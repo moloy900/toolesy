@@ -6,11 +6,11 @@ permalink: /page-speed-test-analyze-website-performance/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Page Speed Test - Analyze Website Performance & SEO</title>
+<title>Free Page Speed Test - Analyze Website Performance</title>
 <meta name="description"
-  content="Free online page speed test tool. Analyze your website performance, Core Web Vitals, and SEO metrics. Get actionable insights to improve loading speed and user experience.">
+  content="Free online page speed test tool. Analyze your website performance, get insights and recommendations to improve loading speed and user experience.">
 <meta name="keywords"
-  content="page speed test, website performance, core web vitals, website speed test, performance analysis, SEO optimization, loading speed, website analyzer">
+  content="page speed test, website performance, speed test, website analyzer, performance metrics, core web vitals, loading speed, website optimization">
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
 
@@ -61,227 +61,79 @@ permalink: /page-speed-test-analyze-website-performance/
     align-items: center;
   }
 
-  .converter-section p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-    color: #333;
-  }
-
-  .url-input-section {
+  .input-section {
     margin: 20px 0;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .url-input-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-
-  .url-input-group input {
-    flex: 1;
-    padding: 15px;
+  .input-section input {
+    width: 100%;
+    padding: 18px;
     border: 2px solid #e0e6ed;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
+    resize: vertical;
     transition: border-color 0.3s;
   }
 
-  .url-input-group input:focus {
+  .input-section input:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
   }
 
-  .device-selector {
-    display: flex;
-    gap: 15px;
-    margin: 20px 0;
+  .button-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 25px 0;
   }
 
-  .device-option {
-    flex: 1;
-    padding: 15px;
-    border: 2px solid #e0e6ed;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: white;
-  }
-
-  .device-option.active {
-    border-color: var(--primary);
-    background: rgba(52, 152, 219, 0.1);
-  }
-
-  .device-option i {
-    font-size: 24px;
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .test-button {
-    width: 100%;
-    padding: 16px;
-    background: var(--primary);
-    color: white;
+  .case-button {
+    padding: 14px 10px;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 20px 0;
+    text-align: center;
   }
 
-  .test-button:hover {
+  .case-button:hover {
     background: #2980b9;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
-  .test-button:disabled {
-    background: #bdc3c7;
-    cursor: not-allowed;
-    transform: none;
+  .case-button:active {
+    transform: translateY(0);
   }
 
-  .loading-spinner {
-    display: none;
-    text-align: center;
-    padding: 40px;
+  .case-button.success {
+    background: var(--success);
   }
 
-  .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--primary);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto 20px;
+  .case-button.success:hover {
+    background: #218838;
   }
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  .case-button.secondary {
+    background: #6c757d;
   }
 
-  .results-section {
-    display: none;
-    margin-top: 30px;
+  .case-button.secondary:hover {
+    background: #5a6268;
   }
 
-  .score-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
+  .case-button.warning {
+    background: #ffc107;
+    color: #212529;
   }
 
-  .score-card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .score-circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-  }
-
-  .score-excellent {
-    background: conic-gradient(#2ecc71 0% 90%, #ecf0f1 90% 100%);
-    color: #27ae60;
-  }
-
-  .score-good {
-    background: conic-gradient(#f39c12 0% 75%, #ecf0f1 75% 100%);
-    color: #e67e22;
-  }
-
-  .score-poor {
-    background: conic-gradient(#e74c3c 0% 50%, #ecf0f1 50% 100%);
-    color: #c0392b;
-  }
-
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-  }
-
-  .metric-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .metric-header {
-    display: flex;
-    justify-content: between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-
-  .metric-title {
-    font-weight: 600;
-    color: #2c3e50;
-  }
-
-  .metric-value {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary);
-  }
-
-  .progress-bar {
-    width: 100%;
-    height: 8px;
-    background: #ecf0f1;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 10px 0;
-  }
-
-  .progress-fill {
-    height: 100%;
-    background: var(--primary);
-    border-radius: 4px;
-    transition: width 0.3s ease;
-  }
-
-  .recommendations {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .recommendation-item {
-    padding: 15px;
-    border-left: 4px solid var(--primary);
-    background: #f8f9fa;
-    margin-bottom: 15px;
-    border-radius: 0 8px 8px 0;
+  .case-button.warning:hover {
+    background: #e0a800;
   }
 
   .alert-container {
@@ -316,6 +168,132 @@ permalink: /page-speed-test-analyze-website-performance/
     font-weight: bold;
   }
 
+  .results-section {
+    margin-top: 30px;
+    display: none;
+  }
+
+  .score-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .score-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary);
+  }
+
+  .score-value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .score-good {
+    color: var(--success);
+  }
+
+  .score-average {
+    color: #ffc107;
+  }
+
+  .score-poor {
+    color: #dc3545;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+  }
+
+  .metric-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .metric-title {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  .metric-value {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .metric-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .recommendations {
+    margin-top: 30px;
+  }
+
+  .recommendation-item {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .recommendation-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .recommendation-description {
+    color: #555;
+    line-height: 1.6;
+  }
+
   .content-placeholder {
     padding: 25px;
     background: white;
@@ -347,16 +325,17 @@ permalink: /page-speed-test-analyze-website-performance/
       padding: 15px;
     }
 
+    .converter-section {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
     .converter-container h1 {
       font-size: 2rem;
     }
 
-    .url-input-group {
-      flex-direction: column;
-    }
-
-    .device-selector {
-      flex-direction: column;
+    .converter-section h2 {
+      font-size: 1.3rem;
     }
 
     .score-cards {
@@ -366,143 +345,112 @@ permalink: /page-speed-test-analyze-website-performance/
     .metrics-grid {
       grid-template-columns: 1fr;
     }
+
+    .button-section {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .case-button {
+      font-size: 13px;
+      padding: 12px 8px;
+    }
   }
 </style>
 
 <div class="converter-container">
   <h1>Free Page Speed Test</h1>
-  <p class="welcome-message">Analyze your website performance, Core Web Vitals, and SEO metrics. Get actionable insights to improve loading speed and user experience.</p>
+  <p class="welcome-message">Analyze your website performance, get detailed insights and actionable recommendations to improve loading speed and user experience.</p>
 
   <div class="converter-section">
-    <h2>Website Performance Analysis</h2>
+    <h2>Website Speed Analysis</h2>
 
-    <div class="url-input-section">
-      <div class="url-input-group">
-        <input type="url" id="websiteUrl" placeholder="Enter website URL (e.g., https://example.com)" value="">
-        <button class="test-button" id="analyzeButton">
-          <i class="fas fa-chart-line"></i> Analyze Performance
-        </button>
-      </div>
-
-      <div class="device-selector">
-        <div class="device-option active" data-device="desktop">
-          <i class="fas fa-desktop"></i>
-          <span>Desktop</span>
-        </div>
-        <div class="device-option" data-device="mobile">
-          <i class="fas fa-mobile-alt"></i>
-          <span>Mobile</span>
-        </div>
-      </div>
+    <div class="input-section">
+      <input type="url" id="websiteUrl" placeholder="Enter website URL (e.g., https://example.com)" value="">
     </div>
+
+    <div class="button-section">
+      <button class="case-button" id="analyzeDesktop">
+        <i class="fas fa-desktop"></i> Analyze Desktop
+      </button>
+      <button class="case-button success" id="analyzeMobile">
+        <i class="fas fa-mobile-alt"></i> Analyze Mobile
+      </button>
+      <button class="case-button secondary" id="clearInput">
+        <i class="fas fa-broom"></i> Clear
+      </button>
+    </div>
+
+    <div id="alertContainer" class="alert-container"></div>
 
     <div class="loading-spinner" id="loadingSpinner">
       <div class="spinner"></div>
-      <p>Analyzing website performance...</p>
-      <p>This may take 20-30 seconds</p>
+      <p>Analyzing website performance... This may take a few seconds.</p>
     </div>
 
     <div class="results-section" id="resultsSection">
+      <h2>Performance Results</h2>
+      
       <div class="score-cards">
         <div class="score-card">
-          <div class="score-circle score-excellent">
-            <span>92</span>
-          </div>
           <h3>Performance Score</h3>
-          <p>Excellent</p>
+          <div class="score-value" id="performanceScore">0</div>
+          <p>Overall Performance</p>
         </div>
         <div class="score-card">
-          <div class="score-circle score-good">
-            <span>2.1s</span>
-          </div>
-          <h3>First Contentful Paint</h3>
-          <p>Good</p>
+          <h3>Accessibility</h3>
+          <div class="score-value" id="accessibilityScore">0</div>
+          <p>Website Accessibility</p>
         </div>
         <div class="score-card">
-          <div class="score-circle score-poor">
-            <span>4.8s</span>
-          </div>
-          <h3>Largest Contentful Paint</h3>
-          <p>Needs Improvement</p>
+          <h3>Best Practices</h3>
+          <div class="score-value" id="bestPracticesScore">0</div>
+          <p>Development Standards</p>
+        </div>
+        <div class="score-card">
+          <h3>SEO Score</h3>
+          <div class="score-value" id="seoScore">0</div>
+          <p>Search Engine Optimization</p>
         </div>
       </div>
 
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-header">
-            <span class="metric-title">First Contentful Paint (FCP)</span>
-            <span class="metric-value">2.1s</span>
+            <span class="metric-title">First Contentful Paint</span>
+            <span class="metric-value" id="fcpValue">0s</span>
           </div>
-          <p>Time until first content is rendered</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 75%"></div>
-          </div>
-          <small>Good: 0-1.8s | Needs Improvement: 1.8-3s | Poor: >3s</small>
+          <p class="metric-description">Time until first text or image is displayed</p>
         </div>
-
         <div class="metric-card">
           <div class="metric-header">
-            <span class="metric-title">Largest Contentful Paint (LCP)</span>
-            <span class="metric-value">4.8s</span>
+            <span class="metric-title">Largest Contentful Paint</span>
+            <span class="metric-value" id="lcpValue">0s</span>
           </div>
-          <p>Time until largest content is rendered</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 40%"></div>
-          </div>
-          <small>Good: 0-2.5s | Needs Improvement: 2.5-4s | Poor: >4s</small>
+          <p class="metric-description">Time until largest content element is visible</p>
         </div>
-
         <div class="metric-card">
           <div class="metric-header">
-            <span class="metric-title">First Input Delay (FID)</span>
-            <span class="metric-value">85ms</span>
+            <span class="metric-title">First Input Delay</span>
+            <span class="metric-value" id="fidValue">0ms</span>
           </div>
-          <p>Time until page becomes interactive</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 90%"></div>
-          </div>
-          <small>Good: 0-100ms | Needs Improvement: 100-300ms | Poor: >300ms</small>
+          <p class="metric-description">Time until page becomes interactive</p>
         </div>
-
         <div class="metric-card">
           <div class="metric-header">
-            <span class="metric-title">Cumulative Layout Shift (CLS)</span>
-            <span class="metric-value">0.08</span>
+            <span class="metric-title">Cumulative Layout Shift</span>
+            <span class="metric-value" id="clsValue">0</span>
           </div>
-          <p>Visual stability during loading</p>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 95%"></div>
-          </div>
-          <small>Good: 0-0.1 | Needs Improvement: 0.1-0.25 | Poor: >0.25</small>
+          <p class="metric-description">Visual stability during loading</p>
         </div>
       </div>
 
       <div class="recommendations">
-        <h3>Performance Recommendations</h3>
-        
-        <div class="recommendation-item">
-          <h4><i class="fas fa-image text-warning"></i> Optimize Images</h4>
-          <p>Serve images in next-gen formats (WebP/AVIF) and properly size images to reduce LCP by 2.1s</p>
-        </div>
-
-        <div class="recommendation-item">
-          <h4><i class="fas fa-code text-primary"></i> Reduce JavaScript Execution Time</h4>
-          <p>Remove unused JavaScript and defer non-critical code to improve interactivity</p>
-        </div>
-
-        <div class="recommendation-item">
-          <h4><i class="fas fa-server text-success"></i> Enable Compression</h4>
-          <p>Use Gzip or Brotli compression to reduce network payload sizes</p>
-        </div>
-
-        <div class="recommendation-item">
-          <h4><i class="fas fa-cache text-info"></i> Leverage Browser Caching</h4>
-          <p>Set appropriate cache policies for static assets to improve repeat visit performance</p>
+        <h3>Optimization Recommendations</h3>
+        <div id="recommendationsList">
+          <!-- Recommendations will be populated here -->
         </div>
       </div>
     </div>
-
-    <div id="alertContainer" class="alert-container"></div>
 
     {% include share-and-donation.html %}
   </div>
@@ -511,67 +459,71 @@ permalink: /page-speed-test-analyze-website-performance/
   <div class="content-placeholder">
     <h2>Free Page Speed Test Tool</h2>
 
-    <p>Website speed is crucial for user experience, SEO rankings, and conversion rates. Our free <strong>Page Speed Test tool</strong> provides comprehensive analysis of your website's performance metrics, including Core Web Vitals that directly impact your Google search rankings. Get detailed insights and actionable recommendations to optimize your website's loading speed and improve user engagement.</p>
+    <p>Website loading speed is crucial for user experience, conversion rates, and search engine rankings. Our free <strong>Page Speed Test tool</strong> provides comprehensive analysis of your website's performance across both desktop and mobile devices. Get detailed insights into Core Web Vitals, performance metrics, and actionable recommendations to optimize your website's speed.</p>
 
-    <h3>Why Website Speed Matters:</h3>
+    <h3>How to Use This Page Speed Test (Step-by-Step):</h3>
     <ul>
-      <li><strong>User Experience:</strong> Faster websites provide better user experience and lower bounce rates</li>
-      <li><strong>SEO Rankings:</strong> Google uses page speed as a ranking factor in search results</li>
-      <li><strong>Conversion Rates:</strong> Every second of delay can reduce conversions by 7%</li>
-      <li><strong>Mobile Performance:</strong> With increasing mobile traffic, speed optimization is essential</li>
-      <li><strong>Core Web Vitals:</strong> Directly impacts your Google search visibility and rankings</li>
+      <li><strong>Enter URL:</strong> Type or paste your website URL in the input field above (include https:// or http://)</li>
+      <li><strong>Choose Device:</strong> Select either "Analyze Desktop" for computer performance or "Analyze Mobile" for smartphone performance</li>
+      <li><strong>Wait for Analysis:</strong> The tool will analyze your website using Google's PageSpeed Insights API (takes 10-30 seconds)</li>
+      <li><strong>Review Results:</strong> Examine your performance scores, Core Web Vitals, and optimization recommendations</li>
+      <li><strong>Implement Changes:</strong> Use the provided recommendations to improve your website speed</li>
     </ul>
 
-    <h3>How to Use This Page Speed Test Tool:</h3>
+    <h3>Real-Life Example & Use Case:</h3>
+    <p>Imagine you run an e-commerce website that's experiencing high bounce rates on mobile devices. By using our Page Speed Test tool with the mobile analysis option, you discover that your Largest Contentful Paint (LCP) is 4.2 seconds (needs improvement) and Cumulative Layout Shift (CLS) is 0.3 (poor). The tool provides specific recommendations like optimizing images, eliminating render-blocking resources, and reducing JavaScript execution time. After implementing these changes, your mobile LCP improves to 2.1 seconds and bounce rate decreases by 35%.</p>
+
+    <h3>Key Metrics Explained:</h3>
     <ul>
-      <li><strong>Enter URL:</strong> Type your website address in the input field above</li>
-      <li><strong>Select Device:</strong> Choose between desktop or mobile analysis</li>
-      <li><strong>Run Analysis:</strong> Click "Analyze Performance" to start the test</li>
-      <li><strong>Review Results:</strong> Examine performance scores and Core Web Vitals</li>
-      <li><strong>Implement Recommendations:</strong> Follow the specific optimization suggestions</li>
+      <li><strong>Performance Score (0-100):</strong> Overall rating of your website's loading performance</li>
+      <li><strong>First Contentful Paint (FCP):</strong> When the first content appears (good: ≤1s, poor: ≥3s)</li>
+      <li><strong>Largest Contentful Paint (LCP):</strong> When the main content loads (good: ≤2.5s, poor: ≥4s)</li>
+      <li><strong>First Input Delay (FID):</strong> How quickly the page responds to user input (good: ≤100ms, poor: ≥300ms)</li>
+      <li><strong>Cumulative Layout Shift (CLS):</strong> Visual stability during loading (good: ≤0.1, poor: ≥0.25)</li>
     </ul>
 
-    <h3>Understanding Core Web Vitals:</h3>
-    <p>Core Web Vitals are a set of specific factors that Google considers important in a webpage's overall user experience:</p>
+    <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
-      <li><strong>Largest Contentful Paint (LCP):</strong> Measures loading performance (should occur within 2.5 seconds)</li>
-      <li><strong>First Input Delay (FID):</strong> Measures interactivity (should be less than 100 milliseconds)</li>
-      <li><strong>Cumulative Layout Shift (CLS):</strong> Measures visual stability (should be less than 0.1)</li>
+      <li><strong>Website Owners:</strong> Monitor and improve your site's performance to reduce bounce rates and increase conversions</li>
+      <li><strong>Web Developers:</strong> Identify performance bottlenecks and optimize code for better user experience</li>
+      <li><strong>SEO Specialists:</strong> Improve Core Web Vitals to boost search engine rankings</li>
+      <li><strong>Digital Marketers:</strong> Ensure landing pages load quickly to maximize campaign effectiveness</li>
+      <li><strong>Agency Professionals:</strong> Provide performance reports and recommendations to clients</li>
     </ul>
 
     <h3>Frequently Asked Questions (FAQ):</h3>
     <p><strong>Q: How often should I test my website speed?</strong><br>
-      A: We recommend testing monthly or after making significant changes to your website. Regular monitoring helps catch performance regressions early.</p>
+      A: We recommend testing monthly for stable websites, or after any major updates or changes to your site.</p>
+
+    <p><strong>Q: Why are desktop and mobile results different?</strong><br>
+      A: Mobile devices typically have slower processors, network limitations, and different rendering engines, which affect performance.</p>
+
+    <p><strong>Q: Is my website data kept private?</strong><br>
+      A: Yes, we don't store your website URLs or test results. All analysis happens through secure API calls.</p>
 
     <p><strong>Q: What's considered a good performance score?</strong><br>
-      A: Scores above 90 are excellent, 80-89 are good, 50-79 need improvement, and below 50 are poor. However, focus on real-world metrics like LCP and FID.</p>
+      A: Scores above 90 are excellent, 80-89 are good, 50-79 need improvement, and below 50 are poor.</p>
 
-    <p><strong>Q: Why is mobile performance different from desktop?</strong><br>
-      A: Mobile devices typically have slower processors, limited memory, and network constraints compared to desktop computers.</p>
+    <p><strong>Q: Can I test localhost or password-protected sites?</strong><br>
+      A: No, the tool can only analyze publicly accessible websites.</p>
 
-    <p><strong>Q: How can I improve my website speed?</strong><br>
-      A: Start with image optimization, enable compression, minimize render-blocking resources, and leverage browser caching. Our tool provides specific recommendations for your site.</p>
-
-    <p><strong>Q: Is this tool free to use?</strong><br>
-      A: Yes, our page speed test tool is completely free with no limitations or registration required.</p>
-
-    <h3>Benefits of Regular Performance Monitoring:</h3>
+    <h3>Why Website Speed Matters:</h3>
+    <p>Website performance directly impacts user experience, conversion rates, and search engine rankings. Studies show that:</p>
     <ul>
-      <li><strong>Early Problem Detection:</strong> Identify performance issues before they impact users</li>
-      <li><strong>SEO Advantage:</strong> Maintain or improve your search engine rankings</li>
-      <li><strong>Competitive Analysis:</strong> Compare your performance against competitors</li>
-      <li><strong>Conversion Optimization:</strong> Faster sites typically have higher conversion rates</li>
-      <li><strong>User Retention:</strong> Better performance leads to lower bounce rates and longer sessions</li>
+      <li>53% of mobile users abandon sites that take longer than 3 seconds to load</li>
+      <li>A 1-second delay in page load can reduce conversions by 7%</li>
+      <li>Google uses page speed as a ranking factor in search results</li>
+      <li>Fast-loading sites have lower bounce rates and higher engagement</li>
     </ul>
 
-    <h3>Common Performance Issues and Solutions:</h3>
-    <p>Based on thousands of website analyses, here are the most common performance problems and how to fix them:</p>
+    <h3>Common Performance Issues & Solutions:</h3>
+    <p>Our tool helps identify and solve the most common website performance problems:</p>
     <ul>
-      <li><strong>Unoptimized Images:</strong> Use modern formats like WebP and implement lazy loading</li>
+      <li><strong>Large Images:</strong> Optimize and compress images without quality loss</li>
       <li><strong>Render-Blocking Resources:</strong> Defer non-critical CSS and JavaScript</li>
-      <li><strong>Slow Server Response:</strong> Optimize backend code and consider CDN implementation</li>
-      <li><strong>Too Many HTTP Requests:</strong> Combine files and use sprites where appropriate</li>
-      <li><strong>Large JavaScript Bundles:</strong> Code split and remove unused code</li>
+      <li><strong>Slow Server Response:</strong> Improve hosting infrastructure or use CDN</li>
+      <li><strong>Excessive JavaScript:</strong> Minimize and bundle JavaScript files</li>
+      <li><strong>Unused CSS:</strong> Remove unused styles and minimize CSS</li>
     </ul>
   </div>
 </div>
@@ -579,57 +531,170 @@ permalink: /page-speed-test-analyze-website-performance/
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const websiteUrl = document.getElementById('websiteUrl');
-    const analyzeButton = document.getElementById('analyzeButton');
+    const analyzeDesktop = document.getElementById('analyzeDesktop');
+    const analyzeMobile = document.getElementById('analyzeMobile');
+    const clearInput = document.getElementById('clearInput');
+    const alertContainer = document.getElementById('alertContainer');
     const loadingSpinner = document.getElementById('loadingSpinner');
     const resultsSection = document.getElementById('resultsSection');
-    const alertContainer = document.getElementById('alertContainer');
-    const deviceOptions = document.querySelectorAll('.device-option');
     
-    let currentDevice = 'desktop';
+    // API Configuration
+    const apiKey = 'AIzaSyAh1Za8vzs18bYYbWB1WMBSw-hhWnBIw7U';
+    const apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
 
-    // Device selection
-    deviceOptions.forEach(option => {
-      option.addEventListener('click', function() {
-        deviceOptions.forEach(opt => opt.classList.remove('active'));
-        this.classList.add('active');
-        currentDevice = this.getAttribute('data-device');
-      });
+    // Event listeners
+    analyzeDesktop.addEventListener('click', function () {
+      analyzeWebsite('desktop');
     });
 
-    // Analyze button click handler
-    analyzeButton.addEventListener('click', function() {
+    analyzeMobile.addEventListener('click', function () {
+      analyzeWebsite('mobile');
+    });
+
+    clearInput.addEventListener('click', function () {
+      websiteUrl.value = '';
+      resultsSection.style.display = 'none';
+      showAlert('Input cleared successfully!', 'success');
+    });
+
+    function analyzeWebsite(formFactor) {
       const url = websiteUrl.value.trim();
       
       if (!url) {
-        showAlert('Please enter a website URL', 'error');
+        showAlert('Please enter a website URL to analyze.', 'error');
         return;
       }
 
-      // Basic URL validation
+      // Validate URL format
       if (!isValidUrl(url)) {
-        showAlert('Please enter a valid URL (include http:// or https://)', 'error');
+        showAlert('Please enter a valid URL (include http:// or https://).', 'error');
         return;
       }
 
-      // Show loading state
-      analyzeButton.disabled = true;
-      analyzeButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
+      // Show loading spinner
       loadingSpinner.style.display = 'block';
       resultsSection.style.display = 'none';
 
-      // Simulate analysis (in real implementation, this would call an API)
-      setTimeout(() => {
-        analyzeButton.disabled = false;
-        analyzeButton.innerHTML = '<i class="fas fa-chart-line"></i> Analyze Performance';
-        loadingSpinner.style.display = 'none';
-        resultsSection.style.display = 'block';
-        
-        // Update results based on device
-        updateResultsForDevice(currentDevice);
-        
-        showAlert('Performance analysis completed successfully!', 'success');
-      }, 3000);
-    });
+      // Construct API URL
+      const apiCallUrl = `${apiUrl}?url=${encodeURIComponent(url)}&strategy=${formFactor}&key=${apiKey}`;
+
+      // Make API request
+      fetch(apiCallUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          displayResults(data, formFactor);
+          loadingSpinner.style.display = 'none';
+          resultsSection.style.display = 'block';
+          showAlert(`Website analysis completed for ${formFactor}!
+          `, 'success');
+        })
+        .catch(error => {
+          loadingSpinner.style.display = 'none';
+          console.error('Error:', error);
+          showAlert('Failed to analyze website. Please check the URL and try again.', 'error');
+        });
+    }
+
+    function displayResults(data, formFactor) {
+      // Extract scores
+      const lighthouse = data.lighthouseResult;
+      const categories = lighthouse.categories;
+      
+      // Update score cards
+      document.getElementById('performanceScore').textContent = Math.round(categories.performance.score * 100);
+      document.getElementById('performanceScore').className = `score-value ${getScoreClass(categories.performance.score)}`;
+      
+      document.getElementById('accessibilityScore').textContent = Math.round(categories.accessibility.score * 100);
+      document.getElementById('accessibilityScore').className = `score-value ${getScoreClass(categories.accessibility.score)}`;
+      
+      document.getElementById('bestPracticesScore').textContent = Math.round(categories['best-practices'].score * 100);
+      document.getElementById('bestPracticesScore').className = `score-value ${getScoreClass(categories['best-practices'].score)}`;
+      
+      document.getElementById('seoScore').textContent = Math.round(categories.seo.score * 100);
+      document.getElementById('seoScore').className = `score-value ${getScoreClass(categories.seo.score)}`;
+
+      // Extract Core Web Vitals
+      const audits = lighthouse.audits;
+      
+      document.getElementById('fcpValue').textContent = formatTime(audits['first-contentful-paint'].displayValue);
+      document.getElementById('lcpValue').textContent = formatTime(audits['largest-contentful-paint'].displayValue);
+      document.getElementById('fidValue').textContent = formatTime(audits['max-potential-fid'].displayValue);
+      document.getElementById('clsValue').textContent = audits['cumulative-layout-shift'].displayValue;
+
+      // Display recommendations
+      displayRecommendations(audits);
+    }
+
+    function getScoreClass(score) {
+      if (score >= 0.9) return 'score-good';
+      if (score >= 0.5) return 'score-average';
+      return 'score-poor';
+    }
+
+    function formatTime(timeString) {
+      if (!timeString) return 'N/A';
+      return timeString.replace('s', 's').replace('ms', 'ms');
+    }
+
+    function displayRecommendations(audits) {
+      const recommendationsList = document.getElementById('recommendationsList');
+      recommendationsList.innerHTML = '';
+
+      // Get opportunities for improvement
+      const opportunities = [
+        'render-blocking-resources',
+        'unused-css-rules',
+        'unused-javascript',
+        'modern-image-formats',
+        'offscreen-images',
+        'unminified-css',
+        'unminified-javascript',
+        'unused-css-rules',
+        'efficient-animated-content'
+      ];
+
+      opportunities.forEach(auditId => {
+        const audit = audits[auditId];
+        if (audit && audit.score < 1) {
+          const recommendationItem = document.createElement('div');
+          recommendationItem.className = 'recommendation-item';
+          
+          recommendationItem.innerHTML = `
+            <div class="recommendation-title">
+              <i class="fas fa-exclamation-triangle"></i>
+              ${audit.title}
+            </div>
+            <div class="recommendation-description">
+              ${audit.description}
+              ${audit.details && audit.details.overallSavingsMs ? 
+                `<br><strong>Potential savings: ${audit.details.overallSavingsMs}ms</strong>` : ''}
+            </div>
+          `;
+          
+          recommendationsList.appendChild(recommendationItem);
+        }
+      });
+
+      // If no recommendations found, show message
+      if (recommendationsList.children.length === 0) {
+        recommendationsList.innerHTML = `
+          <div class="recommendation-item">
+            <div class="recommendation-title">
+              <i class="fas fa-check-circle"></i>
+              Great Job!
+            </div>
+            <div class="recommendation-description">
+              No major optimization opportunities found. Your website is well optimized!
+            </div>
+          </div>
+        `;
+      }
+    }
 
     function isValidUrl(string) {
       try {
@@ -637,21 +702,6 @@ permalink: /page-speed-test-analyze-website-performance/
         return true;
       } catch (_) {
         return false;
-      }
-    }
-
-    function updateResultsForDevice(device) {
-      // Simulate different results for mobile vs desktop
-      if (device === 'mobile') {
-        // Update scores for mobile
-        document.querySelector('.score-circle span').textContent = '85';
-        document.querySelector('.metric-value').textContent = '2.8s';
-        document.querySelectorAll('.metric-value')[1].textContent = '5.2s';
-      } else {
-        // Update scores for desktop
-        document.querySelector('.score-circle span').textContent = '92';
-        document.querySelector('.metric-value').textContent = '2.1s';
-        document.querySelectorAll('.metric-value')[1].textContent = '4.8s';
       }
     }
 
@@ -677,12 +727,5 @@ permalink: /page-speed-test-analyze-website-performance/
         }
       }, 5000);
     }
-
-    // Enter key support for URL input
-    websiteUrl.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        analyzeButton.click();
-      }
-    });
   });
 </script>
