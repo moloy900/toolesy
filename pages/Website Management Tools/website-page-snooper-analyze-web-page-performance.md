@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Website Page Snooper - Analyze Web Page Performance"
-permalink: /website-page-snooper-analyze-web-page-performance/
+permalink: /website-page-snooper-view-and-copy-html-code-from-any-website/
 ---
 
 
