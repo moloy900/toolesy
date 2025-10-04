@@ -108,7 +108,6 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     border: 2px solid #e0e6ed;
     border-radius: 10px;
     font-size: 16px;
-    resize: vertical;
     transition: border-color 0.3s;
   }
 
@@ -173,12 +172,6 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     background: #e0a800;
   }
 
-  .case-button:disabled {
-    background: #6c757d;
-    cursor: not-allowed;
-    transform: none;
-  }
-
   .alert-container {
     margin-top: 20px;
     min-height: 50px;
@@ -206,134 +199,25 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     border: 1px solid #f5c6cb;
   }
 
-  .alert-info {
-    background-color: #d1ecf1;
-    color: #0c5460;
-    border: 1px solid #bee5eb;
-  }
-
   .alert .close {
     cursor: pointer;
     font-weight: bold;
   }
 
-  .results-section {
-    margin-top: 30px;
-    display: none;
-  }
-
-  .size-summary {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-
-  .size-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid var(--primary);
-  }
-
-  .size-value {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 15px 0;
-    color: var(--primary);
-  }
-
-  .size-label {
-    font-size: 1rem;
-    color: #666;
-  }
-
-  .resources-table {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    margin: 25px 0;
-  }
-
-  .table-header {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    gap: 15px;
-    padding: 20px;
-    background: var(--primary);
-    color: white;
-    font-weight: 600;
-  }
-
-  .table-row {
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    gap: 15px;
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-  }
-
-  .table-row:nth-child(even) {
-    background: #f8f9fa;
-  }
-
-  .table-row:last-child {
-    border-bottom: none;
-  }
-
-  .resource-type {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .type-icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .resource-url {
-    word-break: break-all;
-    font-family: monospace;
-    font-size: 0.9rem;
-  }
-
-  .size-good {
-    color: var(--success);
-    font-weight: 600;
-  }
-
-  .size-warning {
-    color: #ffc107;
-    font-weight: 600;
-  }
-
-  .size-poor {
-    color: #dc3545;
-    font-weight: 600;
-  }
-
   .loading-spinner {
     display: none;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
   }
 
   .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--primary);
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary);
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
   }
 
   @keyframes spin {
@@ -341,31 +225,69 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     100% { transform: rotate(360deg); }
   }
 
-  .recommendations {
+  .results-section {
     margin-top: 30px;
-  }
-
-  .recommendation-item {
-    background: white;
     padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    border-left: 4px solid #ffc107;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
-  .recommendation-title {
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .result-card {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--primary);
+  }
+
+  .result-card h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1rem;
+  }
+
+  .result-card .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  .result-card .description {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+  }
+
+  .resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .resources-table th,
+  .resources-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .resources-table th {
+    background-color: #f8f9fa;
     font-weight: 600;
     color: #2c3e50;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
   }
 
-  .recommendation-description {
-    color: #555;
-    line-height: 1.6;
+  .resources-table tr:hover {
+    background-color: #f5f5f5;
   }
 
   .content-placeholder {
@@ -393,68 +315,96 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     margin-bottom: 25px;
   }
 
-  .api-status {
+  /* Share and donation buttons */
+  .share-donation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .share-buttons,
+  .donation-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .share-button,
+  .donation-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-    font-size: 0.9rem;
+    gap: 8px;
+    text-decoration: none;
+    border: none;
   }
 
-  .status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
+  .share-button:hover,
+  .donation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .status-online {
-    background-color: var(--success);
+  .facebook {
+    background: #3b5998;
+    color: white;
   }
 
-  .status-offline {
-    background-color: #dc3545;
+  .twitter {
+    background: #1da1f2;
+    color: white;
   }
 
-  .status-checking {
-    background-color: #ffc107;
+  .linkedin {
+    background: #0077b5;
+    color: white;
   }
 
-  .size-breakdown {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
+  .pinterest {
+    background: #bd081c;
+    color: white;
   }
 
-  .breakdown-item {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  .reddit {
+    background: #FF4500;
+    color: white;
   }
 
-  .breakdown-type {
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 8px;
+  .paypal {
+    background: #0070ba;
+    color: white;
   }
 
-  .breakdown-size {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2c3e50;
-  }
-
-  .breakdown-percentage {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 5px;
+  .coffee {
+    background: #ff813f;
+    color: white;
   }
 
   /* Responsive adjustments */
   @media (max-width: 768px) {
+    .counter-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .button-section {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .case-button {
+      font-size: 13px;
+      padding: 12px 8px;
+    }
+
     .converter-container {
       padding: 15px;
     }
@@ -472,801 +422,455 @@ permalink: /web-page-size-checker-analyze-website-file-size/
       font-size: 1.3rem;
     }
 
-    .counter-wrapper {
+    .share-donation-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .share-buttons,
+    .donation-buttons {
+      justify-content: center;
+    }
+
+    .results-grid {
       grid-template-columns: 1fr;
     }
 
-    .size-summary {
-      grid-template-columns: 1fr;
+    .resources-table {
+      font-size: 0.9rem;
     }
 
-    .table-header,
-    .table-row {
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    .table-header {
-      display: none;
-    }
-
-    .table-row {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      padding: 15px;
-    }
-
-    .table-row::before {
-      content: attr(data-label);
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 5px;
-    }
-
-    .button-section {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    }
-
-    .case-button {
-      font-size: 13px;
-      padding: 12px 8px;
-    }
-
-    .size-breakdown {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .resources-table th,
+    .resources-table td {
+      padding: 8px 10px;
     }
   }
 </style>
 
 <div class="converter-container">
-  <h1>Free Web Page Size Checker</h1>
-  <p class="welcome-message">Analyze your website file size, get detailed insights about resources and optimize for better performance and faster loading times.</p>
+  <h1>Free Online Page Size Checker</h1>
+  <p class="welcome-message">Analyze website file size, loading speed, and performance metrics. Get detailed insights about your web page resources and optimize for better performance.</p>
 
   <div class="converter-section">
-    <h2>Web Page Size Analysis</h2>
+    <h2>Page Size Analyzer</h2>
 
     <div class="counter-wrapper">
       <div class="counter-item">
-        <span>Total Page Size: </span>
+        <span>Total Size: </span>
         <span id="totalSize">0 KB</span>
       </div>
       <div class="counter-item">
-        <span>Total Requests: </span>
-        <span id="totalRequests">0</span>
+        <span>Load Time: </span>
+        <span id="loadTime">0s</span>
       </div>
       <div class="counter-item">
-        <span>Largest Resource: </span>
-        <span id="largestResource">0 KB</span>
+        <span>Resources: </span>
+        <span id="resourceCount">0</span>
       </div>
       <div class="counter-item">
-        <span>Optimization Score: </span>
-        <span id="optimizationScore">0%</span>
+        <span>Performance Score: </span>
+        <span id="performanceScore">0/100</span>
       </div>
     </div>
 
     <div class="input-section">
-      <input type="url" id="websiteUrl" placeholder="Enter website URL (e.g., https://example.com)" value="">
-      <div class="api-status">
-        <span class="status-dot status-checking" id="apiStatusDot"></span>
-        <span id="apiStatusText">Checking API status...</span>
-      </div>
+      <h2>Enter Website URL</h2>
+      <input type="url" id="urlInput" placeholder="https://example.com">
     </div>
 
     <div class="button-section">
-      <button class="case-button" id="analyzePage">
-        <i class="fas fa-chart-bar"></i> Analyze Page Size
-      </button>
-      <button class="case-button success" id="analyzeMobile">
-        <i class="fas fa-mobile-alt"></i> Analyze Mobile
-      </button>
-      <button class="case-button warning" id="showDetails">
-        <i class="fas fa-list"></i> Show Details
-      </button>
-      <button class="case-button secondary" id="clearInput">
-        <i class="fas fa-broom"></i> Clear
-      </button>
+      <button class="case-button" id="checkButton">Check Page Size</button>
+      <button class="case-button success" id="analyzeButton">Detailed Analysis</button>
+      <button class="case-button secondary" id="clearButton">Clear</button>
     </div>
 
     <div id="alertContainer" class="alert-container"></div>
 
     <div class="loading-spinner" id="loadingSpinner">
       <div class="spinner"></div>
-      <p>Analyzing web page size and resources... This may take 15-20 seconds.</p>
-      <p><small>Scanning all resources: HTML, CSS, JavaScript, Images, Fonts...</small></p>
+      <p>Analyzing page size and performance...</p>
     </div>
 
     <div class="results-section" id="resultsSection">
-      <h2>Page Size Analysis Results</h2>
+      <h3>Analysis Results</h3>
       
-      <div class="size-summary">
-        <div class="size-card">
-          <div class="size-label">Total Page Size</div>
-          <div class="size-value" id="summaryTotalSize">0 KB</div>
-          <div class="size-label" id="sizeEvaluation">Evaluating...</div>
+      <div class="results-grid">
+        <div class="result-card">
+          <h4>Total Page Size</h4>
+          <div class="value" id="resultTotalSize">0 KB</div>
+          <div class="description">Combined size of all resources</div>
         </div>
-        <div class="size-card">
-          <div class="size-label">HTML Size</div>
-          <div class="size-value" id="htmlSize">0 KB</div>
-          <div class="size-label">Document Content</div>
+        <div class="result-card">
+          <h4>Performance Score</h4>
+          <div class="value" id="resultPerformanceScore">0/100</div>
+          <div class="description">Overall performance rating</div>
         </div>
-        <div class="size-card">
-          <div class="size-label">CSS Size</div>
-          <div class="size-value" id="cssSize">0 KB</div>
-          <div class="size-label">Stylesheets</div>
+        <div class="result-card">
+          <h4>First Contentful Paint</h4>
+          <div class="value" id="resultFCP">0s</div>
+          <div class="description">When content first appears</div>
         </div>
-        <div class="size-card">
-          <div class="size-label">JS Size</div>
-          <div class="size-value" id="jsSize">0 KB</div>
-          <div class="size-label">JavaScript Files</div>
-        </div>
-        <div class="size-card">
-          <div class="size-label">Image Size</div>
-          <div class="size-value" id="imageSize">0 KB</div>
-          <div class="size-label">Images & Media</div>
-        </div>
-        <div class="size-card">
-          <div class="size-label">Font Size</div>
-          <div class="size-value" id="fontSize">0 KB</div>
-          <div class="size-label">Web Fonts</div>
+        <div class="result-card">
+          <h4>Largest Contentful Paint</h4>
+          <div class="value" id="resultLCP">0s</div>
+          <div class="description">When main content loads</div>
         </div>
       </div>
 
-      <div class="size-breakdown">
-        <div class="breakdown-item">
-          <div class="breakdown-type">HTML</div>
-          <div class="breakdown-size" id="breakdownHtml">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownHtmlPercent">0%</div>
-        </div>
-        <div class="breakdown-item">
-          <div class="breakdown-type">CSS</div>
-          <div class="breakdown-size" id="breakdownCss">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownCssPercent">0%</div>
-        </div>
-        <div class="breakdown-item">
-          <div class="breakdown-type">JavaScript</div>
-          <div class="breakdown-size" id="breakdownJs">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownJsPercent">0%</div>
-        </div>
-        <div class="breakdown-item">
-          <div class="breakdown-type">Images</div>
-          <div class="breakdown-size" id="breakdownImages">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownImagesPercent">0%</div>
-        </div>
-        <div class="breakdown-item">
-          <div class="breakdown-type">Fonts</div>
-          <div class="breakdown-size" id="breakdownFonts">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownFontsPercent">0%</div>
-        </div>
-        <div class="breakdown-item">
-          <div class="breakdown-type">Other</div>
-          <div class="breakdown-size" id="breakdownOther">0 KB</div>
-          <div class="breakdown-percentage" id="breakdownOtherPercent">0%</div>
-        </div>
-      </div>
+      <h4>Resource Breakdown</h4>
+      <table class="resources-table">
+        <thead>
+          <tr>
+            <th>Resource Type</th>
+            <th>Count</th>
+            <th>Total Size</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody id="resourcesTableBody">
+          <!-- Will be populated by JavaScript -->
+        </tbody>
+      </table>
 
-      <div class="resources-table" id="resourcesTable">
-        <div class="table-header">
-          <span>Resource</span>
-          <span>Type</span>
-          <span>Size</span>
-          <span>Status</span>
-        </div>
-        <div id="resourcesList">
-          <!-- Resources will be populated here -->
-        </div>
-      </div>
-
-      <div class="recommendations">
-        <h3>Optimization Recommendations</h3>
-        <div id="recommendationsList">
-          <!-- Recommendations will be populated here -->
-        </div>
+      <h4>Performance Recommendations</h4>
+      <div id="recommendations">
+        <!-- Will be populated by JavaScript -->
       </div>
     </div>
 
     {% include share-and-donation.html %}
 
     <div class="examples">
-      <h2>Page Size Examples</h2>
+      <h2>Example Results</h2>
 
-      <h3>Well-Optimized Website:</h3>
-      <div class="example-text">Total Size: 850 KB
-- HTML: 45 KB (5.3%)
-- CSS: 120 KB (14.1%)
-- JavaScript: 180 KB (21.2%)
-- Images: 450 KB (52.9%)
-- Fonts: 55 KB (6.5%)
-- Requests: 28
+      <h3>Small Website (Optimized)</h3>
+      <div class="example-text">
+Total Page Size: 450 KB
+Load Time: 1.2 seconds
+Performance Score: 92/100
 
-Optimization Score: 92%</div>
+Resource Breakdown:
+- HTML: 15 KB
+- CSS: 40 KB
+- JavaScript: 85 KB
+- Images: 300 KB
+- Fonts: 10 KB
+      </div>
 
-      <h3>Poorly Optimized Website:</h3>
-      <div class="example-text">Total Size: 4.2 MB
-- HTML: 85 KB (2.0%)
-- CSS: 320 KB (7.6%)
-- JavaScript: 1.8 MB (42.9%)
-- Images: 1.9 MB (45.2%)
-- Fonts: 95 KB (2.3%)
-- Requests: 67
+      <h3>Large Website (Needs Optimization)</h3>
+      <div class="example-text">
+Total Page Size: 3.2 MB
+Load Time: 5.8 seconds
+Performance Score: 45/100
 
-Optimization Score: 45%</div>
-
-      <h3>Optimal Size Guidelines:</h3>
-      <div class="example-text">• Excellent: Under 1 MB
-• Good: 1-2 MB
-• Needs Improvement: 2-4 MB
-• Poor: Over 4 MB
-
-• Target: Under 3 seconds load time
-• Optimal Requests: Under 40
-• Max Image Size: 500 KB per image</div>
+Resource Breakdown:
+- HTML: 25 KB
+- CSS: 150 KB
+- JavaScript: 800 KB
+- Images: 2.1 MB
+- Fonts: 125 KB
+      </div>
     </div>
   </div>
 
   <!-- SEO Content Section -->
   <div class="content-placeholder">
-    <h2>Free Web Page Size Checker Tool</h2>
+    <h2>Free Online Page Size Checker Tool</h2>
 
-    <p>Website performance is directly impacted by page size. Our free <strong>Web Page Size Checker tool</strong> provides comprehensive analysis of your website's file size, resource distribution, and optimization opportunities. Identify large files, unnecessary resources, and get actionable recommendations to reduce page weight and improve loading speed.</p>
+    <p>Is your website loading too slowly? Our free <strong>Page Size Checker tool</strong> helps you analyze your website's file size and performance metrics. Get detailed insights about all resources on your web page including HTML, CSS, JavaScript, images, and fonts. Identify performance bottlenecks and optimize your website for faster loading times. There's no download required, no registration needed, and your website data is processed securely through Cloudflare Workers.</p>
 
     <h3>How to Use This Page Size Checker (Step-by-Step):</h3>
     <ul>
-      <li><strong>Enter URL:</strong> Type or paste your website URL in the input field above (include https:// or http://)</li>
-      <li><strong>Analyze:</strong> Click "Analyze Page Size" to scan all resources (HTML, CSS, JS, images, fonts)</li>
-      <li><strong>Review Results:</strong> Examine total page size, resource breakdown, and individual file sizes</li>
-      <li><strong>Check Recommendations:</strong> Follow optimization suggestions to reduce page weight</li>
-      <li><strong>Compare:</strong> Use mobile analysis to see differences between desktop and mobile versions</li>
+      <li><strong>Enter URL:</strong> Type or paste the complete URL of the webpage you want to analyze in the input field above.</li>
+      <li><strong>Check Page Size:</strong> Click the "Check Page Size" button to get a quick overview of your page's total size and loading metrics.</li>
+      <li><strong>Detailed Analysis:</strong> For more comprehensive insights, click "Detailed Analysis" to see a breakdown of all resources and performance recommendations.</li>
+      <li><strong>Optimize:</strong> Use the recommendations provided to optimize your website's performance by reducing file sizes and improving loading speed.</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you manage an e-commerce website that's experiencing slow loading times. By using our Page Size Checker, you discover that your homepage is 4.8 MB with 52 requests. The analysis reveals that unoptimized product images account for 2.1 MB and there are multiple large JavaScript files totaling 1.5 MB. Following the tool's recommendations, you compress images, combine JavaScript files, and implement lazy loading. After optimization, the page size reduces to 1.2 MB with 28 requests, resulting in 65% faster loading times and 40% lower bounce rates.</p>
-
-    <h3>Key Metrics Explained:</h3>
-    <ul>
-      <li><strong>Total Page Size:</strong> Combined size of all resources (good: &lt;1MB, poor: &gt;4MB)</li>
-      <li><strong>Total Requests:</strong> Number of HTTP requests (good: &lt;40, poor: &gt;80)</li>
-      <li><strong>Resource Breakdown:</strong> Distribution of size across HTML, CSS, JS, images, fonts</li>
-      <li><strong>Largest Resource:</strong> Identifies the biggest file that's slowing down your site</li>
-      <li><strong>Optimization Score:</strong> Overall rating based on size and best practices</li>
-    </ul>
+    <p>Imagine you're a web developer working on an e-commerce site that's experiencing slow loading times. By using our Page Size Checker, you discover that the product images account for 70% of the total page size. The tool recommends optimizing these images, which could reduce the page size by 50% and cut loading time in half. This simple analysis could significantly improve user experience and conversion rates.</p>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
-      <li><strong>Website Owners:</strong> Monitor and optimize page size to improve user experience and conversions</li>
-      <li><strong>Web Developers:</strong> Identify performance bottlenecks and optimize resource delivery</li>
-      <li><strong>SEO Specialists:</strong> Improve page speed for better search engine rankings</li>
-      <li><strong>Digital Agencies:</strong> Provide clients with detailed performance reports and recommendations</li>
-      <li><strong>E-commerce Managers:</strong> Optimize product pages for faster loading and higher conversions</li>
+      <li><strong>Web Developers:</strong> Identify performance bottlenecks and optimize website loading speed.</li>
+      <li><strong>SEO Specialists:</strong> Improve page speed for better search engine rankings.</li>
+      <li><strong>Website Owners:</strong> Understand why your site might be loading slowly and how to fix it.</li>
+      <li><strong>Digital Marketers:</strong> Ensure landing pages load quickly to maximize conversions.</li>
+      <li><strong>UX Designers:</strong> Create faster, more responsive user experiences.</li>
     </ul>
 
     <h3>Frequently Asked Questions (FAQ):</h3>
     <p><strong>Q: What is considered a good page size?</strong><br>
-      A: For optimal performance, aim for under 1-2 MB total page size. Pages under 1 MB load quickly, while pages over 4 MB typically have performance issues.</p>
+      A: Ideally, web pages should be under 1-2 MB for optimal performance. Pages under 500 KB load very quickly, while pages over 3 MB may have performance issues, especially on mobile networks.</p>
 
-    <p><strong>Q: Why does page size matter?</strong><br>
-      A: Larger pages take longer to download, especially on mobile networks, leading to higher bounce rates, lower conversions, and poor SEO rankings.</p>
+    <p><strong>Q: How does page size affect loading speed?</strong><br>
+      A: Larger page sizes generally take longer to download, especially on slower internet connections. Each additional resource (images, scripts, stylesheets) requires separate HTTP requests, which can significantly impact loading time.</p>
 
-    <p><strong>Q: How often should I check my page size?</strong><br>
-      A: We recommend checking monthly or after any major website updates, new feature additions, or content changes.</p>
+    <p><strong>Q: Is my website data kept private when I use this tool?</strong><br>
+      A: Yes, we respect your privacy. The analysis is performed through secure Cloudflare Workers, and we don't store your website URLs or analysis results.</p>
 
-    <p><strong>Q: Can I analyze password-protected or local websites?</strong><br>
-      A: No, the tool can only analyze publicly accessible websites that don't require authentication.</p>
+    <p><strong>Q: Can I use this tool for any website?</strong><br>
+      A: Yes, you can analyze any publicly accessible website. Some sites with strict security policies might not be fully analyzable, but most standard websites will work perfectly.</p>
 
-    <p><strong>Q: Is my website data kept private?</strong><br>
-      A: Yes, we don't store your website URLs or analysis results. All processing happens through secure API calls.</p>
+    <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
+      A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
 
-    <h3>Why Page Size Optimization Matters:</h3>
-    <p>Website performance directly impacts business metrics and user satisfaction:</p>
+    <h3>Why Choose Our Page Size Checker?</h3>
+    <p>Our <strong>online page size checker</strong> provides comprehensive analysis with actionable recommendations. Unlike many similar tools, we break down resources by type and provide specific optimization suggestions. The tool uses Cloudflare Workers for secure, fast processing while keeping your API keys completely hidden from frontend exposure.</p>
+
+    <h3>Common Performance Optimization Strategies</h3>
+    <p>Based on our analysis, here are the most effective ways to improve your website's performance:</p>
     <ul>
-      <li>53% of mobile users abandon sites that take longer than 3 seconds to load</li>
-      <li>A 1-second delay in page response can result in a 7% reduction in conversions</li>
-      <li>Google uses page speed as a ranking factor in mobile search results</li>
-      <li>Fast-loading sites have lower bounce rates and higher engagement metrics</li>
-      <li>Every 100KB reduction in page size can improve load time by 10-20% on 3G networks</li>
-    </ul>
-
-    <h3>Common Page Size Issues & Solutions:</h3>
-    <p>Our tool helps identify and solve the most common website size problems:</p>
-    <ul>
-      <li><strong>Large Images:</strong> Optimize and compress images, use modern formats (WebP), implement lazy loading</li>
-      <li><strong>Unminified Code:</strong> Minify CSS and JavaScript files, remove unused code</li>
-      <li><strong>Too Many Requests:</strong> Combine files, use sprites, implement HTTP/2</li>
-      <li><strong>Heavy Frameworks:</strong> Use tree-shaking, code splitting, and load only necessary components</li>
-      <li><strong>Unoptimized Fonts:</strong> Subset fonts, use font-display: swap, consider system fonts</li>
-    </ul>
-
-    <h3>Industry Benchmarks & Best Practices:</h3>
-    <p>Follow these industry standards for optimal web performance:</p>
-    <ul>
-      <li><strong>Total Page Size:</strong> Target 1-2 MB for optimal performance</li>
-      <li><strong>Time to Interactive:</strong> Aim for under 3 seconds</li>
-      <li><strong>First Contentful Paint:</strong> Target under 1.5 seconds</li>
-      <li><strong>Largest Contentful Paint:</strong> Target under 2.5 seconds</li>
-      <li><strong>Cumulative Layout Shift:</strong> Keep under 0.1 for visual stability</li>
+      <li><strong>Image Optimization:</strong> Compress images without losing quality, use modern formats like WebP, and implement lazy loading.</li>
+      <li><strong>Code Minification:</strong> Remove unnecessary characters from CSS, JavaScript, and HTML files.</li>
+      <li><strong>Browser Caching:</strong> Configure caching headers to allow returning visitors to load your site faster.</li>
+      <li><strong>Content Delivery Network (CDN):</strong> Use a CDN to serve your content from servers closer to your visitors.</li>
+      <li><strong>Reduce HTTP Requests:</strong> Combine CSS and JavaScript files where possible to minimize the number of requests.</li>
     </ul>
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const websiteUrl = document.getElementById('websiteUrl');
-    const analyzePage = document.getElementById('analyzePage');
-    const analyzeMobile = document.getElementById('analyzeMobile');
-    const showDetails = document.getElementById('showDetails');
-    const clearInput = document.getElementById('clearInput');
-    const alertContainer = document.getElementById('alertContainer');
-    const loadingSpinner = document.getElementById('loadingSpinner');
-    const resultsSection = document.getElementById('resultsSection');
-    const apiStatusDot = document.getElementById('apiStatusDot');
-    const apiStatusText = document.getElementById('apiStatusText');
-    
-    // API Configuration
-    const apiKey = 'AIzaSyAh1Za8vzs18bYYbWB1WMBSw-hhWnBIw7U';
-    const apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
+// আপনার Cloudflare Worker URL এখানে বসান
+const CLOUDFLARE_WORKER_URL = 'https://page-size-checker.your-subdomain.workers.dev';
 
-    // Check API status on load
-    checkApiStatus();
+document.addEventListener('DOMContentLoaded', function() {
+  const checkButton = document.getElementById('checkButton');
+  const analyzeButton = document.getElementById('analyzeButton');
+  const clearButton = document.getElementById('clearButton');
+  const urlInput = document.getElementById('urlInput');
+  const loadingSpinner = document.getElementById('loadingSpinner');
+  const resultsSection = document.getElementById('resultsSection');
+  const alertContainer = document.getElementById('alertContainer');
+  const resourcesTableBody = document.getElementById('resourcesTableBody');
+  const recommendations = document.getElementById('recommendations');
 
-    // Event listeners
-    analyzePage.addEventListener('click', function () {
-      analyzeWebsite('desktop');
-    });
-
-    analyzeMobile.addEventListener('click', function () {
-      analyzeWebsite('mobile');
-    });
-
-    showDetails.addEventListener('click', function () {
-      const resourcesTable = document.getElementById('resourcesTable');
-      if (resourcesTable.style.display === 'none') {
-        resourcesTable.style.display = 'block';
-        showDetails.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Details';
-      } else {
-        resourcesTable.style.display = 'none';
-        showDetails.innerHTML = '<i class="fas fa-list"></i> Show Details';
-      }
-    });
-
-    clearInput.addEventListener('click', function () {
-      websiteUrl.value = '';
-      resultsSection.style.display = 'none';
-      showAlert('Input cleared successfully!', 'success');
-    });
-
-    async function checkApiStatus() {
-      apiStatusDot.className = 'status-dot status-checking';
-      apiStatusText.textContent = 'Checking API status...';
-      
-      const testUrl = 'https://www.google.com';
-      const testApiUrl = `${apiUrl}?url=${encodeURIComponent(testUrl)}&strategy=desktop&key=${apiKey}`;
-      
-      try {
-        const response = await fetch(testApiUrl, { method: 'HEAD' });
-        if (response.ok) {
-          apiStatusDot.className = 'status-dot status-online';
-          apiStatusText.textContent = 'API is online and ready';
-        } else {
-          throw new Error('API not available');
-        }
-      } catch (error) {
-        apiStatusDot.className = 'status-dot status-offline';
-        apiStatusText.textContent = 'API temporarily unavailable';
-      }
+  checkButton.addEventListener('click', function() {
+    const url = urlInput.value.trim();
+    if (!url) {
+      showAlert('Please enter a valid URL.', 'error');
+      return;
     }
-
-    async function analyzeWebsite(formFactor) {
-      const url = websiteUrl.value.trim();
-      
-      if (!url) {
-        showAlert('Please enter a website URL to analyze.', 'error');
-        return;
-      }
-
-      // Validate URL format
-      if (!isValidUrl(url)) {
-        showAlert('Please enter a valid URL (include http:// or https://).', 'error');
-        return;
-      }
-
-      // Show loading spinner
-      loadingSpinner.style.display = 'block';
-      resultsSection.style.display = 'none';
-      disableButtons();
-
-      try {
-        const apiCallUrl = `${apiUrl}?url=${encodeURIComponent(url)}&strategy=${formFactor}&key=${apiKey}`;
-        const response = await fetchWithTimeout(apiCallUrl);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        displayResults(data, formFactor, url);
-        showAlert(`Page size analysis completed for ${formFactor}!`, 'success');
-      } catch (error) {
-        console.error('Analysis error:', error);
-        showAlert('Failed to analyze website. Please check the URL and try again.', 'error');
-        // Fallback to mock data for demonstration
-        displayMockResults(url, formFactor);
-      } finally {
-        loadingSpinner.style.display = 'none';
-        resultsSection.style.display = 'block';
-        enableButtons();
-      }
-    }
-
-    async function fetchWithTimeout(url, timeout = 30000) {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-      
-      try {
-        const response = await fetch(url, { 
-          signal: controller.signal 
-        });
-        clearTimeout(timeoutId);
-        return response;
-      } catch (error) {
-        clearTimeout(timeoutId);
-        throw error;
-      }
-    }
-
-    function displayResults(data, formFactor, url) {
-      if (!data || !data.lighthouseResult) {
-        showAlert('No data received from analysis. Using demonstration data.', 'info');
-        displayMockResults(url, formFactor);
-        return;
-      }
-
-      const audits = data.lighthouseResult.audits;
-      
-      // Extract resource sizes from audits
-      const resources = extractResourceSizes(audits);
-      calculateAndDisplayMetrics(resources, url);
-      displayRecommendations(resources);
-    }
-
-    function extractResourceSizes(audits) {
-      const resources = {
-        html: { size: 0, count: 0 },
-        css: { size: 0, count: 0 },
-        js: { size: 0, count: 0 },
-        images: { size: 0, count: 0 },
-        fonts: { size: 0, count: 0 },
-        other: { size: 0, count: 0 },
-        total: { size: 0, count: 0 }
-      };
-
-      // This is a simplified extraction - in a real implementation,
-      // you would parse the detailed resource information from the API response
-      
-      // For demonstration, we'll use mock data that simulates real analysis
-      return generateMockResourceData();
-    }
-
-    function generateMockResourceData() {
-      // Generate realistic mock data based on common website patterns
-      const totalSize = 500 + Math.random() * 3000; // 500KB to 3.5MB
-      const resources = {
-        html: { size: 30 + Math.random() * 70, count: 1 },
-        css: { size: 80 + Math.random() * 200, count: 3 + Math.floor(Math.random() * 5) },
-        js: { size: 150 + Math.random() * 500, count: 5 + Math.floor(Math.random() * 8) },
-        images: { size: 200 + Math.random() * 1500, count: 10 + Math.floor(Math.random() * 20) },
-        fonts: { size: 40 + Math.random() * 100, count: 2 + Math.floor(Math.random() * 3) },
-        other: { size: 20 + Math.random() * 50, count: 3 + Math.floor(Math.random() * 5) }
-      };
-
-      // Calculate total
-      resources.total = {
-        size: Object.values(resources).reduce((sum, type) => sum + (type.size || 0), 0),
-        count: Object.values(resources).reduce((sum, type) => sum + (type.count || 0), 0)
-      };
-
-      return resources;
-    }
-
-    function calculateAndDisplayMetrics(resources, url) {
-      const totalSizeKB = resources.total.size;
-      const totalSizeMB = totalSizeKB / 1024;
-      
-      // Update summary counters
-      document.getElementById('totalSize').textContent = formatSize(totalSizeKB);
-      document.getElementById('totalRequests').textContent = resources.total.count;
-      document.getElementById('largestResource').textContent = findLargestResource(resources);
-      document.getElementById('optimizationScore').textContent = calculateOptimizationScore(totalSizeKB) + '%';
-
-      // Update summary cards
-      document.getElementById('summaryTotalSize').textContent = formatSize(totalSizeKB);
-      document.getElementById('sizeEvaluation').textContent = getSizeEvaluation(totalSizeKB);
-      document.getElementById('htmlSize').textContent = formatSize(resources.html.size);
-      document.getElementById('cssSize').textContent = formatSize(resources.css.size);
-      document.getElementById('jsSize').textContent = formatSize(resources.js.size);
-      document.getElementById('imageSize').textContent = formatSize(resources.images.size);
-      document.getElementById('fontSize').textContent = formatSize(resources.fonts.size);
-
-      // Update breakdown
-      updateBreakdown(resources, totalSizeKB);
-
-      // Update resources table
-      updateResourcesTable(resources, url);
-    }
-
-    function formatSize(kb) {
-      if (kb < 1024) {
-        return kb.toFixed(0) + ' KB';
-      } else {
-        return (kb / 1024).toFixed(1) + ' MB';
-      }
-    }
-
-    function findLargestResource(resources) {
-      const sizes = {
-        'HTML': resources.html.size,
-        'CSS': resources.css.size,
-        'JavaScript': resources.js.size,
-        'Images': resources.images.size,
-        'Fonts': resources.fonts.size
-      };
-      
-      const largestType = Object.keys(sizes).reduce((a, b) => sizes[a] > sizes[b] ? a : b);
-      return formatSize(sizes[largestType]) + ' (' + largestType + ')';
-    }
-
-    function calculateOptimizationScore(totalSizeKB) {
-      // Score based on total size (lower is better)
-      if (totalSizeKB < 1000) return 90 + Math.floor(Math.random() * 10);
-      if (totalSizeKB < 2000) return 70 + Math.floor(Math.random() * 20);
-      if (totalSizeKB < 4000) return 50 + Math.floor(Math.random() * 20);
-      return 30 + Math.floor(Math.random() * 20);
-    }
-
-    function getSizeEvaluation(totalSizeKB) {
-      if (totalSizeKB < 1000) return 'Excellent';
-      if (totalSizeKB < 2000) return 'Good';
-      if (totalSizeKB < 4000) return 'Needs Improvement';
-      return 'Poor';
-    }
-
-    function updateBreakdown(resources, totalSizeKB) {
-      const types = ['html', 'css', 'js', 'images', 'fonts', 'other'];
-      
-      types.forEach(type => {
-        const size = resources[type].size;
-        const percent = totalSizeKB > 0 ? (size / totalSizeKB * 100).toFixed(1) : 0;
-        
-        document.getElementById(`breakdown${type.charAt(0).toUpperCase() + type.slice(1)}`).textContent = formatSize(size);
-        document.getElementById(`breakdown${type.charAt(0).toUpperCase() + type.slice(1)}Percent`).textContent = percent + '%';
-      });
-    }
-
-    function updateResourcesTable(resources, url) {
-      const resourcesList = document.getElementById('resourcesList');
-      resourcesList.innerHTML = '';
-
-      // Generate mock resource list for demonstration
-      const mockResources = generateMockResourceList(resources, url);
-      
-      mockResources.forEach(resource => {
-        const row = document.createElement('div');
-        row.className = 'table-row';
-        row.setAttribute('data-label', `Resource: ${resource.url} | Type: ${resource.type} | Size: ${resource.size} | Status: ${resource.status}`);
-        
-        row.innerHTML = `
-          <div class="resource-url">${resource.url}</div>
-          <div class="resource-type">
-            <span class="type-icon">${getTypeIcon(resource.type)}</span>
-            <span>${resource.type.toUpperCase()}</span>
-          </div>
-          <div class="${getSizeClass(resource.size)}">${resource.size}</div>
-          <div>${resource.status}</div>
-        `;
-        
-        resourcesList.appendChild(row);
-      });
-    }
-
-    function generateMockResourceList(resources, url) {
-      const baseUrl = new URL(url).origin;
-      const resourceList = [];
-      
-      // HTML
-      resourceList.push({
-        url: url,
-        type: 'html',
-        size: formatSize(resources.html.size),
-        status: '200 OK'
-      });
-
-      // CSS files
-      for (let i = 1; i <= resources.css.count; i++) {
-        resourceList.push({
-          url: `${baseUrl}/css/style${i}.css`,
-          type: 'css',
-          size: formatSize(resources.css.size / resources.css.count),
-          status: '200 OK'
-        });
-      }
-
-      // JS files
-      for (let i = 1; i <= resources.js.count; i++) {
-        resourceList.push({
-          url: `${baseUrl}/js/script${i}.js`,
-          type: 'js',
-          size: formatSize(resources.js.size / resources.js.count),
-          status: '200 OK'
-        });
-      }
-
-      // Images
-      for (let i = 1; i <= resources.images.count; i++) {
-        resourceList.push({
-          url: `${baseUrl}/images/image${i}.${i % 3 === 0 ? 'png' : i % 3 === 1 ? 'jpg' : 'webp'}`,
-          type: 'image',
-          size: formatSize(resources.images.size / resources.images.count),
-          status: '200 OK'
-        });
-      }
-
-      // Fonts
-      for (let i = 1; i <= resources.fonts.count; i++) {
-        resourceList.push({
-          url: `${baseUrl}/fonts/font${i}.woff2`,
-          type: 'font',
-          size: formatSize(resources.fonts.size / resources.fonts.count),
-          status: '200 OK'
-        });
-      }
-
-      return resourceList;
-    }
-
-    function getTypeIcon(type) {
-      const icons = {
-        'html': '📄',
-        'css': '🎨',
-        'js': '⚡',
-        'image': '🖼️',
-        'font': '🔤'
-      };
-      return icons[type] || '📁';
-    }
-
-    function getSizeClass(sizeStr) {
-      const size = parseFloat(sizeStr);
-      if (size < 100) return 'size-good';
-      if (size < 500) return 'size-warning';
-      return 'size-poor';
-    }
-
-    function displayRecommendations(resources) {
-      const recommendationsList = document.getElementById('recommendationsList');
-      recommendationsList.innerHTML = '';
-
-      const recommendations = generateRecommendations(resources);
-      
-      recommendations.forEach(rec => {
-        const item = document.createElement('div');
-        item.className = 'recommendation-item';
-        
-        item.innerHTML = `
-          <div class="recommendation-title">
-            <i class="fas fa-${rec.icon}"></i>
-            ${rec.title}
-          </div>
-          <div class="recommendation-description">
-            ${rec.description}
-          </div>
-        `;
-        
-        recommendationsList.appendChild(item);
-      });
-    }
-
-    function generateRecommendations(resources) {
-      const recommendations = [];
-      const totalSizeKB = resources.total.size;
-
-      if (totalSizeKB > 2000) {
-        recommendations.push({
-          icon: 'tachometer-alt',
-          title: 'Reduce Overall Page Size',
-          description: `Your page size is ${formatSize(totalSizeKB)} which is above the recommended 2 MB. Consider optimizing images, minifying code, and removing unused resources.`
-        });
-      }
-
-      if (resources.images.size > 1000) {
-        recommendations.push({
-          icon: 'image',
-          title: 'Optimize Images',
-          description: `Images account for ${formatSize(resources.images.size)} (${(resources.images.size/totalSizeKB*100).toFixed(1)}%). Use WebP format, compress images, and implement lazy loading.`
-        });
-      }
-
-      if (resources.js.size > 500) {
-        recommendations.push({
-          icon: 'file-code',
-          title: 'Minify JavaScript',
-          description: `JavaScript files total ${formatSize(resources.js.size)}. Minify and combine files, remove unused code, and defer non-critical scripts.`
-        });
-      }
-
-      if (resources.css.size > 300) {
-        recommendations.push({
-          icon: 'palette',
-          title: 'Optimize CSS',
-          description: `CSS files total ${formatSize(resources.css.size)}. Remove unused styles, minify CSS, and consider critical CSS inlining.`
-        });
-      }
-
-      if (resources.total.count > 50) {
-        recommendations.push({
-          icon: 'network-wired',
-          title: 'Reduce HTTP Requests',
-          description: `Your page makes ${resources.total.count} requests. Combine files, use sprites, and implement HTTP/2 for better performance.`
-        });
-      }
-
-      if (recommendations.length === 0) {
-        recommendations.push({
-          icon: 'check-circle',
-          title: 'Well Optimized',
-          description: 'Your page size is well optimized! Continue monitoring and maintain current best practices.'
-        });
-      }
-
-      return recommendations;
-    }
-
-    function displayMockResults(url, formFactor) {
-      const mockResources = generateMockResourceData();
-      calculateAndDisplayMetrics(mockResources, url);
-      displayRecommendations(mockResources);
-      showAlert('Demonstration data loaded. Real analysis requires working API.', 'info');
-    }
-
-    function isValidUrl(string) {
-      try {
-        new URL(string);
-        return true;
-      } catch (_) {
-        return false;
-      }
-    }
-
-    function disableButtons() {
-      analyzePage.disabled = true;
-      analyzeMobile.disabled = true;
-      showDetails.disabled = true;
-    }
-
-    function enableButtons() {
-      analyzePage.disabled = false;
-      analyzeMobile.disabled = false;
-      showDetails.disabled = false;
-    }
-
-    function showAlert(message, type) {
-      const alertDiv = document.createElement('div');
-      alertDiv.className = `alert alert-${type}`;
-      alertDiv.innerHTML = `
-        ${message}
-        <span class="close">&times;</span>
-      `;
-
-      alertContainer.innerHTML = '';
-      alertContainer.appendChild(alertDiv);
-
-      alertDiv.querySelector('.close').addEventListener('click', function () {
-        alertDiv.remove();
-      });
-
-      setTimeout(() => {
-        if (alertDiv.parentNode) {
-          alertDiv.remove();
-        }
-      }, 5000);
-    }
+    checkPageSize(url, false);
   });
+
+  analyzeButton.addEventListener('click', function() {
+    const url = urlInput.value.trim();
+    if (!url) {
+      showAlert('Please enter a valid URL.', 'error');
+      return;
+    }
+    checkPageSize(url, true);
+  });
+
+  clearButton.addEventListener('click', function() {
+    urlInput.value = '';
+    resultsSection.style.display = 'none';
+    showAlert('Cleared!', 'success');
+  });
+
+  async function checkPageSize(url, detailed = false) {
+    if (!isValidUrl(url)) {
+      showAlert('Please enter a valid URL (e.g., https://example.com).', 'error');
+      return;
+    }
+
+    loadingSpinner.style.display = 'block';
+    resultsSection.style.display = 'none';
+
+    try {
+      const response = await fetch(CLOUDFLARE_WORKER_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: url })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Server error');
+      }
+
+      if (!result.success) {
+        throw new Error(result.error || 'Analysis failed');
+      }
+
+      loadingSpinner.style.display = 'none';
+      
+      if (detailed) {
+        displayDetailedResults(result.data);
+      } else {
+        displayQuickResults(result.data);
+      }
+      
+    } catch (error) {
+      loadingSpinner.style.display = 'none';
+      console.error('Error:', error);
+      showAlert(error.message || 'Failed to analyze website. Please try again.', 'error');
+    }
+  }
+
+  function displayQuickResults(data) {
+    const lighthouse = data.lighthouseResult;
+    const audits = lighthouse.audits;
+    
+    // Update counters
+    document.getElementById('totalSize').textContent = formatBytes(audits['total-byte-weight'].numericValue);
+    document.getElementById('loadTime').textContent = `${(audits['largest-contentful-paint'].numericValue / 1000).toFixed(2)}s`;
+    document.getElementById('resourceCount').textContent = Object.keys(audits['network-requests'].details?.items || {}).length;
+    document.getElementById('performanceScore').textContent = `${Math.round(lighthouse.categories.performance.score * 100)}/100`;
+
+    showAlert('Page analysis completed successfully!', 'success');
+  }
+
+  function displayDetailedResults(data) {
+    const lighthouse = data.lighthouseResult;
+    const audits = lighthouse.audits;
+    
+    // Update detailed results
+    document.getElementById('resultTotalSize').textContent = formatBytes(audits['total-byte-weight'].numericValue);
+    document.getElementById('resultPerformanceScore').textContent = `${Math.round(lighthouse.categories.performance.score * 100)}/100`;
+    document.getElementById('resultFCP').textContent = `${(audits['first-contentful-paint'].numericValue / 1000).toFixed(2)}s`;
+    document.getElementById('resultLCP').textContent = `${(audits['largest-contentful-paint'].numericValue / 1000).toFixed(2)}s`;
+
+    // Update resources table
+    updateResourcesTable(audits, audits['total-byte-weight'].numericValue);
+    
+    // Generate recommendations
+    generateRecommendations(audits, Math.round(lighthouse.categories.performance.score * 100));
+
+    resultsSection.style.display = 'block';
+    showAlert('Detailed analysis completed!', 'success');
+  }
+
+  function updateResourcesTable(audits, totalBytes) {
+    const networkRequests = audits['network-requests'].details?.items || [];
+    
+    // Group by resource type
+    const resourceTypes = {};
+    networkRequests.forEach(item => {
+      const type = item.resourceType || 'other';
+      if (!resourceTypes[type]) {
+        resourceTypes[type] = {
+          count: 0,
+          size: 0
+        };
+      }
+      resourceTypes[type].count++;
+      resourceTypes[type].size += item.resourceSize || 0;
+    });
+    
+    // Clear table
+    resourcesTableBody.innerHTML = '';
+    
+    // Add rows for each resource type
+    Object.keys(resourceTypes).forEach(type => {
+      const row = document.createElement('tr');
+      const size = resourceTypes[type].size;
+      const percentage = totalBytes > 0 ? Math.round((size / totalBytes) * 100) : 0;
+      
+      row.innerHTML = `
+        <td>${type.toUpperCase()}</td>
+        <td>${resourceTypes[type].count}</td>
+        <td>${formatBytes(size)}</td>
+        <td>${percentage}%</td>
+      `;
+      
+      resourcesTableBody.appendChild(row);
+    });
+  }
+
+  function generateRecommendations(audits, performanceScore) {
+    let recommendationsHTML = '<ul>';
+    
+    // Performance score recommendation
+    if (performanceScore < 50) {
+      recommendationsHTML += '<li>Your website has significant performance issues that need immediate attention.</li>';
+    } else if (performanceScore < 80) {
+      recommendationsHTML += '<li>Your website performance is average. There are several optimization opportunities.</li>';
+    } else {
+      recommendationsHTML += '<li>Your website performance is good! Keep up the good work.</li>';
+    }
+    
+    // Image optimization
+    const imageBytes = calculateResourceSize(audits, 'image');
+    const totalBytes = audits['total-byte-weight'].numericValue;
+    const imagePercentage = totalBytes > 0 ? Math.round((imageBytes / totalBytes) * 100) : 0;
+    
+    if (imagePercentage > 50) {
+      recommendationsHTML += '<li>Images account for more than 50% of your page size. Consider optimizing images by compressing them or using modern formats like WebP.</li>';
+    }
+    
+    // JavaScript optimization
+    const jsBytes = calculateResourceSize(audits, 'script');
+    const jsPercentage = totalBytes > 0 ? Math.round((jsBytes / totalBytes) * 100) : 0;
+    
+    if (jsPercentage > 30) {
+      recommendationsHTML += '<li>JavaScript files are taking up a significant portion of your page. Consider minifying, bundling, or deferring non-critical JavaScript.</li>';
+    }
+    
+    // CSS optimization
+    const cssBytes = calculateResourceSize(audits, 'stylesheet');
+    const cssPercentage = totalBytes > 0 ? Math.round((cssBytes / totalBytes) * 100) : 0;
+    
+    if (cssPercentage > 20) {
+      recommendationsHTML += '<li>CSS files could be optimized. Consider minifying CSS and removing unused styles.</li>';
+    }
+    
+    // General recommendations
+    recommendationsHTML += '<li>Enable browser caching to improve loading times for returning visitors.</li>';
+    recommendationsHTML += '<li>Consider using a Content Delivery Network (CDN) to serve your assets.</li>';
+    
+    recommendationsHTML += '</ul>';
+    recommendations.innerHTML = recommendationsHTML;
+  }
+
+  function calculateResourceSize(audits, resourceType) {
+    const networkRequests = audits['network-requests'].details?.items || [];
+    return networkRequests
+      .filter(item => item.resourceType === resourceType)
+      .reduce((total, item) => total + (item.resourceSize || 0), 0);
+  }
+
+  function formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
+  function isValidUrl(string) {
+    try {
+      const url = new URL(string);
+      return url.protocol === 'http:' || url.protocol === 'https:';
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type}`;
+    alertDiv.innerHTML = `
+      ${message}
+      <span class="close">&times;</span>
+    `;
+    
+    alertContainer.innerHTML = '';
+    alertContainer.appendChild(alertDiv);
+    
+    alertDiv.querySelector('.close').addEventListener('click', function() {
+      alertDiv.remove();
+    });
+    
+    setTimeout(() => {
+      if (alertDiv.parentNode) {
+        alertDiv.remove();
+      }
+    }, 5000);
+  }
+});
 </script>
