@@ -319,81 +319,6 @@ permalink: /website-page-snooper-view-and-copy-html-code-from-any-website/
     margin-bottom: 25px;
   }
 
-  /* New styles for share and donation buttons */
-  .share-donation-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .share-buttons,
-  .donation-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .share-button,
-  .donation-button {
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    border: none;
-  }
-
-  .share-button:hover,
-  .donation-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .facebook {
-    background: #3b5998;
-    color: white;
-  }
-
-  .twitter {
-    background: #1da1f2;
-    color: white;
-  }
-
-  .linkedin {
-    background: #0077b5;
-    color: white;
-  }
-
-  .pinterest {
-    background: #bd081c;
-    color: white;
-  }
-
-  .reddit {
-    background: #FF4500;
-    color: white;
-  }
-
-  .paypal {
-    background: #0070ba;
-    color: white;
-  }
-
-  .coffee {
-    background: #ff813f;
-    color: white;
-  }
-
   .upload-icon {
     color: var(--primary);
     cursor: pointer;
@@ -721,21 +646,7 @@ permalink: /website-page-snooper-view-and-copy-html-code-from-any-website/
 
     <div id="alertContainer" class="alert-container"></div>
 
-    <!-- Share and Donation Section -->
-    <div class="share-donation-section">
-      <div class="share-buttons">
-        <a href="#" class="share-button facebook"><i class="fab fa-facebook-f"></i> Share</a>
-        <a href="#" class="share-button twitter"><i class="fab fa-twitter"></i> Tweet</a>
-        <a href="#" class="share-button linkedin"><i class="fab fa-linkedin-in"></i> Share</a>
-        <a href="#" class="share-button pinterest"><i class="fab fa-pinterest-p"></i> Pin</a>
-        <a href="#" class="share-button reddit"><i class="fab fa-reddit-alien"></i> Reddit</a>
-      </div>
-      <div class="donation-buttons">
-        <a href="#" class="donation-button paypal"><i class="fab fa-paypal"></i> Donate</a>
-        <a href="#" class="donation-button coffee"><i class="fas fa-coffee"></i> Buy Coffee</a>
-      </div>
-    </div>
-
+       {% include share-and-donation.html %}
     <div class="examples">
       <h2>Examples</h2>
 
