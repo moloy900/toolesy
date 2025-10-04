@@ -77,6 +77,7 @@ permalink: /page-speed-test-analyze-website-performance/
 
   .url-input-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
   }
@@ -364,16 +365,6 @@ permalink: /page-speed-test-analyze-website-performance/
 
     .metrics-grid {
       grid-template-columns: 1fr;
-    }
-
-    .share-donation-section {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .share-buttons,
-    .donation-buttons {
-      justify-content: center;
     }
   }
 </style>
