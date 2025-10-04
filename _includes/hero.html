@@ -1,0 +1,439 @@
+<style>
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  text-align: start;
+}
+
+.search-suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.search-suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.search-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-icon {
+  margin-right: 12px;
+  color: #6c757d;
+  font-size: 18px;
+}
+
+.suggestion-text {
+  flex: 1;
+  color: #495057;
+}
+
+.suggestion-category {
+  font-size: 12px;
+  color: #6c757d;
+  background: #f8f9fa;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+.search-suggestion-header {
+  padding: 8px 16px;
+  font-weight: bold;
+  color: #495057;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.search-box {
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+}
+</style>
+
+<!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-container">
+      <h1>SEO Tools Hub</h1>
+      <p>All-in-one SEO toolkit to boost your website's performance</p>
+
+      <div class="search-box">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg" placeholder="Search for tools...">
+          <button class="btn btn-primary" type="button">Search</button>
+        </div>
+        <div id="searchSuggestions" class="search-suggestions"></div>
+      </div>
+
+      <div class="categories">
+  <a href="#" class="category-badge" data-category="Online Text Tools">Online Text Tools</a>
+  <a href="#" class="category-badge" data-category="Code & Data Formatter Tools">Code & Data Formatter Tools</a>
+  <a href="#" class="category-badge" data-category="Domain & Network Tools">Domain & Network Tools</a>
+  <a href="#" class="category-badge" data-category="Keywords">Keywords</a>
+  <a href="#" class="category-badge" data-category="Backlinks">Backlinks</a>
+  <a href="#" class="category-badge" data-category="Website Management">Website Management</a>
+</div>
+    </div>
+  </div>
+
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.querySelector('.search-box input');
+  const searchButton = document.querySelector('.search-box button');
+  const searchSuggestions = document.getElementById('searchSuggestions');
+  
+  // Extract all tools and categories from the page
+  const toolsData = extractToolsData();
+  
+  // Add event listeners
+  searchInput.addEventListener('input', handleSearchInput);
+  searchInput.addEventListener('focus', handleSearchFocus);
+  searchInput.addEventListener('keydown', handleSearchKeydown);
+  searchButton.addEventListener('click', handleSearchButtonClick);
+  
+  // Close suggestions when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!searchInput.contains(e.target) && !searchSuggestions.contains(e.target)) {
+      hideSuggestions();
+    }
+  });
+  
+  function extractToolsData() {
+    const data = {
+      categories: [],
+      tools: []
+    };
+    
+    // Get all category sections
+    const contentBoxes = document.querySelectorAll('.content-box');
+    
+    contentBoxes.forEach(box => {
+      const categoryTitle = box.querySelector('.sub_headings').textContent;
+      const categoryTools = [];
+      
+      // Get all tools in this category
+      const toolLinks = box.querySelectorAll('.tools-grid a');
+      
+      toolLinks.forEach(link => {
+        const toolName = link.querySelector('span').textContent;
+        const toolUrl = link.getAttribute('href');
+        const toolIcon = link.querySelector('.icon_placeholder i').className;
+        
+        categoryTools.push({
+          name: toolName,
+          url: toolUrl,
+          icon: toolIcon
+        });
+        
+        // Add to global tools list
+        data.tools.push({
+          name: toolName,
+          url: toolUrl,
+          icon: toolIcon,
+          category: categoryTitle
+        });
+      });
+      
+      data.categories.push({
+        title: categoryTitle,
+        tools: categoryTools
+      });
+    });
+    
+    return data;
+  }
+  
+  function handleSearchInput(e) {
+    const query = e.target.value.trim();
+    
+    if (query.length === 0) {
+      hideSuggestions();
+      return;
+    }
+    
+    const results = searchTools(query);
+    displaySuggestions(results, query);
+  }
+  
+  function handleSearchFocus(e) {
+    const query = e.target.value.trim();
+    
+    if (query.length > 0) {
+      const results = searchTools(query);
+      displaySuggestions(results, query);
+    }
+  }
+  
+  function handleSearchKeydown(e) {
+    if (e.key === 'Enter') {
+      performSearch();
+    } else if (e.key === 'Escape') {
+      hideSuggestions();
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      navigateSuggestions(1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      navigateSuggestions(-1);
+    }
+  }
+  
+  function handleSearchButtonClick() {
+    performSearch();
+  }
+  
+  function searchTools(query) {
+    const results = {
+      categories: [],
+      tools: []
+    };
+    
+    const lowerQuery = query.toLowerCase();
+    
+    // Search in categories
+    toolsData.categories.forEach(category => {
+      if (category.title.toLowerCase().includes(lowerQuery)) {
+        results.categories.push(category);
+      }
+    });
+    
+    // Search in tools
+    toolsData.tools.forEach(tool => {
+      if (tool.name.toLowerCase().includes(lowerQuery)) {
+        results.tools.push(tool);
+      }
+    });
+    
+    return results;
+  }
+  
+  function displaySuggestions(results, query) {
+    if (results.categories.length === 0 && results.tools.length === 0) {
+      hideSuggestions();
+      return;
+    }
+    
+    let html = '';
+    
+    // Add categories section if there are results
+    if (results.categories.length > 0) {
+      html += '<div class="search-suggestion-header">Categories</div>';
+      
+      results.categories.forEach(category => {
+        html += `
+          <div class="search-suggestion-item" data-type="category" data-title="${category.title}">
+            <div class="suggestion-icon"><i class="bi bi-folder"></i></div>
+            <div class="suggestion-text">${highlightMatch(category.title, query)}</div>
+            <div class="suggestion-category">Category</div>
+          </div>
+        `;
+      });
+    }
+    
+    // Add tools section if there are results
+    if (results.tools.length > 0) {
+      html += '<div class="search-suggestion-header">Tools</div>';
+      
+      results.tools.forEach(tool => {
+        html += `
+          <div class="search-suggestion-item" data-type="tool" data-url="${tool.url}">
+            <div class="suggestion-icon"><i class="${tool.icon}"></i></div>
+            <div class="suggestion-text">${highlightMatch(tool.name, query)}</div>
+            <div class="suggestion-category">${tool.category}</div>
+          </div>
+        `;
+      });
+    }
+    
+    searchSuggestions.innerHTML = html;
+    searchSuggestions.style.display = 'block';
+    
+    // Add click event listeners to suggestion items
+    const suggestionItems = searchSuggestions.querySelectorAll('.search-suggestion-item');
+    suggestionItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const type = this.getAttribute('data-type');
+        
+        if (type === 'tool') {
+          const url = this.getAttribute('data-url');
+          window.location.href = url;
+        } else if (type === 'category') {
+          const categoryTitle = this.getAttribute('data-title');
+          scrollToCategory(categoryTitle);
+          hideSuggestions();
+        }
+      });
+    });
+  }
+  
+  function highlightMatch(text, query) {
+    const lowerText = text.toLowerCase();
+    const lowerQuery = query.toLowerCase();
+    const matchIndex = lowerText.indexOf(lowerQuery);
+    
+    if (matchIndex === -1) return text;
+    
+    const before = text.substring(0, matchIndex);
+    const match = text.substring(matchIndex, matchIndex + query.length);
+    const after = text.substring(matchIndex + query.length);
+    
+    return `${before}<strong>${match}</strong>${after}`;
+  }
+  
+  function hideSuggestions() {
+    searchSuggestions.style.display = 'none';
+  }
+  
+  function navigateSuggestions(direction) {
+    const items = searchSuggestions.querySelectorAll('.search-suggestion-item');
+    if (items.length === 0) return;
+    
+    let currentIndex = -1;
+    
+    // Find currently selected item
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].classList.contains('selected')) {
+        currentIndex = i;
+        break;
+      }
+    }
+    
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    
+    if (newIndex < 0) newIndex = items.length - 1;
+    if (newIndex >= items.length) newIndex = 0;
+    
+    // Remove selection from all items
+    items.forEach(item => item.classList.remove('selected'));
+    
+    // Add selection to new item
+    items[newIndex].classList.add('selected');
+    items[newIndex].scrollIntoView({ block: 'nearest' });
+  }
+  
+  function performSearch() {
+    const query = searchInput.value.trim();
+    
+    if (query.length === 0) return;
+    
+    // If there's a selected suggestion, navigate to it
+    const selectedItem = searchSuggestions.querySelector('.search-suggestion-item.selected');
+    if (selectedItem) {
+      const type = selectedItem.getAttribute('data-type');
+      
+      if (type === 'tool') {
+        const url = selectedItem.getAttribute('data-url');
+        window.location.href = url;
+      } else if (type === 'category') {
+        const categoryTitle = selectedItem.getAttribute('data-title');
+        scrollToCategory(categoryTitle);
+      }
+    } else {
+      // Otherwise, show all results for the query
+      const results = searchTools(query);
+      if (results.tools.length > 0) {
+        // Navigate to the first tool result
+        window.location.href = results.tools[0].url;
+      } else if (results.categories.length > 0) {
+        // Scroll to the first category
+        scrollToCategory(results.categories[0].title);
+      }
+    }
+    
+    hideSuggestions();
+  }
+  
+  function scrollToCategory(categoryTitle) {
+    const categories = document.querySelectorAll('.sub_headings');
+    
+    for (let i = 0; i < categories.length; i++) {
+      if (categories[i].textContent === categoryTitle) {
+        categories[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+      }
+    }
+  }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Category scroll functionality
+  const categoryBadges = document.querySelectorAll('.category-badge');
+  
+  categoryBadges.forEach(badge => {
+    badge.addEventListener('click', function(e) {
+      e.preventDefault();
+      const categoryName = this.getAttribute('data-category');
+      scrollToCategory(categoryName);
+    });
+  });
+  
+  function scrollToCategory(categoryName) {
+    // Find all category headings
+    const categoryHeadings = document.querySelectorAll('.sub_headings');
+    
+    let targetHeading = null;
+    
+    // Find the matching category heading
+    categoryHeadings.forEach(heading => {
+      if (heading.textContent.trim() === categoryName) {
+        targetHeading = heading;
+      }
+    });
+    
+    if (targetHeading) {
+      // Calculate offset for smooth scrolling (adjust as needed)
+      const offset = 80;
+      const elementPosition = targetHeading.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      // Smooth scroll to the category
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Optional: Add highlight effect
+      highlightCategory(targetHeading);
+    } else {
+      console.log('Category not found:', categoryName);
+    }
+  }
+  
+  function highlightCategory(heading) {
+    // Remove previous highlights
+    const previousHighlights = document.querySelectorAll('.category-highlight');
+    previousHighlights.forEach(el => {
+      el.classList.remove('category-highlight');
+    });
+    
+    // Add highlight to current category
+    heading.classList.add('category-highlight');
+    
+    // Remove highlight after 2 seconds
+    setTimeout(() => {
+      heading.classList.remove('category-highlight');
+    }, 2000);
+  }
+});
+</script>

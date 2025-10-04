@@ -1,0 +1,195 @@
+<!-- Footer -->
+
+<style>
+  /* Footer Input Group */
+  .footer-input-group {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .footer-input-group .form-control {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid rgb(252, 252, 252);
+    border-radius: 4px 0 0 4px;
+    background: rgb(245, 240, 240);
+    color: rgb(2, 2, 2);
+    font-size: 14px;
+  }
+
+  .footer-input-group .form-control::placeholder {
+    color: rgb(0, 0, 0);
+  }
+
+  .footer-input-group .btn {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .footer-input-group .btn:hover {
+    background: #3a56d4;
+    border-color: #3a56d4;
+  }
+
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    color: white;
+  }
+  
+</style>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SEO Tools Hub</h3>
+        <p>Comprehensive suite of free SEO tools to help you optimize your website and improve online visibility.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Tools</h3>
+        <ul class="footer-links">
+          <li><a href="/text-tools">Text Tools</a></li>
+          <li><a href="/image-tools">Image Tools</a></li>
+          <li><a href="/seo-tools">SEO Tools</a></li>
+          <li><a href="/domain-tools">Domain Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+
+
+        <div class="footer-input-group">
+          <input type="email" class="form-control" id="subscribe-email" placeholder="Your email"
+            aria-label="Your email">
+          <button class="btn btn-primary" id="subscribe-btn" type="button">Subscribe</button>
+        </div>
+        <div id="subscription-message" class="subscription-message"></div>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 SEO Tools Hub. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            const emailInput = document.getElementById('subscribe-email');
+            const messageDiv = document.getElementById('subscription-message');
+            
+            subscribeBtn.addEventListener('click', function() {
+                const email = emailInput.value.trim();
+                
+                // Basic email validation
+                if (!email) {
+                    showMessage('Please enter your email address.', 'error');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    showMessage('Please enter a valid email address.', 'error');
+                    return;
+                }
+                
+                // Disable button to prevent multiple submissions
+                subscribeBtn.disabled = true;
+                subscribeBtn.textContent = 'Subscribing...';
+                
+                // Send data to Google Sheets
+                submitToGoogleSheets(email);
+            });
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            function showMessage(message, type) {
+                messageDiv.textContent = message;
+                messageDiv.className = 'subscription-message ' + type;
+                messageDiv.style.display = 'block';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 5000);
+            }
+            
+            function submitToGoogleSheets(email) {
+                // Replace with your Google Apps Script Web App URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbw4JUmJudb4-EMQXqD61Q4umrl9IYYzXCfVxpM_FH4tER7LtS17wbKRs7c98mc2qi60wg/exec';
+                
+                fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        timestamp: new Date().toISOString()
+                    })
+                })
+                .then(() => {
+                    showMessage('Thank you for subscribing!', 'success');
+                    emailInput.value = '';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showMessage('Subscription failed. Please try again.', 'error');
+                })
+                .finally(() => {
+                    // Re-enable button
+                    subscribeBtn.disabled = false;
+                    subscribeBtn.textContent = 'Subscribe';
+                });
+            }
+        });
+    </script>

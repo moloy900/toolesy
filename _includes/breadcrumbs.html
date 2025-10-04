@@ -1,0 +1,91 @@
+<!-- _includes/breadcrumb.html -->
+
+<div class="breadcrumb-container" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ site.baseurl }}/">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+
+        {% if page.breadcrumbs %}
+        {% for crumb in page.breadcrumbs %}
+        {% if forloop.last %}
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ crumb.name }}
+        </li>
+        {% else %}
+        <li class="breadcrumb-item">
+            <a href="{{ site.baseurl }}{{ crumb.url }}">
+                {{ crumb.name }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <li class="breadcrumb-item active" aria-current="page">
+            {{ page.title }}
+        </li>
+        {% endif %}
+    </ol>
+</div>
+
+
+<style>
+    /* Main Content */
+    .main-content {
+        padding: 30px 0;
+        min-height: calc(100vh - 180px);
+    }
+
+    .breadcrumb-container {
+        margin-bottom: 20px;
+    }
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .breadcrumb-item {
+        padding: 0 0.5rem;
+    }
+
+    .breadcrumb-item:not(:first-child)::before {
+        content: "/";
+        padding-right: 0.5rem;
+        color: #6c757d;
+    }
+
+    .breadcrumb-item a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    .breadcrumb-item a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb-item.active {
+        color: #6c757d;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .breadcrumb-container {
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            padding: 0 0.3rem;
+        }
+    }
+</style>
