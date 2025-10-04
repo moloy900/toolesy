@@ -572,7 +572,6 @@ permalink: /page-speed-test-analyze-website-performance/
 </div>
 
 <script>
-<script>
   document.addEventListener('DOMContentLoaded', function () {
     const websiteUrl = document.getElementById('websiteUrl');
     const analyzeDesktop = document.getElementById('analyzeDesktop');
@@ -896,5 +895,4 @@ permalink: /page-speed-test-analyze-website-performance/
       }, 5000);
     }
   });
-</script>
 </script>
