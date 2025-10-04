@@ -572,6 +572,7 @@ permalink: /page-speed-test-analyze-website-performance/
 </div>
 
 <script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     const websiteUrl = document.getElementById('websiteUrl');
     const analyzeDesktop = document.getElementById('analyzeDesktop');
@@ -583,14 +584,6 @@ permalink: /page-speed-test-analyze-website-performance/
     const apiStatusDot = document.getElementById('apiStatusDot');
     const apiStatusText = document.getElementById('apiStatusText');
     
-    // Multiple API keys for fallback
-    const apiKeys = [
-      'AIzaSyAh1Za8vzs18bYYbWB1WMBSw-hhWnBIw7U',
-      'AIzaSyCOU3c58msiVoi8s1w-HSgq6o4c-5XtThQ',
-      'AIzaSyDx1k6Qmo7oLGd6d-6U6l2Y6V6b6V6b6V6' // dummy key for fallback testing
-    ];
-    
-    let currentApiKeyIndex = 0;
     let isApiWorking = false;
 
     // Check API status on load
@@ -616,27 +609,22 @@ permalink: /page-speed-test-analyze-website-performance/
       apiStatusText.textContent = 'Checking API status...';
       
       const testUrl = 'https://www.google.com';
+      const testApiUrl = `https://page-size-checker.bleads2.workers.dev/?url=${encodeURIComponent(testUrl)}&strategy=desktop`;
       
-      for (let i = 0; i < apiKeys.length; i++) {
-        const testApiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(testUrl)}&strategy=desktop&key=${apiKeys[i]}`;
-        
-        try {
-          const response = await fetch(testApiUrl, { method: 'HEAD' });
-          if (response.ok) {
-            currentApiKeyIndex = i;
-            isApiWorking = true;
-            apiStatusDot.className = 'status-dot status-online';
-            apiStatusText.textContent = 'API is online and ready';
-            enableButtons();
-            return;
-          }
-        } catch (error) {
-          console.log(`API key ${i} failed:`, error);
-          continue;
+      try {
+        const response = await fetch(testApiUrl, { method: 'HEAD' });
+        if (response.ok) {
+          isApiWorking = true;
+          apiStatusDot.className = 'status-dot status-online';
+          apiStatusText.textContent = 'API is online and ready';
+          enableButtons();
+          return;
         }
+      } catch (error) {
+        console.log('API check failed:', error);
       }
       
-      // If all APIs fail, use proxy method
+      // If API fails, use alternative method
       apiStatusDot.className = 'status-dot status-offline';
       apiStatusText.textContent = 'Using alternative method';
       isApiWorking = false;
@@ -671,11 +659,11 @@ permalink: /page-speed-test-analyze-website-performance/
         let data;
         
         if (isApiWorking) {
-          // Use Google Pagespeed API
-          const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${formFactor}&key=${apiKeys[currentApiKeyIndex]}`;
+          // Use the provided API endpoint
+          const apiUrl = `https://page-size-checker.bleads2.workers.dev/?url=${encodeURIComponent(url)}&strategy=${formFactor}`;
           data = await fetchWithTimeout(apiUrl);
         } else {
-          // Use alternative method (public API without key)
+          // Use alternative method
           data = await useAlternativeApi(url, formFactor);
         }
         
@@ -713,20 +701,13 @@ permalink: /page-speed-test-analyze-website-performance/
     }
 
     async function useAlternativeApi(url, formFactor) {
-      // Try multiple public endpoints
-      const endpoints = [
-        `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${formFactor}`,
-        `https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&strategy=${formFactor}`
-      ];
-      
-      for (const endpoint of endpoints) {
-        try {
-          const response = await fetchWithTimeout(endpoint);
-          if (response) return response;
-        } catch (error) {
-          console.log(`Endpoint failed: ${endpoint}`, error);
-          continue;
-        }
+      // Try the provided endpoint as fallback
+      try {
+        const endpoint = `https://page-size-checker.bleads2.workers.dev/?url=${encodeURIComponent(url)}&strategy=${formFactor}`;
+        const response = await fetchWithTimeout(endpoint);
+        if (response) return response;
+      } catch (error) {
+        console.log('Alternative endpoint failed:', error);
       }
       
       // If all endpoints fail, return mock data for demonstration
@@ -915,4 +896,5 @@ permalink: /page-speed-test-analyze-website-performance/
       }, 5000);
     }
   });
+</script>
 </script>
