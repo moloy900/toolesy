@@ -315,81 +315,6 @@ permalink: /web-page-size-checker-analyze-website-file-size/
     margin-bottom: 25px;
   }
 
-  /* Share and donation buttons */
-  .share-donation-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .share-buttons,
-  .donation-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .share-button,
-  .donation-button {
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    border: none;
-  }
-
-  .share-button:hover,
-  .donation-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .facebook {
-    background: #3b5998;
-    color: white;
-  }
-
-  .twitter {
-    background: #1da1f2;
-    color: white;
-  }
-
-  .linkedin {
-    background: #0077b5;
-    color: white;
-  }
-
-  .pinterest {
-    background: #bd081c;
-    color: white;
-  }
-
-  .reddit {
-    background: #FF4500;
-    color: white;
-  }
-
-  .paypal {
-    background: #0070ba;
-    color: white;
-  }
-
-  .coffee {
-    background: #ff813f;
-    color: white;
-  }
-
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .counter-wrapper {
@@ -631,8 +556,7 @@ Resource Breakdown:
 </div>
 
 <script>
-// আপনার Cloudflare Worker URL এখানে বসান
-const CLOUDFLARE_WORKER_URL = 'https://page-size-checker.your-subdomain.workers.dev';
+const CLOUDFLARE_WORKER_URL = 'https://page-size-checker.bleads2.workers.dev/';
 
 document.addEventListener('DOMContentLoaded', function() {
   const checkButton = document.getElementById('checkButton');
