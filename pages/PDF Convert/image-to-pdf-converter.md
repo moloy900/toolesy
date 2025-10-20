@@ -972,40 +972,86 @@ permalink: /online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf/
       }
     }
 
-    function renderFileList() {
-      if (imageFiles.length === 0) {
-        fileList.innerHTML = `
-          <div class="empty-state">
-            <i class="fas fa-folder-open"></i>
-            <p>No images selected yet</p>
-            <p>Drag and drop images or click the select button above</p>
-          </div>
-        `;
-        return;
+   // Fix the renderFileList function - remove the fileItem parameter from the onclick handlers
+function renderFileList() {
+  if (imageFiles.length === 0) {
+    fileList.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-folder-open"></i>
+        <p>No images selected yet</p>
+        <p>Drag and drop images or click the select button above</p>
+      </div>
+    `;
+    return;
+  }
+
+  fileList.innerHTML = imageFiles.map((fileItem, index) => `
+    <div class="file-item" data-id="${fileItem.id}">
+      <i class="${getFileIcon(fileItem.type)} file-icon"></i>
+      <div class="file-info">
+        <div class="file-name">${fileItem.name}</div>
+        <div class="file-size">${fileItem.size} • ${fileItem.type.toUpperCase()}</div>
+      </div>
+      <div class="file-actions">
+        <button class="file-action-btn move-up" ${index === 0 ? 'disabled' : ''} data-id="${fileItem.id}" data-action="move-up">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        <button class="file-action-btn move-down" ${index === imageFiles.length - 1 ? 'disabled' : ''} data-id="${fileItem.id}" data-action="move-down">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="file-action-btn remove-file" data-id="${fileItem.id}" data-action="remove">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  `).join('');
+
+  // Add event listeners to the buttons
+  fileList.querySelectorAll('.file-action-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const fileId = this.getAttribute('data-id');
+      const action = this.getAttribute('data-action');
+      
+      switch(action) {
+        case 'move-up':
+          moveFileUp(fileId);
+          break;
+        case 'move-down':
+          moveFileDown(fileId);
+          break;
+        case 'remove':
+          removeFile(fileId);
+          break;
       }
+    });
+  });
+}
 
-      fileList.innerHTML = imageFiles.map((fileItem, index) => `
-        <div class="file-item" data-id="${fileItem.id}">
-          <i class="${getFileIcon(fileItem.type)} file-icon"></i>
-          <div class="file-info">
-            <div class="file-name">${fileItem.name}</div>
-            <div class="file-size">${fileItem.size} • ${fileItem.type.toUpperCase()}</div>
-          </div>
-          <div class="file-actions">
-            <button class="file-action-btn move-up" ${index === 0 ? 'disabled' : ''} onclick="moveFileUp('${fileItem.id}')">
-              <i class="fas fa-arrow-up"></i>
-            </button>
-            <button class="file-action-btn move-down" ${index === imageFiles.length - 1 ? 'disabled' : ''} onclick="moveFileDown('${fileItem.id}')">
-              <i class="fas fa-arrow-down"></i>
-            </button>
-            <button class="file-action-btn remove-file" onclick="removeFile('${fileItem.id}')">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      `).join('');
-    }
+// Update the move and remove functions to work with fileId
+function moveFileUp(fileId) {
+  const index = imageFiles.findIndex(item => item.id == fileId);
+  if (index > 0) {
+    [imageFiles[index - 1], imageFiles[index]] = [imageFiles[index], imageFiles[index - 1]];
+    renderFileList();
+    updateUI();
+  }
+}
 
+function moveFileDown(fileId) {
+  const index = imageFiles.findIndex(item => item.id == fileId);
+  if (index < imageFiles.length - 1) {
+    [imageFiles[index], imageFiles[index + 1]] = [imageFiles[index + 1], imageFiles[index]];
+    renderFileList();
+    updateUI();
+  }
+}
+
+function removeFile(fileId) {
+  imageFiles = imageFiles.filter(item => item.id != fileId);
+  renderFileList();
+  updateUI();
+  showAlert('File removed.', 'info');
+}
     function updateUI() {
       // Update counters
       document.getElementById('imageCount').textContent = imageFiles.length;
