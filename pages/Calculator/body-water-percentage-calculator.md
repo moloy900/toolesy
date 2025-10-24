@@ -14,6 +14,64 @@ permalink: /body-water-percentage-calculator-calculate-your-body-water-percentag
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
 
+    <!-- Canonical URL for Blogspot -->
+    <link rel="canonical" href="http://yourblog.blogspot.com/text-replacement-tool" />
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Text Replacement Tool - Find and Replace Text Online">
+    <meta property="og:description" content="Free online tool to find and replace text with advanced options. Perfect for editing, formatting, and processing text.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yourblog.blogspot.com/text-replacement-tool">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Replacement Tool - Find and Replace Text Online">
+    <meta name="twitter:description" content="Free online tool to find and replace text with advanced options. Perfect for editing, formatting, and processing text.">
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text Replacement Tool",
+      "url": "http://yourblog.blogspot.com/text-replacement-tool",
+      "description": "Free online tool to find and replace text with advanced options like case sensitivity, whole words, and regex support.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is regex (regular expression) mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regex mode allows you to use special patterns to match text. For example, '\\d+' would match any sequence of digits. This is useful for advanced text manipulation like finding all email addresses or phone numbers in a text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my text kept private when using this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. All text processing happens locally in your browser. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure and private."
+          }
+        }
+      ]
+    }
+    </script>
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
