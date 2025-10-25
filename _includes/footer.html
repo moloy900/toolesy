@@ -76,11 +76,11 @@
       <div class="footer-section">
         <h3>Tools</h3>
         <ul class="footer-links">
-          <li><a href="#" data-category="Online Text Tools">Text Tools</a></li>
-          <li><a href="#" data-category="Code & Data Formatter Tools">Code Formatter</a></li>
-          <li><a href="#" data-category="Domain & Network Tools">Domain Tool</a></li>
-          <li><a href="#" data-category="Online Calculator Tools">Calculator</a></li>
-          <li><a href="#" data-category="Online PDF Tools">PDF Tools</a></li>
+          <li><a href="#" class="category-badge" data-category="Online Text Tools">Text Tools</a></li>
+          <li><a href="#" class="category-badge" data-category="Code & Data Formatter Tools">Code Formatter</a></li>
+          <li><a href="#" class="category-badge" data-category="Domain & Network Tools">Domain Tool</a></li>
+          <li><a href="#" class="category-badge" data-category="Online Calculator Tools">Calculator</a></li>
+          <li><a href="#" class="category-badge" data-category="Online PDF Tools">PDF Tools</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -200,4 +200,66 @@
                 });
             }
         });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+  // Category scroll functionality
+  const categoryBadges = document.querySelectorAll('.category-badge');
+  
+  categoryBadges.forEach(badge => {
+    badge.addEventListener('click', function(e) {
+      e.preventDefault();
+      const categoryName = this.getAttribute('data-category');
+      scrollToCategory(categoryName);
+    });
+  });
+  
+  function scrollToCategory(categoryName) {
+    // Find all category headings
+    const categoryHeadings = document.querySelectorAll('.sub_headings');
+    
+    let targetHeading = null;
+    
+    // Find the matching category heading
+    categoryHeadings.forEach(heading => {
+      if (heading.textContent.trim() === categoryName) {
+        targetHeading = heading;
+      }
+    });
+    
+    if (targetHeading) {
+      // Calculate offset for smooth scrolling (adjust as needed)
+      const offset = 80;
+      const elementPosition = targetHeading.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      // Smooth scroll to the category
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Optional: Add highlight effect
+      highlightCategory(targetHeading);
+    } else {
+      console.log('Category not found:', categoryName);
+    }
+  }
+  
+  function highlightCategory(heading) {
+    // Remove previous highlights
+    const previousHighlights = document.querySelectorAll('.category-highlight');
+    previousHighlights.forEach(el => {
+      el.classList.remove('category-highlight');
+    });
+    
+    // Add highlight to current category
+    heading.classList.add('category-highlight');
+    
+    // Remove highlight after 2 seconds
+    setTimeout(() => {
+      heading.classList.remove('category-highlight');
+    }, 2000);
+  }
+});
     </script>

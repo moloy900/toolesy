@@ -35,7 +35,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-baseurl: "/toolesy/"
+baseurl: "https://toolesy.com/"
 favicon: "/assets/images/favicon.ico"
 # Exclude from processing.
 # The following items will not be processed, by default.
