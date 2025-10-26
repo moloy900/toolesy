@@ -544,9 +544,9 @@ permalink: /donate/
         <i class="fab fa-paypal donation-icon"></i>
         <h3>PayPal Donation</h3>
         <p>Quick and secure one-time or recurring donations via PayPal. Most popular option with instant processing.</p>   
-        <button class="donate-button" id="paypalDonate">
+        <a href="https://www.paypal.com/paypalme/dynamicrelaxing" class="donate-button" id="paypalDonate">
           <i class="fab fa-paypal"></i> Donate with PayPal
-        </button>
+        </a>
       </div>
 
       <!-- Buy Me a Coffee -->
@@ -554,9 +554,9 @@ permalink: /donate/
         <i class="fas fa-coffee donation-icon"></i>
         <h3>Buy Me a Coffee</h3>
         <p>Support with a one-time coffee donation. Simple, fast, and helps keep us energized while coding new features!</p>
-        <button class="donate-button warning" id="coffeeDonate">
+        <a href="https://buymeacoffee.com/paramgyandarsan" class="donate-button warning" id="coffeeDonate">
           <i class="fas fa-mug-hot"></i> Buy a Coffee
-        </button>
+        </a>
       </div>
 
       <!-- Patreon -->
@@ -564,9 +564,9 @@ permalink: /donate/
         <i class="fab fa-patreon donation-icon"></i>
         <h3>Patreon Membership</h3>
         <p>Become a patron with monthly support. Get early access to new tools and exclusive updates from our development team.</p>
-        <button class="donate-button success" id="patreonDonate">
+        <a href="https://patreon.com/paramgyandarshan" class="donate-button success" id="patreonDonate">
           <i class="fab fa-patreon"></i> Support on Patreon
-        </button>
+        </a>
       </div>
     </div>
   </div>
