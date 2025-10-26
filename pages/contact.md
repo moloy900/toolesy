@@ -281,7 +281,7 @@ permalink: /contact/
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <p>support@seotoolshub.com</p>
+                            <p>paramgyandarshanchat@gmail.com</p>
                         </div>
                     </div>
 
@@ -289,7 +289,7 @@ permalink: /contact/
                         <div class="contact-icon"><i class="fas fa-globe"></i></div>
                         <div class="contact-details">
                             <h3>Website</h3>
-                            <p>seotoolshub.com</p>
+                            <p>toolesy.com</p>
                         </div>
                     </div>
 

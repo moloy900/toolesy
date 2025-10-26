@@ -140,12 +140,12 @@ permalink: /terms-of-service/
         <div class="terms-content">
             <section class="terms-section">
                 <h2>1. Acceptance of Terms</h2>
-                <p>Welcome to <strong>SEO Tools Hub</strong>. By accessing or using our website and the tools we provide
+                <p>Welcome to <strong>ToolEsy</strong>. By accessing or using our website and the tools we provide
                     — including but not limited to Text Tools, Image Tools, Video Tools, Calculators, Converters, PDF &
                     Document Tools, and Miscellaneous Converters — you agree to comply with and be bound by these Terms
                     of Service. Please read them carefully before using our website.</p>
 
-                <p>By accessing or using <strong>SEO Tools Hub</strong>, you agree to these Terms of Service, our
+                <p>By accessing or using <strong>ToolEsy</strong>, you agree to these Terms of Service, our
                     Disclaimer, and Privacy Policy. If you do not agree, you should not use our website.</p>
             </section>
 
@@ -161,7 +161,7 @@ permalink: /terms-of-service/
 
             <section class="terms-section">
                 <h2>3. No Guarantee of Accuracy</h2>
-                <p>We strive to provide accurate and reliable tools, but <strong>SEO Tools Hub</strong> makes no
+                <p>We strive to provide accurate and reliable tools, but <strong>ToolEsy</strong> makes no
                     guarantee of accuracy, completeness, or suitability of results. Use of our tools is entirely at your
                     own risk.</p>
             </section>
@@ -169,7 +169,7 @@ permalink: /terms-of-service/
             <section class="terms-section">
                 <h2>4. Intellectual Property</h2>
                 <ul class="terms-list">
-                    <li>All content, design, and code on <strong>SEO Tools Hub</strong> are the intellectual property of
+                    <li>All content, design, and code on <strong>ToolEsy</strong> are the intellectual property of
                         the site owner unless otherwise noted.</li>
                     <li>You may not copy, reproduce, distribute, or modify any part of the website without prior written
                         consent.</li>
@@ -184,7 +184,7 @@ permalink: /terms-of-service/
 
             <section class="terms-section">
                 <h2>6. Limitation of Liability</h2>
-                <p>In no event shall <strong>SEO Tools Hub</strong>, its owners, affiliates, employees, or partners be
+                <p>In no event shall <strong>ToolEsy</strong>, its owners, affiliates, employees, or partners be
                     liable for any damages (including but not limited to direct, indirect, incidental, or consequential
                     damages) arising from your use of our website or tools.</p>
             </section>
@@ -197,7 +197,7 @@ permalink: /terms-of-service/
 
             <section class="terms-section">
                 <h2>8. Changes to Terms</h2>
-                <p><strong>SEO Tools Hub</strong> may update these Terms of Service from time to time. Any changes will
+                <p><strong>ToolEsy</strong> may update these Terms of Service from time to time. Any changes will
                     be posted on this page with an updated "Last Updated" date. Continued use of the site after changes
                     constitutes acceptance of the updated terms.</p>
             </section>
@@ -206,12 +206,12 @@ permalink: /terms-of-service/
                 <h2>9. Contact Us</h2>
                 <div class="contact-info">
                     <p>If you have any questions about these Terms of Service, please contact us at:</p>
-                    <p class="contact-email">📧 support@seotoolshub.com</p>
+                    <p class="contact-email">📧 paramgyandarshanchat@gmail.com</p>
                 </div>
             </section>
 
             <div class="legal-note">
-                <p><strong>Note:</strong> This is a legal agreement between you and <strong>SEO Tools Hub</strong>. By
+                <p><strong>Note:</strong> This is a legal agreement between you and <strong>ToolEsy</strong>. By
                     using our website, you acknowledge that you have read, understood, and agree to be bound by these
                     terms.</p>
             </div>

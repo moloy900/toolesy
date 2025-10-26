@@ -193,12 +193,12 @@ permalink: /disclaimer/
     <div class="disclaimer-content">
       <section class="disclaimer-section">
         <h2>General Information</h2>
-        <p>The information, tools, and services provided on <strong>SEO Tools Hub</strong> — including but not limited
+        <p>The information, tools, and services provided on <strong>ToolEsy</strong> — including but not limited
           to Text Tools, Image Tools, Video Tools, Calculators, Converters, PDF & Document Tools, and Miscellaneous
           Converters — are for general informational, educational, and personal use only.</p>
 
         <p>We make every effort to ensure the accuracy and reliability of the content and tools available on our
-          website. However, <strong>SEO Tools Hub</strong> makes no warranties, guarantees, or representations of any
+          website. However, <strong>ToolEsy</strong> makes no warranties, guarantees, or representations of any
           kind, whether express or implied, about the completeness, accuracy, reliability, suitability, or availability
           of the website or the information, products, or services contained on the site.</p>
       </section>
@@ -212,7 +212,7 @@ permalink: /disclaimer/
 
       <section class="disclaimer-section">
         <h2>No Professional Advice</h2>
-        <p>The content and tools provided on <strong>SEO Tools Hub</strong> should not be considered as professional,
+        <p>The content and tools provided on <strong>ToolEsy</strong> should not be considered as professional,
           legal, financial, or technical advice. Always seek the guidance of a qualified professional for specific
           concerns.</p>
       </section>
@@ -226,7 +226,7 @@ permalink: /disclaimer/
 
       <section class="disclaimer-section">
         <h2>Limitation of Liability</h2>
-        <p>In no event shall <strong>SEO Tools Hub</strong> or its owners, affiliates, employees, or partners be held
+        <p>In no event shall <strong>ToolEsy</strong> or its owners, affiliates, employees, or partners be held
           responsible for any direct, indirect, incidental, or consequential damages resulting from the use of our
           website, tools, or resources.</p>
       </section>
@@ -244,7 +244,7 @@ permalink: /disclaimer/
 
       <div class="contact-info">
         <h3>Contact Information</h3>
-        <p>If you have any questions about this Disclaimer, please contact us through our <a href="#">Contact Page</a>.
+        <p>If you have any questions about this Disclaimer, please contact us through our <a href="{{ '/contact' | relative_url }}">Contact Page</a>.
         </p>
       </div>
     </div>

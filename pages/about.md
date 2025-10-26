@@ -235,7 +235,7 @@ permalink: /about/
 <div class="content-box">
     <div class="about-container">
         <h1>About Us</h1>
-        <p class="welcome-message">Welcome to <strong>SEO Tools Hub</strong> – your all-in-one destination for smart,
+        <p class="welcome-message">Welcome to <strong>ToolEsy</strong> – your all-in-one destination for smart,
             simple, and reliable online tools.</p>
 
         <div class="about-content">
@@ -248,7 +248,7 @@ permalink: /about/
 
             <section class="about-section">
                 <h2>What We Offer</h2>
-                <p>At <strong>SEO Tools Hub</strong>, you'll find:</p>
+                <p>At <strong>ToolEsy</strong>, you'll find:</p>
 
                 <div class="tools-grid">
                     <div class="tool-category">
@@ -324,7 +324,7 @@ permalink: /about/
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                        <span>support@seotoolshub.com</span>
+                        <span>paramgyandarshanchat@gmail.com</span>
                     </div>
                 </div>
             </section>
@@ -332,7 +332,7 @@ permalink: /about/
             <section class="closing-section">
                 <div class="thank-you">
                     <h2>Thank You</h2>
-                    <p>Thank you for choosing <strong>SEO Tools Hub</strong> as your go-to platform for smart online
+                    <p>Thank you for choosing <strong>ToolEsy</strong> as your go-to platform for smart online
                         tools. <i class="fas fa-rocket"></i></p>
                 </div>
             </section>

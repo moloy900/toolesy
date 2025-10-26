@@ -137,7 +137,7 @@ permalink: /privacy-policy/
         <div class="policy-content">
             <section class="policy-section">
                 <h2>1. Information We Collect</h2>
-                <p>At <strong>SEO Tools Hub</strong>, we may collect the following types of information when you use our
+                <p>At <strong>ToolEsy</strong>, we may collect the following types of information when you use our
                     website:</p>
 
                 <ul>
