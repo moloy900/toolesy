@@ -692,7 +692,6 @@ permalink: /online-case-converter-change-text-to-upper-lower-title-case/
         text or all caps for emphasis).</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
 
     <h2>Frequently Asked Questions</h2>
 <p><strong>What is a Text Case Converter?</strong><br>
