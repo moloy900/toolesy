@@ -6,13 +6,78 @@ permalink: /online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online PDF Resizer - Resize PDF Pages to Different Paper Sizes</title>
+
+<title>Resize PDF Pages Online Free - A4, Letter & Custom Sizes</title>
 <meta name="description"
-  content="Free online PDF resizer tool. Resize PDF pages to different paper sizes like A4, Letter, Legal. Adjust PDF resolution and dimensions. No registration required.">
+  content="Resize PDF pages online for free. Change PDF dimensions to A4, Letter, Legal, or custom sizes. Fast, secure, and no watermark.">
 <meta name="keywords"
-  content="pdf resizer, resize pdf, pdf resize tool, change pdf size, pdf paper size, pdf dimensions, pdf tools">
-<meta name="author" content="Your Name">
+  content="resize pdf online free, pdf resizer tool, change pdf paper size, pdf dimensions, resize pdf without losing quality, a4 pdf resizer, pdf size changer, compress and resize pdf">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph (OG) Tags -->
+<meta property="og:title" content="Free Online PDF Resizer - Resize PDF Pages Easily">
+<meta property="og:description" content="Change your PDF page size to A4, Letter, Legal or custom dimensions — free, fast and no signup required.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Resize PDF Pages Online Free">
+<meta name="twitter:description" content="Adjust PDF dimensions to standard or custom sizes. No watermark and no registration.">
+
+<!-- ✅ WebPage Schema for Google Ranking -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "PDF Resizer Tool",
+  "description": "Resize PDF pages online to A4, Letter, Legal or custom sizes. Quick, secure and without losing quality.",
+  "url": "https://toolesy.com/online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolEsy",
+    "logo": {
+      "@type": "ImageObject"
+    }
+  }
+}
+</script>
+
+<!-- ✅ FAQ Schema for Featured Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the PDF resizer free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our PDF resizer tool is 100% free with no watermark or signup required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will resizing PDF pages reduce the quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the tool maintains high-quality resolution even after resizing your PDF pages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What paper sizes does this PDF resizer support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can resize PDFs to A4, Letter, Legal, and custom dimensions as per your requirement."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

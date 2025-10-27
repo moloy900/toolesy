@@ -4,9 +4,6 @@ title: "Text Replacement Tool - Find and Replace Text Online"
 permalink: /text-replacement-tool-find-and-replace-text-online/
 ---
 
-
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Text Replacement Tool - Find and Replace Text Online</title>
@@ -18,14 +15,14 @@ permalink: /text-replacement-tool-find-and-replace-text-online/
 <meta name="robots" content="index, follow">
 
 <!-- Canonical URL for Blogspot -->
-<link rel="canonical" href="http://yourblog.blogspot.com/text-replacement-tool" />
+<link rel="canonical" href="http://toolesy.com/text-replacement-tool-find-and-replace-text-online" />
 
 <!-- Open Graph tags -->
 <meta property="og:title" content="Text Replacement Tool - Find and Replace Text Online">
 <meta property="og:description"
     content="Free online tool to find and replace text with advanced options. Perfect for editing, formatting, and processing text.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://yourblog.blogspot.com/text-replacement-tool">
+<meta property="og:url" content="http://toolesy.com/text-replacement-tool-find-and-replace-text-online">
 
 <!-- Twitter Card tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -39,7 +36,7 @@ permalink: /text-replacement-tool-find-and-replace-text-online/
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Text Replacement Tool",
-      "url": "http://yourblog.blogspot.com/text-replacement-tool",
+      "url": "http://toolesy.com/text-replacement-tool-find-and-replace-text-online",
       "description": "Free online tool to find and replace text with advanced options like case sensitivity, whole words, and regex support.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "All",

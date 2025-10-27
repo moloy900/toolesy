@@ -6,13 +6,78 @@ permalink: /online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Alphabetizer Text Tool - Sort A-Z, Z-A, Remove Duplicates</title>
-<meta name="description"
-  content="Free online alphabetizer tool to sort text alphabetically (A-Z or Z-A), remove duplicates, and sort by length. Organize lists and text data instantly.">
-<meta name="keywords"
-  content="alphabetizer, text sorter, sort alphabetically, remove duplicates, sort A-Z, sort Z-A, text organizer, list sorter, alphabetical order">
-<meta name="author" content="Your Name">
+
+<title>Alphabetizer ✨ Free Online Text Sorter (A-Z, Z-A, Remove Duplicates)</title>
+
+<meta name="description" content="Free Alphabetizer tool to sort text alphabetically (A-Z or Z-A), remove duplicates, sort by length, and clean up lists instantly. Perfect for students, writers & data tasks — no login needed.">
+
+<meta name="keywords" content="alphabetizer, text alphabetizer, sort text online, remove duplicates online, sort list alphabetically, text sorter, a-z z-a sorter, sort list tool, alphabetical order online, text cleanup tool, list sorter tool">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph (OG) Tags -->
+<meta property="og:title" content="Free Online Alphabetizer ✨ Sort Text A-Z, Z-A & Remove Duplicates">
+<meta property="og:description" content="Sort text alphabetically, remove duplicate lines, sort by length & organize lists fast. 100% free alphabetical text sorter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.toolesy.com/online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alphabetizer ✨ Free Online Text Sorter Tool">
+<meta name="twitter:description" content="Sort text A-Z, Z-A or by length and remove duplicates instantly. Perfect for all devices!">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Alphabetizer - Free Online Text Sort Tool",
+ "url": "https://www.toolesy.com/online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates",
+ "description": "Sort text alphabetically A-Z or Z-A, remove duplicate lines and organize lists online for free.",
+ "author": {
+   "@type": "Person",
+   "name": "paramdip nath"
+ },
+ "mainEntity": {
+   "@type": "FAQPage",
+   "mainEntity": [
+     {
+       "@type": "Question",
+       "name": "What is an Alphabetizer?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "An Alphabetizer is a tool that sorts words or lines alphabetically in A-Z or Z-A order."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Can I remove duplicate lines?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes. This tool can remove duplicate lines instantly while sorting text."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Can I sort text by length?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, you can sort from shortest to longest or longest to shortest."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Is this Alphabetizer free?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, the tool is completely free and requires no registration."
+       }
+     }
+   ]
+ }
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

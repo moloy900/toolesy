@@ -4,16 +4,63 @@ title: "Online Case Converter - Change Text to Upper, Lower & Title Case"
 permalink: /online-case-converter-change-text-to-upper-lower-title-case/
 ---
 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Text Case Converter - Uppercase, Lowercase, Title Case</title>
-<meta name="description"
-  content="Free online tool to change text case instantly. Convert to uppercase, lowercase, title case & more. No signup required. Works on Blogspot.">
-<meta name="keywords"
-  content="text case converter, change to lowercase, capitalize title, uppercase to lowercase, format text online, essay title formatter, capitalize sentence, small text generator, all caps converter, text tool">
-<meta name="author" content="Your Name">
+
+<title>Free Text Case Converter Online | Uppercase, Lowercase, Title Case Tool</title>
+
+<meta name="description" content="Free online Text Case Converter. Instantly convert text to uppercase, lowercase, title case, sentence case, and more. Perfect for students, writers, bloggers & web developers. No signup required.">
+
+<meta name="keywords" content="text case converter, uppercase converter, lowercase converter, title case tool, sentence case converter, case change tool, caps to small letters, capitalize text online, blog title formatter, online text editor, free text tools">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Free Online Text Case Converter | Uppercase ↔ Lowercase Tool">
+<meta property="og:description" content="Convert text case instantly — uppercase, lowercase, title case, sentence case & more! No login, 100% free.">
+<meta property="og:url" content="https://toolesy.com/online-case-converter-change-text-to-upper-lower-title-case">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Text Case Converter Online">
+<meta name="twitter:description" content="Convert text case instantly — uppercase, lowercase, title case & more!">
+
+<!-- ✅ Rich FAQ Schema for Google Ranking Boost -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Text Case Converter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Text Case Converter is a free online tool that changes text format like uppercase, lowercase, title case, sentence case & more instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Text Case Converter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool is 100% free to use, without signup or restrictions. You can convert unlimited text anytime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which text cases can I convert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can convert text to uppercase, lowercase, title case, sentence case, inverse case, and capitalize every word."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -15,14 +15,14 @@ permalink: /plain-text-converter-remove-formatting-clean-text-online/
 <meta name="robots" content="index, follow">
 
 <!-- Canonical URL for Blogspot -->
-<link rel="canonical" href="http://yourblog.blogspot.com/plain-text-converter" />
+<link rel="canonical" href="http://toolesy.com/plain-text-converter-remove-formatting-clean-text-online" />
 
 <!-- Open Graph tags -->
 <meta property="og:title" content="Plain Text Converter - Clean and Format Text Online">
 <meta property="og:description"
     content="Free online tool to remove formatting, punctuation, duplicates, URLs and more from your text. Clean and optimize text instantly.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://yourblog.blogspot.com/plain-text-converter">
+<meta property="og:url" content="http://toolesy.com/plain-text-converter-remove-formatting-clean-text-online">
 
 <!-- Twitter Card tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@ permalink: /plain-text-converter-remove-formatting-clean-text-online/
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Plain Text Converter",
-      "url": "http://yourblog.blogspot.com/plain-text-converter",
+      "url": "http://toolesy.com/plain-text-converter-remove-formatting-clean-text-online",
       "description": "Free online tool to remove formatting, punctuation, duplicates, URLs and more from your text.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "All",

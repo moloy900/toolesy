@@ -16,14 +16,14 @@ permalink: /word-frequency-counter-analyze-text-word-usage/
 <meta name="robots" content="index, follow">
 
 <!-- Canonical URL for Blogspot -->
-<link rel="canonical" href="http://yourblog.blogspot.com/word-frequency-counter" />
+<link rel="canonical" href="http://toolesy.com/word-frequency-counter-analyze-text-word-usage" />
 
 <!-- Open Graph tags -->
 <meta property="og:title" content="Word Frequency Counter - Analyze Text Word Usage">
 <meta property="og:description"
     content="Free online tool to analyze word frequency in your text. Perfect for writers, SEO, and content analysis.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://yourblog.blogspot.com/word-frequency-counter">
+<meta property="og:url" content="http://toolesy.com/word-frequency-counter-analyze-text-word-usage">
 
 <!-- Twitter Card tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@ permalink: /word-frequency-counter-analyze-text-word-usage/
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Word Frequency Counter",
-      "url": "http://yourblog.blogspot.com/word-frequency-counter",
+      "url": "http://toolesy.com/word-frequency-counter-analyze-text-word-usage",
       "description": "Free online tool to analyze word frequency in text. Count how often each word appears in your content.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "All",

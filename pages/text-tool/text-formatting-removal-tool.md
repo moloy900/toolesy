@@ -15,14 +15,14 @@ permalink: /text-formatting-removal-tool/
 <meta name="robots" content="index, follow">
 
 <!-- Canonical URL for Blogspot -->
-<link rel="canonical" href="http://yourblog.blogspot.com/text-formatting-removal" />
+<link rel="canonical" href="http://toolesy.com/text-formatting-removal-tool" />
 
 <!-- Open Graph tags -->
 <meta property="og:title" content="Text Formatting Removal Tool - Clean Text Online">
 <meta property="og:description"
     content="Free online tool to remove all text formatting including bold, italic, underline, font styles, and colors. Clean your text for plain text usage.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://yourblog.blogspot.com/text-formatting-removal">
+<meta property="og:url" content="http://toolesy.com/text-formatting-removal-tool">
 
 <!-- Twitter Card tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@ permalink: /text-formatting-removal-tool/
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Text Formatting Removal Tool",
-      "url": "http://yourblog.blogspot.com/text-formatting-removal",
+      "url": "http://toolesy.com/text-formatting-removal-tool",
       "description": "Free online tool to remove all text formatting including bold, italic, underline, font styles, and colors.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "All",

@@ -6,13 +6,71 @@ permalink: /base64-encoder-decoder-online-base64-converter-tool/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Base64 Encoder & Decoder - Base64 Converter</title>
-<meta name="description"
-  content="Free online Base64 encoder and decoder tool. Convert text, images, and files to Base64 format and decode Base64 strings instantly. Essential for web development and data transmission.">
-<meta name="keywords"
-  content="base64 encode, base64 decode, base64 encoder, base64 decoder, base64 converter, base64 to text, text to base64, file to base64, base64 image">
-<meta name="author" content="Your Name">
+
+<title>Base64 Encoder & Decoder ✨ Free Online Text & File Converter</title>
+
+<meta name="description" content="Free online Base64 encoder & decoder. Convert text, images, files, and URLs to Base64 format or decode Base64 back to readable data. Instant, secure & no signup required.">
+
+<meta name="keywords" content="base64, base64 encode, base64 decode, convert to base64, base64 encoder online, base64 decoder online, base64 converter tool, image to base64, base64 to text, decode base64 string">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Free Base64 Encoder & Decoder - Convert Text & Files Online">
+<meta property="og:description" content="Convert text, images and data to Base64 or decode Base64 instantly. Fast, secure tool for developers.">
+<meta property="og:url" content="https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Base64 Encoder & Decoder - Convert Text & Files Online">
+<meta name="twitter:description" content="Fast & secure Base64 converter for developers and users. No signup required.">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Base64 Encoder & Decoder Online",
+ "url": "https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool",
+ "description": "Convert text, images, and files to and from Base64 instantly.",
+ "author": {
+   "@type": "Person",
+   "name": "paramdip nath"
+ },
+ "mainEntity": {
+   "@type": "FAQPage",
+   "mainEntity": [
+     {
+       "@type": "Question",
+       "name": "What is Base64 encoding?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Base64 encoding converts binary data into readable ASCII text."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Why is Base64 used?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "It safely transfers data through text-only systems like HTML, email, and JSON."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Can I convert images to Base64?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, upload images to instantly convert to Base64."
+       }
+     }
+   ]
+ }
+}
+</script>
+
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

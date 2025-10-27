@@ -6,13 +6,78 @@ permalink: /free-online-pdf-cropper-crop-pdf-pages-precisely/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online PDF Cropper - Crop PDF Files with Precision</title>
+
+<title>Crop PDF Online Free - Precise PDF Page Cropping Tool</title>
 <meta name="description"
-  content="Free online PDF cropper tool. Crop PDF files with interactive selection tool. Apply same crop to multiple pages. No registration required.">
+  content="Free PDF cropper tool to crop PDF pages with precision. Select custom crop areas and apply to all pages instantly. No signup & no watermark.">
 <meta name="keywords"
-  content="pdf cropper, crop pdf, pdf crop tool, crop pdf online, pdf editor, pdf tools, crop multiple pages">
-<meta name="author" content="Your Name">
+  content="crop pdf online free, pdf cropper tool, crop pdf pages, trim pdf online, pdf margin remover, pdf page cropper, free pdf editor no watermark">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Crop PDF Online Free - Precise PDF Page Cropping Tool">
+<meta property="og:description" content="Crop PDF pages easily — custom crop areas & apply to all pages. Free, secure & no watermark.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/free-online-pdf-cropper-crop-pdf-pages-precisely">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online PDF Cropper - No Watermark">
+<meta name="twitter:description" content="Crop and trim PDF pages online free. No signup. No watermark.">
+
+<!-- ✅ WebPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "PDF Cropper Tool",
+  "description": "Crop and trim PDF pages online free with precise selection & no quality loss.",
+  "url": "https://toolesy.com/free-online-pdf-cropper-crop-pdf-pages-precisely",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolEsy",
+    "logo": {
+      "@type": "ImageObject"
+    }
+  }
+}
+</script>
+
+<!-- ✅ FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this PDF cropper free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our PDF cropper is 100% free to use without any registration or watermark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I crop all pages in a PDF at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can apply the same crop selection to multiple or all pages in your PDF file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will cropping affect PDF quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the cropping process does not reduce quality. It only trims selected areas."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

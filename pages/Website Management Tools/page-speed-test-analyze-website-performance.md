@@ -6,13 +6,69 @@ permalink: /page-speed-test-analyze-website-performance/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Page Speed Test - Analyze Website Performance</title>
+
+<title>Free Page Speed Test Tool - Check Website Speed & Core Web Vitals</title>
+
 <meta name="description"
-  content="Free online page speed test tool. Analyze your website performance, get insights and recommendations to improve loading speed and user experience.">
+  content="Free Page Speed Test Tool to analyze website speed, Core Web Vitals, performance score, load time, SEO issues, and improvement suggestions. Boost your site’s ranking and user experience.">
 <meta name="keywords"
-  content="page speed test, website performance, speed test, website analyzer, performance metrics, core web vitals, loading speed, website optimization">
-<meta name="author" content="Your Name">
+  content="page speed test, website speed checker, test website loading speed, core web vitals checker, performance analyzer, website performance tool, speed optimization, lighthouse test, improve website speed">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Free Page Speed Test - Check Performance & Core Web Vitals">
+<meta property="og:description" content="Analyze loading speed, performance score, and SEO issues. Get improvement tips instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/page-speed-test-analyze-website-performance/">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Page Speed Test Tool - Website Performance Checker">
+<meta name="twitter:description" content="Check performance score, Core Web Vitals & loading issues for free. Optimize your site now!">
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I check website speed online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your website URL in a page speed test tool like this one and it will analyze load time, Core Web Vitals, performance score, and optimization issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is page speed important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fast websites improve SEO ranking, reduce bounce rates, enhance user experience, and increase conversion rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve my website speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compress images, reduce JavaScript, enable caching, use a fast server, and optimize Core Web Vitals to make your website load faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this website speed test tool free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it is 100% free with no account required. Just enter your URL and get instant results with recommendations."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

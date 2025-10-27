@@ -6,13 +6,69 @@ permalink: /web-page-size-checker-analyze-website-file-size/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Web Page Size Checker - Analyze Website File Size & Performance</title>
+
+<title>Free Web Page Size Checker - Analyze Page Weight & Website Performance</title>
+
 <meta name="description"
-  content="Free online web page size checker tool. Analyze your website file size, get detailed insights about resources and optimize for better performance.">
+  content="Free online Web Page Size Checker tool. Analyze total page weight, resource load, Core Web Vitals impact, and file size breakdown to optimize your website speed and performance.">
 <meta name="keywords"
-  content="page size checker, website size analyzer, file size checker, web page size, website performance, page weight, resource size, optimization tool">
-<meta name="author" content="Your Name">
+  content="web page size checker, page weight analyzer, website size checker, file size analyzer, resource size breakdown, Core Web Vitals, site performance test, website optimization tool, reduce page size, speed test">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Free Web Page Size Checker - Website Performance Analyzer">
+<meta property="og:description" content="Instantly check total page weight and optimize your site for speed and better SEO performance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/web-page-size-checker-analyze-website-file-size/">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online Page Size Analyzer - Test Your Website Performance">
+<meta name="twitter:description" content="Analyze resource weight, speed impact, and Core Web Vitals with a single click.">
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a web page size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Web page size is the total weight of all resources such as HTML, CSS, JavaScript, images, fonts, and videos loaded when visiting a page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does page size matter for SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large page sizes slow loading speed and negatively impact Core Web Vitals, resulting in lower search rankings and poor user experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I reduce web page size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can optimize images, minify CSS/JS, enable caching, remove unused resources, and reduce large third-party scripts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Web Page Size Checker tool free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this tool is 100% free with no account required."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

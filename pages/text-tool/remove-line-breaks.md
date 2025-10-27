@@ -15,23 +15,21 @@ permalink: /remove-line-breaks-online-clean-text-tool-instant/
 <meta name="author" content="paramdip">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Language" content="en">
-<link rel="canonical" href="https://converttextdata.blogspot.com/2025/08/blog-post_24.html">
+<link rel="canonical" href="https://toolesy.com/remove-line-breaks-online-clean-text-tool-instant">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://converttextdata.blogspot.com/2025/08/blog-post_24.html">
+<meta property="og:url" content="https://toolesy.com/remove-line-breaks-online-clean-text-tool-instant">
 <meta property="og:title" content="Remove Line Breaks Online - Clean Text Tool | Instant">
 <meta property="og:description"
     content="Remove extra line breaks from text instantly. Clean messy data from PDFs, word processors & web pages. Fast, free, and no registration required.">
-<meta property="og:image" content="https://converttextdata.blogspot.com/line-break-removal-tool-preview.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://converttextdata.blogspot.com/2025/08/blog-post_24.html">
+<meta property="twitter:url" content="https://toolesy.com/remove-line-breaks-online-clean-text-tool-instant">
 <meta property="twitter:title" content="Remove Line Breaks Online - Clean Text Tool | Instant">
 <meta property="twitter:description"
     content="Remove extra line breaks from text instantly. Clean messy data from PDFs, word processors & web pages.">
-<meta property="twitter:image" content="https://converttextdata.blogspot.com/line-break-removal-tool-preview.jpg">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -39,7 +37,7 @@ permalink: /remove-line-breaks-online-clean-text-tool-instant/
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Line Break Removal Tool",
-      "url": "https://converttextdata.blogspot.com/2025/08/blog-post_24.html",
+      "url": "https://toolesy.com/remove-line-breaks-online-clean-text-tool-instant",
       "description": "Free online tool to remove line breaks and clean up text from PDFs, documents, and web pages.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",

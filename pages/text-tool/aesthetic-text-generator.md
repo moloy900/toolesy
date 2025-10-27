@@ -6,13 +6,79 @@ permalink: /aesthetic-text-generator-create-stylish-text-for-social-media/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Aesthetic Text Generator - Create Stylish Text for Social Media</title>
-<meta name="description"
-  content="Free online aesthetic text generator tool. Create stylish, fancy, and beautiful text for social media, bios, and messages. Convert normal text to aesthetic fonts instantly.">
-<meta name="keywords"
-  content="aesthetic text generator, fancy text, stylish fonts, social media text, bio text, cool fonts, text generator, unicode text, aesthetic fonts">
-<meta name="author" content="Your Name">
+
+<title>Aesthetic Text Generator ✨ Cool Stylish Fonts for Social Media Bios</title>
+
+<meta name="description" content="Best free Aesthetic Text Generator to make stylish fonts for Instagram bio, Facebook, TikTok, Discord, and messages. Convert normal text into fancy, cute, aesthetic Unicode fonts instantly — no sign-up required.">
+
+<meta name="keywords" content="aesthetic text generator, fancy font generator, cool text, stylish fonts for instagram, cute aesthetic fonts, unicode text generator, aesthetic fonts for bio, pretty text generator, font changer instagram, fancy letters online">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Aesthetic Text Generator ✨ Cool Stylish Fonts for Social Media Bios">
+<meta property="og:description" content="Free online Aesthetic Text Generator. Create stylish, fancy, cute fonts for Instagram, TikTok, Facebook, Discord & more. Convert text to unique aesthetic styles instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.toolesy.com/aesthetic-text-generator-create-stylish-text-for-social-media">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aesthetic Text Generator ✨ Cool Stylish Fonts for Social Media Bios">
+<meta name="twitter:description" content="Create stylish, fancy, aesthetic fonts for social media bios and messages in one click!">
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Aesthetic Text Generator",
+ "url": "https://www.toolesy.com/aesthetic-text-generator-create-stylish-text-for-social-media",
+ "description": "Free online aesthetic text generator tool to create stylish, fancy, and beautiful text for social media bios and messages.",
+ "author": {
+   "@type": "Person",
+   "name": "paramdip nath"
+ },
+ "mainEntity": [{
+   "@type": "FAQPage",
+   "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an Aesthetic Text Generator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It converts normal text into stylish, fancy, and cute aesthetic font styles using Unicode characters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this Aesthetic Text Generator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! It is completely free to use without any signup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use aesthetic fonts on Instagram & TikTok?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All fonts generated work on major platforms like Instagram and TikTok."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will the fonts work on all devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most fonts work everywhere. Some rare symbols may vary depending on device support."
+        }
+      }
+   ]
+ }]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -6,13 +6,78 @@ permalink: /online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Image to PDF Converter - Convert JPG, PNG, TIFF to PDF</title>
+
+<title>Free Image to PDF Converter - Convert JPG, PNG & TIFF to PDF Online</title>
 <meta name="description"
-  content="Free online image to PDF converter tool. Convert JPG, PNG, TIFF images to PDF documents. Combine multiple images into one PDF. No registration required.">
+  content="Free online Image to PDF converter. Convert JPG, PNG, TIFF images to secure PDF documents. Merge multiple images into one PDF. No registration required.">
 <meta name="keywords"
-  content="image to pdf, jpg to pdf, png to pdf, tiff to pdf, convert images to pdf, image converter, pdf tools">
-<meta name="author" content="Your Name">
+  content="image to pdf, jpg to pdf free, png to pdf converter, tiff to pdf, merge images to pdf, convert photos to pdf, online pdf tools, image converter online, without watermark">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Free Image to PDF Converter - Convert JPG, PNG & TIFF to PDF Online">
+<meta property="og:description" content="Convert images to PDF fast & free. Combine multiple images into one PDF file. No signup needed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf">
+
+<!-- ✅ Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Image to PDF Converter - No Watermark">
+<meta name="twitter:description" content="Convert JPG, PNG, TIFF images to PDF instantly — Secure & free.">
+
+<!-- ✅ WebPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Image to PDF Converter",
+  "description": "Convert JPG, PNG, TIFF to PDF online — free, secure & fast.",
+  "url": "https://toolesy.com/online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolEsy",
+    "logo": {
+      "@type": "ImageObject"
+    }
+  }
+}
+</script>
+
+<!-- ✅ FAQ Schema for Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this image to PDF converter free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it is 100% free and you can convert images to PDF without registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We support JPG, PNG, and TIFF images. You can also combine multiple files into a single PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will there be a watermark on my PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, we do not add any watermark to your converted PDF."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

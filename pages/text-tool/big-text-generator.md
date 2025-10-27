@@ -6,13 +6,71 @@ permalink: /online-big-text-generator-create-ascii-art-large-text/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Big Text Generator - Create ASCII Art & Large Text</title>
-<meta name="description"
-  content="Free online Big Text Generator tool. Create ASCII art, large text banners, and stylized text for social media, websites, and creative projects.">
-<meta name="keywords"
-  content="big text generator, ascii art, large text, text art, banner text, social media text, fancy text, text generator, ascii generator">
-<meta name="author" content="Your Name">
+
+<title>Big Text Generator ✨ Free ASCII Art & Large Stylish Text Maker</title>
+
+<meta name="description" content="Free Big Text Generator tool for creating large ASCII art text, fancy banners, and cool stylish fonts for social media, Discord, headlines, and creative designs. Instant copy & paste!">
+
+<meta name="keywords" content="big text generator, ascii text generator, large text maker, big font generator, fancy big letters, banner text generator, stylish text maker, discord big text, text art generator">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph -->
+<meta property="og:title" content="Free Big Text Generator - ASCII Art & Large Stylish Fonts Online">
+<meta property="og:description" content="Generate ASCII art text and stylish big text banners instantly. Perfect for social media, Discord, and creative projects.">
+<meta property="og:url" content="https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Big Text Generator - ASCII & Large Text Maker">
+<meta name="twitter:description" content="Create cool ASCII art banners and large stylish text instantly. Copy & paste anywhere!">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Big Text Generator Online",
+ "url": "https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool",
+ "description": "Create large ASCII text and stylish big fonts online. Free and instant.",
+ "author": {
+   "@type": "Person",
+   "name": "paramdip nath"
+ },
+ "mainEntity": {
+   "@type": "FAQPage",
+   "mainEntity": [
+     {
+       "@type": "Question",
+       "name": "What is a Big Text Generator?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "A tool that converts normal text into large ASCII art banner fonts."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Where can I use Big Text?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "You can use it in social media posts, Discord messages, banners, and creative design."
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "Is this tool free?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes. It is completely free and works instantly without signup."
+       }
+     }
+   ]
+ }
+}
+</script>
+
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
