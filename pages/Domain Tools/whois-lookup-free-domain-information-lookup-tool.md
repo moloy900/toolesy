@@ -295,80 +295,6 @@ permalink: /whois-lookup-free-domain-information-lookup-tool/
     margin-bottom: 25px;
   }
 
-  .share-donation-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .share-buttons,
-  .donation-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .share-button,
-  .donation-button {
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    border: none;
-  }
-
-  .share-button:hover,
-  .donation-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .facebook {
-    background: #3b5998;
-    color: white;
-  }
-
-  .twitter {
-    background: #1da1f2;
-    color: white;
-  }
-
-  .linkedin {
-    background: #0077b5;
-    color: white;
-  }
-
-  .pinterest {
-    background: #bd081c;
-    color: white;
-  }
-
-  .reddit {
-    background: #FF4500;
-    color: white;
-  }
-
-  .paypal {
-    background: #0070ba;
-    color: white;
-  }
-
-  .coffee {
-    background: #ff813f;
-    color: white;
-  }
-
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .button-section {
@@ -444,35 +370,7 @@ permalink: /whois-lookup-free-domain-information-lookup-tool/
       <div class="whois-data" id="whoisData"></div>
     </div>
 
-    <!-- Share and Donation Buttons Section -->
-    <div class="share-donation-section">
-      <div class="share-buttons">
-        <a href="#" class="share-button facebook" id="shareFacebook">
-          <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-        <a href="#" class="share-button twitter" id="shareTwitter">
-          <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="#" class="share-button linkedin" id="shareLinkedIn">
-          <i class="fab fa-linkedin-in"></i> LinkedIn
-        </a>
-        <a href="#" class="share-button pinterest" id="sharePinterest">
-          <i class="fab fa-pinterest-p"></i> Pinterest
-        </a>
-        <a href="#" class="share-button reddit" id="shareReddit">
-          <i class="fab fa-reddit"></i> Reddit
-        </a>
-      </div>
-
-      <div class="donation-buttons">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" class="donation-button paypal">
-          <i class="fab fa-paypal"></i> Donate via PayPal
-        </a>
-        <a href="https://buymeacoffee.com/YOUR_USERNAME" target="_blank" class="donation-button coffee">
-          <i class="fas fa-coffee"></i> Buy me a Coffee
-        </a>
-      </div>
-    </div>
+     {% include share-and-donation.html %}
 
     <div class="examples">
       <h2>Example Domains to Try</h2>
