@@ -6,13 +6,78 @@ permalink: /time-calculator-calculate-time-addsubtract-time-online/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Time Calculator - Calculate Time, Add/Subtract Time</title>
-<meta name="description"
-  content="Free online time calculator tool. Calculate time differences, add or subtract time, convert time units, and more. Easy to use with instant results.">
-<meta name="keywords"
-  content="time calculator, calculate time, add time, subtract time, time difference, time converter, hours calculator, minutes calculator, time duration">
-<meta name="author" content="Your Name">
+
+<title>Time Calculator - Add Time, Subtract Time, Calculate Hours & Minutes Online Free</title>
+
+<meta name="description" content="Free online time calculator to add or subtract time, calculate hours and minutes, find time differences, and convert time units instantly. Perfect for work, payroll, study, and daily use.">
+
+<meta name="keywords" content="time calculator, add time calculator, subtract time calculator, time difference calculator, hours calculator, minutes calculator, work time calculator, time duration calculator, payroll hours calculator, free online time calculator">
+
+<meta name="author" content="ToolEsy">
+
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolesy.com/time-calculator-calculate-time-addsubtract-time-online">
+
+<!-- ✅ Open Graph Tags (for Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="Free Online Time Calculator - Instant Time Add/Subtract Tool">
+<meta property="og:description" content="Quickly calculate time difference, add or subtract hours and minutes, and convert time units online. Fast & 100% Free!">
+<meta property="og:url" content="https://toolesy.com/time-calculator-calculate-time-addsubtract-time-online">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Time Calculator - Fast & Free">
+<meta name="twitter:description" content="Add or subtract time, calculate work hours, convert hours to minutes instantly.">
+
+<!-- ✅ FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+      "@type": "Question",
+      "name": "What is a time calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A time calculator helps you add, subtract, or calculate time durations such as hours and minutes quickly and accurately online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this time calculator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! ToolEsy Time Calculator is 100% free to use with instant results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate work hours for payroll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can easily calculate total working hours, break duration, and overtime for payroll or timesheets."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ✅ Webpage Schema for better ranking -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Time Calculator - Add & Subtract Time Instantly",
+  "url": "https://toolesy.com/time-calculator-calculate-time-addsubtract-time-online",
+  "description": "Free online time calculator to add, subtract, and convert time instantly.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ToolEsy"
+  }
+}
+</script>
+
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

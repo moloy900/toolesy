@@ -6,13 +6,64 @@ permalink: /find-ip-address-free-online-ip-lookup-tool/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find IP Address - Free Online IP Lookup Tool</title>
+
+<title>IP Address Lookup Tool — Find IP, Location & ISP Info Free</title>
+
 <meta name="description"
-  content="Free online tool to find IP address of any website or domain. Get detailed IP information including location, ISP, and more. No signup required.">
+  content="Free IP Address Lookup Tool. Instantly find any website or domain IP address with location, ISP, timezone & hosting details. Quick results — no signup needed.">
+
 <meta name="keywords"
-  content="find ip address, ip lookup, website ip, domain ip, ip location, ip checker, ip tool, online ip finder">
-<meta name="author" content="Your Name">
+  content="find ip address, ip lookup, website ip finder, domain ip checker, ip location lookup, what is my ip, online ip finder, ip details, ip tool, ip tracker">
+
+<meta name="author" content="Paramdip Nath">
 <meta name="robots" content="index, follow">
+
+<!-- ✅ Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Find IP Address & Location Online — Free IP Lookup Tool">
+<meta property="og:description" content="Lookup website IPs instantly. Discover IP location, ISP and hosting server details — fast and free.">
+<meta property="og:url" content="https://toolesy.com/find-ip-address-free-online-ip-lookup-tool">
+<meta property="og:site_name" content="ToolEsy">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free IP Lookup — Find IP Address & Location">
+<meta name="twitter:description" content="Check website or domain IP address with ISP, region, and hosting server details, instantly & free.">
+
+<!-- ✅ FAQ Schema (Boosts Google Visibility) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does an IP lookup tool do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An IP lookup tool shows detailed IP information such as IP address, geolocation, ISP, hostname, and hosting server details of a website or domain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the IP lookup tool free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! This IP Address Lookup Tool is 100% free and does not require registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find IP address of any website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Simply enter the website URL to find its IP address, hosting details, and global location."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

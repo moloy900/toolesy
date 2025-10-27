@@ -6,13 +6,69 @@ permalink: /whois-lookup-free-domain-information-lookup-tool/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free WHOIS Lookup Tool - Check Domain Information & Availability</title>
+
+<title>WHOIS Lookup Tool — Check Domain Owner & Availability (Free)</title>
+
 <meta name="description"
-  content="Free online WHOIS lookup tool to check domain registration information, availability, expiration dates, and contact details. No signup required.">
+  content="Use our free WHOIS Lookup Tool to check domain ownership, registrar info, expiration date, DNS status & availability. Instant results — no signup required.">
+
 <meta name="keywords"
-  content="whois lookup, domain information, domain availability, domain registration, whois search, domain checker, whois tool, domain expiration, whois api">
-<meta name="author" content="Your Name">
+  content="whois lookup, domain lookup, whois search, domain owner check, whois checker, domain registration info, is domain available, dns lookup, domain expiry checker">
+
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Free WHOIS Lookup Tool — Check Domain Information Easy">
+<meta property="og:description" content="Find domain owner, registrar, availability & expiration instantly with free WHOIS lookup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/whois-lookup-free-domain-information-lookup-tool/">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free WHOIS Lookup Tool — Domain Owner, Registrar, Expiry Info">
+<meta name="twitter:description" content="Check WHOIS data instantly — domain ownership, expiration, availability, DNS info & more.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does WHOIS lookup show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WHOIS lookup shows domain owner information, registrar details, creation date, expiration date, and domain availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WHOIS lookup free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the WHOIS lookup tool is free with instant results and no signup required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find the owner of a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If WHOIS privacy is not enabled, you can view the owner’s contact details including admin email and organization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this tool check domain availability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it tells whether the domain is already registered and when it expires."
+      }
+    }
+  ]
+}
+</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

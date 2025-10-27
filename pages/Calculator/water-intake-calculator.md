@@ -6,13 +6,72 @@ permalink: /water-intake-calculator-calculate-your-daily-hydration-needs/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Water Intake Calculator - Calculate Your Daily Hydration Needs</title>
-<meta name="description"
-  content="Free online water intake calculator. Calculate your daily hydration needs based on weight, activity level, climate, and health factors. Stay properly hydrated with personalized recommendations.">
-<meta name="keywords"
-  content="water intake calculator, hydration calculator, daily water intake, water consumption, hydration needs, water calculator, health calculator, fitness calculator">
-<meta name="author" content="Your Name">
+
+<title>Daily Water Intake Calculator - How Much Water Should You Drink?</title>
+
+<meta name="description" content="Free online Daily Water Intake Calculator. Calculate how much water you should drink per day based on weight, age, activity level & climate. Personalized hydration needs for a healthier lifestyle.">
+
+<meta name="keywords" content="water intake calculator, daily water intake calculator, how much water should I drink, hydration calculator, water consumption calculator, health calculator hydration, fitness water calculator">
+
+<meta name="author" content="ToolEsy">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolesy.com/water-intake-calculator-calculate-your-daily-hydration-needs/">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Daily Water Intake Calculator - Personalized Hydration Guide">
+<meta property="og:description" content="Calculate your ideal daily water consumption based on your body needs. Stay hydrated & healthy!">
+<meta property="og:url" content="https://toolesy.com/water-intake-calculator-calculate-your-daily-hydration-needs/">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Water Intake Calculator - How Much Water Do You Need Daily?">
+<meta name="twitter:description" content="Instantly calculate your hydration needs based on weight, activity & more. Free & easy to use!">
+
+<!-- ✅ FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+      "@type": "Question",
+      "name": "How much water do I need per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your daily water intake depends on weight, age, activity level, weather conditions, and overall health. Use a water intake calculator for a personalized result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is drinking 3 liters of water a day good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3 liters per day may be ideal for some individuals but can be too much or too little depending on lifestyle and health factors. The calculator provides accurate personalized guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if I'm properly hydrated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clear to pale-yellow urine, good energy levels, and normal thirst response indicate proper hydration. Dark urine or fatigue may signal dehydration."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ✅ WebPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Daily Water Intake Calculator",
+  "url": "https://toolesy.com/water-intake-calculator-calculate-your-daily-hydration-needs/",
+  "description": "Free tool to calculate how much water you should drink each day to stay healthy and hydrated."
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

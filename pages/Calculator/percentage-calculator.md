@@ -6,13 +6,98 @@ permalink: /percentage-calculator/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Percentage Calculator - Calculate Percentages Easily</title>
+
+<title>Free Percentage Calculator Online | % Increase/Decrease & Percentage of Number</title>
+
 <meta name="description"
-  content="Free online percentage calculator tool. Calculate percentage increase, decrease, percentage of a number, and more. Easy to use with step-by-step solutions.">
+  content="Free online percentage calculator! Calculate percentage increase, percentage decrease, percentage of a number, discount rate, and GST percentage easily with step-by-step solutions.">
+
 <meta name="keywords"
-  content="percentage calculator, calculate percentage, percentage increase, percentage decrease, percentage of a number, percentage formula, math calculator">
-<meta name="author" content="Your Name">
+  content="percentage calculator, calculate percentage, percentage increase calculator, percentage decrease calculator, percentage of number, discount percentage calculator, GST percentage calculator, math calculator online">
+
+<meta name="author" content="ToolEsy.com">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolesy.com/percentage-calculator">
+
+<!-- ✅ Open Graph / Facebook -->
+<meta property="og:title" content="Free Percentage Calculator Online">
+<meta property="og:description" content="Calculate percentage increase, decrease, discount, and GST instantly.">
+<meta property="og:url" content="https://toolesy.com/percentage-calculator">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Percentage Calculator Online">
+<meta name="twitter:description" content="Easy percent calculator for percentage increase, decrease & discounts.">
+
+<!-- ✅ FAQ SCHEMA (Boost Google Featured Snippets) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percentage = (Value / Total) x 100. Enter values in the calculator for instant results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate percentage increase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percentage Increase = (New Value − Old Value) ÷ Old Value × 100. Our calculator does it automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the discount percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Discount % = (Original Price − Sale Price) ÷ Original Price × 100. Use the discount feature on this page."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ✅ Webpage Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Free Percentage Calculator Online",
+ "url": "https://toolesy.com/percentage-calculator",
+ "description": "Free percentage calculator for percentage increase, decrease, discounts & GST calculations.",
+ "publisher": {
+   "@type": "Organization",
+   "name": "ToolEsy"
+ }
+}
+</script>
+
+<!-- ✅ Breadcrumb Schema (Boost SEO Ranking) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://toolesy.com/"
+ }, {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Percentage Calculator",
+   "item": "https://toolesy.com/percentage-calculator"
+ }]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

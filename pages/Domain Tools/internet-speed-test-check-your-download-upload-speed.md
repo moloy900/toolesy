@@ -6,13 +6,71 @@ permalink: /internet-speed-test-check-your-download-upload-speed/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Internet Speed Test - Check Download & Upload Speed Online</title>
+<title>Internet Speed Test — Check Download, Upload & Ping | Free Online Tool</title>
 <meta name="description"
-  content="Free online internet speed test tool to check your download speed, upload speed, and ping. Test your connection speed instantly. No signup required.">
+  content="Run a fast and accurate internet speed test. Check your download speed, upload speed, ping, and connection stability instantly. Free online WiFi & broadband speed checker. No signup!">
 <meta name="keywords"
-  content="internet speed test, speed test, download speed, upload speed, ping test, network speed, broadband test, wifi speed test, connection speed, online speed test">
-<meta name="author" content="Your Name">
+  content="internet speed test, wifi speed test, broadband speed test, online speed test, check internet speed, download upload ping test, network latency checker, speedtest tool">
+<meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Free Internet Speed Test — Check WiFi & Broadband Speed Online">
+<meta property="og:description" content="Test your download, upload & ping instantly. Accurate internet speed test for WiFi and broadband — 100% free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolesy.com/internet-speed-test-check-your-download-upload-speed/">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Internet Speed Test — Download, Upload & Ping Checker">
+<meta name="twitter:description" content="Instant and accurate connection test. No signup required.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Free Internet Speed Test",
+  "description": "Test your download, upload and ping speed instantly. 100% free WiFi & broadband speed checker.",
+  "url": "https://toolesy.com/internet-speed-test-check-your-download-upload-speed/",
+  "mainEntity": [{
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I check my internet speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Click the Start Test button and our tool will measure your download speed, upload speed and ping instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this internet speed test accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we use advanced servers and bandwidth testing technology to deliver accurate results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work for WiFi networks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this tool works for WiFi, broadband, 4G and 5G connections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this speed test free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, it's 100% free and no signup or installation is required."
+        }
+      }
+    ]
+  }]
+}
+</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

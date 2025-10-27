@@ -6,13 +6,72 @@ permalink: /travel-carbon-offset-calculator/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Carbon Offset Calculator - Calculate & Offset Your Travel Emissions</title>
-<meta name="description"
-  content="Free online Travel Carbon Offset Calculator. Calculate your travel carbon footprint and discover how to offset it through verified environmental projects. Make your travels more sustainable.">
-<meta name="keywords"
-  content="carbon offset calculator, travel emissions, carbon footprint, sustainable travel, eco-friendly travel, climate change, carbon neutral, environmental impact">
-<meta name="author" content="Your Name">
+
+<title>Travel Carbon Footprint Calculator - Calculate & Offset CO2 Emissions (Free & Instant)</title>
+
+<meta name="description" content="Free Travel Carbon Footprint Calculator. Calculate CO2 emissions from flights, car trips, and other travel. Get instant carbon offset suggestions to make your journeys climate-friendly and sustainable.">
+
+<meta name="keywords" content="travel carbon footprint calculator, carbon offset calculator, flight carbon calculator, car CO2 calculator, travel emissions calculator, CO2 travel calculator, eco friendly travel calculator, climate neutral travel">
+
+<meta name="author" content="ToolEsy">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolesy.com/travel-carbon-offset-calculator/">
+
+<!-- ✅ Open Graph Tags -->
+<meta property="og:title" content="Travel Carbon Footprint Calculator - Reduce Your Travel Emissions">
+<meta property="og:description" content="Instant CO2 emission calculation for flights, car travel, and daily commuting — plus offset suggestions.">
+<meta property="og:url" content="https://toolesy.com/travel-carbon-offset-calculator/">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Travel Carbon Offset Calculator">
+<meta name="twitter:description" content="Calculate your travel CO2 emissions and offset them with sustainable projects. Fast & Free!">
+
+<!-- ✅ FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+      "@type": "Question",
+      "name": "What is a travel carbon footprint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A travel carbon footprint is the total CO2 emissions released into the atmosphere due to transportation, such as flights, cars, buses, or trains."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I offset travel emissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can offset emissions by supporting verified carbon reduction projects such as tree planting, renewable energy, and forest conservation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Travel Carbon Offset Calculator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ToolEsy's Travel Carbon Footprint Calculator is 100% free to use with instant results."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ✅ Webpage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Travel Carbon Footprint Calculator",
+  "url": "https://toolesy.com/travel-carbon-offset-calculator/",
+  "description": "Free online CO2 calculator for all types of travel to measure and offset emissions."
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

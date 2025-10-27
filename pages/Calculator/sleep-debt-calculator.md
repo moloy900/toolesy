@@ -6,13 +6,101 @@ permalink: /sleep-debt-calculator-track-and-calculate-your-sleep-deficit/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sleep Debt Calculator - Track and Calculate Your Sleep Deficit</title>
+
+<title>Sleep Debt Calculator | Measure Your Sleep Deficit & Recover Faster</title>
+
 <meta name="description"
-  content="Free online sleep debt calculator. Track your sleep patterns, calculate sleep deficit, and get personalized recommendations for better sleep health.">
+  content="Free Sleep Debt Calculator helps you measure sleep deficit, track weekly sleep balance, and get personalized recovery tips. Improve sleep health and energy!">
+
 <meta name="keywords"
-  content="sleep debt calculator, sleep deficit, sleep tracker, sleep health, sleep calculator, sleep patterns, sleep recovery, optimal sleep">
-<meta name="author" content="Your Name">
+  content="sleep debt calculator, sleep deficit calculator, sleep recovery calculator, how much sleep do I need, sleep tracker, sleep health calculator, sleep balance calculator, sleep deprivation recovery, sleep hours needed">
+
+<meta name="author" content="ToolEsy.com">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit">
+
+<!-- ✅ Open Graph / Facebook -->
+<meta property="og:title" content="Sleep Debt Calculator | Check Your Sleep Deficit">
+<meta property="og:description" content="Track your sleep deficit and learn how much recovery sleep you need for better health and energy.">
+<meta property="og:url" content="https://toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sleep Debt Calculator | Calculate Sleep Deficiency">
+<meta name="twitter:description" content="Check your sleep debt, restore sleep balance & boost productivity with science-backed calculations.">
+
+<!-- ✅ FAQ Schema for Google Rich Results -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is sleep debt?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sleep debt is the difference between the amount of sleep you need versus the amount of sleep you actually get. Over time, sleep debt can negatively impact energy, focus, health, and mood."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you calculate sleep debt?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sleep debt is calculated by subtracting your actual sleep hours from the recommended sleep hours per night, then multiplying by the number of nights with insufficient sleep."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you recover from sleep debt?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, you can recover from sleep debt by getting extra sleep for a few days, maintaining consistent sleep times, and improving sleep hygiene."
+   }
+  }
+ ]
+}
+</script>
+
+<!-- ✅ WebPage Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Sleep Debt Calculator",
+ "description": "Free online sleep debt calculator to measure sleep deficit and improve sleep health.",
+ "url": "https://toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit",
+ "publisher": {
+  "@type": "Organization",
+  "name": "ToolEsy"
+ }
+}
+</script>
+
+<!-- ✅ Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://toolesy.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Sleep Debt Calculator",
+   "item": "https://toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit"
+  }
+ ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

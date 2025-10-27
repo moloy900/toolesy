@@ -6,13 +6,102 @@ permalink: /social-media-time-wastage-calculator/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Social Media Time Wastage Calculator - Track Your Digital Time</title>
+
+<title>Social Media Time Wastage Calculator | Track Your Digital Habits</title>
+
 <meta name="description"
-  content="Free online Social Media Time Wastage Calculator. Track how much time you spend on social media platforms and calculate the productivity loss. Optimize your digital habits.">
+  content="Use our free Social Media Time Wastage Calculator to track how much time you spend on apps like Facebook, Instagram, YouTube & TikTok. Reduce screen time and improve productivity with daily insights.">
+
 <meta name="keywords"
-  content="social media time calculator, time wastage calculator, digital detox, productivity tracker, social media addiction, time management, digital wellness">
-<meta name="author" content="Your Name">
+  content="social media time calculator, screen time calculator, time wastage calculator, digital detox, productivity tracker, social media addiction, screen addiction, time management tool, digital wellness, app usage calculator">
+
+<meta name="author" content="ToolEsy.com">
 <meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://toolesy.com/social-media-time-wastage-calculator">
+
+<!-- ✅ Open Graph / Facebook -->
+<meta property="og:title" content="Social Media Time Wastage Calculator | Track Screen Time Online">
+<meta property="og:description" content="Track time spent on social media and calculate productivity loss. Take control of your digital life.">
+<meta property="og:url" content="https://toolesy.com/social-media-time-wastage-calculator">
+<meta property="og:type" content="website">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Social Media Time Calculator | Reduce Screen Time & Boost Productivity">
+<meta name="twitter:description" content="Check how much time you waste on social media and improve your digital well-being.">
+
+<!-- ✅ FAQ Schema for Google Rich Results -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I calculate social media time usage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Simply enter how many hours per day you spend on each social media platform. The calculator will estimate your total weekly, monthly, and yearly screen time and productivity loss."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does social media affect productivity?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Excessive social media use reduces focus, increases procrastination, and decreases productivity. Tracking your usage helps you regain time for meaningful tasks."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can I reduce my social media time?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Set daily reminders, avoid using social media during work hours, turn off notifications, and allocate specific time slots for browsing."
+   }
+  }
+ ]
+}
+</script>
+
+<!-- ✅ WebPage Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Social Media Time Wastage Calculator",
+ "description": "Free tool to calculate social media screen time and productivity loss.",
+ "url": "https://toolesy.com/social-media-time-wastage-calculator",
+ "publisher": {
+  "@type": "Organization",
+  "name": "ToolEsy"
+ }
+}
+</script>
+
+<!-- ✅ Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://toolesy.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Social Media Time Wastage Calculator",
+   "item": "https://toolesy.com/social-media-time-wastage-calculator"
+  }
+ ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
