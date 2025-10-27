@@ -693,6 +693,17 @@ permalink: /online-case-converter-change-text-to-upper-lower-title-case/
     </ul>
 
     <h3>Frequently Asked Questions (FAQ):</h3>
+
+    <h2>Frequently Asked Questions</h2>
+<p><strong>What is a Text Case Converter?</strong><br>
+A Text Case Converter is a free online tool that changes text format like uppercase, lowercase, title case, sentence case & more instantly.</p>
+
+<p><strong>Is this Text Case Converter free?</strong><br>
+Yes, this tool is 100% free to use, without signup or restrictions. You can convert unlimited text anytime.</p>
+
+<p><strong>Which text cases can I convert?</strong><br>
+You can convert text to uppercase, lowercase, title case, sentence case, inverse case, and capitalize every word.</p>
+
     <p><strong>Q: What is the difference between Title Case and Sentence case?</strong><br>
       A: Title Case capitalizes the first letter of every major word (e.g., nouns, verbs, adjectives), as seen in book
       titles: "The Quick Brown Fox". Sentence case only capitalizes the very first word of the sentence and any proper
