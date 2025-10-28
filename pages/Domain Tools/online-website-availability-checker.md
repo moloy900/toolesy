@@ -28,53 +28,6 @@ permalink: /online-website-availability-checker/
 <meta name="twitter:title" content="Is This Website Down? Free Availability Checker">
 <meta name="twitter:description" content="Check website status, response time, and uptime instantly — 100% free.">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free Website Availability Checker",
-  "description": "Check if a website is down or up online. Test uptime, response time and server status worldwide.",
-  "url": "https://toolesy.com/online-website-availability-checker/",
-  "mainEntity": [{
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I check if a website is down?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Enter the domain into our availability checker — it will test uptime, HTTP status, and response time instantly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is a website not loading?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A website may not load due to hosting downtime, DNS failures, invalid SSL, or server overload."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can this tool check websites worldwide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it performs availability checks from multiple global locations for accurate results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this tool free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The website availability checker is 100% free without signup or limits."
-        }
-      }
-    ]
-  }]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

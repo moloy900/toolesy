@@ -30,40 +30,6 @@ permalink: /find-ip-address-free-online-ip-lookup-tool/
 <meta name="twitter:title" content="Free IP Lookup — Find IP Address & Location">
 <meta name="twitter:description" content="Check website or domain IP address with ISP, region, and hosting server details, instantly & free.">
 
-<!-- ✅ FAQ Schema (Boosts Google Visibility) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does an IP lookup tool do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An IP lookup tool shows detailed IP information such as IP address, geolocation, ISP, hostname, and hosting server details of a website or domain."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the IP lookup tool free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This IP Address Lookup Tool is 100% free and does not require registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I find IP address of any website?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Simply enter the website URL to find its IP address, hosting details, and global location."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

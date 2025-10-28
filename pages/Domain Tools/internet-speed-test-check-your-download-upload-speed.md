@@ -25,53 +25,6 @@ permalink: /internet-speed-test-check-your-download-upload-speed/
 <meta name="twitter:title" content="Free Internet Speed Test — Download, Upload & Ping Checker">
 <meta name="twitter:description" content="Instant and accurate connection test. No signup required.">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free Internet Speed Test",
-  "description": "Test your download, upload and ping speed instantly. 100% free WiFi & broadband speed checker.",
-  "url": "https://toolesy.com/internet-speed-test-check-your-download-upload-speed/",
-  "mainEntity": [{
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I check my internet speed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Click the Start Test button and our tool will measure your download speed, upload speed and ping instantly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this internet speed test accurate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we use advanced servers and bandwidth testing technology to deliver accurate results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does it work for WiFi networks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, this tool works for WiFi, broadband, 4G and 5G connections."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this speed test free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it's 100% free and no signup or installation is required."
-        }
-      }
-    ]
-  }]
-}
-</script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

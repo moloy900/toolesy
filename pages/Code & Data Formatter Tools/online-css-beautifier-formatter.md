@@ -28,50 +28,6 @@ permalink: /online-css-beautifier-formatter/
 <meta name="twitter:title" content="CSS Beautifier & Formatter - Free Online Tool">
 <meta name="twitter:description" content="Make your CSS beautiful with proper indentation and minify for faster load. 100% Free.">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-      "@type": "Question",
-      "name": "What is a CSS Beautifier?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A CSS Beautifier formats messy CSS by adding proper indentation, spaces, and structure making code easier to read and maintain."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I minify CSS using this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool allows you to minify CSS by removing unnecessary characters such as spaces, line breaks, and comments to improve performance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this CSS Formatter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! ToolEsy CSS Beautifier & Formatter is completely free and offers instant results with no signup."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- ✅ Webpage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "CSS Beautifier & Formatter Online Free",
-  "url": "https://toolesy.com/online-css-beautifier-formatter/",
-  "description": "Free online tool to format, beautify, and minify CSS instantly."
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

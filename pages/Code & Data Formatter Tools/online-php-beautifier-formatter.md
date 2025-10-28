@@ -30,40 +30,6 @@ permalink: /online-php-beautifier-formatter/
 <meta name="twitter:title" content="Free Online PHP Beautifier & Formatter">
 <meta name="twitter:description" content="Format, minify, and validate PHP code easily. Boost readability and clean up messy PHP code online.">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does a PHP beautifier do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A PHP beautifier formats messy PHP code into clean and readable code by applying proper indentation, spacing, and structure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this PHP formatter tool free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. This PHP Formatter & Beautifier tool is 100% free and requires no sign-up or installation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can this tool validate PHP code for errors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The tool identifies syntax issues and helps improve code structure for better functionality and debugging."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

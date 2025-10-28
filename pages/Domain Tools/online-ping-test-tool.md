@@ -29,53 +29,6 @@ permalink: /online-ping-test-tool/
 <meta name="twitter:title" content="Ping Test — Server Response & Latency Checker">
 <meta name="twitter:description" content="Fast and accurate online ping test tool. Free & reliable.">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free Online Ping Test Tool",
-  "description": "Check network latency, server connectivity and ping response time. 100% free online ping tester.",
-  "url": "https://toolesy.com/online-ping-test-tool/",
-  "mainEntity": [{
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a ping test?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A ping test measures the latency and response time between your device and a server."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is lower ping better?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, lower ping means faster and more stable network performance, especially important for gaming and calls."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I test ping for any server?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can test ping and connectivity for any public IP address, website, or server worldwide."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What causes high ping?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Slow WiFi, long distance to server, network congestion, or VPN use can cause high latency."
-        }
-      }
-    ]
-  }]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -31,41 +31,6 @@ permalink: /online-xml-formatter-format-validate-beautify/
 <meta name="twitter:title" content="Free Online XML Formatter & Checker">
 <meta name="twitter:description" content="Instant XML beautifier and validator. Format unreadable XML into clean and structured code for better readability.">
 
-<!-- ✅ FAQ Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an XML Formatter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An XML formatter formats messy XML code into a properly structured and readable form with correct indentation and syntax highlighting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this XML formatter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This XML Formatter and Validator is 100% free. No signup or software installation required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does this tool validate XML for errors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. This tool validates XML structure and highlights any syntax errors so they can be corrected easily."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

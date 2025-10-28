@@ -30,40 +30,6 @@ permalink: /online-javascript-beautifier-formatter/
 <meta name="twitter:title" content="Free Online JavaScript Beautifier & Formatter">
 <meta name="twitter:description" content="Beautify and minify JS code instantly. Make JavaScript clean, readable & production-ready.">
 
-<!-- ✅ FAQ Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a JavaScript beautifier?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A JavaScript beautifier is a tool that reformats messy JS code into a clean and readable structure with proper indentation and spacing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I also minify JavaScript code with this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This free online JS formatter also supports minifying your JavaScript to reduce file size for better website performance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this JavaScript formatting tool free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. This tool is completely free and does not require any signup."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

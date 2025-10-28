@@ -28,51 +28,6 @@ permalink: /online-html-beautifier-formatter/
 <meta name="twitter:title" content="Free HTML Beautifier & Formatter - Online Tool">
 <meta name="twitter:description" content="Instant HTML formatting & minification for developers. Copy clean organized HTML code in seconds.">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does an HTML Beautifier do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An HTML Beautifier formats messy HTML by adding proper indentation and structure. It makes the code easier to read and debug."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I minify HTML with this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can minify HTML by removing unwanted spaces, line breaks, and comments for faster page performance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this HTML Formatter tool free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. ToolEsy HTML Beautifier & Formatter is 100% free with instant results and no signup required."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "HTML Beautifier & Formatter Online Free",
-  "url": "https://toolesy.com/online-html-beautifier-formatter/",
-  "description": "Free online tool to beautify, format, minify and clean HTML code instantly."
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

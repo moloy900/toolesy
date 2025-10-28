@@ -25,52 +25,6 @@ permalink: /find-location-of-your-domain-free-website-location-finder/
 <meta name="twitter:title" content="Find Website & Server Location Online">
 <meta name="twitter:description" content="Find where a website is hosted - country, city, ISP & coordinates. No signup!">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Find Website Location Online",
-  "description": "Free tool to check the server location of any domain including IP, ISP & geolocation.",
-  "url": "https://toolesy.com/find-location-of-your-domain-free-website-location-finder/",
-  "mainEntity": [{
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I find the location of a domain?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Enter the website URL in our tool and get the server location including country, region, city & ISP."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I find where a website is hosted?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, this tool identifies the hosting provider and server location instantly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this website location tool free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it is 100% free and requires no account."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How accurate is website geolocation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We provide the most accurate results based on IP and global data sources."
-        }
-      }
-    ]
-  }]
-}
-</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

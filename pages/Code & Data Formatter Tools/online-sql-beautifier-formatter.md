@@ -30,41 +30,6 @@ permalink: /online-sql-beautifier-formatter/
 <meta name="twitter:title" content="Free Online SQL Beautifier & Validator">
 <meta name="twitter:description" content="Beautify, format, and validate SQL Queries with just one click. Free SQL formatter tool for MySQL, PostgreSQL, Oracle, SQL Server & more.">
 
-<!-- ✅ FAQ Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a SQL Beautifier tool used for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A SQL beautifier tool formats SQL code by adding proper indentation and structure. It makes SQL queries readable, organized, and easier to debug or understand."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this SQL formatter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The SQL Beautifier & Formatter is 100% free, with no account required. Simply paste your query and format it in one click."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does this tool support all SQL types?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. It supports most SQL databases including MySQL, PostgreSQL, SQL Server, Oracle, SQLite, MariaDB, and more."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
