@@ -30,63 +30,6 @@ permalink: /percentage-calculator/
 <meta name="twitter:title" content="Free Percentage Calculator Online">
 <meta name="twitter:description" content="Easy percent calculator for percentage increase, decrease & discounts.">
 
-<!-- ✅ Webpage Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "Free Percentage Calculator Online",
- "url": "https://toolesy.com/percentage-calculator",
- "description": "Free percentage calculator for percentage increase, decrease, discounts & GST calculations.",
- "publisher": {
-   "@type": "Organization",
-   "name": "ToolEsy"
- }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I calculate percentage of a number?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Multiply the number by the percentage divided by 100. For example, to find 15% of 200, calculate (15 ÷ 100) × 200 = 30."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between percentage increase and decrease?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Percentage increase measures growth from an original value to a higher value, while percentage decrease measures reduction from an original value to a lower value."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I calculate what percentage one number is of another?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Divide the first number by the second number, then multiply by 100. For example, to find what percentage 25 is of 80, calculate (25 ÷ 80) × 100 = 31.25%."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there any cost to use this percentage calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, this is completely free tool with no registration required and no hidden fees."
-      }
-    }
-  ]
-}
-</script>
-
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -33,65 +33,6 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
 <meta name="twitter:title" content="Hours Calculator | Free Online Work Hours & Time Duration Tool">
 <meta name="twitter:description" content="Free online hours calculator for work hours, timesheet totals, overtime, payroll, and time duration. Quick and easy to use.">
 
-<!-- JSON-LD Web Application Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Hours Calculator",
-  "url": "https://toolesy.com/hours-calculator-calculate-hours-work-time-timesheet-online",
-  "description": "Free online hours calculator to calculate work hours, timesheet totals, time duration, overtime, and payroll. Fast, accurate, and easy to use for employees, freelancers, and businesses.",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "All",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I calculate hours with breaks included?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply enter your clock-in time, clock-out time, and break duration. The calculator automatically subtracts break time from your total hours worked."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between regular time and overtime?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Regular time is hours worked up to your standard work week (typically 40 hours). Overtime is any hours worked beyond that threshold, usually paid at a higher rate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate hours for multiple employees?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "While this calculator is designed for individual calculations, you can use it sequentially for multiple employees by clearing the inputs between calculations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How accurate is the hours calculation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our calculator is highly accurate and handles all time calculations with precision, including decimal conversions and break time deductions."
-      }
-    }
-  ]
-}
-</script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

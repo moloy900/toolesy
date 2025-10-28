@@ -28,67 +28,6 @@ permalink: /travel-carbon-offset-calculator/
 <meta name="twitter:title" content="Travel Carbon Offset Calculator">
 <meta name="twitter:description" content="Calculate your travel CO2 emissions and offset them with sustainable projects. Fast & Free!">
 
-
-<!-- ✅ Webpage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Travel Carbon Footprint Calculator",
-  "url": "https://toolesy.com/travel-carbon-offset-calculator/",
-  "description": "Free online CO2 calculator for all types of travel to measure and offset emissions."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How accurate are the carbon emission calculations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our calculations use emission factors from reputable sources including the EPA, DEFRA, and ICAO. While individual results may vary based on specific circumstances, the estimates provide a reliable benchmark for understanding travel impacts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does carbon offsetting actually mean?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Carbon offsetting involves investing in environmental projects that reduce or remove greenhouse gas emissions equivalent to those you've produced. These projects are verified by third-party standards to ensure they deliver real, additional climate benefits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are offset projects actually effective?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Verified carbon offset projects undergo rigorous certification processes to ensure they deliver genuine emission reductions. Look for projects certified under standards like Gold Standard, Verified Carbon Standard (VCS), or Climate Action Reserve."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should I reduce my travel or just offset it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most effective approach is to first reduce emissions where possible and then offset the remaining unavoidable emissions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does carbon offsetting typically cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Offset costs range from $10-50 per ton of CO₂ depending on project type and certification standard. Our calculator uses $25/ton as a default, representing the average cost of high-quality offset projects."
-      }
-    }
-  ]
-}
-</script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

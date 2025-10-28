@@ -33,66 +33,6 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
 <meta name="twitter:title" content="Date Calculator | Free Online Tool to Add, Subtract & Compare Dates">
 <meta name="twitter:description" content="Free online date calculator to add or subtract days, calculate date differences, and find day of the week. Fast and easy to use.">
 
-<!-- JSON-LD Web Application Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Date Calculator",
-  "url": "https://toolesy.com/date-calculator-calculate-dates-addsubtract-days-online",
-  "description": "Free online date calculator tool to calculate date differences, add or subtract days, and find weekdays. Fast, accurate, and easy to use.",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "All",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How accurate is the date calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our date calculator is highly accurate and accounts for leap years, different month lengths, and time zone considerations. It uses JavaScript's built-in Date object for precise calculations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate business days only (excluding weekends)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can use the option to exclude weekends when calculating date differences or adding/subtracting days from dates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How far back or forward in time can I calculate dates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The calculator can handle dates from year 1000 to year 9999, covering virtually all practical needs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the calculator account for leap years?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the calculator automatically accounts for leap years in all date calculations, ensuring accurate results."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
