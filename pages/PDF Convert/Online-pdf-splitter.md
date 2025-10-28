@@ -29,58 +29,6 @@ permalink: /free-online-pdf-splitter-split-pdf-files-into-multiple-documents/
 <meta name="twitter:title" content="Free Online PDF Splitter Tool">
 <meta name="twitter:description" content="Split PDF files into multiple documents online without losing quality.">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I split a PDF file online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Upload your PDF, select the pages or range you want to split, then download your new PDF files instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this PDF splitter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is 100% free to use with no registration or watermark applied."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the quality of the PDF reduce after splitting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, your PDF documents retain the original quality when splitting pages."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- WebSite + Tool Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "PDF Splitter",
- "url": "https://toolesy.com/free-online-pdf-splitter-split-pdf-files-into-multiple-documents/",
- "applicationCategory": "BusinessApplication",
- "operatingSystem": "Web Browser",
- "description": "Free online PDF splitter tool to separate pages or extract specific page ranges.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

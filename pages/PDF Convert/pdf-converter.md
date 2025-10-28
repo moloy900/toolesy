@@ -29,58 +29,6 @@ permalink: /online-pdf-converter-convert-pdf-to-image-formats/
 <meta name="twitter:title" content="PDF Converter - Free PDF to JPG, PNG Tool">
 <meta name="twitter:description" content="Convert PDF to multiple formats instantly. No signup required!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this PDF converter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can convert PDF files for free without creating an account or adding a watermark."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What formats can I convert PDF to?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can convert PDF files to JPG, PNG, TIFF, HTML, ODT, EPUB, and more formats online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my uploaded PDF secure?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, all uploaded files are processed securely and automatically deleted after conversion."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- WebApplication Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "PDF Converter",
- "url": "https://toolesy.com/online-pdf-converter-convert-pdf-to-image-formats/",
- "applicationCategory": "UtilityApplication",
- "operatingSystem": "Web Browser",
- "description": "Convert PDF to images & documents online with high quality and free usage.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

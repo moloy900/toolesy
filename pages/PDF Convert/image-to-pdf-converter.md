@@ -26,58 +26,6 @@ permalink: /online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf/
 <meta name="twitter:title" content="Free Image to PDF Converter - No Watermark">
 <meta name="twitter:description" content="Convert JPG, PNG, TIFF images to PDF instantly — Secure & free.">
 
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Image to PDF Converter",
-  "description": "Convert JPG, PNG, TIFF to PDF online — free, secure & fast.",
-  "url": "https://toolesy.com/online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ToolEsy",
-    "logo": {
-      "@type": "ImageObject"
-    }
-  }
-}
-</script>
-
-<!-- ✅ FAQ Schema for Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this image to PDF converter free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is 100% free and you can convert images to PDF without registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which image formats are supported?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We support JPG, PNG, and TIFF images. You can also combine multiple files into a single PDF."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will there be a watermark on my PDF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, we do not add any watermark to your converted PDF."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

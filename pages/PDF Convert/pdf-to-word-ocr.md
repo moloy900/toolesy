@@ -29,58 +29,6 @@ permalink: /pdf-to-word-ocr-converter/
 <meta name="twitter:title" content="Free PDF to Word Converter with OCR">
 <meta name="twitter:description" content="Convert scanned PDF to editable Word documents online — fast & secure.">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Can this tool convert scanned PDFs into editable Word files?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes, this tool uses OCR technology to extract text from scanned PDFs and convert them into editable Word documents."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Is the PDF to Word OCR converter free?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes, this tool is completely free to use with no registration or watermark."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Are my uploaded PDF files secure?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes, all files are processed securely in your browser and deleted automatically after conversion."
-   }
-  }
- ]
-}
-</script>
-
-<!-- WebApplication Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "PDF to Word OCR Converter",
- "url": "https://toolesy.com/pdf-to-word-ocr-converter/",
- "applicationCategory": "UtilityApplication",
- "operatingSystem": "Web Browser",
- "description": "Convert scanned PDF files into editable Word documents online using optical character recognition.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
-
 <!-- === PDF to Word OCR Required Libraries === -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>

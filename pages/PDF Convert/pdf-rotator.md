@@ -29,57 +29,6 @@ permalink: /online-pdf-rotator-rotate-pdf-pages/
 <meta name="twitter:title" content="PDF Rotator - Free Online Rotate Tool">
 <meta name="twitter:description" content="Rotate any PDF page online instantly. No signup required!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this PDF rotation tool free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool allows you to rotate PDF pages for free without any watermark or registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I rotate only selected pages?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can rotate specific pages or the entire PDF according to your need."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will my PDF quality remain the same?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, your PDF quality remains intact and files are securely deleted after processing."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- WebApplication Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "PDF Rotator",
- "url": "https://toolesy.com/online-pdf-rotator-rotate-pdf-pages/",
- "applicationCategory": "UtilityApplication",
- "operatingSystem": "Web Browser",
- "description": "Rotate PDF pages left, right or upside-down quickly and securely online.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
 
 
 <!-- Font Awesome -->

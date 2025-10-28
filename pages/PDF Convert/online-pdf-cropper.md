@@ -26,58 +26,6 @@ permalink: /free-online-pdf-cropper-crop-pdf-pages-precisely/
 <meta name="twitter:title" content="Free Online PDF Cropper - No Watermark">
 <meta name="twitter:description" content="Crop and trim PDF pages online free. No signup. No watermark.">
 
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "PDF Cropper Tool",
-  "description": "Crop and trim PDF pages online free with precise selection & no quality loss.",
-  "url": "https://toolesy.com/free-online-pdf-cropper-crop-pdf-pages-precisely",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ToolEsy",
-    "logo": {
-      "@type": "ImageObject"
-    }
-  }
-}
-</script>
-
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this PDF cropper free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, our PDF cropper is 100% free to use without any registration or watermark."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I crop all pages in a PDF at once?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can apply the same crop selection to multiple or all pages in your PDF file."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will cropping affect PDF quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, the cropping process does not reduce quality. It only trims selected areas."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

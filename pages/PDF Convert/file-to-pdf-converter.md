@@ -27,57 +27,6 @@ permalink: /free-online-pdf-word-excel-converter/
 <meta name="twitter:title" content="Free PDF Converter Tool">
 <meta name="twitter:description" content="Convert Word, Excel & HTML files to PDF online — Fast & secure">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free PDF Converter",
-  "description": "Free online tool to convert DOCX, XLSX & HTML to PDF. No signup required.",
-  "url": "https://toolesy.com/free-online-pdf-word-excel-converter",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ToolEsy",
-    "logo": {
-      "@type": "ImageObject"
-    }
-  }
-}
-</script>
-
-<!-- ✅ FAQ Schema for Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this PDF converter tool free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the PDF converter is 100% free and requires no signup."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which file formats can I convert to PDF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can convert Word (DOCX), Excel (XLSX), and HTML files to PDF."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my uploaded file secure?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, all files are processed securely and not stored on servers after conversion."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- === PDF Converter Required Libraries === -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>

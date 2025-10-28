@@ -26,58 +26,6 @@ permalink: /online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/
 <meta name="twitter:title" content="Resize PDF Pages Online Free">
 <meta name="twitter:description" content="Adjust PDF dimensions to standard or custom sizes. No watermark and no registration.">
 
-<!-- ✅ WebPage Schema for Google Ranking -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "PDF Resizer Tool",
-  "description": "Resize PDF pages online to A4, Letter, Legal or custom sizes. Quick, secure and without losing quality.",
-  "url": "https://toolesy.com/online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ToolEsy",
-    "logo": {
-      "@type": "ImageObject"
-    }
-  }
-}
-</script>
-
-<!-- ✅ FAQ Schema for Featured Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is the PDF resizer free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, our PDF resizer tool is 100% free with no watermark or signup required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will resizing PDF pages reduce the quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, the tool maintains high-quality resolution even after resizing your PDF pages."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What paper sizes does this PDF resizer support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can resize PDFs to A4, Letter, Legal, and custom dimensions as per your requirement."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

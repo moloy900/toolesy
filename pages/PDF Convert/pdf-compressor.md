@@ -29,58 +29,6 @@ permalink: /online-pdf-compressor-reduce-pdf-file-size/
 <meta name="twitter:title" content="Free PDF Compressor Tool">
 <meta name="twitter:description" content="Reduce PDF file size online without losing quality. Free & Easy.">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How can I compress a PDF online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Upload your PDF file, select the compression level, and download the reduced-size PDF in seconds. No registration required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the PDF quality reduced after compression?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can choose between low, medium, or high compression to keep the best balance between file size and quality."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this PDF compressor free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! It is 100% free to use with no watermark or usage limits."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- WebApplication / Tool Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "PDF Compressor",
- "url": "https://toolesy.com/online-pdf-compressor-reduce-pdf-file-size/",
- "applicationCategory": "UtilityApplication",
- "operatingSystem": "Web Browser",
- "description": "Free online PDF compressor to reduce file size for fast sharing and storage savings.",
- "offers": {
-   "@type": "Offer",
-   "price": "0",
-   "priceCurrency": "USD"
- }
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

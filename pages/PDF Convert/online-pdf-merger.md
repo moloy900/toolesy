@@ -26,58 +26,6 @@ permalink: /free-online-pdf-merger-combine-multiple-pdf-files-into-one/
 <meta name="twitter:title" content="Merge PDF Files Online Free - No Watermark">
 <meta name="twitter:description" content="Fast and secure PDF merge tool. Combine PDFs easily online with no registration or watermark.">
 
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "PDF Merger Tool",
-  "description": "Merge multiple PDF files online for free. No watermark, fast processing, and secure file handling.",
-  "url": "https://toolesy.com/free-online-pdf-merger-combine-multiple-pdf-files-into-one",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ToolEsy",
-    "logo": {
-      "@type": "ImageObject"
-    }
-  }
-}
-</script>
-
-<!-- ✅ FAQ Schema for High Ranking -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is the PDF merger free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, our PDF merger tool is 100% free with no hidden charges or watermarking."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will merging PDFs reduce the quality?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, your PDFs remain in their original high-quality resolution even after merging."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need to sign up to merge PDF files?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No registration is required. Simply upload your files and combine them instantly."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
