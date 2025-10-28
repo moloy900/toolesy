@@ -202,7 +202,7 @@
       background-color: #f0f0f0;
       display: flex;
       align-items: start;
-      justify-content: start;
+      justify-content: center;
       margin: 0 10px;
       color: #888;
   }
@@ -234,7 +234,7 @@
       height: 120px;
       display: flex;
       align-items: start;
-      justify-content: start;
+      justify-content: center;
       color: #888;
   }
 
