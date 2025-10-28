@@ -196,6 +196,9 @@
 
   /* Side Ads */
   .ad-side {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
       width: 160px;
       flex-shrink: 0;
       min-height: 600px;
