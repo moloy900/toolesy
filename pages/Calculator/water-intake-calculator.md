@@ -28,39 +28,6 @@ permalink: /water-intake-calculator-calculate-your-daily-hydration-needs/
 <meta name="twitter:title" content="Water Intake Calculator - How Much Water Do You Need Daily?">
 <meta name="twitter:description" content="Instantly calculate your hydration needs based on weight, activity & more. Free & easy to use!">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-      "@type": "Question",
-      "name": "How much water do I need per day?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your daily water intake depends on weight, age, activity level, weather conditions, and overall health. Use a water intake calculator for a personalized result."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is drinking 3 liters of water a day good?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "3 liters per day may be ideal for some individuals but can be too much or too little depending on lifestyle and health factors. The calculator provides accurate personalized guidance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know if I'm properly hydrated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Clear to pale-yellow urine, good energy levels, and normal thirst response indicate proper hydration. Dark urine or fatigue may signal dehydration."
-      }
-    }
-  ]
-}
-</script>
-
 <!-- ✅ WebPage Schema -->
 <script type="application/ld+json">
 {
