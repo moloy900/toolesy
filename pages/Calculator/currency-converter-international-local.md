@@ -51,6 +51,47 @@ permalink: /currency-converter-international-local/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between International and Indian numbering systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The International system uses groups of three digits (Thousands, Millions, Billions), while the Indian system uses groups of two digits after thousands (Lakhs, Crores, Arabs)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the currency exchange rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our currency rates are updated regularly and provide approximate market rates. For exact trading rates, please check with your financial institution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit to the numbers I can convert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can convert very large numbers, including trillions and kharabs, without any issue. The tool is built to handle extremely large numerical values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my financial data kept private when I use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All conversions happen locally in your browser. Your financial data is never sent to any server, meaning we never see, store, or have access to your numbers."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -732,9 +773,6 @@ permalink: /currency-converter-international-local/
 
     <p><strong>Q: Is my financial data kept private when I use this tool?</strong><br>
       A: Absolutely. All conversions happen locally in your browser. Your financial data is never sent to any server, meaning we never see, store, or have access to your numbers.</p>
-
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
 
     <h3>Why Choose Our Currency & Number Converter?</h3>
     <p>Our <strong>online Currency Converter and Number System Converter</strong> stands out because of its dual functionality, combining currency conversion with numbering system conversion. Unlike simple currency converters, we help you understand the fundamental differences between numbering systems used around the world. The tool works completely offline once loaded, ensuring your data privacy and reliability even with poor internet connections.</p>

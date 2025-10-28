@@ -39,6 +39,54 @@ permalink: /water-intake-calculator-calculate-your-daily-hydration-needs/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I drink too much water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While rare, overhydration (hyponatremia) is possible, especially during endurance events. Stick to your calculated needs and increase gradually during extreme conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do other beverages count toward my daily water intake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most non-alcoholic beverages contribute to hydration. However, water should be your primary source as it's calorie-free and most effective."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does caffeine affect hydration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While caffeine has mild diuretic effects, moderate consumption (3-4 cups daily) doesn't significantly impact overall hydration status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I drink water even when I'm not thirsty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, thirst is a late indicator of dehydration. It's better to drink regularly throughout the day rather than waiting until you feel thirsty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if I'm properly hydrated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signs of good hydration include pale yellow urine, regular urination 4-7 times daily, moist mouth and skin, and good energy levels."
+      }
+    }
+  ]
+}
+</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

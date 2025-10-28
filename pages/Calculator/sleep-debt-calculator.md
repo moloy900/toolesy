@@ -45,27 +45,55 @@ permalink: /sleep-debt-calculator-track-and-calculate-your-sleep-deficit/
 }
 </script>
 
-<!-- ✅ Breadcrumb Schema -->
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [
-  {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://toolesy.com/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Sleep Debt Calculator",
-   "item": "https://toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit"
-  }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is sleep debt calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sleep debt is calculated by comparing your actual sleep time with your recommended sleep needs over a specific period. For example, if you need 8 hours but only get 6 hours for 5 days, you accumulate 10 hours of sleep debt (2 hours × 5 days)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I really \"catch up\" on lost sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but with limitations. While extra sleep on weekends can help reduce sleep debt, it doesn't completely reverse all effects of chronic sleep deprivation. Consistent adequate sleep is most beneficial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much sleep do I actually need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sleep needs vary by age and individual. Most adults need 7-9 hours, teenagers need 8-10 hours, and younger children need 9-12 hours. Our calculator adjusts recommendations based on your age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is napping helpful for reducing sleep debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strategic napping (20-30 minutes) can provide temporary alertness benefits, but it doesn't replace the need for consolidated nighttime sleep for debt recovery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to recover from sleep debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recovery time depends on the amount of debt accumulated. Generally, it takes several days of adequate sleep to recover from each hour of sleep debt, with longer recovery needed for chronic deprivation."
+      }
+    }
+  ]
 }
 </script>
+
 
 
 <!-- Font Awesome -->

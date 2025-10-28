@@ -46,25 +46,52 @@ permalink: /social-media-time-wastage-calculator/
 }
 </script>
 
-<!-- ✅ Breadcrumb Schema -->
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [
-  {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://toolesy.com/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Social Media Time Wastage Calculator",
-   "item": "https://toolesy.com/social-media-time-wastage-calculator"
-  }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the Social Media Time Wastage Calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator provides estimates based on the data you input. For maximum accuracy, check your phone's screen time reports or use dedicated tracking apps before entering your usage times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as \"productive time\" versus \"wasted time\" on social media?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While some social media use can be productive (networking, learning, business), our calculator focuses on recreational usage. The tool allows you to adjust parameters based on how you value your time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I save my data to track progress over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the calculator includes a \"Save My Data\" feature that stores your information locally in your browser, allowing you to compare your usage patterns over weeks or months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the digital wellness score calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The wellness score considers total screen time, distribution across platforms, comparison with healthy benchmarks, and potential impact on sleep and mental health."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my social media usage data secure and private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. All calculations happen locally in your browser. Your data is never sent to any server, ensuring complete privacy and security."
+      }
+    }
+  ]
 }
 </script>
 

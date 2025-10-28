@@ -52,6 +52,55 @@ permalink: /confidence-interval-calculator-calculate-statistical-intervals-onlin
 </script>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a confidence interval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A confidence interval is a range of values that likely contains the true population parameter with a specified level of confidence. A 95% confidence interval means that if we repeated the sampling process many times, 95% of the intervals would contain the true parameter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use Z-distribution vs T-distribution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Z-distribution when the population standard deviation is known or when sample size is large (n > 30). Use T-distribution when population standard deviation is unknown and sample size is small (n ≤ 30)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does sample size affect the confidence interval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Larger sample sizes result in narrower confidence intervals, providing more precise estimates of the population parameter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between confidence level and confidence interval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Confidence level (e.g., 95%) is the probability that the interval contains the true parameter. Confidence interval is the actual range of values (e.g., [45, 55])."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this calculator for medical or critical research?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While this calculator provides accurate statistical results, always consult with a statistician for critical research applications."
+      }
+    }
+  ]
+}
+</script>
+
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

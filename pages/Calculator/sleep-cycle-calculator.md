@@ -45,24 +45,55 @@ permalink: /sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time/
 }
 </script>
 
-<!-- ✅ Breadcrumb Schema -->
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [{
-  "@type": "ListItem",
-  "position": 1,
-  "name": "Home",
-  "item": "https://toolesy.com/"
- }, {
-  "@type": "ListItem",
-  "position": 2,
-  "name": "Sleep Cycle Calculator",
-  "item": "https://toolesy.com/sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time"
- }]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long is a typical sleep cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most adults have sleep cycles lasting 90-110 minutes, with 90 minutes being the average. The first cycle might be shorter, while later cycles tend to be longer with more REM sleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I train myself to need less sleep by using sleep cycles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While timing your sleep with cycles can improve sleep quality, it doesn't reduce your biological sleep needs. Most adults still require 7-9 hours of sleep per night for optimal health."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I still feel tired even after completing sleep cycles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several factors can affect sleep quality, including sleep disorders, stress, diet, and sleep environment. Completing cycles helps, but other sleep hygiene factors are also important."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do sleep cycles change with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, sleep architecture changes throughout life. Infants have shorter cycles (50-60 minutes), while older adults may experience more fragmented sleep with less deep sleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to get 6 hours of sleep with complete cycles or 7 hours that breaks a cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, it's better to complete cycles. Six hours (4 cycles) with proper timing often feels better than 7 hours that wakes you from deep sleep. However, consistently getting only 6 hours can lead to sleep debt over time."
+      }
+    }
+  ]
 }
 </script>
+
 
 
 <!-- Font Awesome -->

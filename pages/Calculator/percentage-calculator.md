@@ -45,24 +45,47 @@ permalink: /percentage-calculator/
 }
 </script>
 
-<!-- ✅ Breadcrumb Schema (Boost SEO Ranking) -->
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [{
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://toolesy.com/"
- }, {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "Percentage Calculator",
-   "item": "https://toolesy.com/percentage-calculator"
- }]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate percentage of a number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the number by the percentage divided by 100. For example, to find 15% of 200, calculate (15 ÷ 100) × 200 = 30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between percentage increase and decrease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percentage increase measures growth from an original value to a higher value, while percentage decrease measures reduction from an original value to a lower value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate what percentage one number is of another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the first number by the second number, then multiply by 100. For example, to find what percentage 25 is of 80, calculate (25 ÷ 80) × 100 = 31.25%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any cost to use this percentage calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this is completely free tool with no registration required and no hidden fees."
+      }
+    }
+  ]
 }
 </script>
+
 
 
 <!-- Font Awesome -->
@@ -686,9 +709,6 @@ permalink: /percentage-calculator/
 
     <p><strong>Q: How do I calculate what percentage one number is of another?</strong><br>
       A: Divide the first number by the second number, then multiply by 100. For example, to find what percentage 25 is of 80, calculate (25 ÷ 80) × 100 = 31.25%.</p>
-
-    <p><strong>Q: Can I use this calculator on my mobile phone?</strong><br>
-      A: Yes, our percentage calculator is fully responsive and works perfectly on all devices including smartphones and tablets.</p>
 
     <p><strong>Q: Is there any cost to use this percentage calculator?</strong><br>
       A: No, this is completely free tool with no registration required and no hidden fees.</p>

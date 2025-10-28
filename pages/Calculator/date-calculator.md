@@ -51,6 +51,49 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
 }
 </script>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the date calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our date calculator is highly accurate and accounts for leap years, different month lengths, and time zone considerations. It uses JavaScript's built-in Date object for precise calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate business days only (excluding weekends)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can use the option to exclude weekends when calculating date differences or adding/subtracting days from dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far back or forward in time can I calculate dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator can handle dates from year 1000 to year 9999, covering virtually all practical needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for leap years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the calculator automatically accounts for leap years in all date calculations, ensuring accurate results."
+      }
+    }
+  ]
+}
+</script>
+
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -858,9 +901,6 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
 
     <p><strong>Q: Does the calculator account for leap years?</strong><br>
       A: Yes, the calculator automatically accounts for leap years in all date calculations, ensuring accurate results.</p>
-
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our date calculator is fully responsive and works perfectly on all devices including smartphones and tablets.</p>
 
     <h3>Why Choose Our Date Calculator?</h3>
     <p>Our <strong>online date calculator</strong> stands out for its versatility, accuracy, and user-friendly interface. Unlike basic calculators that provide simple results, ours shows detailed breakdowns and step-by-step explanations of how each calculation was performed. The tool handles multiple date calculation scenarios and provides options to customize results based on your specific needs. All calculations happen locally in your browser, ensuring your data privacy and enabling offline use once the page is loaded.</p>

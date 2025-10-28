@@ -51,6 +51,47 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate hours with breaks included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply enter your clock-in time, clock-out time, and break duration. The calculator automatically subtracts break time from your total hours worked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between regular time and overtime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regular time is hours worked up to your standard work week (typically 40 hours). Overtime is any hours worked beyond that threshold, usually paid at a higher rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate hours for multiple employees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While this calculator is designed for individual calculations, you can use it sequentially for multiple employees by clearing the inputs between calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the hours calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our calculator is highly accurate and handles all time calculations with precision, including decimal conversions and break time deductions."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -1028,9 +1069,6 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
 
     <p><strong>Q: How accurate is the hours calculation?</strong><br>
       A: Our calculator is highly accurate and handles all time calculations with precision, including decimal conversions and break time deductions.</p>
-
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our hours calculator is fully responsive and works perfectly on all devices including smartphones and tablets.</p>
 
     <h3>Why Choose Our Hours Calculator?</h3>
     <p>Our <strong>online hours calculator</strong> stands out for its comprehensive features, accuracy, and user-friendly interface. Unlike basic calculators that provide simple results, ours shows detailed breakdowns with summary cards and step-by-step explanations. The tool handles multiple calculation scenarios including daily hours, weekly timesheets, overtime calculations, and payroll computations. All calculations happen locally in your browser, ensuring your data privacy and enabling offline use once the page is loaded.</p>

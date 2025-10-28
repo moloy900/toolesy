@@ -53,6 +53,56 @@ permalink: /language-learning-progress-calculator/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate are the timeline estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estimates are based on language acquisition research and average learning curves. Individual results may vary based on aptitude, consistency, and learning environment, but the calculations provide realistic benchmarks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the CEFR scale used in the calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Common European Framework of Reference for Languages (CEFR) is an international standard for describing language ability. It ranges from A1 (beginner) to C2 (proficient/mastery)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does language difficulty affect learning time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Languages are categorized by difficulty for English speakers. Category I (Spanish, French) takes ~600 hours to reach B2, while Category IV (Arabic, Chinese, Japanese, Korean) can take ~2200 hours for the same level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I save my progress and return later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the 'Save My Progress' feature stores your data locally in your browser, allowing you to track your improvement over time and update your calculations as you advance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I recalculate my progress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend recalculating every 1-3 months to account for actual progress, adjust study methods, and update your timeline based on real learning velocity."
+      }
+    }
+  ]
+}
+</script>
+
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

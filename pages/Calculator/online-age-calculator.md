@@ -53,6 +53,56 @@ permalink: /online-age-calculator/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this age calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our age calculator is extremely accurate. It accounts for leap years, different month lengths, and even calculates down to the second if you provide time information. The calculations are based on the Gregorian calendar system used internationally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate age for dates in the future?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can calculate how old someone will be on a future date by entering both the birth date and the future date you want to calculate age as of."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the zodiac sign calculation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The zodiac sign is automatically calculated based on your birth date using the tropical zodiac system commonly used in Western astrology. The tool shows your zodiac sign and its date range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my personal information kept private when I use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. This is a core principle of our tool. All calculations happen locally on your own computer or phone. Your dates are never sent to any server, meaning we never see, store, or have access to your personal information. It is 100% secure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account or pay to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees."
+      }
+    }
+  ]
+}
+</script>
+
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -889,9 +939,6 @@ Days Until Next Birthday: 63 days</div>
 
     <p><strong>Q: Is my personal information kept private when I use this tool?</strong><br>
       A: Absolutely. This is a core principle of our tool. All calculations happen locally on your own computer or phone. Your dates are never sent to any server, meaning we never see, store, or have access to your personal information. It is 100% secure.</p>
-
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
 
     <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
       A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>

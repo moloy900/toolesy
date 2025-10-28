@@ -44,6 +44,56 @@ permalink: /time-calculator-calculate-time-addsubtract-time-online/
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the time calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our time calculator is highly accurate and handles all time calculations with precision, including leap seconds and time zone conversions where applicable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate time in both 12-hour and 24-hour formats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can choose between 12-hour (AM/PM) and 24-hour formats in the calculator options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for daylight saving time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The basic time zone calculations use standard offsets. For precise daylight saving time adjustments, you may need to account for specific dates and locations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far can I calculate time differences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator can handle time differences of any duration, from seconds to years, making it suitable for both short-term and long-term calculations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this tool on my mobile phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our time calculator is fully responsive and works perfectly on all devices including smartphones and tablets."
+      }
+    }
+  ]
+}
+</script>
+
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
