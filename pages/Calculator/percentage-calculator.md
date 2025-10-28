@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Percentage Calculator - Calculate Percentages Online"
+title: "Percentage Calculator – Calculate Percentages Online"
 permalink: /percentage-calculator/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Percentage Calculator Online | % Increase/Decrease & Percentage of Number</title>
+<title>Percentage Calculator – Calculate Percentages Online</title>
 
 <meta name="description"
-  content="Free online percentage calculator! Calculate percentage increase, percentage decrease, percentage of a number, discount rate, and GST percentage easily with step-by-step solutions.">
+  content="Free percentage calculator to find percentage increase, decrease, discounts, GST, and percentage of any number. Quick, accurate, and easy for daily use.">
 
 <meta name="keywords"
   content="percentage calculator, calculate percentage, percentage increase calculator, percentage decrease calculator, percentage of number, discount percentage calculator, GST percentage calculator, math calculator online">
@@ -29,40 +29,6 @@ permalink: /percentage-calculator/
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Percentage Calculator Online">
 <meta name="twitter:description" content="Easy percent calculator for percentage increase, decrease & discounts.">
-
-<!-- ✅ FAQ SCHEMA (Boost Google Featured Snippets) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do you calculate percentage?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Percentage = (Value / Total) x 100. Enter values in the calculator for instant results."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I calculate percentage increase?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Percentage Increase = (New Value − Old Value) ÷ Old Value × 100. Our calculator does it automatically."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I find the discount percentage?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Discount % = (Original Price − Sale Price) ÷ Original Price × 100. Use the discount feature on this page."
-      }
-    }
-  ]
-}
-</script>
 
 <!-- ✅ Webpage Schema -->
 <script type="application/ld+json">

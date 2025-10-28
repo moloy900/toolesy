@@ -52,40 +52,6 @@ permalink: /average-calculator-calculate-mean-median-mode-online/
 }
 </script>
 
-<!-- FAQ Schema (SEO Boost for Google Featured Snippets) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does the Average Calculator do?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "This average calculator quickly calculates the mean, median, mode and range of any set of numbers. It’s designed for students, teachers, and data analysts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this calculator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. This tool is 100% free, requires no login and works on all devices including mobile, tablet, and desktop."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this average calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Anyone — including students learning math, teachers preparing assignments, and professionals doing statistical analysis."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Confidence Interval Calculator - Calculate Statistical Intervals Online"
+title: "Confidence Interval Calculator – Stats & Research Tool"
 permalink: /confidence-interval-calculator-calculate-statistical-intervals-online/
 ---
 
@@ -8,10 +8,10 @@ permalink: /confidence-interval-calculator-calculate-statistical-intervals-onlin
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Confidence Interval Calculator | Free Online Statistics Tool</title>
+<title>Confidence Interval Calculator – Stats & Research Tool</title>
 
 <meta name="description"
-  content="Calculate confidence intervals online for means, proportions, and more with our free confidence interval calculator. Perfect for statistics, research, and data analysis.">
+  content="Calculate confidence intervals for means, proportions and datasets with our free online tool. Fast, accurate and ideal for statistics, research and data analysis.">
 
 <meta name="keywords"
   content="confidence interval calculator, online statistics calculator, mean confidence interval, proportion confidence interval, margin of error calculator, standard error tool, z-score calculator, t-score calculator, data analysis calculator">
@@ -51,47 +51,6 @@ permalink: /confidence-interval-calculator-calculate-statistical-intervals-onlin
 }
 </script>
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Confidence Interval Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Confidence Interval Calculator is a statistical tool that estimates the range of values likely to contain a population parameter such as a mean or proportion. It is widely used in research, data analysis, and statistics."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Confidence Interval Calculator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool is completely free to use and requires no signup or login."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Anyone including students, researchers, teachers, and data analysts can use this online tool to calculate confidence intervals for statistical analysis."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of confidence intervals can I calculate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can calculate confidence intervals for means, proportions, standard deviations, and other statistical parameters using this online calculator."
-      }
-    }
-  ]
-}
-</script>
 
 
 <!-- Font Awesome -->

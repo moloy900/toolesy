@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Study Time vs Exam Score Calculator - Predict Your Exam Performance"
+title: "Study Time vs Exam Score Calculator – Predict Results"
 permalink: /study-time-vs-exam-score-calculator/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Study Time vs Exam Score Calculator | Predict Your Grades & Improve Results</title>
+<title>Study Time vs Exam Score Calculator – Predict Results</title>
 
 <meta name="description"
-  content="Use our free Study Time vs Exam Score Calculator to predict your exam marks based on study hours. Improve learning efficiency and create the best study plan for higher grades.">
+  content="Free study time vs exam score calculator to estimate marks from study hours. Improve learning, plan better, and boost grades with smart study insights.">
 
 <meta name="keywords"
   content="study time calculator, exam score predictor, grade calculator, study hours vs marks calculator, academic performance tool, improve exam results, study planning tool, grade prediction calculator">
@@ -30,40 +30,6 @@ permalink: /study-time-vs-exam-score-calculator/
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Exam Score Prediction Calculator | Study Smarter for Better Grades">
 <meta name="twitter:description" content="Track your study hours and forecast exam performance instantly.">
-
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "How does the Study Time vs Exam Score Calculator work?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "You enter how many hours you study per day and the calculator predicts your exam score using proven study efficiency models and general performance patterns."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How many hours should I study to score good marks?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Study recommendations vary by subject, but consistent daily study, active recall, and spaced repetition improve marks more effectively than long cramming sessions."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Can this tool improve my study plan?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes! It helps track your preparation and optimize your study schedule for better exam performance with the same effort."
-   }
-  }
- ]
-}
-</script>
 
 <!-- ✅ WebPage Schema -->
 <script type="application/ld+json">

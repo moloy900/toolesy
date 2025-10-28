@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Sleep Debt Calculator - Track and Calculate Your Sleep Deficit"
+title: "Sleep Debt Calculator – Track Your Sleep Deficit"
 permalink: /sleep-debt-calculator-track-and-calculate-your-sleep-deficit/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sleep Debt Calculator | Measure Your Sleep Deficit & Recover Faster</title>
+<title>Sleep Debt Calculator – Track Your Sleep Deficit</title>
 
 <meta name="description"
-  content="Free Sleep Debt Calculator helps you measure sleep deficit, track weekly sleep balance, and get personalized recovery tips. Improve sleep health and energy!">
+  content="Free sleep debt calculator to track your weekly sleep deficit and get tips to recover lost sleep. Improve your sleep health, mood, and daily energy levels.">
 
 <meta name="keywords"
   content="sleep debt calculator, sleep deficit calculator, sleep recovery calculator, how much sleep do I need, sleep tracker, sleep health calculator, sleep balance calculator, sleep deprivation recovery, sleep hours needed">
@@ -29,40 +29,6 @@ permalink: /sleep-debt-calculator-track-and-calculate-your-sleep-deficit/
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sleep Debt Calculator | Calculate Sleep Deficiency">
 <meta name="twitter:description" content="Check your sleep debt, restore sleep balance & boost productivity with science-backed calculations.">
-
-<!-- ✅ FAQ Schema for Google Rich Results -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "What is sleep debt?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Sleep debt is the difference between the amount of sleep you need versus the amount of sleep you actually get. Over time, sleep debt can negatively impact energy, focus, health, and mood."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How do you calculate sleep debt?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Sleep debt is calculated by subtracting your actual sleep hours from the recommended sleep hours per night, then multiplying by the number of nights with insufficient sleep."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Can you recover from sleep debt?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes, you can recover from sleep debt by getting extra sleep for a few days, maintaining consistent sleep times, and improving sleep hygiene."
-   }
-  }
- ]
-}
-</script>
 
 <!-- ✅ WebPage Schema -->
 <script type="application/ld+json">

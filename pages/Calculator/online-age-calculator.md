@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Online Age Calculator - Calculate Your Age Instantly"
+title: "Online Age Calculator – Calculate Age Instantly"
 permalink: /online-age-calculator/
 ---
 
@@ -8,10 +8,10 @@ permalink: /online-age-calculator/
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Online Age Calculator - Calculate Exact Age from Date of Birth</title>
+<title>Online Age Calculator – Calculate Age Instantly</title>
 
 <meta name="description"
-  content="Free online Age Calculator. Calculate exact age in years, months, days, hours, minutes & seconds. Also find age difference between two dates instantly. Perfect for daily use, school projects & official forms.">
+  content="Free online age calculator to find your exact age in years, months, days, and more. Also calculate age differences quickly for school, forms, and daily use.">
 
 <meta name="keywords"
   content="age calculator, age calculator online, date of birth calculator, how old am I, exact age calculator, age in days calculator, age counter, age difference calculator, birthday calculator, DOB calculator">
@@ -52,49 +52,6 @@ permalink: /online-age-calculator/
   }
 }
 </script>
-
-<!-- FAQ Schema JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does the Age Calculator work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Age Calculator computes your exact age using your birth date and the current date, showing age in years, months, days, hours, and minutes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the Age Calculator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! The Age Calculator is 100% free with no signup required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate age difference between two dates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can find the age gap between any two dates instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can this tool calculate age in days or seconds?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! You can calculate age in years, months, weeks, days, hours, minutes, and even seconds."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

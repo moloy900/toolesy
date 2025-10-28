@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Time Calculator - Calculate Time, Add/Subtract Time Online"
+title: "Time Calculator – Add, Subtract & Calculate Hours"
 permalink: /time-calculator-calculate-time-addsubtract-time-online/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Time Calculator - Add Time, Subtract Time, Calculate Hours & Minutes Online Free</title>
+<title>Time Calculator – Add, Subtract & Calculate Hours</title>
 
-<meta name="description" content="Free online time calculator to add or subtract time, calculate hours and minutes, find time differences, and convert time units instantly. Perfect for work, payroll, study, and daily use.">
+<meta name="description" content="Free online time calculator to add or subtract time, find time duration, and convert hours and minutes. Ideal for payroll, study, and everyday time planning.">
 
 <meta name="keywords" content="time calculator, add time calculator, subtract time calculator, time difference calculator, hours calculator, minutes calculator, work time calculator, time duration calculator, payroll hours calculator, free online time calculator">
 
@@ -29,39 +29,6 @@ permalink: /time-calculator-calculate-time-addsubtract-time-online/
 <meta name="twitter:title" content="Time Calculator - Fast & Free">
 <meta name="twitter:description" content="Add or subtract time, calculate work hours, convert hours to minutes instantly.">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-      "@type": "Question",
-      "name": "What is a time calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A time calculator helps you add, subtract, or calculate time durations such as hours and minutes quickly and accurately online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this time calculator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! ToolEsy Time Calculator is 100% free to use with instant results."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate work hours for payroll?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can easily calculate total working hours, break duration, and overtime for payroll or timesheets."
-      }
-    }
-  ]
-}
-</script>
-
 <!-- ✅ Webpage Schema for better ranking -->
 <script type="application/ld+json">
 {
@@ -76,8 +43,6 @@ permalink: /time-calculator-calculate-time-addsubtract-time-online/
   }
 }
 </script>
-
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

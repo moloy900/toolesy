@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Social Media Time Wastage Calculator - Track Your Digital Time"
+title: "Social Media Time Calculator – Track Digital Usage"
 permalink: /social-media-time-wastage-calculator/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Social Media Time Wastage Calculator | Track Your Digital Habits</title>
+<title>Social Media Time Calculator – Track Digital Usage</title>
 
 <meta name="description"
-  content="Use our free Social Media Time Wastage Calculator to track how much time you spend on apps like Facebook, Instagram, YouTube & TikTok. Reduce screen time and improve productivity with daily insights.">
+  content="Free social media time calculator to track daily screen time on Facebook, Instagram, YouTube, TikTok, and more. Reduce distractions and boost productivity.">
 
 <meta name="keywords"
   content="social media time calculator, screen time calculator, time wastage calculator, digital detox, productivity tracker, social media addiction, screen addiction, time management tool, digital wellness, app usage calculator">
@@ -30,40 +30,6 @@ permalink: /social-media-time-wastage-calculator/
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Social Media Time Calculator | Reduce Screen Time & Boost Productivity">
 <meta name="twitter:description" content="Check how much time you waste on social media and improve your digital well-being.">
-
-<!-- ✅ FAQ Schema for Google Rich Results -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "How do I calculate social media time usage?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Simply enter how many hours per day you spend on each social media platform. The calculator will estimate your total weekly, monthly, and yearly screen time and productivity loss."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How does social media affect productivity?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Excessive social media use reduces focus, increases procrastination, and decreases productivity. Tracking your usage helps you regain time for meaningful tasks."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How can I reduce my social media time?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Set daily reminders, avoid using social media during work hours, turn off notifications, and allocate specific time slots for browsing."
-   }
-  }
- ]
-}
-</script>
 
 <!-- ✅ WebPage Schema -->
 <script type="application/ld+json">

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Currency Converter (International + Local) - International to Indian Number System Converter"
+title: "Currency Converter – Millions to Lakhs & Crores Online"
 permalink: /currency-converter-international-local/
 ---
 
@@ -8,10 +8,10 @@ permalink: /currency-converter-international-local/
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Currency & Number Converter | International to Indian Number System</title>
+<title>Currency Converter – Millions to Lakhs & Crores Online</title>
 
 <meta name="description"
-  content="Free online currency converter and numbering system converter. Convert international numbers to Indian numbering system, millions to lakhs, billions to crores, and more instantly.">
+  content="Convert currency and numbers instantly from international format to the Indian numbering system. Change millions to lakhs, billions to crores easily and accurately.">
 
 <meta name="keywords"
   content="currency converter, number converter, international to Indian numbering system, million to lakh converter, billion to crore converter, lakh to million, crore to billion, online number converter, free converter">
@@ -50,49 +50,6 @@ permalink: /currency-converter-international-local/
   }
 }
 </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is this Currency & Number Converter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "This tool allows you to convert currencies and numbers online for free. You can switch between international and Indian numbering systems, convert millions to lakhs, billions to crores, and vice versa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this converter free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this converter is completely free and requires no login or registration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Anyone, including students, accountants, business professionals, and general users who want to convert currencies or numbers between international and Indian systems."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I convert large numbers like billions and crores?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool allows conversion of large numbers, including millions, billions, lakhs, and crores, easily and accurately."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

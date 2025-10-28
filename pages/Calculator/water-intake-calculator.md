@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Water Intake Calculator - Calculate Your Daily Hydration Needs"
+title: "Water Intake Calculator – Daily Hydration Requirement"
 permalink: /water-intake-calculator-calculate-your-daily-hydration-needs/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Daily Water Intake Calculator - How Much Water Should You Drink?</title>
+<title>Water Intake Calculator – Daily Hydration Requirement</title>
 
-<meta name="description" content="Free online Daily Water Intake Calculator. Calculate how much water you should drink per day based on weight, age, activity level & climate. Personalized hydration needs for a healthier lifestyle.">
+<meta name="description" content="Free water intake calculator to find how much water you need daily based on weight, age, activity, and climate. Stay hydrated and boost overall health.">
 
 <meta name="keywords" content="water intake calculator, daily water intake calculator, how much water should I drink, hydration calculator, water consumption calculator, health calculator hydration, fitness water calculator">
 

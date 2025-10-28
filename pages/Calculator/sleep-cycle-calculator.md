@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Sleep Cycle Calculator - Calculate Your Optimal Bedtime & Wake-up Time"
+title: "Sleep Cycle Calculator – Find Your Best Bed & Wake Time"
 permalink: /sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Best Sleep Cycle Calculator | Optimal Bedtime & Wake-up Time Timer</title>
+<title>Sleep Cycle Calculator – Find Your Best Bed & Wake Time</title>
 
 <meta name="description"
-  content="Free Sleep Cycle Calculator! Find your perfect bedtime and wake-up time based on natural sleep cycles. Improve deep sleep, REM sleep & boost energy every morning.">
+  content="Free sleep cycle calculator to find the ideal bedtime and wake-up time for deeper sleep, more REM, and better morning energy. Improve your sleep schedule easily.">
 
 <meta name="keywords"
   content="sleep cycle calculator, bedtime calculator, sleep calculator, wake up time calculator, REM sleep calculator, deep sleep calculator, how to sleep better, circadian rhythm calculator, optimal sleep time">
@@ -29,40 +29,6 @@ permalink: /sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time/
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sleep Cycle Calculator | Best Bedtime for Quality Sleep">
 <meta name="twitter:description" content="Improve REM sleep, deep sleep & wake up refreshed.">
-
-<!-- ✅ FAQ SCHEMA for Google Rich Snippets -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "How does the sleep cycle calculator work?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "This calculator uses 90-minute sleep cycle intervals consisting of REM and deep sleep stages to recommend the best sleep and wake-up times."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How many sleep cycles do I need per night?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Most adults need 4-6 sleep cycles per night (6-9 hours). Children and teens may require more cycles for growth and brain development."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Is waking up in the middle of a sleep cycle bad?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes. Waking up during deep sleep causes tiredness, low energy, and brain fog. Our calculator helps you wake up between cycles to feel refreshed."
-   }
-  }
- ]
-}
-</script>
 
 <!-- ✅ WebPage Schema -->
 <script type="application/ld+json">

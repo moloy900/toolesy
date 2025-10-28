@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Date Calculator - Calculate Dates, Add/Subtract Days Online"
+title: "Date Calculator – Add/Subtract Days & Find Date Online"
 permalink: /date-calculator-calculate-dates-addsubtract-days-online/
 ---
 
@@ -8,10 +8,10 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Date Calculator | Free Online Tool to Add, Subtract & Compare Dates</title>
+<title>Date Calculator – Add/Subtract Days & Find Date Online</title>
 
-<meta name="description"
-  content="Free online date calculator. Calculate date differences, add or subtract days, find the day of the week, and more. Easy, fast, and accurate for all date calculations.">
+<meta name="description" content="Use our free date calculator to add or subtract days, calculate date differences, and find weekdays instantly. Fast, accurate, and easy date calculation online.">
+
 
 <meta name="keywords"
   content="date calculator, calculate date, add days to date, subtract days from date, date difference calculator, day calculator, week calculator, month calculator, online date tool">
@@ -50,49 +50,6 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
   }
 }
 </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Date Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Date Calculator is a free online tool that allows you to add or subtract days, calculate date differences, and find the day of the week for any date."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Date Calculator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is completely free to use with no registration or login required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this Date Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Anyone including students, professionals, teachers, and anyone needing to calculate dates quickly and accurately can use this tool."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate the difference between two dates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool allows you to calculate the difference between any two dates in days, weeks, months, or years instantly."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

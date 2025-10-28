@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Travel Carbon Offset Calculator - Calculate & Offset Your Travel Emissions"
+title: "Travel Carbon Offset Calculator – Reduce Travel Emissions"
 permalink: /travel-carbon-offset-calculator/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Travel Carbon Footprint Calculator - Calculate & Offset CO2 Emissions (Free & Instant)</title>
+<title>Travel Carbon Offset Calculator – Reduce Travel Emissions</title>
 
-<meta name="description" content="Free Travel Carbon Footprint Calculator. Calculate CO2 emissions from flights, car trips, and other travel. Get instant carbon offset suggestions to make your journeys climate-friendly and sustainable.">
+<meta name="description" content="Free travel carbon offset calculator to estimate CO2 from flights and car trips. Get quick offset tips for cleaner, climate-friendly, and sustainable travel.">
 
 <meta name="keywords" content="travel carbon footprint calculator, carbon offset calculator, flight carbon calculator, car CO2 calculator, travel emissions calculator, CO2 travel calculator, eco friendly travel calculator, climate neutral travel">
 
@@ -28,38 +28,6 @@ permalink: /travel-carbon-offset-calculator/
 <meta name="twitter:title" content="Travel Carbon Offset Calculator">
 <meta name="twitter:description" content="Calculate your travel CO2 emissions and offset them with sustainable projects. Fast & Free!">
 
-<!-- ✅ FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-      "@type": "Question",
-      "name": "What is a travel carbon footprint?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A travel carbon footprint is the total CO2 emissions released into the atmosphere due to transportation, such as flights, cars, buses, or trains."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I offset travel emissions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can offset emissions by supporting verified carbon reduction projects such as tree planting, renewable energy, and forest conservation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the Travel Carbon Offset Calculator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. ToolEsy's Travel Carbon Footprint Calculator is 100% free to use with instant results."
-      }
-    }
-  ]
-}
-</script>
 
 <!-- ✅ Webpage Schema -->
 <script type="application/ld+json">

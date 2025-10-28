@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Hours Calculator - Calculate Hours, Work Time, Timesheet Online"
+title: "Hours Calculator – Work Hours & Time Duration Online"
 permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
 ---
 
@@ -8,10 +8,10 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hours Calculator | Free Online Tool to Calculate Work Hours & Time Duration</title>
+<title>Hours Calculator – Work Hours & Time Duration Online</title>
 
 <meta name="description"
-  content="Free online hours calculator. Quickly calculate work hours, timesheet totals, time duration, overtime, and payroll. Ideal for employees, freelancers, and businesses.">
+  content="Free online hours calculator to calculate work hours, timesheet totals, time duration, and overtime. Fast, accurate, and perfect for employees and businesses.">
 
 <meta name="keywords"
   content="hours calculator, work hours calculator, timesheet calculator, time duration calculator, overtime calculator, payroll calculator, time card calculator, online time calculator">
@@ -50,49 +50,6 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
   }
 }
 </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an Hours Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An Hours Calculator is a free online tool that helps you calculate work hours, time duration, timesheet totals, overtime, and payroll easily and accurately."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Hours Calculator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool is completely free and requires no registration or login."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this Hours Calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Anyone including employees, freelancers, small business owners, and HR professionals can use this tool to calculate work hours and time duration."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I calculate overtime or payroll with this tool?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this hours calculator allows you to compute overtime, payroll hours, and total worked hours quickly and accurately."
-      }
-    }
-  ]
-}
-</script>
-
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
