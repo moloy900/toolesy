@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "Plain Text Converter - Remove Formatting, Clean Text Online"
+title: "Plain Text Converter – Remove Formatting Online Free"
 permalink: /plain-text-converter-remove-formatting-clean-text-online/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plain Text Converter - Remove Formatting, Clean Text Online</title>
+<title>Plain Text Converter – Remove Formatting Online Free</title>
 <meta name="description"
-    content="Free online plain text converter tool. Remove formatting, punctuation, duplicates, whitespace, URLs, emails and more from your text. Clean and optimize text instantly.">
+    content="Free online plain text converter to remove formatting, punctuation, duplicates, whitespace, URLs, emails, and more. Clean and optimize text instantly with one click.">
 <meta name="keywords"
     content="plain text converter, remove formatting, text cleaner, remove punctuation, remove duplicates, text optimization">
 <meta name="author" content="Your Name">

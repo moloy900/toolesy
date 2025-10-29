@@ -712,36 +712,36 @@ that might need special handling.</textarea>
                 by line feeds</li>
         </ul>
 
-        <h3>Frequently Asked Questions (FAQ):</h3>
+        <h3>Frequently Asked Questions:</h3>
 
-        <p><strong>Q: What exactly does this tool remove?</strong><br>
-            <strong>A:</strong> It removes line break characters (like `\n` and `\r`), which are created when you press
+        <p><strong>What exactly does this tool remove?</strong><br>
+            It removes line break characters (like `\n` and `\r`), which are created when you press
             'Enter' or 'Return' in a document. These often appear as unwanted gaps or new lines when text is moved
             between different applications.
         </p>
 
-        <p><strong>Q: Will this tool delete my paragraph spacing?</strong><br>
-            <strong>A:</strong> You have control. The tool can be set to remove all breaks completely or replace each
+        <p><strong> Will this tool delete my paragraph spacing?</strong><br>
+            You have control. The tool can be set to remove all breaks completely or replace each
             break with a space to ensure words don't run together, preserving the logical flow of sentences.
         </p>
 
-        <p><strong>Q: Is my text safe when I use this online tool?</strong><br>
-            <strong>A:</strong> Completely. All processing happens locally within your own web browser. Your text is
+        <p><strong>Is my text safe when I use this online tool?</strong><br>
+            Completely. All processing happens locally within your own web browser. Your text is
             never transmitted to or stored on our server, ensuring 100% data privacy and security.
         </p>
 
-        <p><strong>Q: Can I use this tool on my phone?</strong><br>
-            <strong>A:</strong> Yes, the tool is fully responsive and works perfectly on all mobile devices, allowing
+        <p><strong>Can I use this tool on my phone?</strong><br>
+            Yes, the tool is fully responsive and works perfectly on all mobile devices, allowing
             you to clean text on the go.
         </p>
 
-        <p><strong>Q: Is there a limit to how much text I can clean?</strong><br>
-            <strong>A:</strong> You can process very large blocks of text, making it suitable for cleaning entire
+        <p><strong>Is there a limit to how much text I can clean?</strong><br>
+            You can process very large blocks of text, making it suitable for cleaning entire
             chapters or large data sets in one go.
         </p>
 
-        <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
-            <strong>A:</strong> No, this is a completely free tool. There is no sign-up, no subscription, and no hidden
+        <p><strong>Do I need to create an account or pay to use this?</strong><br>
+            No, this is a completely free tool. There is no sign-up, no subscription, and no hidden
             fees.
         </p>
     </div>

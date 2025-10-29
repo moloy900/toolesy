@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Online Alphabetizer Text Tool - Sort A-Z, Z-A, Remove Duplicates"
+title: "Alphabetizer Text Tool – Sort A-Z, Remove Duplicates Free"
 permalink: /online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alphabetizer ✨ Free Online Text Sorter (A-Z, Z-A, Remove Duplicates)</title>
+<title>Alphabetizer Text Tool – Sort A-Z, Remove Duplicates Free</title>
 
-<meta name="description" content="Free Alphabetizer tool to sort text alphabetically (A-Z or Z-A), remove duplicates, sort by length, and clean up lists instantly. Perfect for students, writers & data tasks — no login needed.">
+<meta name="description" content="Free online Alphabetizer tool to sort text alphabetically (A-Z or Z-A), remove duplicates, organize by length, and clean lists instantly. Perfect for students, writers, and data tasks.">
 
 <meta name="keywords" content="alphabetizer, text alphabetizer, sort text online, remove duplicates online, sort list alphabetically, text sorter, a-z z-a sorter, sort list tool, alphabetical order online, text cleanup tool, list sorter tool">
 
@@ -686,21 +686,21 @@ Cherry</div>
       <li><strong>Students:</strong> Organize study materials, reference lists, or any academic content.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: What is the difference between A-Z and Z-A sorting?</strong><br>
-      A: A-Z sorting arranges text in ascending alphabetical order (from A to Z), while Z-A sorting arranges text in descending alphabetical order (from Z to A).</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>What is the difference between A-Z and Z-A sorting?</strong><br>
+      A-Z sorting arranges text in ascending alphabetical order (from A to Z), while Z-A sorting arranges text in descending alphabetical order (from Z to A).</p>
 
-    <p><strong>Q: Can this tool handle large lists of items?</strong><br>
-      A: Yes, you can process very large lists with thousands of items without any issue. The tool is built to handle extensive text data efficiently.</p>
+    <p><strong>Can this tool handle large lists of items?</strong><br>
+      Yes, you can process very large lists with thousands of items without any issue. The tool is built to handle extensive text data efficiently.</p>
 
-    <p><strong>Q: Is my text data kept private and secure when I use this tool?</strong><br>
-      A: Absolutely. This is a core principle of our tool. The sorting happens locally on your own computer or phone. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure.</p>
+    <p><strong>Is my text data kept private and secure when I use this tool?</strong><br>
+      Absolutely. This is a core principle of our tool. The sorting happens locally on your own computer or phone. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure.</p>
 
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
+    <p><strong>Can I use this tool on my mobile phone?</strong><br>
+      Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
 
-    <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
-      A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
+    <p><strong>Do I need to create an account or pay to use this?</strong><br>
+      No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
 
     <h3>Why Choose Our Alphabetizer Text Tool?</h3>
     <p>Our <strong>online alphabetizer</strong> stands out from other tools because of its simplicity, speed, and privacy features. Unlike many online tools, we don't store your data on our servers - all processing happens in your browser. This means your proprietary lists, client data, and sensitive information remain completely private. The tool also works offline once loaded, making it reliable even with unstable internet connections.</p>

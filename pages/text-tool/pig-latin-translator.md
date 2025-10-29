@@ -654,21 +654,21 @@ I love learning new languages and having fun with word games.</div>
       <li><strong>Writers & Creatives:</strong> Generate unique character dialogues or create fictional languages inspired by Pig Latin.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: What exactly is Pig Latin?</strong><br>
-      A: Pig Latin is a language game where words in English are altered according to a simple set of rules. Typically, the first consonant or consonant cluster is moved to the end of the word and "ay" is added (e.g., "hello" becomes "ellohay").</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>What exactly is Pig Latin?</strong><br>
+      Pig Latin is a language game where words in English are altered according to a simple set of rules. Typically, the first consonant or consonant cluster is moved to the end of the word and "ay" is added (e.g., "hello" becomes "ellohay").</p>
 
-    <p><strong>Q: Are there different versions of Pig Latin?</strong><br>
-      A: Yes, there are variations! Our tool supports the standard version as well as "ay" and "way" variations. The standard version moves the first consonant cluster and adds "ay", while variations might handle vowel-starting words differently.</p>
+    <p><strong>Are there different versions of Pig Latin?</strong><br>
+      Yes, there are variations! Our tool supports the standard version as well as "ay" and "way" variations. The standard version moves the first consonant cluster and adds "ay", while variations might handle vowel-starting words differently.</p>
 
-    <p><strong>Q: Is my text kept private and secure when I use this translator?</strong><br>
-      A: Absolutely. This is a core principle of our tool. The translation happens locally on your own computer or phone. Your text is never sent to any server, meaning we never see, store, or have access to your messages. It is 100% secure.</p>
+    <p><strong>Is my text kept private and secure when I use this translator?</strong><br>
+      Absolutely. This is a core principle of our tool. The translation happens locally on your own computer or phone. Your text is never sent to any server, meaning we never see, store, or have access to your messages. It is 100% secure.</p>
 
-    <p><strong>Q: Can I use this tool on my mobile phone?</strong><br>
-      A: Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
+    <p><strong>Can I use this tool on my mobile phone?</strong><br>
+      Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
 
-    <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
-      A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
+    <p><strong>Do I need to create an account or pay to use this?</strong><br>
+      No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
 
     <h3>Why Choose Our Pig Latin Translator?</h3>
     <p>Our <strong>online Pig Latin translator</strong> stands out from other tools because of its accuracy, flexibility, and privacy features. Unlike many online tools, we don't store your text on our servers - all processing happens in your browser. This means your private messages, creative writing, and personal texts remain completely secure. The tool also works offline once loaded, making it reliable even with unstable internet connections.</p>

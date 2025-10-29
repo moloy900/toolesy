@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Online Case Converter - Change Text to Upper, Lower & Title Case"
+title: "Case Converter – Change Text to Upper, Lower & Title"
 permalink: /online-case-converter-change-text-to-upper-lower-title-case/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Text Case Converter Online | Uppercase, Lowercase, Title Case Tool</title>
+<title>Case Converter – Change Text to Upper, Lower & Title</title>
 
-<meta name="description" content="Free online Text Case Converter. Instantly convert text to uppercase, lowercase, title case, sentence case, and more. Perfect for students, writers, bloggers & web developers. No signup required.">
+<meta name="description" content="Free online Case Converter tool. Instantly change text to uppercase, lowercase, title case, sentence case, and more. Perfect for students, writers, bloggers, and developers. No signup needed.">
 
 <meta name="keywords" content="text case converter, uppercase converter, lowercase converter, title case tool, sentence case converter, case change tool, caps to small letters, capitalize text online, blog title formatter, online text editor, free text tools">
 

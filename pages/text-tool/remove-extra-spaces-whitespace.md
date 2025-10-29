@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "Remove Extra Spaces / Whitespace - Online Whitespace Remover Tool"
+title: "Remove Extra Spaces – Online Whitespace Remover Tool"
 permalink: /remove-extra-spaces-whitespace-online-whitespace-remover-tool/
 ---
 
 <!-- ✅ Basic Meta Tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Extra Spaces & Whitespace Remover - Clean Your Text</title>
-<meta name="description" content="Free online tool to remove extra spaces and whitespace from your text. Clean up messy formatting, remove multiple spaces, tabs, and line breaks instantly.">
+<title>Remove Extra Spaces – Online Whitespace Remover Tool</title>
+<meta name="description" content="Free tool to remove extra spaces and whitespace from text. Clean messy formatting by deleting multiple spaces, tabs, and line breaks instantly. No installation required.">
 <meta name="keywords" content="remove extra spaces, whitespace remover, space remover, clean text, remove multiple spaces, trim spaces, text formatter, space cleaner, text cleaner, remove tabs, remove line breaks, fix text formatting">
 <meta name="author" content="paramdip nath">
 <meta name="robots" content="index, follow">

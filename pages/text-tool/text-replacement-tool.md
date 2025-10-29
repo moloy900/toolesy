@@ -808,29 +808,29 @@ permalink: /text-replacement-tool-find-and-replace-text-online/
             <li><strong>Replace All:</strong> Replaces every occurrence at once instead of one at a time</li>
         </ul>
 
-        <h3>Frequently Asked Questions (FAQ):</h3>
-        <p><strong>Q: What is regex (regular expression) mode?</strong><br>
-            A: Regex mode allows you to use special patterns to match text. For example, '\d+' would match any sequence
+        <h3>Frequently Asked Questions:</h3>
+        <p><strong>What is regex (regular expression) mode?</strong><br>
+            Regex mode allows you to use special patterns to match text. For example, '\d+' would match any sequence
             of digits. This is useful for advanced text manipulation like finding all email addresses or phone numbers
             in a text.</p>
 
-        <p><strong>Q: Is my text kept private when using this tool?</strong><br>
-            A: Absolutely. All text processing happens locally in your browser. Your text is never sent to any server,
+        <p><strong>Is my text kept private when using this tool?</strong><br>
+            Absolutely. All text processing happens locally in your browser. Your text is never sent to any server,
             meaning we never see, store, or have access to your data. It is 100% secure and private.</p>
 
-        <p><strong>Q: Can I use this tool for code refactoring?</strong><br>
-            A: Yes, the tool is excellent for code refactoring, especially when combined with the whole word matching
+        <p><strong>Can I use this tool for code refactoring?</strong><br>
+            Yes, the tool is excellent for code refactoring, especially when combined with the whole word matching
             and case sensitivity options to ensure precise replacements.</p>
 
-        <p><strong>Q: What are some common regex patterns I can use?</strong><br>
-            A: Some useful patterns include:<br>
+        <p><strong>What are some common regex patterns I can use?</strong><br>
+            Some useful patterns include:<br>
             - \d+ (matches one or more digits)<br>
             - [A-Za-z]+ (matches words)<br>
             - \bword\b (matches "word" as a whole word)<br>
             - ^.+@.+\..+$ (matches email addresses)</p>
 
-        <p><strong>Q: Can I replace text in multiple files at once?</strong><br>
-            A: This tool processes one text at a time. For multiple files, you would need to process each file
+        <p><strong>Can I replace text in multiple files at once?</strong><br>
+            This tool processes one text at a time. For multiple files, you would need to process each file
             separately, or use a dedicated desktop application for batch processing.</p>
 
         <h3>Regex Quick Reference</h3>
