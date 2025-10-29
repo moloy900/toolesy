@@ -463,6 +463,13 @@
           width: 100%;
       }
 
+      .ad-bottom {
+        display: block !important;
+        width: 100%;
+        min-height: 120px;
+        margin: 10px 0;
+    }
+
 
       /* Hero adjustments */
       .hero h1 {
