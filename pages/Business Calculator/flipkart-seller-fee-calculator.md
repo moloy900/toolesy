@@ -6,7 +6,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flipkart Seller Fee Calculator 2025 - Calculate Your Profit & Fees</title>
+<title>Flipkart Fee Calculator - Calculate Profit & Seller Payout</title>
 <meta name="description"
   content="Calculate Flipkart selling fees, GST, shipping, TCS, commission and profit margin instantly. Best tool for Flipkart sellers to plan pricing strategy.
 ">
@@ -578,7 +578,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 </style>
 
 <div class="converter-container">
-  <h1>Flipkart Seller Fee Calculator 2025</h1>
+  <h1>Flipkart Seller Fee Calculator</h1>
   <p class="welcome-message">Calculate your exact profit, commission fees, shipping costs, GST, and TCS for selling on Flipkart. Plan your pricing strategy effectively to maximize your earnings.</p>
 
   <div class="converter-section">
