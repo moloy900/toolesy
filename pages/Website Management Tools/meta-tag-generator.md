@@ -690,84 +690,35 @@ permalink: /meta-tag-generator-create-seo-meta-tags-instantly/
       }
     }
 
-    function generateMetaTags() {
-      // Get form values
-      const title = siteTitle.value.trim();
-      const description = siteDescription.value.trim();
-      const keywords = siteKeywords.value.trim();
-      
-      // Get selected robots values
-      let robotsIndexValue = 'index';
-      let robotsFollowValue = 'follow';
-      
-      robotsIndex.forEach(radio => {
-        if (radio.checked) robotsIndexValue = radio.value;
-      });
-      
-      robotsFollow.forEach(radio => {
-        if (radio.checked) robotsFollowValue = radio.value;
-      });
-      
-      const charset = contentType.value;
-      const language = siteLanguage.value;
-      const revisit = revisitAfter.value;
-      const author = authorName.value.trim();
+   function generateMetaTags() {
+  const title = siteTitle.value.trim();
+  const description = siteDescription.value.trim();
+  const keywords = siteKeywords.value.trim();
+  const charset = contentType.value;
+  const author = authorName.value.trim();
 
-      // Validate required fields
-      if (!title) {
-        showAlert('Please enter a site title.', 'error');
-        return;
-      }
+  if (!title || !description) {
+    showAlert('Please enter required fields: Title & Description', 'error');
+    return;
+  }
 
-      if (!description) {
-        showAlert('Please enter a site description.', 'error');
-        return;
-      }
+  const robotsIndexValue = [...robotsIndex].find(r => r.checked).value;
+  const robotsFollowValue = [...robotsFollow].find(r => r.checked).value;
+  const robotsContent = `${robotsIndexValue}, ${robotsFollowValue}`;
 
-      // Generate meta tags
-      let metaTags = '';
+  let metaTags = `
+<title>${title}</title>
+<meta name="description" content="${description}">
+${keywords ? `<meta name="keywords" content="${keywords}">` : ``}
+${author ? `<meta name="author" content="${author}">` : ``}
+<meta name="robots" content="${robotsContent}">
+<meta charset="${charset}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">`;
 
-      // Title tag
-      metaTags += `&lt;title&gt;${escapeHtml(title)}&lt;/title&gt;\n`;
+  metaTagsPreview.textContent = metaTags.trim();
+  showAlert('Meta tags generated successfully ✅', 'success');
+}
 
-      // Description meta tag
-      metaTags += `&lt;meta name="description" content="${escapeHtml(description)}"&gt;\n`;
-
-      // Keywords meta tag (if provided)
-      if (keywords) {
-        metaTags += `&lt;meta name="keywords" content="${escapeHtml(keywords)}"&gt;\n`;
-      }
-
-      // Robots meta tag
-      const robotsContent = robotsIndexValue === 'noindex' || robotsFollowValue === 'nofollow' 
-        ? `${robotsIndexValue}, ${robotsFollowValue}` 
-        : 'index, follow';
-      metaTags += `&lt;meta name="robots" content="${robotsContent}"&gt;\n`;
-
-      // Charset meta tag
-      metaTags += `&lt;meta charset="${charset}"&gt;\n`;
-
-      // Viewport meta tag (always included for responsiveness)
-      metaTags += `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n`;
-
-      // Author meta tag (if provided)
-      if (author) {
-        metaTags += `&lt;meta name="author" content="${escapeHtml(author)}"&gt;\n`;
-      }
-
-      // Revisit-after meta tag (if provided and valid)
-      if (revisit && revisit > 0) {
-        metaTags += `&lt;meta name="revisit-after" content="${revisit} days"&gt;\n`;
-      }
-
-      // Content language meta tag
-      metaTags += `&lt;meta http-equiv="Content-Language" content="${language}"&gt;\n`;
-
-      // Set preview
-      metaTagsPreview.textContent = metaTags;
-
-      showAlert('Meta tags generated successfully!', 'success');
-    }
 
     function copyMetaTags() {
       const metaTags = metaTagsPreview.textContent;
