@@ -1098,21 +1098,21 @@ permalink: /social-media-time-wastage-calculator/
       <li><strong>Anyone Feeling Overwhelmed:</strong> Identify time drains and reclaim control of your schedule.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: How accurate is the Social Media Time Wastage Calculator?</strong><br>
-      A: The calculator provides estimates based on the data you input. For maximum accuracy, check your phone's screen time reports or use dedicated tracking apps before entering your usage times.</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>How accurate is the Social Media Time Wastage Calculator?</strong><br>
+      The calculator provides estimates based on the data you input. For maximum accuracy, check your phone's screen time reports or use dedicated tracking apps before entering your usage times.</p>
 
-    <p><strong>Q: What counts as "productive time" versus "wasted time" on social media?</strong><br>
-      A: While some social media use can be productive (networking, learning, business), our calculator focuses on recreational usage. The tool allows you to adjust parameters based on how you value your time.</p>
+    <p><strong>What counts as "productive time" versus "wasted time" on social media?</strong><br>
+      While some social media use can be productive (networking, learning, business), our calculator focuses on recreational usage. The tool allows you to adjust parameters based on how you value your time.</p>
 
-    <p><strong>Q: Can I save my data to track progress over time?</strong><br>
-      A: Yes, the calculator includes a "Save My Data" feature that stores your information locally in your browser, allowing you to compare your usage patterns over weeks or months.</p>
+    <p><strong>Can I save my data to track progress over time?</strong><br>
+      Yes, the calculator includes a "Save My Data" feature that stores your information locally in your browser, allowing you to compare your usage patterns over weeks or months.</p>
 
-    <p><strong>Q: How is the digital wellness score calculated?</strong><br>
-      A: The wellness score considers total screen time, distribution across platforms, comparison with healthy benchmarks, and potential impact on sleep and mental health.</p>
+    <p><strong>How is the digital wellness score calculated?</strong><br>
+      The wellness score considers total screen time, distribution across platforms, comparison with healthy benchmarks, and potential impact on sleep and mental health.</p>
 
-    <p><strong>Q: Is my social media usage data secure and private?</strong><br>
-      A: Absolutely. All calculations happen locally in your browser. Your data is never sent to any server, ensuring complete privacy and security.</p>
+    <p><strong>Is my social media usage data secure and private?</strong><br>
+      Absolutely. All calculations happen locally in your browser. Your data is never sent to any server, ensuring complete privacy and security.</p>
 
     <h3>The Psychology of Social Media Addiction</h3>
     <p>Social media platforms are designed to keep you engaged through psychological triggers:</p>

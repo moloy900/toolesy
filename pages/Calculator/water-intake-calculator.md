@@ -976,21 +976,21 @@ permalink: /water-intake-calculator-calculate-your-daily-hydration-needs/
       <li><strong>Seniors:</strong> Address age-related changes in thirst perception that can lead to chronic dehydration.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: Can I drink too much water?</strong><br>
-      A: While rare, overhydration (hyponatremia) is possible, especially during endurance events. Stick to your calculated needs and increase gradually during extreme conditions.</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>Can I drink too much water?</strong><br>
+      While rare, overhydration (hyponatremia) is possible, especially during endurance events. Stick to your calculated needs and increase gradually during extreme conditions.</p>
 
-    <p><strong>Q: Do other beverages count toward my daily water intake?</strong><br>
-      A: Yes, most non-alcoholic beverages contribute to hydration. However, water should be your primary source as it's calorie-free and most effective.</p>
+    <p><strong>Do other beverages count toward my daily water intake?</strong><br>
+      Yes, most non-alcoholic beverages contribute to hydration. However, water should be your primary source as it's calorie-free and most effective.</p>
 
-    <p><strong>Q: How does caffeine affect hydration?</strong><br>
-      A: While caffeine has mild diuretic effects, moderate consumption (3-4 cups daily) doesn't significantly impact overall hydration status.</p>
+    <p><strong>How does caffeine affect hydration?</strong><br>
+      While caffeine has mild diuretic effects, moderate consumption (3-4 cups daily) doesn't significantly impact overall hydration status.</p>
 
-    <p><strong>Q: Should I drink water even when I'm not thirsty?</strong><br>
-      A: Yes, thirst is a late indicator of dehydration. It's better to drink regularly throughout the day rather than waiting until you feel thirsty.</p>
+    <p><strong>Should I drink water even when I'm not thirsty?</strong><br>
+      Yes, thirst is a late indicator of dehydration. It's better to drink regularly throughout the day rather than waiting until you feel thirsty.</p>
 
-    <p><strong>Q: How do I know if I'm properly hydrated?</strong><br>
-      A: Signs of good hydration include pale yellow urine, regular urination (4-7 times daily), moist mouth and skin, and good energy levels.</p>
+    <p><strong>How do I know if I'm properly hydrated?</strong><br>
+      Signs of good hydration include pale yellow urine, regular urination (4-7 times daily), moist mouth and skin, and good energy levels.</p>
 
     <h3>The Science Behind Hydration</h3>
     <p>Water comprises about 60% of the adult human body and is involved in nearly every bodily function. Proper hydration:</p>
