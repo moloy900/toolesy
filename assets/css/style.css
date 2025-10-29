@@ -453,13 +453,10 @@
           order: 0;
       }
 
-      .ad-left {
-          order: 0;
-      }
-
-      .ad-right {
-          order: 3;
-      }
+      .ad-left,
+    .ad-right {
+        display: none !important;
+    }
 
       .main-content {
           order: 1;
