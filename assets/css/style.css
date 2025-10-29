@@ -463,12 +463,6 @@
           width: 100%;
       }
 
-      .ad-bottom {
-          order: 2;
-          display: none;
-          /* Hide bottom ad on mobile */
-      }
-
 
       /* Hero adjustments */
       .hero h1 {
