@@ -177,6 +177,15 @@ permalink: /meta-tag-generator-create-seo-meta-tags-instantly/
     overflow-y: auto;
   }
 
+  .meta-tags-preview pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #ecf0f1;
+  background: transparent;
+}
+
   .button-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -763,25 +772,11 @@ function generateMetaTags() {
   // Content language meta tag
   metaTags += `<meta http-equiv="Content-Language" content="${language}">`;
 
-  // Set preview - render as formatted code
-  metaTagsPreview.innerHTML = `<div style="font-family: 'Courier New', monospace; white-space: pre-wrap; color: #ecf0f1; line-height: 1.5;">${metaTags}</div>`;
+  // Set preview - use innerHTML instead of textContent to render actual HTML
+  metaTagsPreview.innerHTML = `<pre>${metaTags}</pre>`;
 
   showAlert('Meta tags generated successfully!', 'success');
 }
-    function copyMetaTags() {
-      const metaTags = metaTagsPreview.textContent;
-      
-      if (metaTags === 'Your generated meta tags will appear here...') {
-        showAlert('Please generate meta tags first.', 'error');
-        return;
-      }
-
-      navigator.clipboard.writeText(metaTags).then(() => {
-        showAlert('Meta tags copied to clipboard!', 'success');
-      }).catch(err => {
-        showAlert('Failed to copy meta tags: ' + err, 'error');
-      });
-    }
 
     function downloadMetaTags() {
       const metaTags = metaTagsPreview.textContent;
