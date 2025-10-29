@@ -177,15 +177,6 @@ permalink: /meta-tag-generator-create-seo-meta-tags-instantly/
     overflow-y: auto;
   }
 
-  .meta-tags-preview pre {
-  margin: 0;
-  font-family: 'Courier New', monospace;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  color: #ecf0f1;
-  background: transparent;
-}
-
   .button-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -699,84 +690,99 @@ permalink: /meta-tag-generator-create-seo-meta-tags-instantly/
       }
     }
 
-function generateMetaTags() {
-  // Get form values
-  const title = siteTitle.value.trim();
-  const description = siteDescription.value.trim();
-  const keywords = siteKeywords.value.trim();
-  
-  // Get selected robots values
-  let robotsIndexValue = 'index';
-  let robotsFollowValue = 'follow';
-  
-  robotsIndex.forEach(radio => {
-    if (radio.checked) robotsIndexValue = radio.value;
-  });
-  
-  robotsFollow.forEach(radio => {
-    if (radio.checked) robotsFollowValue = radio.value;
-  });
-  
-  const charset = contentType.value;
-  const language = siteLanguage.value;
-  const revisit = revisitAfter.value;
-  const author = authorName.value.trim();
+    function generateMetaTags() {
+      // Get form values
+      const title = siteTitle.value.trim();
+      const description = siteDescription.value.trim();
+      const keywords = siteKeywords.value.trim();
+      
+      // Get selected robots values
+      let robotsIndexValue = 'index';
+      let robotsFollowValue = 'follow';
+      
+      robotsIndex.forEach(radio => {
+        if (radio.checked) robotsIndexValue = radio.value;
+      });
+      
+      robotsFollow.forEach(radio => {
+        if (radio.checked) robotsFollowValue = radio.value;
+      });
+      
+      const charset = contentType.value;
+      const language = siteLanguage.value;
+      const revisit = revisitAfter.value;
+      const author = authorName.value.trim();
 
-  // Validate required fields
-  if (!title) {
-    showAlert('Please enter a site title.', 'error');
-    return;
-  }
+      // Validate required fields
+      if (!title) {
+        showAlert('Please enter a site title.', 'error');
+        return;
+      }
 
-  if (!description) {
-    showAlert('Please enter a site description.', 'error');
-    return;
-  }
+      if (!description) {
+        showAlert('Please enter a site description.', 'error');
+        return;
+      }
 
-  // Generate meta tags
-  let metaTags = '';
+      // Generate meta tags
+      let metaTags = '';
 
-  // Title tag
-  metaTags += `<title>${escapeHtml(title)}</title>\n`;
+      // Title tag
+      metaTags += `&lt;title&gt;${escapeHtml(title)}&lt;/title&gt;\n`;
 
-  // Description meta tag
-  metaTags += `<meta name="description" content="${escapeHtml(description)}">\n`;
+      // Description meta tag
+      metaTags += `&lt;meta name="description" content="${escapeHtml(description)}"&gt;\n`;
 
-  // Keywords meta tag (if provided)
-  if (keywords) {
-    metaTags += `<meta name="keywords" content="${escapeHtml(keywords)}">\n`;
-  }
+      // Keywords meta tag (if provided)
+      if (keywords) {
+        metaTags += `&lt;meta name="keywords" content="${escapeHtml(keywords)}"&gt;\n`;
+      }
 
-  // Author meta tag (if provided)
-  if (author) {
-    metaTags += `<meta name="author" content="${escapeHtml(author)}">\n`;
-  }
+      // Robots meta tag
+      const robotsContent = robotsIndexValue === 'noindex' || robotsFollowValue === 'nofollow' 
+        ? `${robotsIndexValue}, ${robotsFollowValue}` 
+        : 'index, follow';
+      metaTags += `&lt;meta name="robots" content="${robotsContent}"&gt;\n`;
 
-  // Robots meta tag
-  const robotsContent = robotsIndexValue === 'noindex' || robotsFollowValue === 'nofollow' 
-    ? `${robotsIndexValue}, ${robotsFollowValue}` 
-    : 'index, follow';
-  metaTags += `<meta name="robots" content="${robotsContent}">\n`;
+      // Charset meta tag
+      metaTags += `&lt;meta charset="${charset}"&gt;\n`;
 
-  // Charset meta tag
-  metaTags += `<meta charset="${charset}">\n`;
+      // Viewport meta tag (always included for responsiveness)
+      metaTags += `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n`;
 
-  // Viewport meta tag (always included for responsiveness)
-  metaTags += `<meta name="viewport" content="width=device-width, initial-scale=1.0">\n`;
+      // Author meta tag (if provided)
+      if (author) {
+        metaTags += `&lt;meta name="author" content="${escapeHtml(author)}"&gt;\n`;
+      }
 
-  // Revisit-after meta tag (if provided and valid)
-  if (revisit && revisit > 0) {
-    metaTags += `<meta name="revisit-after" content="${revisit} days">\n`;
-  }
+      // Revisit-after meta tag (if provided and valid)
+      if (revisit && revisit > 0) {
+        metaTags += `&lt;meta name="revisit-after" content="${revisit} days"&gt;\n`;
+      }
 
-  // Content language meta tag
-  metaTags += `<meta http-equiv="Content-Language" content="${language}">`;
+      // Content language meta tag
+      metaTags += `&lt;meta http-equiv="Content-Language" content="${language}"&gt;\n`;
 
-  // Set preview - use innerHTML instead of textContent to render actual HTML
-  metaTagsPreview.innerHTML = `<pre>${metaTags}</pre>`;
+      // Set preview
+      metaTagsPreview.textContent = metaTags;
 
-  showAlert('Meta tags generated successfully!', 'success');
-}
+      showAlert('Meta tags generated successfully!', 'success');
+    }
+
+    function copyMetaTags() {
+      const metaTags = metaTagsPreview.textContent;
+      
+      if (metaTags === 'Your generated meta tags will appear here...') {
+        showAlert('Please generate meta tags first.', 'error');
+        return;
+      }
+
+      navigator.clipboard.writeText(metaTags).then(() => {
+        showAlert('Meta tags copied to clipboard!', 'success');
+      }).catch(err => {
+        showAlert('Failed to copy meta tags: ' + err, 'error');
+      });
+    }
 
     function downloadMetaTags() {
       const metaTags = metaTagsPreview.textContent;
