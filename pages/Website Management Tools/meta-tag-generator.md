@@ -690,85 +690,84 @@ permalink: /meta-tag-generator-create-seo-meta-tags-instantly/
       }
     }
 
-    function generateMetaTags() {
-      // Get form values
-      const title = siteTitle.value.trim();
-      const description = siteDescription.value.trim();
-      const keywords = siteKeywords.value.trim();
-      
-      // Get selected robots values
-      let robotsIndexValue = 'index';
-      let robotsFollowValue = 'follow';
-      
-      robotsIndex.forEach(radio => {
-        if (radio.checked) robotsIndexValue = radio.value;
-      });
-      
-      robotsFollow.forEach(radio => {
-        if (radio.checked) robotsFollowValue = radio.value;
-      });
-      
-      const charset = contentType.value;
-      const language = siteLanguage.value;
-      const revisit = revisitAfter.value;
-      const author = authorName.value.trim();
+function generateMetaTags() {
+  // Get form values
+  const title = siteTitle.value.trim();
+  const description = siteDescription.value.trim();
+  const keywords = siteKeywords.value.trim();
+  
+  // Get selected robots values
+  let robotsIndexValue = 'index';
+  let robotsFollowValue = 'follow';
+  
+  robotsIndex.forEach(radio => {
+    if (radio.checked) robotsIndexValue = radio.value;
+  });
+  
+  robotsFollow.forEach(radio => {
+    if (radio.checked) robotsFollowValue = radio.value;
+  });
+  
+  const charset = contentType.value;
+  const language = siteLanguage.value;
+  const revisit = revisitAfter.value;
+  const author = authorName.value.trim();
 
-      // Validate required fields
-      if (!title) {
-        showAlert('Please enter a site title.', 'error');
-        return;
-      }
+  // Validate required fields
+  if (!title) {
+    showAlert('Please enter a site title.', 'error');
+    return;
+  }
 
-      if (!description) {
-        showAlert('Please enter a site description.', 'error');
-        return;
-      }
+  if (!description) {
+    showAlert('Please enter a site description.', 'error');
+    return;
+  }
 
-      // Generate meta tags
-      let metaTags = '';
+  // Generate meta tags
+  let metaTags = '';
 
-      // Title tag
-      metaTags += `&lt;title&gt;${escapeHtml(title)}&lt;/title&gt;\n`;
+  // Title tag
+  metaTags += `<title>${escapeHtml(title)}</title>\n`;
 
-      // Description meta tag
-      metaTags += `&lt;meta name="description" content="${escapeHtml(description)}"&gt;\n`;
+  // Description meta tag
+  metaTags += `<meta name="description" content="${escapeHtml(description)}">\n`;
 
-      // Keywords meta tag (if provided)
-      if (keywords) {
-        metaTags += `&lt;meta name="keywords" content="${escapeHtml(keywords)}"&gt;\n`;
-      }
+  // Keywords meta tag (if provided)
+  if (keywords) {
+    metaTags += `<meta name="keywords" content="${escapeHtml(keywords)}">\n`;
+  }
 
-      // Robots meta tag
-      const robotsContent = robotsIndexValue === 'noindex' || robotsFollowValue === 'nofollow' 
-        ? `${robotsIndexValue}, ${robotsFollowValue}` 
-        : 'index, follow';
-      metaTags += `&lt;meta name="robots" content="${robotsContent}"&gt;\n`;
+  // Author meta tag (if provided)
+  if (author) {
+    metaTags += `<meta name="author" content="${escapeHtml(author)}">\n`;
+  }
 
-      // Charset meta tag
-      metaTags += `&lt;meta charset="${charset}"&gt;\n`;
+  // Robots meta tag
+  const robotsContent = robotsIndexValue === 'noindex' || robotsFollowValue === 'nofollow' 
+    ? `${robotsIndexValue}, ${robotsFollowValue}` 
+    : 'index, follow';
+  metaTags += `<meta name="robots" content="${robotsContent}">\n`;
 
-      // Viewport meta tag (always included for responsiveness)
-      metaTags += `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n`;
+  // Charset meta tag
+  metaTags += `<meta charset="${charset}">\n`;
 
-      // Author meta tag (if provided)
-      if (author) {
-        metaTags += `&lt;meta name="author" content="${escapeHtml(author)}"&gt;\n`;
-      }
+  // Viewport meta tag (always included for responsiveness)
+  metaTags += `<meta name="viewport" content="width=device-width, initial-scale=1.0">\n`;
 
-      // Revisit-after meta tag (if provided and valid)
-      if (revisit && revisit > 0) {
-        metaTags += `&lt;meta name="revisit-after" content="${revisit} days"&gt;\n`;
-      }
+  // Revisit-after meta tag (if provided and valid)
+  if (revisit && revisit > 0) {
+    metaTags += `<meta name="revisit-after" content="${revisit} days">\n`;
+  }
 
-      // Content language meta tag
-      metaTags += `&lt;meta http-equiv="Content-Language" content="${language}"&gt;\n`;
+  // Content language meta tag
+  metaTags += `<meta http-equiv="Content-Language" content="${language}">`;
 
-      // Set preview
-      metaTagsPreview.textContent = metaTags;
+  // Set preview - render as formatted code
+  metaTagsPreview.innerHTML = `<div style="font-family: 'Courier New', monospace; white-space: pre-wrap; color: #ecf0f1; line-height: 1.5;">${metaTags}</div>`;
 
-      showAlert('Meta tags generated successfully!', 'success');
-    }
-
+  showAlert('Meta tags generated successfully!', 'success');
+}
     function copyMetaTags() {
       const metaTags = metaTagsPreview.textContent;
       
