@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Online PDF Resizer - Resize PDF Pages to Different Paper Sizes"
+title: "Online PDF Resizer – Resize PDF Pages to Any Paper Size Free"
 permalink: /online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/
 ---
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Resize PDF Pages Online Free - A4, Letter & Custom Sizes</title>
+<title>Online PDF Resizer – Resize PDF Pages to Any Paper Size Free</title>
 <meta name="description"
   content="Resize PDF pages online for free. Change PDF dimensions to A4, Letter, Legal, or custom sizes. Fast, secure, and no watermark.">
 <meta name="keywords"
@@ -917,21 +917,21 @@ permalink: /online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/
       <li><strong>Designers:</strong> Adjust PDF dimensions for different presentation or publication requirements.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: Will resizing affect the quality of my PDF content?</strong><br>
-      A: Our resizer uses advanced algorithms to maintain quality. Text remains sharp, and images are resized intelligently to preserve clarity.</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>Will resizing affect the quality of my PDF content?</strong><br>
+      Our resizer uses advanced algorithms to maintain quality. Text remains sharp, and images are resized intelligently to preserve clarity.</p>
 
-    <p><strong>Q: Can I resize only specific pages in a multi-page PDF?</strong><br>
-      A: Yes, you can choose to resize all pages or specify a page range using our flexible options.</p>
+    <p><strong>Can I resize only specific pages in a multi-page PDF?</strong><br>
+      Yes, you can choose to resize all pages or specify a page range using our flexible options.</p>
 
-    <p><strong>Q: Is my data secure when using this PDF resizer?</strong><br>
-      A: Absolutely. Your PDF file is processed entirely in your browser and never uploaded to any server. This means your documents remain completely private and secure.</p>
+    <p><strong>Is my data secure when using this PDF resizer?</strong><br>
+      Absolutely. Your PDF file is processed entirely in your browser and never uploaded to any server. This means your documents remain completely private and secure.</p>
 
-    <p><strong>Q: What paper sizes are supported?</strong><br>
-      A: We support all standard paper sizes including A4, Letter, Legal, A3, A5, Tabloid, and custom dimensions.</p>
+    <p><strong>What paper sizes are supported?</strong><br>
+      We support all standard paper sizes including A4, Letter, Legal, A3, A5, Tabloid, and custom dimensions.</p>
 
-    <p><strong>Q: Do I need to create an account or pay to use this tool?</strong><br>
-      A: No, this is a completely free tool with no registration required. There are no hidden fees or watermarks.</p>
+    <p><strong>Do I need to create an account or pay to use this tool?</strong><br>
+      No, this is a completely free tool with no registration required. There are no hidden fees or watermarks.</p>
 
     <h3>Why Choose Our PDF Resizer?</h3>
     <p>Our <strong>online PDF Resizer</strong> stands out for its precision, flexibility, and privacy. Unlike many online tools, we don't upload your files to external servers - all processing happens locally in your browser. This ensures maximum security for your sensitive documents. The tool offers both standard paper sizes and custom dimension options, giving you complete control over your document's appearance.</p>

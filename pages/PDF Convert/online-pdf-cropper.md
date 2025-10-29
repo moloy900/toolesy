@@ -7,7 +7,7 @@ permalink: /free-online-pdf-cropper-crop-pdf-pages-precisely/
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Crop PDF Online Free - Precise PDF Page Cropping Tool</title>
+<title>Online PDF Cropper - Crop PDF Pages Precisely</title>
 <meta name="description"
   content="Free PDF cropper tool to crop PDF pages with precision. Select custom crop areas and apply to all pages instantly. No signup & no watermark.">
 <meta name="keywords"
@@ -1053,21 +1053,21 @@ permalink: /free-online-pdf-cropper-crop-pdf-pages-precisely/
       <li><strong>Administrative Staff:</strong> Clean up scanned documents by removing scanner artifacts or unwanted borders.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: Can I crop multiple PDF files at once?</strong><br>
-      A: Currently, our tool processes one PDF file at a time. For multiple files, you'll need to crop them individually.</p>
+    <h3>Frequently Asked Questions:</h3>
+    <p><strong>Can I crop multiple PDF files at once?</strong><br>
+      Currently, our tool processes one PDF file at a time. For multiple files, you'll need to crop them individually.</p>
 
-    <p><strong>Q: Will cropping affect the quality of my PDF?</strong><br>
-      A: No, cropping preserves the original quality of your PDF content. Text remains sharp and images maintain their resolution.</p>
+    <p><strong>Will cropping affect the quality of my PDF?</strong><br>
+      No, cropping preserves the original quality of your PDF content. Text remains sharp and images maintain their resolution.</p>
 
-    <p><strong>Q: Is my data secure when using this PDF cropper?</strong><br>
-      A: Absolutely. Your PDF file is processed entirely in your browser and never uploaded to any server. This means your documents remain completely private and secure.</p>
+    <p><strong>Is my data secure when using this PDF cropper?</strong><br>
+      Absolutely. Your PDF file is processed entirely in your browser and never uploaded to any server. This means your documents remain completely private and secure.</p>
 
-    <p><strong>Q: Can I apply different crop areas to different pages?</strong><br>
-      A: The tool is designed to apply the same crop area consistently across all selected pages. For different crop areas on different pages, you would need to process them separately.</p>
+    <p><strong>Can I apply different crop areas to different pages?</strong><br>
+      The tool is designed to apply the same crop area consistently across all selected pages. For different crop areas on different pages, you would need to process them separately.</p>
 
-    <p><strong>Q: Do I need to create an account or pay to use this tool?</strong><br>
-      A: No, this is a completely free tool with no registration required. There are no hidden fees or watermarks.</p>
+    <p><strong>Do I need to create an account or pay to use this tool?</strong><br>
+      No, this is a completely free tool with no registration required. There are no hidden fees or watermarks.</p>
 
     <h3>Why Choose Our PDF Cropper?</h3>
     <p>Our <strong>online PDF Cropper</strong> stands out for its precision, ease of use, and privacy. Unlike many online tools, we don't upload your files to external servers - all processing happens locally in your browser. This ensures maximum security for your sensitive documents. The interactive crop tool gives you pixel-perfect control over your selection, and the ability to apply the same crop to multiple pages saves you time on repetitive tasks.</p>
