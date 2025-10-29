@@ -26,52 +26,6 @@ permalink: /website-page-snooper-view-and-copy-html-code-from-any-website/
 <meta name="twitter:title" content="Free Website Page Snooper — View Website HTML Code">
 <meta name="twitter:description" content="Analyze any webpage structure and copy HTML source code instantly.">
 
-<!-- ✅ FAQ Schema + Web Tool Schema -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "WebPage",
-"name": "Website Page Snooper Tool",
-"url": "https://toolesy.com/website-page-snooper",
-"description": "Free online Website Page Snooper tool to view and copy HTML code from any website instantly.",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "What is a Website Page Snooper?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "A tool that helps you view and extract the HTML source code of any website in seconds."
-}
-},
-{
-"@type": "Question",
-"name": "Is Website Page Snooper free?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes, it is 100% free and requires no registration."
-}
-},
-{
-"@type": "Question",
-"name": "Can I download source code?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "You can copy and save the HTML code for further development and research."
-}
-},
-{
-"@type": "Question",
-"name": "Does it support all websites?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "It works on almost all public websites that allow HTML access."
-}
-}
-]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

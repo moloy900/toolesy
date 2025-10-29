@@ -27,49 +27,6 @@ permalink: /web-page-size-checker-analyze-website-file-size/
 <meta name="twitter:title" content="Free Online Page Size Analyzer - Test Your Website Performance">
 <meta name="twitter:description" content="Analyze resource weight, speed impact, and Core Web Vitals with a single click.">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a web page size?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Web page size is the total weight of all resources such as HTML, CSS, JavaScript, images, fonts, and videos loaded when visiting a page."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does page size matter for SEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Large page sizes slow loading speed and negatively impact Core Web Vitals, resulting in lower search rankings and poor user experience."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I reduce web page size?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can optimize images, minify CSS/JS, enable caching, remove unused resources, and reduce large third-party scripts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the Web Page Size Checker tool free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool is 100% free with no account required."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

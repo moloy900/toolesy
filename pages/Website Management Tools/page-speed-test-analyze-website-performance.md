@@ -27,49 +27,6 @@ permalink: /page-speed-test-analyze-website-performance/
 <meta name="twitter:title" content="Free Page Speed Test Tool - Website Performance Checker">
 <meta name="twitter:description" content="Check performance score, Core Web Vitals & loading issues for free. Optimize your site now!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I check website speed online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Enter your website URL in a page speed test tool like this one and it will analyze load time, Core Web Vitals, performance score, and optimization issues."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is page speed important?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fast websites improve SEO ranking, reduce bounce rates, enhance user experience, and increase conversion rates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I improve my website speed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Compress images, reduce JavaScript, enable caching, use a fast server, and optimize Core Web Vitals to make your website load faster."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this website speed test tool free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is 100% free with no account required. Just enter your URL and get instant results with recommendations."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

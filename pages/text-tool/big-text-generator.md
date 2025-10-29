@@ -27,51 +27,6 @@ permalink: /online-big-text-generator-create-ascii-art-large-text/
 <meta name="twitter:title" content="Free Big Text Generator - ASCII & Large Text Maker">
 <meta name="twitter:description" content="Create cool ASCII art banners and large stylish text instantly. Copy & paste anywhere!">
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "Big Text Generator Online",
- "url": "https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool",
- "description": "Create large ASCII text and stylish big fonts online. Free and instant.",
- "author": {
-   "@type": "Person",
-   "name": "paramdip nath"
- },
- "mainEntity": {
-   "@type": "FAQPage",
-   "mainEntity": [
-     {
-       "@type": "Question",
-       "name": "What is a Big Text Generator?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "A tool that converts normal text into large ASCII art banner fonts."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Where can I use Big Text?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "You can use it in social media posts, Discord messages, banners, and creative design."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Is this tool free?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes. It is completely free and works instantly without signup."
-       }
-     }
-   ]
- }
-}
-</script>
-
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

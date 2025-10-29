@@ -30,50 +30,6 @@ permalink: /text-replacement-tool-find-and-replace-text-online/
 <meta name="twitter:description"
     content="Free online tool to find and replace text with advanced options. Perfect for editing, formatting, and processing text.">
 
-<!-- JSON-LD structured data -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Text Replacement Tool",
-      "url": "http://toolesy.com/text-replacement-tool-find-and-replace-text-online",
-      "description": "Free online tool to find and replace text with advanced options like case sensitivity, whole words, and regex support.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is regex (regular expression) mode?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Regex mode allows you to use special patterns to match text. For example, '\\d+' would match any sequence of digits. This is useful for advanced text manipulation like finding all email addresses or phone numbers in a text."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my text kept private when using this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. All text processing happens locally in your browser. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure and private."
-          }
-        }
-      ]
-    }
-    </script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

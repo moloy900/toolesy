@@ -27,41 +27,6 @@ permalink: /online-notepad-free-text-editor-for-notes/
 <meta name="twitter:title" content="Free Online Notepad - Rich Text Editor">
 <meta name="twitter:description" content="MS Word-like free editor. Write, edit, format & download text online.">
 
-<!-- ✅ FAQ Rich Schema Boost -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this online notepad free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This online notepad is completely free with no sign-up required and no usage limits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I format text like in Microsoft Word?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it supports bold, italic, underline, fonts, colors, bullet lists, headings and more — just like Microsoft Word."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I save and download my notes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can download your notes as a text or document file and it supports auto-save to prevent losing data."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

@@ -24,52 +24,6 @@ permalink: /pig-latin-translator-online-english-to-pig-latin-converter/
 <meta name="twitter:title" content="Free Pig Latin Translator - Convert English to Pig Latin">
 <meta name="twitter:description" content="Instant Pig Latin translation for fun communication and learning!">
 
-<!-- ✅ Structured Data: Webpage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Free Online Pig Latin Translator",
-  "url": "https://toolesy.com/pig-latin-translator-online-english-to-pig-latin-converter",
-  "description": "Convert English text to Pig Latin instantly with this free online translator tool."
-}
-</script>
-
-<!-- ✅ Structured Data: FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Pig Latin?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pig Latin is a playful language game where English words are altered for fun or secret communication."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you convert English to Pig Latin?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically, you move the first consonant or consonant group to the end and add 'ay'. Words beginning with vowels get 'way' or 'yay' added at the end."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Pig Latin Translator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This tool is 100% free to use for everyone."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

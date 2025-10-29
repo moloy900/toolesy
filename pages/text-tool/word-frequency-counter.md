@@ -31,50 +31,6 @@ permalink: /word-frequency-counter-analyze-text-word-usage/
 <meta name="twitter:description"
     content="Free online tool to analyze word frequency in your text. Perfect for writers, SEO, and content analysis.">
 
-<!-- JSON-LD structured data -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Word Frequency Counter",
-      "url": "http://toolesy.com/word-frequency-counter-analyze-text-word-usage",
-      "description": "Free online tool to analyze word frequency in text. Count how often each word appears in your content.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a word frequency counter used for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A word frequency counter analyzes text to show how often each word appears. Writers use it to identify overused words, SEO specialists use it to optimize content, and researchers use it for text analysis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my text kept private when using this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. The analysis happens locally in your browser. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure."
-          }
-        }
-      ]
-    }
-    </script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

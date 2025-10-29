@@ -27,41 +27,6 @@ permalink: /online-morse-code-translator-convert-text-to-morse-code/
 <meta name="twitter:title" content="Free Online Morse Code Translator Tool">
 <meta name="twitter:description" content="Convert text to Morse code and decode Morse instantly with sound & light signals.">
 
-<!-- ✅ FAQ Schema (Rich Snippet SEO Boost) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Morse Code Translator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Morse Code Translator is a tool that converts text to Morse code dots and dashes and can also decode Morse back into text."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I play Morse code sound?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This tool allows audio playback, flashing light signals, and vibration for practicing and learning Morse code."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Morse Code Translator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is 100% free to use with unlimited conversions, no login required."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

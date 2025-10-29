@@ -31,58 +31,6 @@ permalink: /remove-line-breaks-online-clean-text-tool-instant/
 <meta property="twitter:description"
     content="Remove extra line breaks from text instantly. Clean messy data from PDFs, word processors & web pages.">
 
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Line Break Removal Tool",
-      "url": "https://toolesy.com/remove-line-breaks-online-clean-text-tool-instant",
-      "description": "Free online tool to remove line breaks and clean up text from PDFs, documents, and web pages.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "Any",
-      "permissions": "browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What exactly does this tool remove?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It removes line break characters (like \\n and \\r), which are created when you press 'Enter' or 'Return' in a document. These often appear as unwanted gaps or new lines when text is moved between different applications."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will this tool delete my paragraph spacing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You have control. The tool can be set to remove all breaks completely or replace each break with a space to ensure words don't run together, preserving the logical flow of sentences."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my text safe when I use this online tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Completely. All processing happens locally within your own web browser. Your text is never transmitted to or stored on our server, ensuring 100% data privacy and security."
-          }
-        }
-      ]
-    }
-    </script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

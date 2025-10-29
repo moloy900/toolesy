@@ -27,51 +27,6 @@ permalink: /base64-encoder-decoder-online-base64-converter-tool/
 <meta name="twitter:title" content="Free Base64 Encoder & Decoder - Convert Text & Files Online">
 <meta name="twitter:description" content="Fast & secure Base64 converter for developers and users. No signup required.">
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "Base64 Encoder & Decoder Online",
- "url": "https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool",
- "description": "Convert text, images, and files to and from Base64 instantly.",
- "author": {
-   "@type": "Person",
-   "name": "paramdip nath"
- },
- "mainEntity": {
-   "@type": "FAQPage",
-   "mainEntity": [
-     {
-       "@type": "Question",
-       "name": "What is Base64 encoding?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Base64 encoding converts binary data into readable ASCII text."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Why is Base64 used?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "It safely transfers data through text-only systems like HTML, email, and JSON."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Can I convert images to Base64?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes, upload images to instantly convert to Base64."
-       }
-     }
-   ]
- }
-}
-</script>
-
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

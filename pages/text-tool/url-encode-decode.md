@@ -27,49 +27,6 @@ permalink: /url-encode-decode-online-url-encoderdecoder-tool/
 <meta name="twitter:title" content="Free URL Encode & Decode Tool">
 <meta name="twitter:description" content="Convert text to URL encoding and decode encoded URLs online. Fast, free, accurate!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is URL encoding?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "URL encoding is a process that converts special characters into a format that can be safely transmitted over the internet using percent encoding."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do we need to encode URLs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "URLs must be encoded to avoid breaking the structure of the URL and ensure all characters are correctly interpreted by browsers and servers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I decode a URL?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Paste your encoded URL into a decoding tool like this one, and it will automatically convert percent-encoded characters back to readable text."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this URL encoder/decoder free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This URL encode and decode tool is 100% free and works instantly without any login or installation."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

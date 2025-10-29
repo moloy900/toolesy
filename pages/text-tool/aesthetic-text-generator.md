@@ -28,58 +28,6 @@ permalink: /aesthetic-text-generator-create-stylish-text-for-social-media/
 <meta name="twitter:description" content="Create stylish, fancy, aesthetic fonts for social media bios and messages in one click!">
 
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "Aesthetic Text Generator",
- "url": "https://www.toolesy.com/aesthetic-text-generator-create-stylish-text-for-social-media",
- "description": "Free online aesthetic text generator tool to create stylish, fancy, and beautiful text for social media bios and messages.",
- "author": {
-   "@type": "Person",
-   "name": "paramdip nath"
- },
- "mainEntity": [{
-   "@type": "FAQPage",
-   "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is an Aesthetic Text Generator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It converts normal text into stylish, fancy, and cute aesthetic font styles using Unicode characters."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this Aesthetic Text Generator free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! It is completely free to use without any signup."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use aesthetic fonts on Instagram & TikTok?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. All fonts generated work on major platforms like Instagram and TikTok."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will the fonts work on all devices?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most fonts work everywhere. Some rare symbols may vary depending on device support."
-        }
-      }
-   ]
- }]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

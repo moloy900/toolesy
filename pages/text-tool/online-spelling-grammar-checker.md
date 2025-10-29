@@ -27,41 +27,6 @@ permalink: /online-spelling-and-grammar-checker-check-text-for-errors/
 <meta name="twitter:title" content="Instant Grammar & Spell Check Tool Online">
 <meta name="twitter:description" content="Fix punctuation & grammar mistakes in one click. No registration required!">
 
-<!-- ✅ FAQ Schema for Google Snippet Boost -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this spelling and grammar checker free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can check unlimited text for free. No login required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it detect punctuation and style mistakes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it checks punctuation, grammar rules, spelling errors, and writing clarity."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use this grammar checker?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Students, bloggers, writers, professionals, and anyone who wants to improve writing."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

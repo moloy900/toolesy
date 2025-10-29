@@ -27,49 +27,6 @@ permalink: /online-zalgo-glitch-text-generator-create-corrupted-text/
 <meta name="twitter:title" content="Zalgo Glitch Text Generator - Creepy Text Maker">
 <meta name="twitter:description" content="Generate corrupted horror text instantly for free. Just type and copy the glitch effect!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Zalgo Text?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zalgo text is a glitchy, corrupted-looking text created using combining Unicode characters. It looks scary, chaotic, and is commonly used for horror-themed writing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How to generate Zalgo glitch text?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Just type normal text into a Zalgo text generator and it automatically adds glitch characters above, below, and through the letters to create a creepy effect."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where can I use Zalgo text?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can use Zalgo glitch text on Discord, Instagram, TikTok, spooky stories, gaming usernames, Halloween posts, and artistic text designs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Zalgo generator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This tool is 100% free to use without any login or installation. Just type, copy, and paste your creepy text anywhere."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

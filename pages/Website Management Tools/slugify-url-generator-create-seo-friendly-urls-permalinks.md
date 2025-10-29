@@ -27,48 +27,6 @@ permalink: /slugify-url-generator-create-seo-friendly-urls-permalinks/
 <meta name="twitter:title" content="Free Online Slugify Tool - SEO URL & Permalink Generator">
 <meta name="twitter:description" content="Generate optimized URL slugs for search engine friendly permalinks. 100% free!">
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a slug in SEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A slug is the part of a URL that identifies a page in a readable format. It improves SEO by helping search engines and users understand the page topic."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I generate a URL slug?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply enter your text into this tool and it converts it into a clean, SEO-friendly URL slug automatically."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which platforms support these slugs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "These slugs work perfectly with WordPress, Blogger, Shopify, Webflow, Ghost, and any CMS that supports custom URLs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this Slugify tool free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This Slugify URL Generator is completely free and requires no account or installation."
-      }
-    }
-  ]
-}
-</script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

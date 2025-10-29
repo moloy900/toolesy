@@ -24,52 +24,6 @@ permalink: /remove-extra-spaces-whitespace-online-whitespace-remover-tool/
 <meta name="twitter:title" content="Extra Spaces Remover - Clean Your Text Online">
 <meta name="twitter:description" content="Clean messy formatting and remove unnecessary whitespace from your content instantly. 100% Free Tool.">
 
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Extra Spaces & Whitespace Remover",
-  "url": "https://toolesy.com/remove-extra-spaces-whitespace-online-whitespace-remover-tool",
-  "description": "Easily remove extra spaces, whitespace, tabs, and line breaks from text with this free tool."
-}
-</script>
-
-<!-- ✅ FAQ Schemas -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I remove extra spaces from text?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Paste your text into the tool and click the remove spaces button. The tool will delete unnecessary spaces automatically."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does this tool remove tabs and line breaks?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. It can clean tabs, double spaces, and unwanted line breaks to improve text formatting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the whitespace remover free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! This tool is 100% free with no login required."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

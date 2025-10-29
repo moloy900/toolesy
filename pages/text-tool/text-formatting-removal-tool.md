@@ -30,50 +30,6 @@ permalink: /text-formatting-removal-tool/
 <meta name="twitter:description"
     content="Free online tool to remove all text formatting including bold, italic, underline, font styles, and colors.">
 
-<!-- JSON-LD structured data -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Text Formatting Removal Tool",
-      "url": "http://toolesy.com/text-formatting-removal-tool",
-      "description": "Free online tool to remove all text formatting including bold, italic, underline, font styles, and colors.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What types of formatting does this tool remove?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool removes all text formatting including bold, italic, underline, font styles, colors, hyperlinks, bullets, special characters, and HTML tags. It converts formatted text into clean plain text."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my text kept private when using this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. All text processing happens locally in your browser. Your text is never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure and private."
-          }
-        }
-      ]
-    }
-    </script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

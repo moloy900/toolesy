@@ -24,52 +24,6 @@ permalink: /reverse-text-generator-flip-reverse-text-online/
 <meta name="twitter:title" content="Reverse Text Generator - FREE Online Tool">
 <meta name="twitter:description" content="Reverse and flip text instantly. Great for puzzles, coding, fun messages, and more.">
 
-<!-- ✅ WebPage Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Reverse Text Generator",
-  "url": "https://toolesy.com/reverse-text-generator-flip-reverse-text-online",
-  "description": "Flip and reverse text instantly online for free. Works on any device."
-}
-</script>
-
-<!-- ✅ FAQ Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I reverse text online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Just enter your text into the input box and click the Reverse button. Your reversed text will appear instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can this tool flip entire sentences?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! You can flip single words or entire paragraphs backward while keeping or removing original word order."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need to install anything?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No installation or login required. Works instantly in your browser."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

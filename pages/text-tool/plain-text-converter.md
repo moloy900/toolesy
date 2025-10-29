@@ -30,24 +30,6 @@ permalink: /plain-text-converter-remove-formatting-clean-text-online/
 <meta name="twitter:description"
     content="Free online tool to remove formatting, punctuation, duplicates, URLs and more from your text.">
 
-<!-- JSON-LD structured data -->
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Plain Text Converter",
-      "url": "http://toolesy.com/plain-text-converter-remove-formatting-clean-text-online",
-      "description": "Free online tool to remove formatting, punctuation, duplicates, URLs and more from your text.",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

@@ -24,52 +24,6 @@ permalink: /stacked-vertical-text-generator-online-vertical-text-creator/
 <meta name="twitter:title" content="Free Vertical Text Generator - Create Stacked Text Online">
 <meta name="twitter:description" content="Transform normal text into vertical & upright designs instantly. Works on any device!">
 
-<!-- ✅ WebPage Schema (SEO Boost) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Vertical Text Generator",
-  "url": "https://toolesy.com/stacked-vertical-text-generator-online-vertical-text-creator",
-  "description": "Create vertical and stacked text online for free with instant output."
-}
-</script>
-
-<!-- ✅ FAQ Schema (Rich Results SERP Boost 🔥) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I turn normal text into vertical text?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply type or paste your text in the box and choose the vertical or stacked text option. Your vertical result will appear instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I copy and use vertical text on social media?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can directly copy and paste the vertical text into platforms like Instagram, Facebook, Twitter, and TikTok."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this tool completely free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the tool is 100% free with no login, no installation, and no restrictions."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

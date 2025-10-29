@@ -27,49 +27,6 @@ permalink: /ascii-art-generator-convert-images-to-text-art-online/
 <meta name="twitter:title" content="Free ASCII Art Generator ✨ Convert Images to Text Art Online">
 <meta name="twitter:description" content="Create ASCII art from photos instantly — no signup needed.">
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "ASCII Art Generator - Convert Images to Text Art",
- "url": "https://www.toolesy.com/ascii-art-generator-convert-images-to-text-art-online",
- "description": "Convert images to ASCII text art online with customizable characters and resolution.",
- "author": {
-   "@type": "Person",
-   "name": "paramdip nath"
- },
- "mainEntity": {
-   "@type": "FAQPage",
-   "mainEntity": [
-     {
-       "@type": "Question",
-       "name": "What is ASCII art?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "ASCII art is artwork created using text characters instead of pixels."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Can I customize the characters used?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes, you can choose custom characters and resolution settings for different art styles."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Is this ASCII art generator free?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Yes, this tool is 100% free with no signup required."
-       }
-     }
-   ]
- }
-}
-</script>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

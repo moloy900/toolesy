@@ -27,41 +27,6 @@ permalink: /online-rewording-tool-paraphraser-rephrase-text-instantly/
 <meta name="twitter:title" content="Instant Paraphrasing Tool - Rephrase Text Online">
 <meta name="twitter:description" content="Humanlike text rewriting & plagiarism removal. Try for free — no login needed!">
 
-<!-- ✅ FAQ Schema for Google Rich Results -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is this paraphrasing tool free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the paraphrasing tool is completely free. You can rewrite unlimited text without logging in."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will the rewritten text be plagiarism-free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. It rewrites sentences using different synonyms and structure to help avoid plagiarism."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it work for essays and professional content?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. It supports essays, academic content, articles, social media posts, blogs, and more."
-      }
-    }
-  ]
-}
-</script>
-
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
