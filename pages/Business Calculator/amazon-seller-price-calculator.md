@@ -700,17 +700,17 @@ permalink: /amazon-seller-price-calculator-fees-profit/
       </div>
       
       <div class="input-group">
-        <label class="input-label">Product Cost ($)</label>
+        <label class="input-label">Product Cost (₹)</label>
         <input type="number" id="productCost" class="input-field" placeholder="0.00" min="0" step="0.01">
       </div>
       
       <div class="input-group">
-        <label class="input-label">Selling Price ($)</label>
+        <label class="input-label">Selling Price (₹)</label>
         <input type="number" id="sellingPrice" class="input-field" placeholder="0.00" min="0" step="0.01">
       </div>
       
       <div class="input-group">
-        <label class="input-label">Shipping Cost ($)</label>
+        <label class="input-label">Shipping Cost (₹)</label>
         <input type="number" id="shippingCost" class="input-field" placeholder="0.00" min="0" step="0.01" value="0.00">
       </div>
       
@@ -741,31 +741,31 @@ permalink: /amazon-seller-price-calculator-fees-profit/
       <div class="results-grid">
         <div class="result-item">
           <span class="result-label">Product Cost</span>
-          <span class="result-value" id="resultCost">$0.00</span>
+          <span class="result-value" id="resultCost">₹0.00</span>
         </div>
         <div class="result-item">
           <span class="result-label">Amazon Referral Fee</span>
-          <span class="result-value" id="resultReferral">$0.00</span>
+          <span class="result-value" id="resultReferral">₹0.00</span>
         </div>
         <div class="result-item">
           <span class="result-label">FBA Fulfillment Fee</span>
-          <span class="result-value" id="resultFulfillment">$0.00</span>
+          <span class="result-value" id="resultFulfillment">₹0.00</span>
         </div>
         <div class="result-item">
           <span class="result-label">Storage Fee</span>
-          <span class="result-value" id="resultStorage">$0.00</span>
+          <span class="result-value" id="resultStorage">₹0.00</span>
         </div>
         <div class="result-item">
           <span class="result-label">Shipping Cost</span>
-          <span class="result-value" id="resultShipping">$0.00</span>
+          <span class="result-value" id="resultShipping">₹0.00</span>
         </div>
         <div class="result-item highlight">
           <span class="result-label">Total Fees</span>
-          <span class="result-value" id="resultTotalFees">$0.00</span>
+          <span class="result-value" id="resultTotalFees">₹0.00</span>
         </div>
         <div class="result-item" id="profitResult">
           <span class="result-label">Net Profit</span>
-          <span class="result-value" id="resultProfit">$0.00</span>
+          <span class="result-value" id="resultProfit">₹0.00</span>
         </div>
         <div class="result-item">
           <span class="result-label">Profit Margin</span>
@@ -777,7 +777,7 @@ permalink: /amazon-seller-price-calculator-fees-profit/
         </div>
         <div class="result-item">
           <span class="result-label">Monthly Profit</span>
-          <span class="result-value" id="resultMonthly">$0.00</span>
+          <span class="result-value" id="resultMonthly">₹0.00</span>
         </div>
       </div>
     </div>
@@ -796,31 +796,31 @@ permalink: /amazon-seller-price-calculator-fees-profit/
       <div class="example-text">Product: Wireless Headphones
 Category: Electronics
 Subcategory: Headphones
-Cost: $25.00 | Selling Price: $49.99
+Cost: ₹25.00 | Selling Price: ₹49.99
 Weight: 0.5 lbs | Monthly Sales: 50 units
 
 Results:
-- Amazon Referral Fee: $7.50 (15%)
-- FBA Fulfillment Fee: $3.19
-- Total Fees: $10.69
-- Net Profit: $14.30 per unit
+- Amazon Referral Fee: ₹7.50 (15%)
+- FBA Fulfillment Fee: ₹3.19
+- Total Fees: ₹10.69
+- Net Profit: ₹14.30 per unit
 - Profit Margin: 28.6%
-- Monthly Profit: $715.00</div>
+- Monthly Profit: ₹715.00</div>
 
       <h3>Example 2: Clothing Product</h3>
       <div class="example-text">Product: Men's T-shirt
 Category: Clothing
 Subcategory: Men's T-shirts
-Cost: $8.00 | Selling Price: $19.99
+Cost: ₹8.00 | Selling Price: ₹19.99
 Weight: 0.3 lbs | Monthly Sales: 100 units
 
 Results:
-- Amazon Referral Fee: $3.00 (15%)
-- FBA Fulfillment Fee: $2.92
-- Total Fees: $5.92
-- Net Profit: $6.07 per unit
+- Amazon Referral Fee: ₹3.00 (15%)
+- FBA Fulfillment Fee: ₹2.92
+- Total Fees: ₹5.92
+- Net Profit: ₹6.07 per unit
 - Profit Margin: 30.4%
-- Monthly Profit: $607.00</div>
+- Monthly Profit: ₹607.00</div>
     </div>
   </div>
 
@@ -840,7 +840,7 @@ Results:
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're considering selling wireless headphones on Amazon. You can purchase them for $25 each and plan to sell them for $49.99. Using our calculator, you select "Electronics" as the category and "Headphones" as the subcategory. After entering the product weight (0.5 lbs) and estimating 50 units sold per month, the calculator reveals that after Amazon's referral fee (15% = $7.50) and FBA fulfillment fee ($3.19), your net profit per unit would be $14.30. This gives you a 28.6% profit margin and a monthly profit of $715. Without this calculator, you might have underestimated Amazon's fees and overestimated your profits.</p>
+    <p>Imagine you're considering selling wireless headphones on Amazon. You can purchase them for ₹25 each and plan to sell them for ₹49.99. Using our calculator, you select "Electronics" as the category and "Headphones" as the subcategory. After entering the product weight (0.5 lbs) and estimating 50 units sold per month, the calculator reveals that after Amazon's referral fee (15% = ₹7.50) and FBA fulfillment fee (₹3.19), your net profit per unit would be ₹14.30. This gives you a 28.6% profit margin and a monthly profit of ₹715. Without this calculator, you might have underestimated Amazon's fees and overestimated your profits.</p>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
@@ -899,11 +899,11 @@ Results:
               <input type="text" id="compareProduct1" class="input-field" placeholder="Product 1">
             </div>
             <div class="input-group">
-              <label class="input-label">Cost ($)</label>
+              <label class="input-label">Cost (₹)</label>
               <input type="number" id="compareCost1" class="input-field" placeholder="0.00" min="0" step="0.01">
             </div>
             <div class="input-group">
-              <label class="input-label">Selling Price ($)</label>
+              <label class="input-label">Selling Price (₹)</label>
               <input type="number" id="comparePrice1" class="input-field" placeholder="0.00" min="0" step="0.01">
             </div>
             <div class="input-group">
@@ -914,7 +914,7 @@ Results:
           <div class="results-grid">
             <div class="result-item">
               <span class="result-label">Net Profit</span>
-              <span class="result-value" id="compareProfit1">$0.00</span>
+              <span class="result-value" id="compareProfit1">₹0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label">Profit Margin</span>
@@ -922,7 +922,7 @@ Results:
             </div>
             <div class="result-item">
               <span class="result-label">Monthly Profit</span>
-              <span class="result-value" id="compareMonthly1">$0.00</span>
+              <span class="result-value" id="compareMonthly1">₹0.00</span>
             </div>
           </div>
         </div>
@@ -934,11 +934,11 @@ Results:
               <input type="text" id="compareProduct2" class="input-field" placeholder="Product 2">
             </div>
             <div class="input-group">
-              <label class="input-label">Cost ($)</label>
+              <label class="input-label">Cost (₹)</label>
               <input type="number" id="compareCost2" class="input-field" placeholder="0.00" min="0" step="0.01">
             </div>
             <div class="input-group">
-              <label class="input-label">Selling Price ($)</label>
+              <label class="input-label">Selling Price (₹)</label>
               <input type="number" id="comparePrice2" class="input-field" placeholder="0.00" min="0" step="0.01">
             </div>
             <div class="input-group">
@@ -949,7 +949,7 @@ Results:
           <div class="results-grid">
             <div class="result-item">
               <span class="result-label">Net Profit</span>
-              <span class="result-value" id="compareProfit2">$0.00</span>
+              <span class="result-value" id="compareProfit2">₹0.00</span>
             </div>
             <div class="result-item">
               <span class="result-label">Profit Margin</span>
@@ -957,7 +957,7 @@ Results:
             </div>
             <div class="result-item">
               <span class="result-label">Monthly Profit</span>
-              <span class="result-value" id="compareMonthly2">$0.00</span>
+              <span class="result-value" id="compareMonthly2">₹0.00</span>
             </div>
           </div>
         </div>
@@ -1158,13 +1158,13 @@ Results:
       if (weight <= 4) return 6.69;
       if (weight <= 4.5) return 7.19;
       if (weight <= 5) return 7.69;
-      // For weights over 5 lbs, add $0.38 per additional 0.5 lb
+      // For weights over 5 lbs, add ₹0.38 per additional 0.5 lb
       return 7.69 + Math.ceil((weight - 5) * 2) * 0.38;
     }
 
     // Calculate monthly storage fee
     function calculateStorageFee(weight, monthlyUnits) {
-      // Simplified storage fee: $0.75 per cubic foot per month (standard)
+      // Simplified storage fee: ₹0.75 per cubic foot per month (standard)
       // Approximation: 1 lb ≈ 0.1 cubic foot for most products
       const cubicFeet = weight * 0.1;
       return cubicFeet * monthlyUnits * 0.75;
@@ -1224,16 +1224,16 @@ Results:
       const monthlyProfit = netProfit * units;
 
       // Update results
-      resultCost.textContent = `$${cost.toFixed(2)}`;
-      resultReferral.textContent = `$${referralFee.toFixed(2)} (${referralRate}%)`;
-      resultFulfillment.textContent = `$${fulfillmentFee.toFixed(2)}`;
-      resultStorage.textContent = `$${storageFee.toFixed(2)}`;
-      resultShipping.textContent = `$${shipping.toFixed(2)}`;
-      resultTotalFees.textContent = `$${totalFees.toFixed(2)}`;
-      resultProfit.textContent = `$${netProfit.toFixed(2)}`;
-      resultMargin.textContent = `${profitMargin.toFixed(1)}%`;
-      resultROI.textContent = `${roi.toFixed(1)}%`;
-      resultMonthly.textContent = `$${monthlyProfit.toFixed(2)}`;
+      resultCost.textContent = `₹₹{cost.toFixed(2)}`;
+      resultReferral.textContent = `₹₹{referralFee.toFixed(2)} (₹{referralRate}%)`;
+      resultFulfillment.textContent = `₹₹{fulfillmentFee.toFixed(2)}`;
+      resultStorage.textContent = `₹₹{storageFee.toFixed(2)}`;
+      resultShipping.textContent = `₹₹{shipping.toFixed(2)}`;
+      resultTotalFees.textContent = `₹₹{totalFees.toFixed(2)}`;
+      resultProfit.textContent = `₹₹{netProfit.toFixed(2)}`;
+      resultMargin.textContent = `₹{profitMargin.toFixed(1)}%`;
+      resultROI.textContent = `₹{roi.toFixed(1)}%`;
+      resultMonthly.textContent = `₹₹{monthlyProfit.toFixed(2)}`;
       
       // Update profit display style based on value
       if (netProfit > 0) {
@@ -1296,12 +1296,12 @@ Results:
 
     // Calculate profit for a comparison product
     function calculateComparisonProduct(productNum) {
-      const cost = parseFloat(document.getElementById(`compareCost${productNum}`).value);
-      const price = parseFloat(document.getElementById(`comparePrice${productNum}`).value);
-      const units = parseInt(document.getElementById(`compareUnits${productNum}`).value);
+      const cost = parseFloat(document.getElementById(`compareCost₹{productNum}`).value);
+      const price = parseFloat(document.getElementById(`comparePrice₹{productNum}`).value);
+      const units = parseInt(document.getElementById(`compareUnits₹{productNum}`).value);
       
       if (!cost || !price || !units) {
-        showAlert(`Please enter valid values for Product ${productNum}`, 'error');
+        showAlert(`Please enter valid values for Product ₹{productNum}`, 'error');
         return;
       }
       
@@ -1316,9 +1316,9 @@ Results:
       const monthlyProfit = netProfit * units;
       
       // Update comparison results
-      document.getElementById(`compareProfit${productNum}`).textContent = `$${netProfit.toFixed(2)}`;
-      document.getElementById(`compareMargin${productNum}`).textContent = `${profitMargin.toFixed(1)}%`;
-      document.getElementById(`compareMonthly${productNum}`).textContent = `$${monthlyProfit.toFixed(2)}`;
+      document.getElementById(`compareProfit₹{productNum}`).textContent = `₹₹{netProfit.toFixed(2)}`;
+      document.getElementById(`compareMargin₹{productNum}`).textContent = `₹{profitMargin.toFixed(1)}%`;
+      document.getElementById(`compareMonthly₹{productNum}`).textContent = `₹₹{monthlyProfit.toFixed(2)}`;
     }
 
     // Clear all inputs
@@ -1333,16 +1333,16 @@ Results:
       monthlyUnits.value = '1';
       
       // Reset results
-      resultCost.textContent = '$0.00';
-      resultReferral.textContent = '$0.00';
-      resultFulfillment.textContent = '$0.00';
-      resultStorage.textContent = '$0.00';
-      resultShipping.textContent = '$0.00';
-      resultTotalFees.textContent = '$0.00';
-      resultProfit.textContent = '$0.00';
+      resultCost.textContent = '₹0.00';
+      resultReferral.textContent = '₹0.00';
+      resultFulfillment.textContent = '₹0.00';
+      resultStorage.textContent = '₹0.00';
+      resultShipping.textContent = '₹0.00';
+      resultTotalFees.textContent = '₹0.00';
+      resultProfit.textContent = '₹0.00';
       resultMargin.textContent = '0%';
       resultROI.textContent = '0%';
-      resultMonthly.textContent = '$0.00';
+      resultMonthly.textContent = '₹0.00';
       profitResult.className = 'result-item';
       
       showAlert('All inputs cleared.', 'success');
@@ -1351,9 +1351,9 @@ Results:
     // Show alert message
     function showAlert(message, type) {
       const alertDiv = document.createElement('div');
-      alertDiv.className = `alert alert-${type}`;
+      alertDiv.className = `alert alert-₹{type}`;
       alertDiv.innerHTML = `
-                    ${message}
+                    ₹{message}
                     <span class="close">&times;</span>
                 `;
 
