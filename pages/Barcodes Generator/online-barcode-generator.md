@@ -4,6 +4,7 @@ title: "Online Barcode Generator - Create 1D Linear Barcodes"
 permalink: /online-barcode-generator-create-1d-linear-barcodes/
 ---
 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Online Barcode Generator - Create 1D Linear Barcodes</title>
@@ -13,7 +14,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
   content="barcode generator, 1d barcode, linear barcode, UPC-A, EAN-13, Code 128, Code 39, barcode creator, inventory barcode, retail barcode">
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
-<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.12.1/JsBarcode.all.min.js" integrity="sha512-fLmJPYDfCIAZ0gpG/iiIzPw113KquhzI1bxG0XhiLYyqm8Ax2lEiq1h1qv2vafH9tLzkjm4HYRWSeKoGFH4xIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -486,7 +487,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       </div>
       <div class="counter-item">
         <span>Barcode Type: </span>
-        <span id="barcodeType">UPC-A</span>
+        <span id="barcodeType">CODE128</span>
       </div>
       <div class="counter-item">
         <span>Data Length: </span>
@@ -499,85 +500,117 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
     </div>
 
     <div class="barcode-types-grid">
-      <div class="barcode-type-card active" data-type="upc-a">
-        <div class="barcode-type-header">
-          <span class="barcode-type-name">UPC-A</span>
-          <span class="barcode-type-example">12345678905</span>
-        </div>
-        <div class="barcode-type-details">12-digit numeric • Retail products in the USA & Canada</div>
-      </div>
-
-      <div class="barcode-type-card" data-type="upc-e">
-        <div class="barcode-type-header">
-          <span class="barcode-type-name">UPC-E</span>
-          <span class="barcode-type-example">1234565</span>
-        </div>
-        <div class="barcode-type-details">Compressed 8-digit version of UPC-A • Small retail items</div>
-      </div>
-
-      <div class="barcode-type-card" data-type="ean-13">
-        <div class="barcode-type-header">
-          <span class="barcode-type-name">EAN-13</span>
-          <span class="barcode-type-example">5901234123457</span>
-        </div>
-        <div class="barcode-type-details">13-digit numeric • International retail products</div>
-      </div>
-
-      <div class="barcode-type-card" data-type="ean-8">
-        <div class="barcode-type-header">
-          <span class="barcode-type-name">EAN-8</span>
-          <span class="barcode-type-example">96385074</span>
-        </div>
-        <div class="barcode-type-details">8-digit numeric • Small packaging (Europe/Asia)</div>
-      </div>
-
-      <div class="barcode-type-card" data-type="code-39">
-        <div class="barcode-type-header">
-          <span class="barcode-type-name">Code 39</span>
-          <span class="barcode-type-example">CODE39EXAMPLE</span>
-        </div>
-        <div class="barcode-type-details">Supports letters (A–Z), numbers (0–9), and symbols • Inventory, military, industrial</div>
-      </div>
-
-      <div class="barcode-type-card" data-type="code-128">
+      <div class="barcode-type-card active" data-type="CODE128" data-example="Code128ABC123">
         <div class="barcode-type-header">
           <span class="barcode-type-name">Code 128</span>
           <span class="barcode-type-example">Code128ABC123</span>
         </div>
-        <div class="barcode-type-details">Compact, supports all ASCII • Shipping, logistics, warehousing</div>
+        <div class="barcode-type-details">High-density alphanumeric barcode — widely used in logistics, shipping, and warehouse labels.</div>
       </div>
 
-      <div class="barcode-type-card" data-type="itf">
+      <div class="barcode-type-card" data-type="CODE128A" data-example="CODE128A123">
         <div class="barcode-type-header">
-          <span class="barcode-type-name">ITF (Interleaved 2 of 5)</span>
+          <span class="barcode-type-name">Code 128A</span>
+          <span class="barcode-type-example">CODE128A123</span>
+        </div>
+        <div class="barcode-type-details">Subset for uppercase letters, digits, and control chars.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="CODE128B" data-example="Code128Babc">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">Code 128B</span>
+          <span class="barcode-type-example">Code128Babc</span>
+        </div>
+        <div class="barcode-type-details">Subset for upper/lowercase letters and digits.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="CODE128C" data-example="123456789012">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">Code 128C</span>
           <span class="barcode-type-example">123456789012</span>
         </div>
-        <div class="barcode-type-details">Numeric-only barcode, very compact • Cartons and packaging</div>
+        <div class="barcode-type-details">Subset optimized for numeric pairs (00–99).</div>
       </div>
 
-      <div class="barcode-type-card" data-type="codabar">
+      <div class="barcode-type-card" data-type="EAN13" data-example="5901234123457">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">EAN-13</span>
+          <span class="barcode-type-example">5901234123457</span>
+        </div>
+        <div class="barcode-type-details">13-digit retail barcode standard (international).</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="EAN8" data-example="96385074">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">EAN-8</span>
+          <span class="barcode-type-example">96385074</span>
+        </div>
+        <div class="barcode-type-details">Shorter 8-digit retail barcode used for small items.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="UPC" data-example="12345678905">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">UPC-A</span>
+          <span class="barcode-type-example">12345678905</span>
+        </div>
+        <div class="barcode-type-details">12-digit numeric barcode used in USA/Canada retail.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="CODE39" data-example="CODE39EXAMPLE">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">CODE39</span>
+          <span class="barcode-type-example">CODE39EXAMPLE</span>
+        </div>
+        <div class="barcode-type-details">Simple alphanumeric barcode (A–Z, 0–9, - . $ / + % space). Common in industry and inventory.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="ITF14" data-example="12345678901234">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">ITF-14</span>
+          <span class="barcode-type-example">12345678901234</span>
+        </div>
+        <div class="barcode-type-details">Numeric-only barcode for outer cartons and packaging.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="MSI" data-example="123456">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">MSI (Modified Plessey)</span>
+          <span class="barcode-type-example">123456</span>
+        </div>
+        <div class="barcode-type-details">Numeric barcode for inventory, retail shelf labels.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="codabar" data-example="A123456A">
         <div class="barcode-type-header">
           <span class="barcode-type-name">Codabar</span>
           <span class="barcode-type-example">A123456A</span>
         </div>
-        <div class="barcode-type-details">Supports numbers + A/B/C/D • Libraries, blood banks, logistics</div>
+        <div class="barcode-type-details">Used in logistics, blood banks, libraries. Supports 0–9 and A–D.</div>
+      </div>
+
+      <div class="barcode-type-card" data-type="pharmacode" data-example="12345">
+        <div class="barcode-type-header">
+          <span class="barcode-type-name">Pharmacode</span>
+          <span class="barcode-type-example">12345</span>
+        </div>
+        <div class="barcode-type-details">Binary barcode used on pharmaceutical packaging.</div>
       </div>
     </div>
 
     <div class="input-section">
       <h2>Barcode Data</h2>
-      <textarea id="barcodeInput" rows="3" placeholder="Enter barcode data...">012345678905</textarea>
-      <div class="example-text" style="font-size: 0.9rem; color: #666; margin-top: 5px;">Example: 012345678905</div>
+      <textarea id="barcodeInput" rows="3" placeholder="Enter barcode data...">Code128ABC123</textarea>
+      <div class="example-text" style="font-size: 0.9rem; color: #666; margin-top: 5px;">Example: <span id="currentExample">Code128ABC123</span></div>
     </div>
 
     <div class="barcode-options">
       <div class="option-group">
         <label class="option-label">Barcode Size</label>
         <select id="barcodeSize" class="option-select">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large" selected>Large</option>
-          <option value="x-large">Extra Large</option>
+          <option value="1">Small</option>
+          <option value="2" selected>Medium</option>
+          <option value="3">Large</option>
+          <option value="4">Extra Large</option>
         </select>
       </div>
       
@@ -585,7 +618,6 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
         <label class="option-label">Output Format</label>
         <select id="outputFormat" class="option-select">
           <option value="png" selected>PNG</option>
-          <option value="pdf">PDF</option>
           <option value="svg">SVG</option>
         </select>
       </div>
@@ -625,7 +657,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       <h2>Barcode Preview</h2>
       <div id="barcodeOutput" class="barcode-data">Barcode will appear here after generation</div>
       <div id="barcodeImageContainer">
-        <img id="barcodeImage" class="barcode-image" src="" alt="Generated Barcode" style="display: none;">
+        <svg id="barcodeImage"></svg>
       </div>
       <div class="barcode-info">
         <div id="barcodeInfo">No barcode generated yet</div>
@@ -637,14 +669,14 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
   <div class="content-placeholder">
     <h2>Free Online Barcode Generator Tool</h2>
 
-    <p>Create professional 1D linear barcodes instantly with our free online barcode generator. Whether you need UPC-A for retail products, Code 128 for shipping labels, or Code 39 for inventory management, our tool supports all major barcode formats. Generate high-quality barcodes in PNG, PDF, or SVG formats with customizable sizes and colors. No download required, no registration needed, and your data privacy is guaranteed as all processing happens securely in your browser.</p>
+    <p>Create professional 1D linear barcodes instantly with our free online barcode generator. Whether you need UPC-A for retail products, Code 128 for shipping labels, or Code 39 for inventory management, our tool supports all major barcode formats. Generate high-quality barcodes in PNG or SVG formats with customizable sizes and colors. No download required, no registration needed, and your data privacy is guaranteed as all processing happens securely in your browser.</p>
 
     <h3>How to Generate Barcodes (Step-by-Step):</h3>
     <ul>
       <li><strong>Select Barcode Type:</strong> Choose from popular 1D barcode formats like UPC-A, EAN-13, Code 128, Code 39, and more based on your needs.</li>
       <li><strong>Enter Data:</strong> Input the numeric or alphanumeric data you want to encode in the barcode. Make sure it matches the requirements for your selected barcode type.</li>
       <li><strong>Customize Appearance:</strong> Adjust the size, colors, and output format to match your requirements.</li>
-      <li><strong>Generate & Download:</strong> Click "Generate Barcode" to create your barcode, then download it in your preferred format (PNG, PDF, or SVG).</li>
+      <li><strong>Generate & Download:</strong> Click "Generate Barcode" to create your barcode, then download it in your preferred format (PNG or SVG).</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
@@ -652,13 +684,14 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
 
     <h3>Supported Barcode Types & Applications:</h3>
     <ul>
+      <li><strong>Code 128 (High-density):</strong> Logistics, shipping labels, warehouse management</li>
       <li><strong>UPC-A (12-digit numeric):</strong> Retail products in the USA and Canada</li>
       <li><strong>EAN-13 (13-digit numeric):</strong> International retail products worldwide</li>
-      <li><strong>Code 128 (all ASCII):</strong> Shipping labels, logistics, warehouse management</li>
       <li><strong>Code 39 (alphanumeric):</strong> Inventory tracking, military, industrial applications</li>
-      <li><strong>ITF (Interleaved 2 of 5):</strong> Carton labeling, packaging with numeric data</li>
+      <li><strong>ITF-14 (Interleaved 2 of 5):</strong> Carton labeling, packaging with numeric data</li>
       <li><strong>Codabar (numeric + A/B/C/D):</strong> Libraries, blood banks, logistics</li>
-      <li><strong>UPC-E & EAN-8:</strong> Small retail items and packaging with space constraints</li>
+      <li><strong>MSI Plessey:</strong> Retail shelf labels, inventory management</li>
+      <li><strong>Pharmacode:</strong> Pharmaceutical packaging and drug identification</li>
     </ul>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
@@ -668,6 +701,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       <li><strong>Retailers:</strong> Produce UPC and EAN barcodes for retail products</li>
       <li><strong>Logistics Companies:</strong> Create shipping labels with Code 128 barcodes</li>
       <li><strong>Libraries & Educational Institutions:</strong> Generate Codabar barcodes for book tracking</li>
+      <li><strong>Pharmaceutical Companies:</strong> Create Pharmacode barcodes for drug packaging</li>
       <li><strong>Students & Developers:</strong> Learn about barcode technology and integration</li>
     </ul>
 
@@ -699,6 +733,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       <li><strong>Library Systems:</strong> Book tracking, membership cards, and inventory management</li>
       <li><strong>Manufacturing:</strong> Work-in-process tracking, quality control, and asset management</li>
       <li><strong>Event Management:</strong> Ticket validation, access control, and attendance tracking</li>
+      <li><strong>Pharmaceutical:</strong> Drug identification, batch tracking, and safety compliance</li>
     </ul>
   </div>
 </div>
@@ -712,6 +747,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
     const barcodeOutput = document.getElementById('barcodeOutput');
     const barcodeImage = document.getElementById('barcodeImage');
     const barcodeInfo = document.getElementById('barcodeInfo');
+    const currentExample = document.getElementById('currentExample');
     
     // Barcode options
     const barcodeSize = document.getElementById('barcodeSize');
@@ -721,7 +757,8 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
     const fgColor = document.getElementById('fgColor');
     
     // Current barcode type
-    let currentBarcodeType = 'upc-a';
+    let currentBarcodeType = 'CODE128';
+    let currentBarcodeExample = 'Code128ABC123';
     let generatedBarcodeData = '';
 
     // Initialize counters
@@ -746,6 +783,13 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
         this.classList.add('active');
         // Update current barcode type
         currentBarcodeType = this.getAttribute('data-type');
+        currentBarcodeExample = this.getAttribute('data-example');
+        // Update example text
+        currentExample.textContent = currentBarcodeExample;
+        // Update input with example if empty
+        if (!barcodeInput.value.trim()) {
+          barcodeInput.value = currentBarcodeExample;
+        }
         updateCounts();
         validateBarcodeData();
       });
@@ -769,16 +813,20 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
 
     function getBarcodeTypeName(type) {
       const typeNames = {
-        'upc-a': 'UPC-A',
-        'upc-e': 'UPC-E',
-        'ean-13': 'EAN-13',
-        'ean-8': 'EAN-8',
-        'code-39': 'Code 39',
-        'code-128': 'Code 128',
-        'itf': 'ITF',
-        'codabar': 'Codabar'
+        'CODE128': 'Code 128',
+        'CODE128A': 'Code 128A',
+        'CODE128B': 'Code 128B',
+        'CODE128C': 'Code 128C',
+        'EAN13': 'EAN-13',
+        'EAN8': 'EAN-8',
+        'UPC': 'UPC-A',
+        'CODE39': 'CODE39',
+        'ITF14': 'ITF-14',
+        'MSI': 'MSI Plessey',
+        'codabar': 'Codabar',
+        'pharmacode': 'Pharmacode'
       };
-      return typeNames[type] || 'Unknown';
+      return typeNames[type] || type;
     }
 
     function validateBarcodeData() {
@@ -788,47 +836,40 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
 
       // Validation rules for different barcode types
       switch(currentBarcodeType) {
-        case 'upc-a':
+        case 'UPC':
           if (data.length !== 12 || !/^\d+$/.test(data)) {
             isValid = false;
             message = 'UPC-A requires exactly 12 numeric digits';
           }
           break;
-        case 'upc-e':
-          if (data.length !== 8 || !/^\d+$/.test(data)) {
-            isValid = false;
-            message = 'UPC-E requires exactly 8 numeric digits';
-          }
-          break;
-        case 'ean-13':
+        case 'EAN13':
           if (data.length !== 13 || !/^\d+$/.test(data)) {
             isValid = false;
             message = 'EAN-13 requires exactly 13 numeric digits';
           }
           break;
-        case 'ean-8':
+        case 'EAN8':
           if (data.length !== 8 || !/^\d+$/.test(data)) {
             isValid = false;
             message = 'EAN-8 requires exactly 8 numeric digits';
           }
           break;
-        case 'code-39':
+        case 'CODE39':
           if (!/^[A-Z0-9\-\.\$\+\/%\s]+$/.test(data.toUpperCase())) {
             isValid = false;
-            message = 'Code 39 supports A-Z, 0-9, and symbols: - . $ + / % space';
+            message = 'CODE39 supports A-Z, 0-9, and symbols: - . $ + / % space';
           }
           break;
-        case 'code-128':
-          // Code 128 supports all ASCII characters
-          if (data.length === 0) {
+        case 'ITF14':
+          if (!/^\d+$/.test(data) || (data.length < 12 || data.length > 14)) {
             isValid = false;
-            message = 'Code 128 requires at least one character';
+            message = 'ITF-14 requires 12-14 numeric digits';
           }
           break;
-        case 'itf':
-          if (data.length % 2 !== 0 || !/^\d+$/.test(data)) {
+        case 'MSI':
+          if (!/^\d+$/.test(data)) {
             isValid = false;
-            message = 'ITF requires an even number of numeric digits';
+            message = 'MSI requires numeric digits only';
           }
           break;
         case 'codabar':
@@ -837,6 +878,13 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
             message = 'Codabar supports numbers and start/stop characters A, B, C, D';
           }
           break;
+        case 'pharmacode':
+          if (!/^\d+$/.test(data) || parseInt(data) < 3 || parseInt(data) > 131070) {
+            isValid = false;
+            message = 'Pharmacode requires numeric value between 3 and 131070';
+          }
+          break;
+        // Code 128 variants have minimal validation as they support wide character sets
       }
 
       document.getElementById('barcodeStatus').textContent = isValid ? 'Valid' : 'Invalid';
@@ -877,7 +925,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
         case 'clear':
           barcodeInput.value = '';
           barcodeOutput.textContent = 'Barcode will appear here after generation';
-          barcodeImage.style.display = 'none';
+          barcodeImage.innerHTML = '';
           barcodeInfo.textContent = 'No barcode generated yet';
           generatedBarcodeData = '';
           updateCounts();
@@ -885,109 +933,88 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       }
     }
 
-   function generateBarcode() {
-  const data = barcodeInput.value;
-  const validation = validateBarcodeData();
+    function generateBarcode() {
+      const data = barcodeInput.value;
+      const validation = validateBarcodeData();
 
-  if (!validation.isValid) {
-    showAlert(validation.message, 'error');
-    return;
-  }
-
-  generatedBarcodeData = data;
-
-  JsBarcode("#barcodeImage", data, {
-    format: currentBarcodeType.replace('-', '').toUpperCase(), // যেমন 'CODE128'
-    lineColor: fgColor.value,
-    background: bgColor.value,
-    width: 2,
-    height: 60,
-    displayValue: showText.value === 'true'
-  });
-
-  barcodeImage.style.display = 'block';
-  barcodeOutput.textContent = '';
-  barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Data: ${data}`;
-  
-  showAlert('Barcode generated successfully!', 'success');
-}
-
-
-    function createBarcodeVisualization(data) {
-      // This is a simplified visualization for demonstration
-      // In a real implementation, use a proper barcode library like JsBarcode
-      const container = document.getElementById('barcodeImageContainer');
-      
-      // Create a simple bar pattern based on the data
-      let bars = '';
-      for (let i = 0; i < data.length; i++) {
-        const charCode = data.charCodeAt(i);
-        // Create varying bar widths based on character code
-        const width = (charCode % 5) + 1;
-        bars += `<div style="display:inline-block; width:${width}px; height:80px; background:${fgColor.value}; margin:0 1px;"></div>`;
+      if (!validation.isValid) {
+        showAlert(validation.message, 'error');
+        return;
       }
-      
-      container.innerHTML = `
-        <div style="text-align:center; padding:20px; background:${bgColor.value}; border:1px solid #ddd;">
-          <div style="margin-bottom:10px;">${showText.value === 'true' ? data : ''}</div>
-          <div>${bars}</div>
-        </div>
-      `;
-      
-      barcodeImage.style.display = 'none';
+
+      try {
+        // Clear previous barcode
+        barcodeImage.innerHTML = '';
+        
+        // Generate new barcode using JsBarcode
+        JsBarcode("#barcodeImage", data, {
+          format: currentBarcodeType,
+          width: parseFloat(barcodeSize.value),
+          height: 60,
+          displayValue: showText.value === 'true',
+          lineColor: fgColor.value,
+          background: bgColor.value,
+          margin: 10
+        });
+
+        generatedBarcodeData = data;
+        barcodeOutput.textContent = data;
+        barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Data: ${data} | Size: ${barcodeSize.options[barcodeSize.selectedIndex].text}`;
+        
+        showAlert('Barcode generated successfully!', 'success');
+      } catch (error) {
+        showAlert('Error generating barcode: ' + error.message, 'error');
+      }
     }
 
-   function downloadBarcode() {
-  const format = outputFormat.value; // png, svg, pdf
-  const svg = document.getElementById('barcodeImage');
+    function downloadBarcode() {
+      const format = outputFormat.value;
+      const svgElement = document.getElementById('barcodeImage');
+      
+      if (!svgElement || !svgElement.innerHTML) {
+        showAlert('No barcode generated to download.', 'error');
+        return;
+      }
 
-  if (format === 'svg') {
-    const svgData = new XMLSerializer().serializeToString(svg);
-    const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    downloadFile(url, 'barcode.svg');
-  } 
-  else if (format === 'png') {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    const svgData = new XMLSerializer().serializeToString(svg);
-    const img = new Image();
-    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-    const url = URL.createObjectURL(svgBlob);
+      try {
+        if (format === 'svg') {
+          // Download as SVG
+          const svgData = new XMLSerializer().serializeToString(svgElement);
+          const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          downloadFile(url, `barcode_${currentBarcodeType}.svg`);
+        } else if (format === 'png') {
+          // Convert SVG to PNG for download
+          const svgData = new XMLSerializer().serializeToString(svgElement);
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          const img = new Image();
+          
+          img.onload = function () {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+            
+            const pngUrl = canvas.toDataURL('image/png');
+            downloadFile(pngUrl, `barcode_${currentBarcodeType}.png`);
+          };
+          
+          img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+        }
+      } catch (error) {
+        showAlert('Error downloading barcode: ' + error.message, 'error');
+      }
+    }
 
-    img.onload = function () {
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-      URL.revokeObjectURL(url);
-
-      const pngUrl = canvas.toDataURL('image/png');
-      downloadFile(pngUrl, 'barcode.png');
-    };
-    img.src = url;
-  } 
-  else if (format === 'pdf') {
-    const svgData = new XMLSerializer().serializeToString(svg);
-    const win = window.open('', '_blank');
-    win.document.write(`<img src="data:image/svg+xml;base64,${btoa(svgData)}">`);
-    win.document.close();
-    win.print();
-  } 
-  else {
-    showAlert('Invalid format selected.', 'error');
-  }
-}
-
-function downloadFile(url, filename) {
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  showAlert(`Barcode downloaded as ${filename}`, 'success');
-}
-
+    function downloadFile(url, filename) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showAlert(`Barcode downloaded as ${filename}`, 'success');
+    }
 
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
