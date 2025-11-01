@@ -1,249 +1,492 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-  <loc>http://www.toolesy.com/</loc>
+  <loc>https://www.toolesy.com/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-case-converter-change-text-to-upper-lower-title-case/</loc>
+  <loc>https://www.toolesy.com/online-case-converter-change-text-to-upper-lower-title-case/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/text-replacement-tool-find-and-replace-text-online/</loc>
+  <loc>https://www.toolesy.com/text-replacement-tool-find-and-replace-text-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/plain-text-converter-remove-formatting-clean-text-online/</loc>
+  <loc>https://www.toolesy.com/plain-text-converter-remove-formatting-clean-text-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/remove-line-breaks-online-clean-text-tool-instant/</loc>
+  <loc>https://www.toolesy.com/remove-line-breaks-online-clean-text-tool-instant/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/word-frequency-counter-analyze-text-word-usage/</loc>
+  <loc>https://www.toolesy.com/word-frequency-counter-analyze-text-word-usage/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/text-formatting-removal-tool/</loc>
+  <loc>https://www.toolesy.com/text-formatting-removal-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-xml-formatter-format-validate-beautify/</loc>
+  <loc>https://www.toolesy.com/online-xml-formatter-format-validate-beautify/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-html-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-html-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-css-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-css-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-javascript-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-javascript-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-json-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-json-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-php-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-php-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-sql-beautifier-formatter/</loc>
+  <loc>https://www.toolesy.com/online-sql-beautifier-formatter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit/</loc>
+  <loc>https://www.toolesy.com/sleep-debt-calculator-track-and-calculate-your-sleep-deficit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time/</loc>
+  <loc>https://www.toolesy.com/sleep-cycle-calculator-calculate-your-optimal-bedtime-wake-up-time/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/water-intake-calculator-calculate-your-daily-hydration-needs/</loc>
+  <loc>https://www.toolesy.com/water-intake-calculator-calculate-your-daily-hydration-needs/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/carbon-footprint-calculator-calculate-your-co-emissions/</loc>
+  <loc>https://www.toolesy.com/carbon-footprint-calculator-calculate-your-co-emissions/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/free-online-pdf-merger-combine-multiple-pdf-files-into-one/</loc>
+  <loc>https://www.toolesy.com/free-online-pdf-merger-combine-multiple-pdf-files-into-one/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/free-online-pdf-splitter-split-pdf-files-into-multiple-documents/</loc>
+  <loc>https://www.toolesy.com/free-online-pdf-splitter-split-pdf-files-into-multiple-documents/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/free-online-pdf-cropper-crop-pdf-pages-precisely/</loc>
+  <loc>https://www.toolesy.com/free-online-pdf-cropper-crop-pdf-pages-precisely/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/</loc>
+  <loc>https://www.toolesy.com/online-pdf-resizer-resize-pdf-pages-to-different-paper-sizes/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/about/</loc>
+  <loc>https://www.toolesy.com/about/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/contact/</loc>
+  <loc>https://www.toolesy.com/contact/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-notepad-free-text-editor-for-notes/</loc>
+  <loc>https://www.toolesy.com/online-notepad-free-text-editor-for-notes/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/reverse-text-generator-flip-reverse-text-online/</loc>
+  <loc>https://www.toolesy.com/reverse-text-generator-flip-reverse-text-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/aesthetic-text-generator-create-stylish-text-for-social-media/</loc>
+  <loc>https://www.toolesy.com/aesthetic-text-generator-create-stylish-text-for-social-media/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/ascii-art-generator-convert-images-to-text-art-online/</loc>
+  <loc>https://www.toolesy.com/ascii-art-generator-convert-images-to-text-art-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates/</loc>
+  <loc>https://www.toolesy.com/online-alphabetizer-text-tool-sort-a-z-z-a-remove-duplicates/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-big-text-generator-create-ascii-art-large-text/</loc>
+  <loc>https://www.toolesy.com/online-big-text-generator-create-ascii-art-large-text/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-morse-code-translator-convert-text-to-morse-code/</loc>
+  <loc>https://www.toolesy.com/online-morse-code-translator-convert-text-to-morse-code/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-zalgo-glitch-text-generator-create-corrupted-text/</loc>
+  <loc>https://www.toolesy.com/online-zalgo-glitch-text-generator-create-corrupted-text/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-phonetic-spelling-generator-convert-text-to-phonetic-alphabet/</loc>
+  <loc>https://www.toolesy.com/online-phonetic-spelling-generator-convert-text-to-phonetic-alphabet/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/remove-extra-spaces-whitespace-online-whitespace-remover-tool/</loc>
+  <loc>https://www.toolesy.com/remove-extra-spaces-whitespace-online-whitespace-remover-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/pig-latin-translator-online-english-to-pig-latin-converter/</loc>
+  <loc>https://www.toolesy.com/pig-latin-translator-online-english-to-pig-latin-converter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/stacked-vertical-text-generator-online-vertical-text-creator/</loc>
+  <loc>https://www.toolesy.com/stacked-vertical-text-generator-online-vertical-text-creator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/url-encode-decode-online-url-encoderdecoder-tool/</loc>
+  <loc>https://www.toolesy.com/url-encode-decode-online-url-encoderdecoder-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool/</loc>
+  <loc>https://www.toolesy.com/base64-encoder-decoder-online-base64-converter-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/text-to-handwriting-converter-convert-digital-text-to-realistic-handwriting/</loc>
+  <loc>https://www.toolesy.com/text-to-handwriting-converter-convert-digital-text-to-realistic-handwriting/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-spelling-and-grammar-checker-check-text-for-errors/</loc>
+  <loc>https://www.toolesy.com/online-spelling-and-grammar-checker-check-text-for-errors/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-rewording-tool-paraphraser-rephrase-text-instantly/</loc>
+  <loc>https://www.toolesy.com/online-rewording-tool-paraphraser-rephrase-text-instantly/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-website-availability-checker/</loc>
+  <loc>https://www.toolesy.com/online-website-availability-checker/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-ping-test-tool/</loc>
+  <loc>https://www.toolesy.com/online-ping-test-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/find-ip-address-free-online-ip-lookup-tool/</loc>
+  <loc>https://www.toolesy.com/find-ip-address-free-online-ip-lookup-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/find-location-of-your-domain-free-website-location-finder/</loc>
+  <loc>https://www.toolesy.com/find-location-of-your-domain-free-website-location-finder/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/whois-lookup-free-domain-information-lookup-tool/</loc>
+  <loc>https://www.toolesy.com/whois-lookup-free-domain-information-lookup-tool/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/internet-speed-test-check-your-download-upload-speed/</loc>
+  <loc>https://www.toolesy.com/internet-speed-test-check-your-download-upload-speed/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/slugify-url-generator-create-seo-friendly-urls-permalinks/</loc>
+  <loc>https://www.toolesy.com/slugify-url-generator-create-seo-friendly-urls-permalinks/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/page-speed-test-analyze-website-performance/</loc>
+  <loc>https://www.toolesy.com/page-speed-test-analyze-website-performance/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/web-page-size-checker-analyze-website-file-size/</loc>
+  <loc>https://www.toolesy.com/web-page-size-checker-analyze-website-file-size/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/website-page-snooper-view-and-copy-html-code-from-any-website/</loc>
+  <loc>https://www.toolesy.com/website-page-snooper-view-and-copy-html-code-from-any-website/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/mobile-data-usage-calculator-calculate-your-monthly-data-needs/</loc>
+  <loc>https://www.toolesy.com/meta-tag-generator-create-seo-meta-tags-instantly/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/body-water-percentage-calculator-calculate-your-body-water-percentage/</loc>
+  <loc>https://www.toolesy.com/robotstxt-generator-create-robotstxt-file-instantly/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/study-time-vs-exam-score-calculator/</loc>
+  <loc>https://www.toolesy.com/xml-sitemap-generator-create-sitemap-for-your-website/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/social-media-time-wastage-calculator/</loc>
+  <loc>https://www.toolesy.com/mobile-data-usage-calculator-calculate-your-monthly-data-needs/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/language-learning-progress-calculator/</loc>
+  <loc>https://www.toolesy.com/body-water-percentage-calculator-calculate-your-body-water-percentage/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/travel-carbon-offset-calculator/</loc>
+  <loc>https://www.toolesy.com/study-time-vs-exam-score-calculator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/currency-converter-international-local/</loc>
+  <loc>https://www.toolesy.com/social-media-time-wastage-calculator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-age-calculator/</loc>
+  <loc>https://www.toolesy.com/travel-carbon-offset-calculator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/percentage-calculator/</loc>
+  <loc>https://www.toolesy.com/currency-converter-international-local/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/date-calculator-calculate-dates-addsubtract-days-online/</loc>
+  <loc>https://www.toolesy.com/online-age-calculator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/time-calculator-calculate-time-addsubtract-time-online/</loc>
+  <loc>https://www.toolesy.com/percentage-calculator/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/hours-calculator-calculate-hours-work-time-timesheet-online/</loc>
+  <loc>https://www.toolesy.com/date-calculator-calculate-dates-addsubtract-days-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/average-calculator-calculate-mean-median-mode-online/</loc>
+  <loc>https://www.toolesy.com/time-calculator-calculate-time-addsubtract-time-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/confidence-interval-calculator-calculate-statistical-intervals-online<//loc>
+  <loc>https://www.toolesy.com/hours-calculator-calculate-hours-work-time-timesheet-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-pdf-compressor-reduce-pdf-file-size/</loc>
+  <loc>https://www.toolesy.com/average-calculator-calculate-mean-median-mode-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-pdf-rotator-rotate-pdf-pages/</loc>
+  <loc>https://www.toolesy.com/confidence-interval-calculator-calculate-statistical-intervals-online/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-pdf-converter-convert-pdf-to-image-formats/</loc>
+  <loc>https://www.toolesy.com/sleep-calculator-find-your-perfect-bedtime/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf/</loc>
+  <loc>https://www.toolesy.com/flipkart-fee-calculator-calculate-profit-seller-payout/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/free-online-pdf-word-excel-converter/</loc>
+  <loc>https://www.toolesy.com/amazon-seller-price-calculator-fees-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/pdf-to-word-ocr-converter/</loc>
+  <loc>https://www.toolesy.com/amazon-fba-calculator-estimate-profits-fees-in-inr/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/?category=Online Text Tools</loc>
+  <loc>https://www.toolesy.com/meesho-price-calculator-estimate-selling-price-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/?category=Code &amp; Data Formatter Tools</loc>
+  <loc>https://www.toolesy.com/jiomart-price-calculator-estimate-selling-price-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/?category=Domain &amp; Network Tools</loc>
+  <loc>https://www.toolesy.com/ebay-price-calculator-estimate-selling-price-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/?category=Online Calculator Tools</loc>
+  <loc>https://www.toolesy.com/etsy-price-calculator-estimate-product-costs-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/?category=Online PDF Tools</loc>
+  <loc>https://www.toolesy.com/alibaba-price-calculator-estimate-product-costs-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/disclaimer/</loc>
+  <loc>https://www.toolesy.com/online-gst-calculator-for-flipkart-amazon-sellers/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/privacy-policy/</loc>
+  <loc>https://www.toolesy.com/volumetric-weight-calculator-for-amazon-flipkart/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/terms-of-service/</loc>
+  <loc>https://www.toolesy.com/amazon-price-calculator-estimate-product-cost-profit/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/faq/</loc>
+  <loc>https://www.toolesy.com/online-pdf-compressor-reduce-pdf-file-size/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/donate/</loc>
+  <loc>https://www.toolesy.com/online-pdf-rotator-rotate-pdf-pages/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.toolesy.com/sitemap/</loc>
+  <loc>https://www.toolesy.com/online-pdf-converter-convert-pdf-to-image-formats/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.toolesy.com/online-image-to-pdf-converter-convert-jpg-png-tiff-to-pdf/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/free-online-pdf-word-excel-converter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/pdf-to-word-ocr-converter/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/?category=Online%20Text%20Tools</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/?category=Code%20&amp;%20Data%20Formatter%20Tools</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/?category=Domain%20&amp;%20Network%20Tools</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/?category=Online%20Calculator%20Tools</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/?category=Online%20PDF%20Tools</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/disclaimer/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/privacy-policy/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/terms-of-service/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/faq/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/donate/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.toolesy.com/sitemap/</loc>
+  <lastmod>2025-11-01T07:03:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
