@@ -14,8 +14,8 @@ social:
 
 
 # Favicon and logo (update if needed)
-logo: "https://www.toolesy.com/toolesy-logo.png"
-favicon: "/assets/images/favicon.ico"
+logo: "https://www.toolesy.com/favicon.png"
+favicon: "https://www.toolesy.com/favicon.ico"
 
 # Build Settings
 markdown: kramdown
