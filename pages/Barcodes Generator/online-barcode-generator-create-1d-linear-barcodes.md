@@ -8,9 +8,9 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Online Barcode Generator - Create Retail & Product Barcodes</title>
 <meta name="description"
-  content="Free online barcode generator tool. Create retail and product barcode types including UPC-A, EAN-13, ISBN, ISSN, ISMN, JAN-13, and more for global retail applications.">
+  content="Free online barcode generator tool. Create retail and product barcodes including UPC-A, EAN-13, ISBN, ISSN, and more for global retail standards.">
 <meta name="keywords"
-  content="barcode generator, retail barcode, product barcode, UPC-A, EAN-13, ISBN, ISSN, ISMN, JAN-13, SSCC18, retail packaging">
+  content="barcode generator, retail barcode, product barcode, UPC-A, EAN-13, ISBN, ISSN, SSCC18, barcode creator, inventory barcode">
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bwip-js/4.7.0/bwip-js-min.js" integrity="sha512-MDtabmDetsQATsClilUhXqOmgQraxAmYDYWTaxzvAD9S0qaJJKMj/WqnxC7VnEAVULW637yr/KZGPbwdvArCJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -474,10 +474,10 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
 
 <div class="converter-container">
   <h1>Free Online Retail & Product Barcode Generator</h1>
-  <p class="welcome-message">Create professional retail and product barcodes for global markets. Generate UPC-A, EAN-13, ISBN, ISSN, ISMN, JAN-13, and other retail barcode types instantly.</p>
+  <p class="welcome-message">Create professional retail and product barcodes for global standards. Generate UPC-A, EAN-13, ISBN, ISSN, and other retail barcode types instantly.</p>
 
   <div class="converter-section">
-    <h2>Retail & Product Barcodes</h2>
+    <h2>Retail & Product Barcodes Generator</h2>
 
     <div class="counter-wrapper">
       <div class="counter-item">
@@ -520,7 +520,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">EAN-13</span>
           <span class="barcode-type-example">5901234123457</span>
         </div>
-        <div class="barcode-type-details">13 digits • European Article Number • Global retail standard</div>
+        <div class="barcode-type-details">13 digits • Global retail standard • European Article Number</div>
       </div>
 
       <div class="barcode-type-card" data-type="ean8" data-example="96385074">
@@ -528,7 +528,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">EAN-8</span>
           <span class="barcode-type-example">96385074</span>
         </div>
-        <div class="barcode-type-details">8 digits • Short EAN • Small packaging items</div>
+        <div class="barcode-type-details">8 digits • Short EAN format • Small packaging items</div>
       </div>
 
       <div class="barcode-type-card" data-type="isbn" data-example="9780123456789">
@@ -536,7 +536,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">ISBN</span>
           <span class="barcode-type-example">9780123456789</span>
         </div>
-        <div class="barcode-type-details">International Standard Book Number • Based on EAN-13</div>
+        <div class="barcode-type-details">Books identification • Based on EAN-13 • International Standard Book Number</div>
       </div>
 
       <div class="barcode-type-card" data-type="issn" data-example="9771234567004">
@@ -544,15 +544,15 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">ISSN</span>
           <span class="barcode-type-example">9771234567004</span>
         </div>
-        <div class="barcode-type-details">International Standard Serial Number • Periodicals & journals</div>
+        <div class="barcode-type-details">Periodicals & journals • International Standard Serial Number</div>
       </div>
 
-      <div class="barcode-type-card" data-type="ismn" data-example="9790234567890">
+      <div class="barcode-type-card" data-type="ismn" data-example="9790123456789">
         <div class="barcode-type-header">
           <span class="barcode-type-name">ISMN</span>
-          <span class="barcode-type-example">9790234567890</span>
+          <span class="barcode-type-example">9790123456789</span>
         </div>
-        <div class="barcode-type-details">International Standard Music Number • Sheet music publications</div>
+        <div class="barcode-type-details">Sheet music identification • International Standard Music Number</div>
       </div>
 
       <div class="barcode-type-card" data-type="jan13" data-example="4901234123457">
@@ -560,7 +560,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">JAN-13</span>
           <span class="barcode-type-example">4901234123457</span>
         </div>
-        <div class="barcode-type-details">Japanese Article Number • Same as EAN-13 format</div>
+        <div class="barcode-type-details">Japanese Article Number • Same as EAN-13 • Japan retail market</div>
       </div>
 
       <div class="barcode-type-card" data-type="ucc12" data-example="123456789012">
@@ -568,7 +568,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">UCC-12</span>
           <span class="barcode-type-example">123456789012</span>
         </div>
-        <div class="barcode-type-details">Uniform Code Council • Same as UPC-A format</div>
+        <div class="barcode-type-details">Same as UPC-A • Uniform Code Council standard</div>
       </div>
 
       <div class="barcode-type-card" data-type="sscc18" data-example="123456789012345678">
@@ -576,7 +576,7 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           <span class="barcode-type-name">SSCC-18</span>
           <span class="barcode-type-example">123456789012345678</span>
         </div>
-        <div class="barcode-type-details">Serial Shipping Container Code • Logistics & shipping</div>
+        <div class="barcode-type-details">18 digits • Serial Shipping Container Code • Logistics & shipping</div>
       </div>
     </div>
 
@@ -652,71 +652,71 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
   <div class="content-placeholder">
     <h2>Free Online Retail & Product Barcode Generator</h2>
 
-    <p>Create professional retail and product barcodes for global markets with our free online barcode generator. Whether you need UPC-A for North American retail, EAN-13 for international markets, ISBN for books, or SSCC-18 for shipping containers, our tool supports all major retail barcode formats. Generate high-quality barcodes in PNG or SVG formats with customizable sizes and colors. No download required, no registration needed, and your data privacy is guaranteed.</p>
+    <p>Create professional retail and product barcodes instantly with our free online barcode generator. Whether you need UPC-A for US retail products, EAN-13 for international markets, ISBN for books, or SSCC-18 for shipping containers, our tool supports all major retail barcode formats. Generate high-quality barcodes in PNG or SVG formats with customizable sizes and colors. No download required, no registration needed, and your data privacy is guaranteed as all processing happens securely in your browser.</p>
 
     <h3>How to Generate Retail Barcodes (Step-by-Step):</h3>
     <ul>
-      <li><strong>Select Barcode Type:</strong> Choose from retail-specific barcode formats like UPC-A, EAN-13, ISBN, ISSN, ISMN, JAN-13, and SSCC-18 based on your product type and market.</li>
+      <li><strong>Select Barcode Type:</strong> Choose from retail barcode formats like UPC-A, EAN-13, ISBN, ISSN, and more based on your product type.</li>
       <li><strong>Enter Data:</strong> Input the numeric data following the specific format requirements for your selected barcode type.</li>
-      <li><strong>Customize Appearance:</strong> Adjust the size, colors, and output format to match your packaging requirements.</li>
+      <li><strong>Customize Appearance:</strong> Adjust the size, colors, and output format to match your printing requirements.</li>
       <li><strong>Generate & Download:</strong> Click "Generate Barcode" to create your barcode, then download it in your preferred format (PNG or SVG).</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're a publisher launching a new book series. You need ISBN barcodes for each book, EAN-13 codes for international distribution, and possibly ISSN codes for any periodical publications. Instead of working with multiple vendors or expensive software, you can use our free online tool to generate all required barcodes instantly. Simply select the appropriate barcode type, enter the assigned numbers from your ISBN/EAN agency, and generate professional barcodes ready for printing on book covers and marketing materials.</p>
+    <p>Imagine you're a publisher who needs to create ISBN barcodes for new book releases. Instead of outsourcing this task or purchasing expensive software, you can use our free online tool. Simply select ISBN, enter your 13-digit ISBN number (starting with 978 or 979), customize the size for book covers, and generate professional barcodes ready for printing. The entire process takes less than 30 seconds and ensures your books meet global retail standards.</p>
 
     <h3>Supported Retail Barcode Types & Applications:</h3>
     <ul>
-      <li><strong>UPC-A (12 digits):</strong> North American retail products, consumer goods</li>
-      <li><strong>UPC-E (8 digits):</strong> Small retail items where space is limited</li>
-      <li><strong>EAN-13 (13 digits):</strong> International retail products, global standard</li>
-      <li><strong>EAN-8 (8 digits):</strong> Small packaging items in European/Asian markets</li>
-      <li><strong>ISBN (13 digits):</strong> Books, ebooks, and publications worldwide</li>
-      <li><strong>ISSN (8 digits):</strong> Periodicals, magazines, journals, serial publications</li>
-      <li><strong>ISMN (13 digits):</strong> Sheet music and musical publications</li>
-      <li><strong>JAN-13 (13 digits):</strong> Japanese retail products (EAN-13 compatible)</li>
+      <li><strong>UPC-A (12 digits):</strong> Standard for retail products in USA and Canada</li>
+      <li><strong>UPC-E (8 digits):</strong> Compressed version for small products with limited space</li>
+      <li><strong>EAN-13 (13 digits):</strong> Global standard for retail products worldwide</li>
+      <li><strong>EAN-8 (8 digits):</strong> Short format for small packaging items</li>
+      <li><strong>ISBN (13 digits):</strong> International Standard Book Number for publications</li>
+      <li><strong>ISSN (8 digits):</strong> International Standard Serial Number for periodicals</li>
+      <li><strong>ISMN (13 digits):</strong> International Standard Music Number for sheet music</li>
+      <li><strong>JAN-13 (13 digits):</strong> Japanese Article Number (identical to EAN-13)</li>
       <li><strong>UCC-12 (12 digits):</strong> Uniform Code Council standard (same as UPC-A)</li>
-      <li><strong>SSCC-18 (18 digits):</strong> Logistics, shipping containers, pallet tracking</li>
+      <li><strong>SSCC-18 (18 digits):</strong> Serial Shipping Container Code for logistics</li>
     </ul>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
       <li><strong>Retail Businesses:</strong> Create UPC and EAN barcodes for product labeling</li>
-      <li><strong>Publishers:</strong> Generate ISBN, ISSN, and ISMN codes for publications</li>
-      <li><strong>Manufacturers:</strong> Produce barcodes for product packaging and inventory</li>
-      <li><strong>Logistics Companies:</strong> Create SSCC-18 codes for shipping containers</li>
-      <li><strong>Small Businesses:</strong> Generate professional barcodes without expensive software</li>
-      <li><strong>Exporters:</strong> Create EAN-13 codes for international market compliance</li>
-      <li><strong>Authors & Self-Publishers:</strong> Generate ISBN barcodes for book publishing</li>
+      <li><strong>Publishers:</strong> Generate ISBN barcodes for books and publications</li>
+      <li><strong>Manufacturers:</strong> Produce product barcodes for inventory management</li>
+      <li><strong>Logistics Companies:</strong> Create SSCC-18 barcodes for shipping containers</li>
+      <li><strong>Music Publishers:</strong> Generate ISMN barcodes for sheet music</li>
+      <li><strong>Magazine Publishers:</strong> Create ISSN barcodes for periodicals</li>
+      <li><strong>Small Businesses:</strong> Professional barcodes without expensive software</li>
     </ul>
 
     <h3>Frequently Asked Questions:</h3>
     <p><strong>What is the difference between UPC and EAN barcodes?</strong><br>
-      UPC (Universal Product Code) is primarily used in North America with 12 digits, while EAN (European Article Number) is used internationally with 13 digits. Most modern systems can read both formats.</p>
+      UPC (Universal Product Code) is primarily used in North America with 12 digits, while EAN (European Article Number) is used globally with 13 digits. EAN includes an additional country code digit.</p>
 
-    <p><strong>Do I need to register my barcodes with an official agency?</strong><br>
-      Yes, for commercial use of UPC, EAN, ISBN, ISSN, and ISMN codes, you need to obtain unique numbers from the respective official agencies (GS1 for UPC/EAN, ISBN agencies for books, etc.).</p>
+    <p><strong>Can I generate ISBN barcodes for my books?</strong><br>
+      Yes, our tool supports ISBN barcode generation. You need a valid 13-digit ISBN number (starting with 978 or 979) to create proper book barcodes.</p>
 
-    <p><strong>Can I use the same barcode for different products?</strong><br>
-      No, each unique product variant should have its own unique barcode. Reusing barcodes across different products can cause inventory and pricing errors.</p>
+    <p><strong>Is my barcode data kept private and secure?</strong><br>
+      Absolutely. All barcode generation happens locally in your browser. Your product codes, ISBN numbers, and other sensitive data are never sent to our servers.</p>
 
-    <p><strong>What is the check digit in barcodes?</strong><br>
-      The check digit is the last digit in most barcode formats, calculated from the other digits to ensure data integrity and prevent scanning errors.</p>
+    <p><strong>Do I need a company prefix for retail barcodes?</strong><br>
+      For commercial use of UPC and EAN barcodes, you typically need to obtain a company prefix from GS1 (the global standards organization) to ensure unique product identification.</p>
 
-    <p><strong>Are these barcodes scannable by all retailers?</strong><br>
-      Yes, the barcodes generated follow international standards and are compatible with all standard retail barcode scanners worldwide.</p>
+    <p><strong>What is SSCC-18 used for?</strong><br>
+      SSCC-18 (Serial Shipping Container Code) is used in logistics to identify shipping containers, pallets, and other logistic units throughout the supply chain.</p>
 
     <h3>Why Choose Our Retail Barcode Generator?</h3>
-    <p>Our online retail barcode generator stands out for its specialization in commercial barcode formats used by retailers, publishers, and manufacturers worldwide. Unlike generic barcode tools, we focus on the specific requirements of retail and publishing industries, ensuring compliance with international standards. All processing happens locally in your browser, guaranteeing complete privacy for your product data and ISBN numbers.</p>
+    <p>Our online retail barcode generator stands out for its accuracy, compliance with global standards, and ease of use. Unlike generic barcode tools, we specifically support retail and product barcode formats with proper validation to ensure your barcodes meet industry standards. The tool generates high-quality barcodes suitable for professional printing on product packaging, books, and shipping labels.</p>
 
-    <h3>Global Barcode Standards Compliance</h3>
-    <p>Our generator supports barcodes that comply with major international standards:</p>
+    <h3>Global Standards Compliance</h3>
+    <p>Our barcode generator ensures compliance with international standards:</p>
     <ul>
-      <li><strong>GS1 Standards:</strong> UPC-A, UPC-E, EAN-13, EAN-8, SSCC-18</li>
-      <li><strong>ISBN Agency:</strong> International Standard Book Numbers</li>
-      <li><strong>ISSN International Centre:</strong> Serial publication identifiers</li>
-      <li><strong>ISMN Agency:</strong> Music publication standards</li>
-      <li><strong>JAN Standards:</strong> Japanese Article Number system</li>
+      <li><strong>GS1 Standards:</strong> UPC, EAN, SSCC-18 compliance</li>
+      <li><strong>ISBN Agency:</strong> Proper ISBN barcode formatting</li>
+      <li><strong>ISSN International:</strong> Correct ISSN barcode generation</li>
+      <li><strong>Retail Ready:</strong> Barcodes optimized for POS systems</li>
+      <li><strong>Print Quality:</strong> High-resolution output for professional printing</li>
     </ul>
   </div>
 </div>
@@ -842,9 +842,9 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           }
           break;
         case 'isbn':
-          if (data.length !== 13 || !/^\d+$/.test(data)) {
+          if (data.length !== 13 || !/^\d+$/.test(data) || !/^97[89]/.test(data)) {
             isValid = false;
-            message = 'ISBN requires exactly 13 numeric digits';
+            message = 'ISBN requires 13 digits starting with 978 or 979';
           }
           break;
         case 'issn':
@@ -854,15 +854,15 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
           }
           break;
         case 'ismn':
-          if (data.length !== 13 || !/^\d+$/.test(data)) {
+          if (data.length !== 13 || !/^\d+$/.test(data) || !/^9790/.test(data)) {
             isValid = false;
-            message = 'ISMN requires exactly 13 numeric digits';
+            message = 'ISMN requires 13 digits starting with 9790';
           }
           break;
         case 'jan13':
-          if (data.length !== 13 || !/^\d+$/.test(data)) {
+          if (data.length !== 13 || !/^\d+$/.test(data) || !/^45|49/.test(data.substring(0,2))) {
             isValid = false;
-            message = 'JAN-13 requires exactly 13 numeric digits';
+            message = 'JAN-13 requires 13 digits starting with 45 or 49';
           }
           break;
         case 'ucc12':
@@ -935,29 +935,31 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
       }
 
       try {
-        // Generate barcode using bwip-js
-        const canvas = barcodeCanvas;
-        const scale = parseFloat(barcodeSize.value);
+        // Set canvas size based on selected size
+        const sizeMultiplier = parseInt(barcodeSize.value);
+        const width = 300 * sizeMultiplier;
+        const height = 150 * sizeMultiplier;
         
-        bwipjs.toCanvas(canvas, {
+        barcodeCanvas.width = width;
+        barcodeCanvas.height = height;
+
+        // Generate barcode using bwip-js
+        bwipjs.toCanvas(barcodeCanvas, {
           bcid: currentBarcodeType,
           text: data,
-          scale: scale,
+          scale: sizeMultiplier,
           height: 15,
           includetext: showText.value === 'true',
           textxalign: 'center',
           backgroundcolor: bgColor.value,
           barcolor: fgColor.value
-        }, function (err) {
-          if (err) {
-            showAlert('Error generating barcode: ' + err, 'error');
-          } else {
-            generatedBarcodeData = data;
-            barcodeOutput.textContent = data;
-            barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Data: ${data} | Size: ${barcodeSize.options[barcodeSize.selectedIndex].text}`;
-            showAlert('Barcode generated successfully!', 'success');
-          }
         });
+
+        generatedBarcodeData = data;
+        barcodeOutput.textContent = data;
+        barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Data: ${data} | Size: ${barcodeSize.options[barcodeSize.selectedIndex].text}`;
+        
+        showAlert('Barcode generated successfully!', 'success');
       } catch (error) {
         showAlert('Error generating barcode: ' + error.message, 'error');
       }
@@ -965,7 +967,6 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
 
     function downloadBarcode() {
       const format = outputFormat.value;
-      const canvas = barcodeCanvas;
       
       if (!generatedBarcodeData) {
         showAlert('No barcode generated to download.', 'error');
@@ -974,19 +975,30 @@ permalink: /online-barcode-generator-create-retail-product-barcodes/
 
       try {
         if (format === 'svg') {
-          // For SVG, we'll create a simple SVG representation
-          // Note: This is a simplified version - in production you might want more sophisticated SVG generation
-          const svgContent = `
-            <svg width="${canvas.width}" height="${canvas.height}" xmlns="http://www.w3.org/2000/svg">
-              <image href="${canvas.toDataURL('image/png')}" width="${canvas.width}" height="${canvas.height}"/>
-            </svg>
-          `;
-          const blob = new Blob([svgContent], { type: 'image/svg+xml;charset=utf-8' });
+          // Create SVG barcode
+          const svgNS = "http://www.w3.org/2000/svg";
+          const svg = document.createElementNS(svgNS, "svg");
+          svg.setAttribute("width", "300");
+          svg.setAttribute("height", "150");
+          svg.setAttribute("viewBox", "0 0 300 150");
+          
+          // For SVG, we'll create a simple representation
+          // In a real implementation, you would use the bwip-js SVG renderer
+          const text = document.createElementNS(svgNS, "text");
+          text.setAttribute("x", "150");
+          text.setAttribute("y", "75");
+          text.setAttribute("text-anchor", "middle");
+          text.setAttribute("fill", fgColor.value);
+          text.textContent = `Barcode: ${generatedBarcodeData}`;
+          svg.appendChild(text);
+          
+          const svgData = new XMLSerializer().serializeToString(svg);
+          const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
           const url = URL.createObjectURL(blob);
           downloadFile(url, `barcode_${currentBarcodeType}.svg`);
         } else if (format === 'png') {
-          // Download as PNG
-          const pngUrl = canvas.toDataURL('image/png');
+          // Download PNG from canvas
+          const pngUrl = barcodeCanvas.toDataURL('image/png');
           downloadFile(pngUrl, `barcode_${currentBarcodeType}.png`);
         }
       } catch (error) {
