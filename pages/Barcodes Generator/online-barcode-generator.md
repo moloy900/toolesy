@@ -13,6 +13,7 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
   content="barcode generator, 1d barcode, linear barcode, UPC-A, EAN-13, Code 128, Code 39, barcode creator, inventory barcode, retail barcode">
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -884,32 +885,33 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       }
     }
 
-    function generateBarcode() {
-      const data = barcodeInput.value;
-      const validation = validateBarcodeData();
-      
-      if (!validation.isValid) {
-        showAlert(validation.message, 'error');
-        return;
-      }
+   function generateBarcode() {
+  const data = barcodeInput.value;
+  const validation = validateBarcodeData();
 
-      // Simulate barcode generation (in a real implementation, this would use a barcode library)
-      generatedBarcodeData = data;
-      
-      // Display barcode data
-      barcodeOutput.textContent = data;
-      
-      // For demonstration purposes, we'll create a simple visual representation
-      // In a real implementation, you would use a barcode generation library
-      createBarcodeVisualization(data);
-      
-      // Update barcode info
-      const size = barcodeSize.options[barcodeSize.selectedIndex].text;
-      const format = outputFormat.options[outputFormat.selectedIndex].text;
-      barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Size: ${size} | Format: ${format} | Data: ${data}`;
-      
-      showAlert('Barcode generated successfully!', 'success');
-    }
+  if (!validation.isValid) {
+    showAlert(validation.message, 'error');
+    return;
+  }
+
+  generatedBarcodeData = data;
+
+  JsBarcode("#barcodeImage", data, {
+    format: currentBarcodeType.replace('-', '').toUpperCase(), // যেমন 'CODE128'
+    lineColor: fgColor.value,
+    background: bgColor.value,
+    width: 2,
+    height: 60,
+    displayValue: showText.value === 'true'
+  });
+
+  barcodeImage.style.display = 'block';
+  barcodeOutput.textContent = '';
+  barcodeInfo.textContent = `Type: ${getBarcodeTypeName(currentBarcodeType)} | Data: ${data}`;
+  
+  showAlert('Barcode generated successfully!', 'success');
+}
+
 
     function createBarcodeVisualization(data) {
       // This is a simplified visualization for demonstration
@@ -935,26 +937,57 @@ permalink: /online-barcode-generator-create-1d-linear-barcodes/
       barcodeImage.style.display = 'none';
     }
 
-    function downloadBarcode() {
-      const data = barcodeInput.value;
-      const format = outputFormat.value;
-      const typeName = getBarcodeTypeName(currentBarcodeType);
-      
-      // In a real implementation, this would generate an actual barcode image
-      // For this example, we'll create a simple text file with barcode info
-      const content = `Barcode Type: ${typeName}\nData: ${data}\nGenerated: ${new Date().toLocaleString()}`;
-      const filename = `barcode_${typeName.toLowerCase()}_${data}.${format}`;
-      
-      const element = document.createElement('a');
-      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
-      element.setAttribute('download', filename);
-      element.style.display = 'none';
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-      
-      showAlert(`Barcode downloaded as ${filename}`, 'success');
-    }
+   function downloadBarcode() {
+  const format = outputFormat.value; // png, svg, pdf
+  const svg = document.getElementById('barcodeImage');
+
+  if (format === 'svg') {
+    const svgData = new XMLSerializer().serializeToString(svg);
+    const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    downloadFile(url, 'barcode.svg');
+  } 
+  else if (format === 'png') {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const svgData = new XMLSerializer().serializeToString(svg);
+    const img = new Image();
+    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(svgBlob);
+
+    img.onload = function () {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+
+      const pngUrl = canvas.toDataURL('image/png');
+      downloadFile(pngUrl, 'barcode.png');
+    };
+    img.src = url;
+  } 
+  else if (format === 'pdf') {
+    const svgData = new XMLSerializer().serializeToString(svg);
+    const win = window.open('', '_blank');
+    win.document.write(`<img src="data:image/svg+xml;base64,${btoa(svgData)}">`);
+    win.document.close();
+    win.print();
+  } 
+  else {
+    showAlert('Invalid format selected.', 'error');
+  }
+}
+
+function downloadFile(url, filename) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showAlert(`Barcode downloaded as ${filename}`, 'success');
+}
+
 
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
