@@ -30,14 +30,20 @@ permalink: /pdf-to-word-ocr-converter/
 <meta name="twitter:description" content="Convert scanned PDF to editable Word documents online — fast & secure.">
 
 <!-- === PDF to Word OCR Required Libraries === -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.8.2/docx.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+<!-- PDF.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<!-- Tesseract.js (OCR) CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
+
+<!-- docx.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/docx@8.2.4/build/index.min.js"></script>
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
-  /* Converter Styles */
+  /* PDF to Word Converter Styles */
   .converter-container {
     padding: 20px;
     max-width: 1200px;
@@ -117,155 +123,71 @@ permalink: /pdf-to-word-ocr-converter/
     color: #2c3e50;
   }
 
-  .upload-section {
+  .input-section {
     margin: 20px 0;
-    padding: 30px;
-    background: white;
-    border: 3px dashed #e0e6ed;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
   }
 
-  .upload-section:hover {
+  .file-upload-area {
+    border: 2px dashed #e0e6ed;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .file-upload-area:hover {
     border-color: var(--primary);
     background: #f8f9fa;
   }
 
-  .upload-section i {
-    font-size: 4rem;
-    color: var(--primary);
-    margin-bottom: 20px;
+  .file-upload-area.dragover {
+    border-color: var(--primary);
+    background: #e3f2fd;
   }
 
-  .upload-section h3 {
+  .upload-icon {
+    font-size: 3rem;
     color: var(--primary);
     margin-bottom: 15px;
-    font-size: 1.5rem;
   }
 
-  .upload-section p {
-    color: #666;
-    margin-bottom: 20px;
+  .file-input {
+    display: none;
   }
 
-  .file-upload-button {
-    padding: 12px 30px;
-    background: var(--primary);
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-    border: none;
-    font-size: 1rem;
-  }
-
-  .file-upload-button:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .file-list-section {
-    margin: 30px 0;
-  }
-
-  .file-list {
-    max-height: 400px;
-    overflow-y: auto;
-    border: 1px solid #e0e6ed;
-    border-radius: 10px;
-    background: white;
-  }
-
-  .file-item {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    border-bottom: 1px solid #f0f0f0;
-    transition: background 0.3s ease;
-  }
-
-  .file-item:hover {
+  .conversion-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    padding: 20px;
     background: #f8f9fa;
+    border-radius: 10px;
   }
 
-  .file-item:last-child {
-    border-bottom: none;
+  .option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .file-icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
-  }
-
-  .file-icon.pdf {
-    color: #e74c3c;
-  }
-
-  .file-icon.word {
-    color: #2b579a;
-  }
-
-  .file-info {
-    flex: 1;
-  }
-
-  .file-name {
+  .option-label {
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 5px;
   }
 
-  .file-size {
-    font-size: 0.9rem;
-    color: #7f8c8d;
+  .option-select, .option-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
   }
 
-  .file-actions {
-    display: flex;
-    gap: 10px;
-  }
-
-  .file-action-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    padding: 5px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-
-  .file-action-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .remove-file {
-    color: #e74c3c;
-  }
-
-  .file-action-btn:disabled {
-    color: #ccc;
-    cursor: not-allowed;
-  }
-
-  .file-action-btn:disabled:hover {
-    background: none;
-  }
-
-  .empty-state {
-    text-align: center;
-    padding: 40px 20px;
-    color: #7f8c8d;
-  }
-
-  .empty-state i {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #bdc3c7;
+  .option-input {
+    width: 100%;
   }
 
   .button-section {
@@ -324,10 +246,9 @@ permalink: /pdf-to-word-ocr-converter/
   }
 
   .case-button:disabled {
-    background: #bdc3c7;
+    background: #6c757d;
     cursor: not-allowed;
     transform: none;
-    box-shadow: none;
   }
 
   .alert-container {
@@ -368,54 +289,27 @@ permalink: /pdf-to-word-ocr-converter/
     font-weight: bold;
   }
 
-  .options-section {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-  }
-
-  .conversion-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 15px;
-  }
-
-  .option-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .option-label {
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 5px;
-  }
-
-  .option-select, .option-input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
+  .preview-section {
+    margin: 30px 0;
+    padding: 25px;
     background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .option-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .preview-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
   }
 
-  .option-checkbox input {
-    width: 18px;
-    height: 18px;
-  }
-
-  .progress-section {
+  .progress-container {
     margin: 20px 0;
-    display: none;
   }
 
   .progress-bar {
@@ -424,21 +318,19 @@ permalink: /pdf-to-word-ocr-converter/
     background: #e0e0e0;
     border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 10px;
   }
 
   .progress-fill {
     height: 100%;
     background: var(--primary);
-    border-radius: 4px;
     transition: width 0.3s ease;
-    width: 0%;
   }
 
   .progress-text {
     text-align: center;
-    color: #666;
+    margin-top: 5px;
     font-size: 0.9rem;
+    color: #666;
   }
 
   .content-placeholder {
@@ -466,6 +358,7 @@ permalink: /pdf-to-word-ocr-converter/
     margin-bottom: 25px;
   }
 
+  /* Share and donation buttons */
   .share-donation-section {
     display: flex;
     justify-content: space-between;
@@ -540,100 +433,7 @@ permalink: /pdf-to-word-ocr-converter/
     color: white;
   }
 
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn 0.3s;
-  }
-
-  .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    animation: slideIn 0.3s;
-  }
-
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-  }
-
-  .modal-title {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin: 0;
-  }
-
-  .close-modal {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .close-modal:hover {
-    color: #000;
-  }
-
-  .modal-body {
-    margin-bottom: 20px;
-  }
-
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-
-  .modal-button {
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: none;
-  }
-
-  .modal-button.primary {
-    background: var(--primary);
-    color: white;
-  }
-
-  .modal-button.secondary {
-    background: #6c757d;
-    color: white;
-  }
-
-  .modal-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
+  /* Responsive adjustments */
   @media (max-width: 768px) {
     .counter-wrapper {
       grid-template-columns: 1fr;
@@ -675,528 +475,422 @@ permalink: /pdf-to-word-ocr-converter/
       justify-content: center;
     }
 
-    .modal-content {
-      margin: 20% auto;
-      width: 95%;
-      padding: 20px;
-    }
-
     .conversion-options {
       grid-template-columns: 1fr;
-    }
-
-    .file-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .file-actions {
-      align-self: flex-end;
     }
   }
 </style>
 
 <div class="converter-container">
-  <h1>PDF to Word (OCR) Converter</h1>
-  <p class="welcome-message">Convert scanned PDFs and images to editable Word documents using OCR technology. Everything happens in your browser - no server required!</p>
+  <h1>Free PDF to Word Converter with OCR</h1>
+  <p class="welcome-message">Convert PDF files to editable Word documents using advanced OCR technology. Extract text from scanned PDFs and images with high accuracy.</p>
 
   <div class="converter-section">
-    <h2>PDF to Word Converter</h2>
+    <h2>PDF to Word (OCR) Converter</h2>
 
     <div class="counter-wrapper">
-      <div class="counter-item">
-        <span>Selected PDF: </span>
-        <span id="fileCount">None</span>
-      </div>
-      <div class="counter-item">
-        <span>Total Pages: </span>
-        <span id="pageCount">0</span>
-      </div>
       <div class="counter-item">
         <span>File Size: </span>
         <span id="fileSize">0 MB</span>
       </div>
       <div class="counter-item">
-        <span>Estimated Time: </span>
-        <span id="estimatedTime">0 seconds</span>
+        <span>Pages: </span>
+        <span id="pageCount">0</span>
+      </div>
+      <div class="counter-item">
+        <span>OCR Language: </span>
+        <span id="ocrLanguage">English</span>
+      </div>
+      <div class="counter-item">
+        <span>Status: </span>
+        <span id="conversionStatus">Ready</span>
       </div>
     </div>
 
-    <div class="upload-section" id="dropArea">
-      <i class="fas fa-file-pdf"></i>
-      <h3>Drag & Drop PDF Here</h3>
-      <p>or click the button below to select a PDF file</p>
-      <button class="file-upload-button" id="selectFileBtn">
-        <i class="fas fa-plus"></i> Select PDF
-      </button>
-      <p class="file-info">Supported: PDF files (including scanned PDFs) | Maximum 50 MB</p>
-    </div>
-
-    <!-- Hidden file input -->
-    <input type="file" id="fileUpload" accept=".pdf" style="display: none;">
-
-    <div class="file-list-section">
-      <h3>Selected File <span id="fileListCount">(0 files)</span></h3>
-      <div class="file-list" id="fileList">
-        <div class="empty-state">
+    <div class="input-section">
+      <div class="file-upload-area" id="fileUploadArea">
+        <div class="upload-icon">
           <i class="fas fa-file-pdf"></i>
-          <p>No PDF file selected yet</p>
-          <p>Drag and drop a PDF or click the select button above</p>
         </div>
+        <h3>Drop PDF file here or click to upload</h3>
+        <p class="text-muted">Supports PDF files up to 50MB</p>
+        <input type="file" id="pdfFile" accept="application/pdf" class="file-input">
+      </div>
+      <div id="fileInfo" class="file-info" style="margin-top: 10px;"></div>
+    </div>
+
+    <div class="conversion-options">
+      <div class="option-group">
+        <label class="option-label">OCR Language</label>
+        <select id="ocrLanguageSelect" class="option-select">
+          <option value="eng" selected>English</option>
+          <option value="spa">Spanish</option>
+          <option value="fra">French</option>
+          <option value="deu">German</option>
+          <option value="ita">Italian</option>
+          <option value="por">Portuguese</option>
+          <option value="rus">Russian</option>
+          <option value="chi_sim">Chinese (Simplified)</option>
+          <option value="jpn">Japanese</option>
+          <option value="kor">Korean</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label class="option-label">Output Format</label>
+        <select id="outputFormat" class="option-select">
+          <option value="docx" selected>Word Document (.docx)</option>
+          <option value="txt">Plain Text (.txt)</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label class="option-label">Image Quality</label>
+        <select id="imageQuality" class="option-select">
+          <option value="1">Low (Faster)</option>
+          <option value="2" selected>Medium</option>
+          <option value="3">High (Better Accuracy)</option>
+        </select>
+      </div>
+      
+      <div class="option-group">
+        <label class="option-label">Page Range</label>
+        <input type="text" id="pageRange" class="option-input" placeholder="e.g., 1-5, 7, 9-12 (Leave empty for all pages)">
       </div>
     </div>
 
-    <div class="options-section">
-      <h3>OCR Options</h3>
-      <div class="conversion-options">
-        <div class="option-group">
-          <label class="option-label">Output Filename</label>
-          <input type="text" id="outputFilename" class="option-input" value="converted-document" placeholder="Enter filename">
-        </div>
-        
-        <div class="option-group">
-          <label class="option-label">OCR Language</label>
-          <select id="ocrLanguage" class="option-select">
-            <option value="eng">English</option>
-            <option value="ben">Bengali</option>
-            <option value="spa">Spanish</option>
-            <option value="fra">French</option>
-            <option value="deu">German</option>
-            <option value="hin">Hindi</option>
-            <option value="chi_sim">Chinese (Simplified)</option>
-            <option value="chi_tra">Chinese (Traditional)</option>
-          </select>
-        </div>
-        
-        <div class="option-group">
-          <label class="option-label">Image Quality</label>
-          <select id="imageQuality" class="option-select">
-            <option value="1.0">High (Better OCR)</option>
-            <option value="2.0" selected>Medium (Recommended)</option>
-            <option value="3.0">Low (Faster)</option>
-          </select>
-        </div>
-        
-        <div class="option-group">
-          <div class="option-checkbox">
-            <input type="checkbox" id="preserveFormatting" checked>
-            <label for="preserveFormatting">Preserve Formatting</label>
-          </div>
-          <div class="option-checkbox">
-            <input type="checkbox" id="detectTables">
-            <label for="detectTables">Detect Tables</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="progress-section" id="progressSection">
+    <div class="progress-container" style="display: none;" id="progressContainer">
       <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
+        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
       </div>
       <div class="progress-text" id="progressText">Processing...</div>
     </div>
 
     <div class="button-section">
-      <button class="case-button" data-action="convert" id="convertBtn" disabled>Convert to Word</button>
-      <button class="case-button success" data-action="download" id="downloadBtn" disabled>Download Word</button>
-      <button class="case-button secondary" data-action="clear">Clear All</button>
+      <button class="case-button success" id="convertBtn" disabled>
+        <i class="fas fa-sync-alt"></i> Convert to Word (OCR)
+      </button>
+      <button class="case-button" id="previewBtn" disabled>
+        <i class="fas fa-eye"></i> Preview Text
+      </button>
+      <button class="case-button warning" id="downloadBtn" disabled>
+        <i class="fas fa-download"></i> Download
+      </button>
+      <button class="case-button secondary" id="clearBtn">
+        <i class="fas fa-trash"></i> Clear
+      </button>
     </div>
 
     <div id="alertContainer" class="alert-container"></div>
 
     {% include share-and-donation.html %}
 
-    <div class="examples">
-      <h2>How It Works</h2>
-
-      <h3>Step 1: Upload PDF</h3>
-      <div class="example-text">• Click "Select PDF" or drag and drop a PDF file
-• Works with scanned PDFs and image-based PDFs
-• Maximum file size: 50 MB</div>
-
-      <h3>Step 2: Configure OCR Settings</h3>
-      <div class="example-text">• Select the language of your document
-• Choose image quality for better OCR accuracy
-• Enable table detection if needed</div>
-
-      <h3>Step 3: Convert & Download</h3>
-      <div class="example-text">• Click "Convert to Word" to start OCR processing
-• Wait for the conversion to complete
-• Download your editable Word document</div>
+    <div class="preview-section" id="previewSection" style="display: none;">
+      <h2>Extracted Text Preview</h2>
+      <div class="preview-content" id="previewContent">
+        Extracted text will appear here...
+      </div>
+      <div class="preview-info">
+        <div id="previewInfo">No text extracted yet</div>
+      </div>
     </div>
   </div>
 
   <!-- SEO Content Section -->
   <div class="content-placeholder">
-    <h2>Free PDF to Word OCR Converter - Extract Text from Scanned PDFs</h2>
+    <h2>Free Online PDF to Word Converter with OCR Technology</h2>
 
-    <p>Need to convert scanned PDFs to editable Word documents? Our free <strong>PDF to Word OCR converter</strong> uses advanced optical character recognition (OCR) technology to extract text from scanned PDFs and images, converting them into fully editable Word documents. Whether you have scanned documents, image-based PDFs, or digital PDFs with selectable text, this tool handles everything seamlessly. There's no software to install, no watermarks, and your files remain completely private - all processing happens securely in your browser.</p>
+    <p>Convert your PDF files to editable Word documents with our advanced OCR (Optical Character Recognition) technology. Whether you have scanned PDFs, image-based documents, or digital PDFs, our tool can extract text with high accuracy and convert it to fully editable Word format. No software installation required - everything works directly in your browser.</p>
 
     <h3>How to Convert PDF to Word with OCR (Step-by-Step):</h3>
     <ul>
-      <li><strong>Upload PDF:</strong> Click the "Select PDF" button or simply drag and drop your PDF file into the upload area. The tool works with both scanned and digital PDFs.</li>
-      <li><strong>Configure OCR Settings:</strong> Select the language of your document for better OCR accuracy. Choose image quality settings and enable table detection if needed.</li>
-      <li><strong>Convert & Download:</strong> Click the "Convert to Word" button to process your PDF. The OCR engine will extract text from each page and create an editable Word document for download.</li>
+      <li><strong>Upload PDF File:</strong> Drag and drop your PDF file or click to select it from your device</li>
+      <li><strong>Choose OCR Language:</strong> Select the language of your document for better text recognition accuracy</li>
+      <li><strong>Configure Settings:</strong> Adjust image quality and page range if needed</li>
+      <li><strong>Convert & Extract:</strong> Click "Convert to Word" to start the OCR process and text extraction</li>
+      <li><strong>Download Result:</strong> Download your editable Word document with extracted text</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you have a scanned contract or agreement that you need to edit. Instead of retyping the entire document, you can use our PDF to Word OCR converter to extract the text and convert it into an editable Word document. This saves hours of manual work and ensures accuracy. Similarly, students can convert scanned textbooks or research papers into editable formats for note-taking and quoting.</p>
+    <p>Imagine you have a scanned contract document in PDF format that you need to edit. Instead of manually retyping the entire document, you can use our PDF to Word converter with OCR. Simply upload the scanned PDF, select English as the OCR language, and let our tool extract all the text while preserving the formatting. Within minutes, you'll have an editable Word document ready for modifications, saving you hours of manual work.</p>
+
+    <h3>Supported Features & Capabilities:</h3>
+    <ul>
+      <li><strong>Advanced OCR Technology:</strong> Extract text from scanned PDFs and images</li>
+      <li><strong>Multiple Language Support:</strong> English, Spanish, French, German, and more</li>
+      <li><strong>Format Preservation:</strong> Maintain original formatting in Word documents</li>
+      <li><strong>Batch Processing:</strong> Handle multi-page documents efficiently</li>
+      <li><strong>High Accuracy:</strong> Advanced algorithms for precise text recognition</li>
+      <li><strong>Secure Processing:</strong> All conversion happens locally in your browser</li>
+    </ul>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
-      <li><strong>Students & Researchers:</strong> Convert scanned textbooks, research papers, or articles into editable formats for quoting and note-taking.</li>
-      <li><strong>Legal Professionals:</strong> Convert scanned contracts, agreements, or legal documents into editable Word files for modifications.</li>
-      <li><strong>Business Professionals:</strong> Convert scanned invoices, reports, or business documents into editable formats for data extraction and editing.</li>
-      <li><strong>Administrative Staff:</strong> Convert scanned forms, applications, or documents into editable formats for digital processing.</li>
-      <li><strong>Archivists & Librarians:</strong> Convert scanned historical documents or books into searchable, editable digital formats.</li>
+      <li><strong>Students & Researchers:</strong> Convert scanned books and research papers to editable text</li>
+      <li><strong>Business Professionals:</strong> Edit contracts, reports, and business documents</li>
+      <li><strong>Legal Professionals:</strong> Work with scanned legal documents and contracts</li>
+      <li><strong>Administrative Staff:</strong> Convert archived documents to editable formats</li>
+      <li><strong>Writers & Editors:</strong> Extract text from scanned manuscripts and documents</li>
+      <li><strong>Anyone with Scanned Documents:</strong> Make any scanned document editable</li>
     </ul>
 
     <h3>Frequently Asked Questions:</h3>
-    <p><strong>Does this work with scanned PDFs?</strong><br>
-      Yes! This tool uses OCR technology specifically designed to extract text from scanned PDFs and images.</p>
+    <p><strong>What is OCR and why is it important for PDF conversion?</strong><br>
+      OCR (Optical Character Recognition) technology converts different types of documents, such as scanned paper documents or image-based PDFs, into editable and searchable data. It's essential for converting scanned PDFs where text is stored as images rather than selectable text.</p>
 
-    <p><strong>What languages does the OCR support?</strong><br>
-      The OCR engine supports multiple languages including English, Bengali, Spanish, French, German, Hindi, and Chinese (both Simplified and Traditional).</p>
+    <p><strong>How accurate is the OCR text extraction?</strong><br>
+      Our OCR technology provides high accuracy, especially with clear scans and good image quality. Accuracy can be affected by factors like image resolution, font type, and document quality. For best results, use high-quality scans with clear text.</p>
 
-    <p><strong>Will the formatting of my PDF be preserved?</strong><br>
-      The tool does its best to preserve formatting, but complex layouts in scanned documents might require some manual adjustment in the Word document.</p>
+    <p><strong>Is my document data kept private and secure?</strong><br>
+      Absolutely. All PDF processing and OCR conversion happens locally in your browser. Your documents are never uploaded to our servers, ensuring complete privacy and security for sensitive information.</p>
 
-    <p><strong>Is my data secure when using this converter?</strong><br>
-      Absolutely. Your files are processed entirely in your browser and never uploaded to any server. This means your documents remain completely private and secure.</p>
+    <p><strong>What types of PDFs can be converted?</strong><br>
+      Our tool can handle both digital PDFs (with selectable text) and scanned PDFs (image-based). For scanned PDFs, the OCR feature will extract text from the images.</p>
 
-    <p><strong>Do I need to create an account or pay to use this tool?</strong><br>
-      No, this is a completely free tool with no registration required. There are no hidden fees or watermarks.</p>
+    <p><strong>Are there any file size limitations?</strong><br>
+      The tool can handle PDF files up to 50MB. For larger files, we recommend splitting them into smaller parts or using professional desktop software.</p>
 
-    <h3>Why Choose Our PDF to Word OCR Converter?</h3>
-    <p>Our <strong>PDF to Word OCR converter</strong> stands out for its ability to handle scanned documents, its privacy-focused approach, and its ease of use. Unlike many online tools, we don't upload your files to external servers - all processing happens locally in your browser. This ensures maximum security for your sensitive documents. The tool also works on any device with a modern web browser, making it accessible whenever you need it.</p>
+    <h3>Why Choose Our PDF to Word Converter?</h3>
+    <p>Our online PDF to Word converter stands out for its advanced OCR capabilities, user-friendly interface, and commitment to privacy. Unlike many online converters that require file uploads to external servers, our tool processes everything locally in your browser. This means your confidential documents, contracts, and sensitive information remain completely private and secure.</p>
 
     <h3>Common Applications of PDF to Word Conversion</h3>
     <p>PDF to Word conversion with OCR has numerous practical applications across various fields:</p>
     <ul>
-      <li><strong>Academic Use:</strong> Convert scanned research papers, textbooks, or articles into editable formats for quoting and referencing</li>
-      <li><strong>Legal Use:</strong> Convert scanned contracts, agreements, or legal documents for editing and modification</li>
-      <li><strong>Business Use:</strong> Convert scanned invoices, reports, or forms into editable formats for data extraction</li>
-      <li><strong>Personal Use:</strong> Convert scanned personal documents, letters, or certificates into editable formats</li>
-      <li><strong>Archival Use:</strong> Convert scanned historical documents or books into searchable, editable digital formats</li>
+      <li><strong>Document Editing:</strong> Modify contracts, reports, and forms that were originally in PDF format</li>
+      <li><strong>Content Repurposing:</strong> Extract text from PDFs for use in presentations, websites, or other documents</li>
+      <li><strong>Archival Digitization:</strong> Convert scanned archives and historical documents to editable formats</li>
+      <li><strong>Academic Research:</strong> Extract quotes and references from scanned books and journals</li>
+      <li><strong>Legal Document Processing:</strong> Work with scanned legal documents and court filings</li>
+      <li><strong>Business Process Automation:</strong> Convert incoming scanned documents for digital processing</li>
     </ul>
   </div>
 </div>
 
 <script>
-  // Global variables
-  let selectedFile = null;
-  let convertedDocUrl = null;
-  let convertedDocBytes = null;
-
   document.addEventListener('DOMContentLoaded', function () {
-    const fileUpload = document.getElementById('fileUpload');
-    const selectFileBtn = document.getElementById('selectFileBtn');
-    const dropArea = document.getElementById('dropArea');
-    const fileList = document.getElementById('fileList');
-    const alertContainer = document.getElementById('alertContainer');
+    const pdfFileInput = document.getElementById('pdfFile');
+    const fileUploadArea = document.getElementById('fileUploadArea');
     const convertBtn = document.getElementById('convertBtn');
+    const previewBtn = document.getElementById('previewBtn');
     const downloadBtn = document.getElementById('downloadBtn');
-    const progressSection = document.getElementById('progressSection');
+    const clearBtn = document.getElementById('clearBtn');
+    const alertContainer = document.getElementById('alertContainer');
+    const previewSection = document.getElementById('previewSection');
+    const previewContent = document.getElementById('previewContent');
+    const previewInfo = document.getElementById('previewInfo');
+    const progressContainer = document.getElementById('progressContainer');
     const progressFill = document.getElementById('progressFill');
     const progressText = document.getElementById('progressText');
     
+    // Options
+    const ocrLanguageSelect = document.getElementById('ocrLanguageSelect');
+    const outputFormat = document.getElementById('outputFormat');
+    const imageQuality = document.getElementById('imageQuality');
+    const pageRange = document.getElementById('pageRange');
+    
+    // Conversion state
+    let currentFile = null;
+    let extractedText = '';
+    let conversionInProgress = false;
+
     // Event listeners
-    selectFileBtn.addEventListener('click', function () {
-      fileUpload.click();
-    });
+    fileUploadArea.addEventListener('click', () => pdfFileInput.click());
+    fileUploadArea.addEventListener('dragover', handleDragOver);
+    fileUploadArea.addEventListener('drop', handleFileDrop);
+    pdfFileInput.addEventListener('change', handleFileSelect);
+    
+    convertBtn.addEventListener('click', convertPdfToWord);
+    previewBtn.addEventListener('click', showPreview);
+    downloadBtn.addEventListener('click', downloadDocument);
+    clearBtn.addEventListener('click', clearAll);
 
-    fileUpload.addEventListener('change', handleFileSelect);
-
-    // Drag and drop functionality
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      dropArea.addEventListener(eventName, preventDefaults, false);
-    });
-
-    function preventDefaults(e) {
+    function handleDragOver(e) {
       e.preventDefault();
-      e.stopPropagation();
+      fileUploadArea.classList.add('dragover');
     }
 
-    ['dragenter', 'dragover'].forEach(eventName => {
-      dropArea.addEventListener(eventName, highlight, false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-      dropArea.addEventListener(eventName, unhighlight, false);
-    });
-
-    function highlight() {
-      dropArea.style.borderColor = 'var(--primary)';
-      dropArea.style.backgroundColor = '#e3f2fd';
-    }
-
-    function unhighlight() {
-      dropArea.style.borderColor = '#e0e6ed';
-      dropArea.style.backgroundColor = 'white';
-    }
-
-    dropArea.addEventListener('drop', handleDrop, false);
-
-    function handleDrop(e) {
-      const dt = e.dataTransfer;
-      const files = dt.files;
-      if (files.length > 0) {
+    function handleFileDrop(e) {
+      e.preventDefault();
+      fileUploadArea.classList.remove('dragover');
+      
+      const files = e.dataTransfer.files;
+      if (files.length > 0 && files[0].type === 'application/pdf') {
         handleFile(files[0]);
+      } else {
+        showAlert('Please drop a valid PDF file.', 'error');
       }
     }
 
-    // Action buttons
-    document.querySelectorAll('.case-button').forEach(button => {
-      button.addEventListener('click', function () {
-        const action = this.getAttribute('data-action');
-        handleFileAction(action);
-      });
-    });
-
     function handleFileSelect(e) {
-      const files = e.target.files;
-      if (files.length > 0) {
-        handleFile(files[0]);
+      const file = e.target.files[0];
+      if (file) {
+        handleFile(file);
       }
     }
 
     function handleFile(file) {
-      // Check file type
-      const fileExtension = file.name.toLowerCase().split('.').pop();
-      if (fileExtension !== 'pdf') {
-        showAlert('Please select a PDF file only.', 'error');
+      if (file.type !== 'application/pdf') {
+        showAlert('Please select a PDF file.', 'error');
         return;
       }
-      
-      // Check file size (max 50MB)
+
       if (file.size > 50 * 1024 * 1024) {
-        showAlert('File is too large. Maximum file size is 50MB.', 'error');
-        return;
-      }
-      
-      selectedFile = file;
-      renderFileList();
-      updateUI();
-      showAlert('PDF file selected successfully.', 'success');
-    }
-
-    function renderFileList() {
-      if (!selectedFile) {
-        fileList.innerHTML = `
-          <div class="empty-state">
-            <i class="fas fa-file-pdf"></i>
-            <p>No PDF file selected yet</p>
-            <p>Drag and drop a PDF or click the select button above</p>
-          </div>
-        `;
+        showAlert('File size must be less than 50MB.', 'error');
         return;
       }
 
-      fileList.innerHTML = `
-        <div class="file-item">
-          <i class="fas fa-file-pdf file-icon pdf"></i>
-          <div class="file-info">
-            <div class="file-name">${selectedFile.name}</div>
-            <div class="file-size">${formatFileSize(selectedFile.size)}</div>
-          </div>
-          <div class="file-actions">
-            <button class="file-action-btn remove-file" data-action="remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      `;
-
-      // Add event listener to remove button
-      fileList.querySelector('.file-action-btn').addEventListener('click', function() {
-        selectedFile = null;
-        fileUpload.value = '';
-        renderFileList();
-        updateUI();
-        showAlert('File removed.', 'info');
-      });
+      currentFile = file;
+      updateFileInfo(file);
+      convertBtn.disabled = false;
+      previewBtn.disabled = false;
+      
+      showAlert('PDF file loaded successfully!', 'success');
     }
 
-    function updateUI() {
-      // Update counters
-      document.getElementById('fileCount').textContent = selectedFile ? selectedFile.name : 'None';
-      document.getElementById('fileListCount').textContent = selectedFile ? '(1 file)' : '(0 files)';
-      
-      // Update file size
-      document.getElementById('fileSize').textContent = selectedFile ? formatFileSize(selectedFile.size) : '0 MB';
-      
-      // Estimate time based on file size (rough estimate)
-      const estimatedTime = selectedFile ? Math.ceil(selectedFile.size / (1024 * 1024) * 2) : 0;
-      document.getElementById('estimatedTime').textContent = estimatedTime + ' seconds';
-      
-      // Enable/disable buttons
-      convertBtn.disabled = !selectedFile;
-      downloadBtn.disabled = !convertedDocUrl;
-    }
-
-    function formatFileSize(bytes) {
-      if (bytes === 0) return '0 Bytes';
-      const k = 1024;
-      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-      const i = Math.floor(Math.log(bytes) / Math.log(k));
-      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-
-    function handleFileAction(action) {
-      switch (action) {
-        case 'convert':
-          convertPdfToWord();
-          break;
-
-        case 'download':
-          downloadConvertedWord();
-          break;
-
-        case 'clear':
-          clearAll();
-          break;
-      }
+    function updateFileInfo(file) {
+      const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+      document.getElementById('fileSize').textContent = fileSize + ' MB';
+      document.getElementById('fileInfo').textContent = `File: ${file.name} (${fileSize} MB)`;
     }
 
     async function convertPdfToWord() {
-      if (!selectedFile) {
-        showAlert('Please select a PDF file first.', 'error');
-        return;
-      }
+      if (!currentFile || conversionInProgress) return;
 
+      conversionInProgress = true;
+      convertBtn.disabled = true;
+      progressContainer.style.display = 'block';
+      
       try {
-        // Show progress
-        progressSection.style.display = 'block';
-        progressFill.style.width = '0%';
-        progressText.textContent = 'Initializing PDF.js...';
+        statusText.textContent = "Reading PDF...";
+        const pdfData = await currentFile.arrayBuffer();
 
-        // Initialize PDF.js
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js';
+        // Load the PDF using pdf.js
+        const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+        document.getElementById('pageCount').textContent = pdf.numPages;
 
-        const reader = new FileReader();
-        
-        reader.onload = async function() {
-          try {
-            const typedarray = new Uint8Array(this.result);
-            const pdf = await pdfjsLib.getDocument(typedarray).promise;
-            
-            // Update page count
-            document.getElementById('pageCount').textContent = pdf.numPages;
-            
-            let allText = '';
-            const ocrLanguage = document.getElementById('ocrLanguage').value;
-            const imageQuality = parseFloat(document.getElementById('imageQuality').value);
+        let fullText = "";
+        const totalPages = pdf.numPages;
 
-            // Process each page
-            for (let i = 1; i <= pdf.numPages; i++) {
-              const progress = Math.floor(((i - 1) / pdf.numPages) * 80);
-              progressFill.style.width = progress + '%';
-              progressText.textContent = `Processing page ${i} of ${pdf.numPages}...`;
+        for (let i = 1; i <= totalPages; i++) {
+          const progress = ((i - 1) / totalPages) * 100;
+          progressFill.style.width = progress + '%';
+          progressText.textContent = `Processing Page ${i} of ${totalPages}...`;
+          
+          const page = await pdf.getPage(i);
+          const viewport = page.getViewport({ scale: parseFloat(imageQuality.value) });
 
-              const page = await pdf.getPage(i);
-              const viewport = page.getViewport({ scale: imageQuality });
-              const canvas = document.createElement('canvas');
-              const ctx = canvas.getContext('2d');
-              canvas.width = viewport.width;
-              canvas.height = viewport.height;
+          // Render PDF page to canvas
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d");
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
 
-              await page.render({ canvasContext: ctx, viewport }).promise;
+          await page.render({ canvasContext: context, viewport }).promise;
 
-              progressText.textContent = `Running OCR on page ${i} of ${pdf.numPages}...`;
-
-              // Use Tesseract.js for OCR
-              const { data: { text } } = await Tesseract.recognize(canvas, ocrLanguage);
-              allText += text + '\n\n';
+          // OCR with Tesseract.js
+          const result = await Tesseract.recognize(canvas, ocrLanguageSelect.value, {
+            logger: m => {
+              if (m.status === 'recognizing text') {
+                progressText.textContent = `OCR: ${Math.round(m.progress * 100)}% (Page ${i})`;
+              }
             }
+          });
+          
+          fullText += `\n\n--- Page ${i} ---\n\n` + result.data.text;
+        }
 
-            progressFill.style.width = '90%';
-            progressText.textContent = 'Creating Word document...';
+        extractedText = fullText;
+        
+        progressFill.style.width = '100%';
+        progressText.textContent = 'Creating document...';
 
-            // Create a simple text file as Word document (fallback method)
-            // In a real implementation, you would use docx.js properly
-            const textBlob = new Blob([allText], { type: 'text/plain' });
-            convertedDocBytes = await textBlob.arrayBuffer();
-            
-            // Create blob URL for download
-            convertedDocUrl = URL.createObjectURL(textBlob);
-
-            // Complete progress
-            progressFill.style.width = '100%';
-            progressText.textContent = 'Conversion completed successfully!';
-            
-            showAlert(`Successfully converted ${pdf.numPages} pages!`, 'success');
-            
-            // Enable download button
-            downloadBtn.disabled = false;
-            
-            // Update UI
-            updateUI();
-            
-            // Hide progress after a delay
-            setTimeout(() => {
-              progressSection.style.display = 'none';
-            }, 2000);
-
-          } catch (error) {
-            console.error('Conversion error:', error);
-            progressSection.style.display = 'none';
-            showAlert(`Conversion failed: ${error.message}`, 'error');
-          }
-        };
-
-        reader.onerror = function(error) {
-          console.error('File reading error:', error);
-          progressSection.style.display = 'none';
-          showAlert('Failed to read the PDF file.', 'error');
-        };
-
-        reader.readAsArrayBuffer(selectedFile);
-
+        // Update status
+        document.getElementById('conversionStatus').textContent = 'Completed';
+        document.getElementById('ocrLanguage').textContent = ocrLanguageSelect.options[ocrLanguageSelect.selectedIndex].text;
+        
+        downloadBtn.disabled = false;
+        showAlert('✅ Conversion completed successfully!', 'success');
+        
       } catch (error) {
-        console.error('Initialization error:', error);
-        progressSection.style.display = 'none';
-        showAlert(`Conversion failed: ${error.message}`, 'error');
+        console.error('Conversion error:', error);
+        showAlert('Error during conversion: ' + error.message, 'error');
+      } finally {
+        conversionInProgress = false;
+        progressContainer.style.display = 'none';
+        convertBtn.disabled = false;
       }
     }
 
-    function downloadConvertedWord() {
-      if (!convertedDocUrl || !convertedDocBytes) {
-        showAlert('No converted Word document available. Please convert PDF first.', 'error');
+    function showPreview() {
+      if (!extractedText) {
+        showAlert('Please convert a PDF first.', 'error');
+        return;
+      }
+
+      previewContent.textContent = extractedText;
+      previewSection.style.display = 'block';
+      previewInfo.textContent = `Extracted ${extractedText.length} characters from PDF`;
+      
+      // Scroll to preview section
+      previewSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    async function downloadDocument() {
+      if (!extractedText) {
+        showAlert('No converted text available.', 'error');
         return;
       }
 
       try {
-        const outputFilename = document.getElementById('outputFilename').value || 'converted-document';
-        const filename = outputFilename.endsWith('.docx') ? outputFilename : outputFilename + '.docx';
+        if (outputFormat.value === 'docx') {
+          // Convert extracted text into a Word file using docx.js
+          const { Document, Packer, Paragraph } = window.docx;
+          const doc = new Document({
+            sections: [{
+              children: [new Paragraph(extractedText)]
+            }]
+          });
+
+          const blob = await Packer.toBlob(doc);
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "converted-document.docx";
+          a.click();
+        } else {
+          // Download as text file
+          const blob = new Blob([extractedText], { type: 'text/plain' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "converted-document.txt";
+          a.click();
+        }
         
-        showAlert(`Downloading "${filename}"...`, 'info');
-        
-        // Use downloadjs for reliable download
-        download(convertedDocBytes, filename, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-        
-        showAlert('Word document download completed!', 'success');
-        
+        showAlert('Document downloaded successfully!', 'success');
       } catch (error) {
-        console.error('Download error:', error);
-        showAlert('Failed to download Word document. Please try again.', 'error');
+        showAlert('Error downloading document: ' + error.message, 'error');
       }
     }
 
     function clearAll() {
-      // Clean up blob URLs
-      if (convertedDocUrl) {
-        URL.revokeObjectURL(convertedDocUrl);
-      }
+      currentFile = null;
+      extractedText = '';
       
-      selectedFile = null;
-      convertedDocUrl = null;
-      convertedDocBytes = null;
-      fileUpload.value = '';
-      renderFileList();
-      updateUI();
-      showAlert('All files cleared.', 'info');
+      pdfFileInput.value = '';
+      document.getElementById('fileSize').textContent = '0 MB';
+      document.getElementById('pageCount').textContent = '0';
+      document.getElementById('conversionStatus').textContent = 'Ready';
+      document.getElementById('fileInfo').textContent = '';
+      
+      convertBtn.disabled = true;
+      previewBtn.disabled = true;
+      downloadBtn.disabled = true;
+      
+      previewSection.style.display = 'none';
+      progressContainer.style.display = 'none';
+      
+      showAlert('All fields cleared.', 'info');
     }
 
     function showAlert(message, type) {
@@ -1221,8 +915,5 @@ permalink: /pdf-to-word-ocr-converter/
         }
       }, 5000);
     }
-
-    // Initialize UI
-    updateUI();
   });
 </script>
