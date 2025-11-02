@@ -36,8 +36,8 @@ permalink: /pdf-to-word-ocr-converter/
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
 
 <!-- docx.js CDN -->
-<script src="{{ '/assets/js/docx-converter.js' | relative_url }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
+<!-- <script src="{{ '/assets/js/docx-converter.js' | relative_url }}"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/docxtemplater@3.28.0/build/docxtemplater.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
