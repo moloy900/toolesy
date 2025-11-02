@@ -36,6 +36,7 @@ permalink: /pdf-to-word-ocr-converter/
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
 
 <!-- docx.js CDN -->
+<script src="{{ '/assets/js/docx-converter.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
 
 <!-- Font Awesome -->
@@ -666,248 +667,295 @@ permalink: /pdf-to-word-ocr-converter/
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const pdfFileInput = document.getElementById('pdfFile');
-  const fileUploadArea = document.getElementById('fileUploadArea');
-  const convertBtn = document.getElementById('convertBtn');
-  const previewBtn = document.getElementById('previewBtn');
-  const downloadBtn = document.getElementById('downloadBtn');
-  const clearBtn = document.getElementById('clearBtn');
-  const alertContainer = document.getElementById('alertContainer');
-  const previewSection = document.getElementById('previewSection');
-  const previewContent = document.getElementById('previewContent');
-  const previewInfo = document.getElementById('previewInfo');
-  const progressContainer = document.getElementById('progressContainer');
-  const progressFill = document.getElementById('progressFill');
-  const progressText = document.getElementById('progressText');
-  const conversionStatus = document.getElementById('conversionStatus');
+  document.addEventListener('DOMContentLoaded', function () {
+    const pdfFileInput = document.getElementById('pdfFile');
+    const fileUploadArea = document.getElementById('fileUploadArea');
+    const convertBtn = document.getElementById('convertBtn');
+    const previewBtn = document.getElementById('previewBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const alertContainer = document.getElementById('alertContainer');
+    const previewSection = document.getElementById('previewSection');
+    const previewContent = document.getElementById('previewContent');
+    const previewInfo = document.getElementById('previewInfo');
+    const progressContainer = document.getElementById('progressContainer');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const conversionStatus = document.getElementById('conversionStatus');
+    
+    // Options
+    const ocrLanguageSelect = document.getElementById('ocrLanguageSelect');
+    const outputFormat = document.getElementById('outputFormat');
+    const imageQuality = document.getElementById('imageQuality');
+    const pageRange = document.getElementById('pageRange');
+    
+    // Conversion state
+    let currentFile = null;
+    let extractedText = '';
+    let conversionInProgress = false;
 
-  // Options
-  const ocrLanguageSelect = document.getElementById('ocrLanguageSelect');
-  const outputFormat = document.getElementById('outputFormat');
-  const imageQuality = document.getElementById('imageQuality');
-  const pageRange = document.getElementById('pageRange');
+    // Event listeners
+    fileUploadArea.addEventListener('click', () => pdfFileInput.click());
+    fileUploadArea.addEventListener('dragover', handleDragOver);
+    fileUploadArea.addEventListener('drop', handleFileDrop);
+    pdfFileInput.addEventListener('change', handleFileSelect);
+    
+    convertBtn.addEventListener('click', convertPdfToWord);
+    previewBtn.addEventListener('click', showPreview);
+    downloadBtn.addEventListener('click', downloadDocument);
+    clearBtn.addEventListener('click', clearAll);
 
-  // State
-  let currentFile = null;
-  let extractedText = '';
-  let conversionInProgress = false;
-
-  // --- Event Listeners ---
-  fileUploadArea.addEventListener('click', () => pdfFileInput.click());
-  fileUploadArea.addEventListener('dragover', handleDragOver);
-  fileUploadArea.addEventListener('drop', handleFileDrop);
-  pdfFileInput.addEventListener('change', handleFileSelect);
-  convertBtn.addEventListener('click', convertPdfToWord);
-  previewBtn.addEventListener('click', showPreview);
-  downloadBtn.addEventListener('click', downloadDocument);
-  clearBtn.addEventListener('click', clearAll);
-
-  // --- File Handling ---
-  function handleDragOver(e) {
-    e.preventDefault();
-    fileUploadArea.classList.add('dragover');
-  }
-
-  function handleFileDrop(e) {
-    e.preventDefault();
-    fileUploadArea.classList.remove('dragover');
-    const files = e.dataTransfer.files;
-    if (files.length > 0 && files[0].type === 'application/pdf') {
-      handleFile(files[0]);
-    } else {
-      showAlert('Please drop a valid PDF file.', 'error');
+    function handleDragOver(e) {
+      e.preventDefault();
+      fileUploadArea.classList.add('dragover');
     }
-  }
 
-  function handleFileSelect(e) {
-    const file = e.target.files[0];
-    if (file) handleFile(file);
-  }
-
-  function handleFile(file) {
-    if (file.type !== 'application/pdf') {
-      showAlert('Please select a PDF file.', 'error');
-      return;
+    function handleFileDrop(e) {
+      e.preventDefault();
+      fileUploadArea.classList.remove('dragover');
+      
+      const files = e.dataTransfer.files;
+      if (files.length > 0 && files[0].type === 'application/pdf') {
+        handleFile(files[0]);
+      } else {
+        showAlert('Please drop a valid PDF file.', 'error');
+      }
     }
-    if (file.size > 50 * 1024 * 1024) {
-      showAlert('File size must be less than 50MB.', 'error');
-      return;
+
+    function handleFileSelect(e) {
+      const file = e.target.files[0];
+      if (file) {
+        handleFile(file);
+      }
     }
-    currentFile = file;
-    updateFileInfo(file);
-    convertBtn.disabled = false;
-    previewBtn.disabled = false;
-    showAlert('PDF file loaded successfully!', 'success');
-  }
 
-  function updateFileInfo(file) {
-    const fileSize = (file.size / (1024 * 1024)).toFixed(2);
-    document.getElementById('fileSize').textContent = fileSize + ' MB';
-    document.getElementById('fileInfo').textContent = `File: ${file.name} (${fileSize} MB)`;
-  }
+    function handleFile(file) {
+      if (file.type !== 'application/pdf') {
+        showAlert('Please select a PDF file.', 'error');
+        return;
+      }
 
-  // --- PDF to Text (OCR) ---
-  async function convertPdfToWord() {
-    if (!currentFile || conversionInProgress) return;
-    conversionInProgress = true;
-    convertBtn.disabled = true;
-    progressContainer.style.display = 'block';
-    conversionStatus.textContent = "Processing...";
+      if (file.size > 50 * 1024 * 1024) {
+        showAlert('File size must be less than 50MB.', 'error');
+        return;
+      }
 
-    try {
-      const pdfData = await currentFile.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
-      document.getElementById('pageCount').textContent = pdf.numPages;
+      currentFile = file;
+      updateFileInfo(file);
+      convertBtn.disabled = false;
+      previewBtn.disabled = false;
+      
+      showAlert('PDF file loaded successfully!', 'success');
+    }
 
-      let fullText = "";
-      const totalPages = pdf.numPages;
-      const pagesToProcess = parsePageRange(pageRange.value, totalPages);
+    function updateFileInfo(file) {
+      const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+      document.getElementById('fileSize').textContent = fileSize + ' MB';
+      document.getElementById('fileInfo').textContent = `File: ${file.name} (${fileSize} MB)`;
+    }
 
-      for (let i = 0; i < pagesToProcess.length; i++) {
-        const pageNum = pagesToProcess[i];
-        const progress = (i / pagesToProcess.length) * 100;
-        progressFill.style.width = progress + '%';
-        progressText.textContent = `Processing Page ${pageNum} of ${totalPages}...`;
-        conversionStatus.textContent = `Processing Page ${pageNum}...`;
+    async function convertPdfToWord() {
+      if (!currentFile || conversionInProgress) return;
 
-        const page = await pdf.getPage(pageNum);
-        const viewport = page.getViewport({ scale: parseFloat(imageQuality.value) });
+      conversionInProgress = true;
+      convertBtn.disabled = true;
+      progressContainer.style.display = 'block';
+      conversionStatus.textContent = "Processing...";
+      
+      try {
+        progressText.textContent = "Reading PDF...";
+        const pdfData = await currentFile.arrayBuffer();
 
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        await page.render({ canvasContext: context, viewport }).promise;
+        // Load the PDF using pdf.js
+        const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+        document.getElementById('pageCount').textContent = pdf.numPages;
 
-        const result = await Tesseract.recognize(canvas, ocrLanguageSelect.value, {
-          logger: m => {
-            if (m.status === 'recognizing text') {
-              progressText.textContent = `OCR: ${Math.round(m.progress * 100)}% (Page ${pageNum})`;
+        let fullText = "";
+        const totalPages = pdf.numPages;
+
+        // Parse page range if specified
+        const pagesToProcess = parsePageRange(pageRange.value, totalPages);
+
+        for (let i = 0; i < pagesToProcess.length; i++) {
+          const pageNum = pagesToProcess[i];
+          const progress = (i / pagesToProcess.length) * 100;
+          progressFill.style.width = progress + '%';
+          progressText.textContent = `Processing Page ${pageNum} of ${totalPages}...`;
+          conversionStatus.textContent = `Processing Page ${pageNum}...`;
+          
+          const page = await pdf.getPage(pageNum);
+          const viewport = page.getViewport({ scale: parseFloat(imageQuality.value) });
+
+          // Render PDF page to canvas
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d");
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          await page.render({ canvasContext: context, viewport }).promise;
+
+          // OCR with Tesseract.js
+          const result = await Tesseract.recognize(canvas, ocrLanguageSelect.value, {
+            logger: m => {
+              if (m.status === 'recognizing text') {
+                progressText.textContent = `OCR: ${Math.round(m.progress * 100)}% (Page ${pageNum})`;
+              }
+            }
+          });
+          
+          fullText += `\n\n--- Page ${pageNum} ---\n\n` + result.data.text;
+        }
+
+        extractedText = fullText;
+        
+        progressFill.style.width = '100%';
+        progressText.textContent = 'Creating document...';
+        conversionStatus.textContent = 'Creating document...';
+
+        // Update status
+        conversionStatus.textContent = 'Completed';
+        document.getElementById('ocrLanguage').textContent = ocrLanguageSelect.options[ocrLanguageSelect.selectedIndex].text;
+        
+        downloadBtn.disabled = false;
+        showAlert('✅ Conversion completed successfully!', 'success');
+        
+      } catch (error) {
+        console.error('Conversion error:', error);
+        showAlert('Error during conversion: ' + error.message, 'error');
+        conversionStatus.textContent = 'Error';
+      } finally {
+        conversionInProgress = false;
+        progressContainer.style.display = 'none';
+        convertBtn.disabled = false;
+      }
+    }
+
+    function parsePageRange(rangeText, totalPages) {
+      if (!rangeText.trim()) {
+        // Return all pages if no range specified
+        return Array.from({length: totalPages}, (_, i) => i + 1);
+      }
+
+      const pages = [];
+      const ranges = rangeText.split(',');
+      
+      for (const range of ranges) {
+        const parts = range.split('-');
+        if (parts.length === 1) {
+          // Single page
+          const page = parseInt(parts[0]);
+          if (page >= 1 && page <= totalPages) {
+            pages.push(page);
+          }
+        } else if (parts.length === 2) {
+          // Page range
+          const start = parseInt(parts[0]);
+          const end = parseInt(parts[1]);
+          for (let i = start; i <= end; i++) {
+            if (i >= 1 && i <= totalPages) {
+              pages.push(i);
             }
           }
-        });
-
-        fullText += `\n\n--- Page ${pageNum} ---\n\n` + result.data.text;
-      }
-
-      extractedText = fullText;
-      progressFill.style.width = '100%';
-      progressText.textContent = 'Creating document...';
-      conversionStatus.textContent = 'Completed';
-      document.getElementById('ocrLanguage').textContent = ocrLanguageSelect.options[ocrLanguageSelect.selectedIndex].text;
-      downloadBtn.disabled = false;
-      showAlert('✅ Conversion completed successfully!', 'success');
-
-    } catch (error) {
-      console.error('Conversion error:', error);
-      showAlert('Error during conversion: ' + error.message, 'error');
-      conversionStatus.textContent = 'Error';
-    } finally {
-      conversionInProgress = false;
-      progressContainer.style.display = 'none';
-      convertBtn.disabled = false;
-    }
-  }
-
-  function parsePageRange(rangeText, totalPages) {
-    if (!rangeText.trim()) return Array.from({ length: totalPages }, (_, i) => i + 1);
-    const pages = [];
-    const ranges = rangeText.split(',');
-    for (const range of ranges) {
-      const parts = range.split('-');
-      if (parts.length === 1) {
-        const page = parseInt(parts[0]);
-        if (page >= 1 && page <= totalPages) pages.push(page);
-      } else if (parts.length === 2) {
-        const start = parseInt(parts[0]);
-        const end = parseInt(parts[1]);
-        for (let i = start; i <= end; i++) {
-          if (i >= 1 && i <= totalPages) pages.push(i);
         }
       }
-    }
-    return [...new Set(pages)].sort((a, b) => a - b);
-  }
-
-  // --- Preview ---
-  function showPreview() {
-    if (!extractedText) {
-      showAlert('Please convert a PDF first.', 'error');
-      return;
-    }
-    previewContent.textContent = extractedText;
-    previewSection.style.display = 'block';
-    previewInfo.textContent = `Extracted ${extractedText.length} characters from PDF`;
-    previewSection.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // --- Download DOCX or TXT ---
-  async function downloadDocument() {
-    if (!extractedText) {
-      showAlert('No converted text available.', 'error');
-      return;
+      
+      // Remove duplicates and sort
+      return [...new Set(pages)].sort((a, b) => a - b);
     }
 
-    try {
-      if (outputFormat.value === 'docx') {
-        // ✅ Create DOCX file manually using docxtemplater
-        const zip = new PizZip();
-        const content = `
-          <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-          <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-            <w:body>
-              <w:p><w:r><w:t>${extractedText.replace(/&/g, '&amp;')
-                                             .replace(/</g, '&lt;')
-                                             .replace(/>/g, '&gt;')}</w:t></w:r></w:p>
-            </w:body>
-          </w:document>`;
-        zip.file("word/document.xml", content);
-
-        const doc = new window.docxtemplater().loadZip(zip);
-        const out = zip.generate({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
-
-        saveAs(out, "converted-document.docx");
-        showAlert('Document downloaded successfully!', 'success');
-      } else {
-        const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
-        saveAs(blob, "converted-document.txt");
-        showAlert('Text file downloaded successfully!', 'success');
+    function showPreview() {
+      if (!extractedText) {
+        showAlert('Please convert a PDF first.', 'error');
+        return;
       }
 
-    } catch (error) {
-      console.error('Download error:', error);
-      showAlert('Error downloading document: ' + error.message, 'error');
+      previewContent.textContent = extractedText;
+      previewSection.style.display = 'block';
+      previewInfo.textContent = `Extracted ${extractedText.length} characters from PDF`;
+      
+      // Scroll to preview section
+      previewSection.scrollIntoView({ behavior: 'smooth' });
     }
+async function downloadDocument() {
+  if (!window.extractedText || window.extractedText.trim() === "") {
+    alert("No converted text available.");
+    return;
   }
 
-  // --- Clear ---
-  function clearAll() {
-    currentFile = null;
-    extractedText = '';
-    pdfFileInput.value = '';
-    document.getElementById('fileSize').textContent = '0 MB';
-    document.getElementById('pageCount').textContent = '0';
-    document.getElementById('conversionStatus').textContent = 'Ready';
-    document.getElementById('fileInfo').textContent = '';
-    convertBtn.disabled = true;
-    previewBtn.disabled = true;
-    downloadBtn.disabled = true;
-    previewSection.style.display = 'none';
-    progressContainer.style.display = 'none';
-    progressFill.style.width = '0%';
-    showAlert('All fields cleared.', 'info');
-  }
+  try {
+    const { Document, Packer, Paragraph, TextRun } = window.docx;
 
-  // --- Alert System ---
-  function showAlert(message, type) {
-    const alertDiv = document.createElement('div');
-    alertDiv.className = `alert alert-${type}`;
-    alertDiv.innerHTML = `${message} <span class="close">&times;</span>`;
-    alertContainer.innerHTML = '';
-    alertContainer.appendChild(alertDiv);
-    alertDiv.querySelector('.close').addEventListener('click', () => alertDiv.remove());
-    setTimeout(() => { if (alertDiv.parentNode) alertDiv.remove(); }, 5000);
+    const doc = new Document({
+      sections: [
+        {
+          children: [
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: window.extractedText,
+                  font: "Calibri",
+                  size: 24,
+                }),
+              ],
+            }),
+          ],
+        },
+      ],
+    });
+
+    const blob = await Packer.toBlob(doc);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "converted-document.docx";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  } catch (error) {
+    console.error(error);
+    alert("Error creating DOCX: " + error.message);
   }
-});
+}
+function clearAll() {
+  currentFile = null;
+  extractedText = '';
+
+  pdfFileInput.value = '';
+  document.getElementById('fileSize').textContent = '0 MB';
+  document.getElementById('pageCount').textContent = '0';
+  document.getElementById('conversionStatus').textContent = 'Ready';
+  document.getElementById('fileInfo').textContent = '';
+
+  convertBtn.disabled = true;
+  previewBtn.disabled = true;
+  downloadBtn.disabled = true;
+
+  previewSection.style.display = 'none';
+  progressContainer.style.display = 'none';
+  progressFill.style.width = '0%';
+
+  showAlert('All fields cleared.', 'info');
+}
+
+    function showAlert(message, type) {
+      const alertDiv = document.createElement('div');
+      alertDiv.className = `alert alert-${type}`;
+      alertDiv.innerHTML = `
+        ${message}
+        <span class="close">&times;</span>
+      `;
+
+      alertContainer.innerHTML = '';
+      alertContainer.appendChild(alertDiv);
+
+      // Add close functionality
+      alertDiv.querySelector('.close').addEventListener('click', function () {
+        alertDiv.remove();
+      });
+
+      setTimeout(() => {
+        if (alertDiv.parentNode) {
+          alertDiv.remove();
+        }
+      }, 5000);
+    }
+  });
 </script>
