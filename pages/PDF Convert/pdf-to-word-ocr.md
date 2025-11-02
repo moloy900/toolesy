@@ -37,6 +37,7 @@ permalink: /pdf-to-word-ocr-converter/
 
 <!-- docx.js CDN -->
 <script src="{{ '/assets/js/docx-converter.js' | relative_url }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -890,30 +891,51 @@ async function downloadDocument() {
         return;
       }
 
-      // ✅ Split text into paragraphs for proper Word formatting
+      // ✅ Split text into safe, short paragraphs
       const paragraphs = extractedText
         .split(/\r?\n+/)
         .filter(line => line.trim() !== '')
-        .map(line => new docxLib.Paragraph({
-          children: [new docxLib.TextRun({ text: line, size: 24 })],
-        }));
+        .map(line =>
+          new docxLib.Paragraph({
+            children: [
+              new docxLib.TextRun({
+                text: line,
+                size: 24,
+                font: "Arial",
+              }),
+            ],
+          })
+        );
 
-      // ✅ Create the Word document properly
+      // ✅ Always include valid properties to avoid corruption
       const doc = new docxLib.Document({
-        sections: [{ children: paragraphs }],
+        creator: "PDF to Word Converter",
+        title: "Converted Document",
+        description: "Text extracted from PDF using OCR",
+        sections: [
+          {
+            properties: {},
+            children: paragraphs.length > 0
+              ? paragraphs
+              : [new docxLib.Paragraph("No text extracted.")],
+          },
+        ],
       });
 
-      // ✅ Generate Blob & trigger download
+      // ✅ Generate Blob safely
       const blob = await docxLib.Packer.toBlob(doc);
       const url = URL.createObjectURL(blob);
+
+      // ✅ Trigger download
       const a = document.createElement("a");
       a.href = url;
       a.download = "converted-document.docx";
       a.click();
       URL.revokeObjectURL(url);
 
+      showAlert('Document downloaded successfully!', 'success');
     } else {
-      // Download as .txt file
+      // Plain text download
       const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -921,9 +943,9 @@ async function downloadDocument() {
       a.download = "converted-document.txt";
       a.click();
       URL.revokeObjectURL(url);
-    }
 
-    showAlert('Document downloaded successfully!', 'success');
+      showAlert('Text file downloaded successfully!', 'success');
+    }
   } catch (error) {
     console.error('Download error:', error);
     showAlert('Error downloading document: ' + error.message, 'error');
