@@ -876,42 +876,61 @@ permalink: /pdf-to-word-ocr-converter/
       // Scroll to preview section
       previewSection.scrollIntoView({ behavior: 'smooth' });
     }
-
-let extractedText = "Hello World! This is a DOCX test file.";
-
 async function downloadDocument() {
-  if (!extractedText) {
-    alert('No converted text available.');
-    return;
-  }
+      if (!extractedText) {
+        showAlert('No converted text available.', 'error');
+        return;
+      }
 
-  const { Document, Packer, Paragraph, TextRun } = window.docx;
+      try {
+        if (outputFormat.value === 'docx') {
+          // Check if docx library is available
+          if (typeof docx === 'undefined') {
+            showAlert('Word document format is not available. Please download as text file instead.', 'error');
+            return;
+          }
 
-  const doc = new Document({
-    sections: [{
-      children: [
-        new Paragraph({
-          children: [
-            new TextRun({
-              text: extractedText,
-              font: "Calibri",
-              size: 24
-            })
-          ]
-        })
-      ]
-    }]
-  });
+          // Use the global docx object instead of destructuring
+          const doc = new docx.Document({
+            sections: [{
+              properties: {},
+              children: [
+                new docx.Paragraph({
+                  children: [
+                    new docx.TextRun({
+                      text: extractedText,
+                      size: 24,
+                    })
+                  ]
+                })
+              ]
+            }]
+          });
 
-  const blob = await Packer.toBlob(doc);
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted-document.docx";
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-
-
+          const blob = await docx.Packer.toBlob(doc);
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "converted-document.docx";
+          a.click();
+          URL.revokeObjectURL(url);
+        } else {
+          // Download as text file
+          const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "converted-document.txt";
+          a.click();
+          URL.revokeObjectURL(url);
+        }
+        
+        showAlert('Document downloaded successfully!', 'success');
+      } catch (error) {
+        console.error('Download error:', error);
+        showAlert('Error downloading document: ' + error.message, 'error');
+      }
+    }
 function clearAll() {
   currentFile = null;
   extractedText = '';
