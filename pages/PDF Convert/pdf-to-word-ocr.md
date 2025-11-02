@@ -876,44 +876,42 @@ permalink: /pdf-to-word-ocr-converter/
       // Scroll to preview section
       previewSection.scrollIntoView({ behavior: 'smooth' });
     }
+
+let extractedText = "Hello World! This is a DOCX test file.";
+
 async function downloadDocument() {
-  if (!window.extractedText || window.extractedText.trim() === "") {
-    alert("No converted text available.");
+  if (!extractedText) {
+    alert('No converted text available.');
     return;
   }
 
-  try {
-    const { Document, Packer, Paragraph, TextRun } = window.docx;
+  const { Document, Packer, Paragraph, TextRun } = window.docx;
 
-    const doc = new Document({
-      sections: [
-        {
+  const doc = new Document({
+    sections: [{
+      children: [
+        new Paragraph({
           children: [
-            new Paragraph({
-              children: [
-                new TextRun({
-                  text: window.extractedText,
-                  font: "Calibri",
-                  size: 24,
-                }),
-              ],
-            }),
-          ],
-        },
-      ],
-    });
+            new TextRun({
+              text: extractedText,
+              font: "Calibri",
+              size: 24
+            })
+          ]
+        })
+      ]
+    }]
+  });
 
-    const blob = await Packer.toBlob(doc);
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "converted-document.docx";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  } catch (error) {
-    console.error(error);
-    alert("Error creating DOCX: " + error.message);
-  }
+  const blob = await Packer.toBlob(doc);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "converted-document.docx";
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
+
+
 function clearAll() {
   currentFile = null;
   extractedText = '';
