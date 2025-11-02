@@ -29,7 +29,6 @@ permalink: /pdf-to-word-ocr-converter/
 <meta name="twitter:title" content="Free PDF to Word Converter with OCR">
 <meta name="twitter:description" content="Convert scanned PDF to editable Word documents online — fast & secure.">
 
-<!-- === PDF to Word OCR Required Libraries === -->
 <!-- PDF.js CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
@@ -681,6 +680,7 @@ permalink: /pdf-to-word-ocr-converter/
     const progressContainer = document.getElementById('progressContainer');
     const progressFill = document.getElementById('progressFill');
     const progressText = document.getElementById('progressText');
+    const conversionStatus = document.getElementById('conversionStatus');
     
     // Options
     const ocrLanguageSelect = document.getElementById('ocrLanguageSelect');
@@ -759,9 +759,10 @@ permalink: /pdf-to-word-ocr-converter/
       conversionInProgress = true;
       convertBtn.disabled = true;
       progressContainer.style.display = 'block';
+      conversionStatus.textContent = "Processing...";
       
       try {
-        statusText.textContent = "Reading PDF...";
+        progressText.textContent = "Reading PDF...";
         const pdfData = await currentFile.arrayBuffer();
 
         // Load the PDF using pdf.js
@@ -771,12 +772,17 @@ permalink: /pdf-to-word-ocr-converter/
         let fullText = "";
         const totalPages = pdf.numPages;
 
-        for (let i = 1; i <= totalPages; i++) {
-          const progress = ((i - 1) / totalPages) * 100;
+        // Parse page range if specified
+        const pagesToProcess = parsePageRange(pageRange.value, totalPages);
+
+        for (let i = 0; i < pagesToProcess.length; i++) {
+          const pageNum = pagesToProcess[i];
+          const progress = (i / pagesToProcess.length) * 100;
           progressFill.style.width = progress + '%';
-          progressText.textContent = `Processing Page ${i} of ${totalPages}...`;
+          progressText.textContent = `Processing Page ${pageNum} of ${totalPages}...`;
+          conversionStatus.textContent = `Processing Page ${pageNum}...`;
           
-          const page = await pdf.getPage(i);
+          const page = await pdf.getPage(pageNum);
           const viewport = page.getViewport({ scale: parseFloat(imageQuality.value) });
 
           // Render PDF page to canvas
@@ -791,21 +797,22 @@ permalink: /pdf-to-word-ocr-converter/
           const result = await Tesseract.recognize(canvas, ocrLanguageSelect.value, {
             logger: m => {
               if (m.status === 'recognizing text') {
-                progressText.textContent = `OCR: ${Math.round(m.progress * 100)}% (Page ${i})`;
+                progressText.textContent = `OCR: ${Math.round(m.progress * 100)}% (Page ${pageNum})`;
               }
             }
           });
           
-          fullText += `\n\n--- Page ${i} ---\n\n` + result.data.text;
+          fullText += `\n\n--- Page ${pageNum} ---\n\n` + result.data.text;
         }
 
         extractedText = fullText;
         
         progressFill.style.width = '100%';
         progressText.textContent = 'Creating document...';
+        conversionStatus.textContent = 'Creating document...';
 
         // Update status
-        document.getElementById('conversionStatus').textContent = 'Completed';
+        conversionStatus.textContent = 'Completed';
         document.getElementById('ocrLanguage').textContent = ocrLanguageSelect.options[ocrLanguageSelect.selectedIndex].text;
         
         downloadBtn.disabled = false;
@@ -814,11 +821,45 @@ permalink: /pdf-to-word-ocr-converter/
       } catch (error) {
         console.error('Conversion error:', error);
         showAlert('Error during conversion: ' + error.message, 'error');
+        conversionStatus.textContent = 'Error';
       } finally {
         conversionInProgress = false;
         progressContainer.style.display = 'none';
         convertBtn.disabled = false;
       }
+    }
+
+    function parsePageRange(rangeText, totalPages) {
+      if (!rangeText.trim()) {
+        // Return all pages if no range specified
+        return Array.from({length: totalPages}, (_, i) => i + 1);
+      }
+
+      const pages = [];
+      const ranges = rangeText.split(',');
+      
+      for (const range of ranges) {
+        const parts = range.split('-');
+        if (parts.length === 1) {
+          // Single page
+          const page = parseInt(parts[0]);
+          if (page >= 1 && page <= totalPages) {
+            pages.push(page);
+          }
+        } else if (parts.length === 2) {
+          // Page range
+          const start = parseInt(parts[0]);
+          const end = parseInt(parts[1]);
+          for (let i = start; i <= end; i++) {
+            if (i >= 1 && i <= totalPages) {
+              pages.push(i);
+            }
+          }
+        }
+      }
+      
+      // Remove duplicates and sort
+      return [...new Set(pages)].sort((a, b) => a - b);
     }
 
     function showPreview() {
@@ -844,10 +885,18 @@ permalink: /pdf-to-word-ocr-converter/
       try {
         if (outputFormat.value === 'docx') {
           // Convert extracted text into a Word file using docx.js
-          const { Document, Packer, Paragraph } = window.docx;
+          const { Document, Packer, Paragraph, TextRun } = window.docx;
+          
+          // Split text into paragraphs for better formatting
+          const paragraphs = extractedText.split('\n\n').map(text => 
+            new Paragraph({
+              children: [new TextRun(text)]
+            })
+          );
+
           const doc = new Document({
             sections: [{
-              children: [new Paragraph(extractedText)]
+              children: paragraphs
             }]
           });
 
@@ -857,14 +906,16 @@ permalink: /pdf-to-word-ocr-converter/
           a.href = url;
           a.download = "converted-document.docx";
           a.click();
+          URL.revokeObjectURL(url);
         } else {
           // Download as text file
-          const blob = new Blob([extractedText], { type: 'text/plain' });
+          const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
           a.download = "converted-document.txt";
           a.click();
+          URL.revokeObjectURL(url);
         }
         
         showAlert('Document downloaded successfully!', 'success');
@@ -889,6 +940,7 @@ permalink: /pdf-to-word-ocr-converter/
       
       previewSection.style.display = 'none';
       progressContainer.style.display = 'none';
+      progressFill.style.width = '0%';
       
       showAlert('All fields cleared.', 'info');
     }
