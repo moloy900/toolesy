@@ -884,23 +884,30 @@ permalink: /pdf-to-word-ocr-converter/
 
       try {
         if (outputFormat.value === 'docx') {
-          // Convert extracted text into a Word file using docx.js
-          const { Document, Packer, Paragraph, TextRun } = window.docx;
-          
-          // Split text into paragraphs for better formatting
-          const paragraphs = extractedText.split('\n\n').map(text => 
-            new Paragraph({
-              children: [new TextRun(text)]
-            })
-          );
+          // Check if docx library is available
+          if (typeof docx === 'undefined') {
+            showAlert('Word document format is not available. Please download as text file instead.', 'error');
+            return;
+          }
 
-          const doc = new Document({
+          // Use the global docx object instead of destructuring
+          const doc = new docx.Document({
             sections: [{
-              children: paragraphs
+              properties: {},
+              children: [
+                new docx.Paragraph({
+                  children: [
+                    new docx.TextRun({
+                      text: extractedText,
+                      size: 24,
+                    })
+                  ]
+                })
+              ]
             }]
           });
 
-          const blob = await Packer.toBlob(doc);
+          const blob = await docx.Packer.toBlob(doc);
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
@@ -920,6 +927,7 @@ permalink: /pdf-to-word-ocr-converter/
         
         showAlert('Document downloaded successfully!', 'success');
       } catch (error) {
+        console.error('Download error:', error);
         showAlert('Error downloading document: ' + error.message, 'error');
       }
     }
