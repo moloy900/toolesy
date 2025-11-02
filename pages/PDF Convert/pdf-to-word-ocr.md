@@ -37,7 +37,7 @@ permalink: /pdf-to-word-ocr-converter/
 
 <!-- docx.js CDN -->
 <script src="{{ '/assets/js/docx-converter.js' | relative_url }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@7.8.0/build/index.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -829,48 +829,45 @@ document.addEventListener('DOMContentLoaded', function () {
     previewSection.scrollIntoView({ behavior: 'smooth' });
   }
 
-  async function downloadDocument() {
-    if (!extractedText) return showAlert('No converted text available.', 'error');
+ async function downloadDocument() {
+  if (!window.extractedText || !window.extractedText.trim()) {
+    alert("No converted text available.");
+    return;
+  }
 
-    try {
-      if (outputFormat.value === 'docx') {
-        if (typeof docx === 'undefined') {
-          showAlert('Word format not available.', 'error');
-          return;
-        }
+  try {
+    const { Document, Packer, Paragraph, TextRun } = window.docx;
 
-        const { Document, Packer, Paragraph, TextRun } = window.docx;
-        const doc = new Document({
-          sections: [{
+    const doc = new Document({
+      sections: [{
+        children: [
+          new Paragraph({
             children: [
-              new Paragraph({
-                children: [new TextRun({ text: extractedText, font: "Calibri", size: 24 })]
+              new TextRun({
+                text: window.extractedText,
+                font: "Arial",
+                size: 24,
               })
             ]
-          }]
-        });
+          })
+        ]
+      }]
+    });
 
-        const blob = await Packer.toBlob(doc);
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = "converted-document.docx";
-        a.click();
-        URL.revokeObjectURL(a.href);
-      } else {
-        const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = "converted-document.txt";
-        a.click();
-        URL.revokeObjectURL(a.href);
-      }
+    const blob = await Packer.toBlob(doc);
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "converted-document.docx";
+    a.click();
+    URL.revokeObjectURL(url);
 
-      showAlert('Document downloaded successfully!', 'success');
-    } catch (error) {
-      console.error('Download error:', error);
-      showAlert('Error downloading document: ' + error.message, 'error');
-    }
+    alert("Document downloaded successfully!");
+  } catch (err) {
+    console.error(err);
+    alert("Error: " + err.message);
   }
+}
 
   function clearAll() {
     currentFile = null;
