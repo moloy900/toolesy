@@ -36,7 +36,7 @@ permalink: /pdf-to-word-ocr-converter/
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
 
 <!-- docx.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/docx@8.2.4/build/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -877,60 +877,62 @@ permalink: /pdf-to-word-ocr-converter/
     }
 
     async function downloadDocument() {
-      if (!extractedText) {
-        showAlert('No converted text available.', 'error');
+  if (!extractedText) {
+    showAlert('No converted text available.', 'error');
+    return;
+  }
+
+  try {
+    const docxLib = window.docx;
+
+    if (outputFormat.value === 'docx') {
+      // Ensure docx.js is loaded
+      if (!docxLib) {
+        showAlert('Word document format is not available. Please download as text file instead.', 'error');
         return;
       }
 
-      try {
-        if (outputFormat.value === 'docx') {
-          // Check if docx library is available
-          if (typeof docx === 'undefined') {
-            showAlert('Word document format is not available. Please download as text file instead.', 'error');
-            return;
-          }
-
-          // Use the global docx object instead of destructuring
-          const doc = new docx.Document({
-            sections: [{
-              properties: {},
+      // Create a Word document
+      const doc = new docxLib.Document({
+        sections: [{
+          children: [
+            new docxLib.Paragraph({
               children: [
-                new docx.Paragraph({
-                  children: [
-                    new docx.TextRun({
-                      text: extractedText,
-                      size: 24,
-                    })
-                  ]
+                new docxLib.TextRun({
+                  text: extractedText,
+                  size: 24,
                 })
               ]
-            }]
-          });
+            })
+          ]
+        }]
+      });
 
-          const blob = await docx.Packer.toBlob(doc);
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "converted-document.docx";
-          a.click();
-          URL.revokeObjectURL(url);
-        } else {
-          // Download as text file
-          const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "converted-document.txt";
-          a.click();
-          URL.revokeObjectURL(url);
-        }
-        
-        showAlert('Document downloaded successfully!', 'success');
-      } catch (error) {
-        console.error('Download error:', error);
-        showAlert('Error downloading document: ' + error.message, 'error');
-      }
+      const blob = await docxLib.Packer.toBlob(doc);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "converted-document.docx";
+      a.click();
+      URL.revokeObjectURL(url);
+
+    } else {
+      // Download as .txt
+      const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "converted-document.txt";
+      a.click();
+      URL.revokeObjectURL(url);
     }
+
+    showAlert('Document downloaded successfully!', 'success');
+  } catch (error) {
+    console.error('Download error:', error);
+    showAlert('Error downloading document: ' + error.message, 'error');
+  }
+}
 
     function clearAll() {
       currentFile = null;
