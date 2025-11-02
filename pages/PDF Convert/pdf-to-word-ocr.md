@@ -36,9 +36,7 @@ permalink: /pdf-to-word-ocr-converter/
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.0/dist/tesseract.min.js"></script>
 
 <!-- docx.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/pizzip@3.1.1/dist/pizzip.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docxtemplater@3.28.0/build/docxtemplater.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@7.0.0/build/index.js"></script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
