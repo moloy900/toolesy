@@ -875,8 +875,7 @@ permalink: /pdf-to-word-ocr-converter/
       // Scroll to preview section
       previewSection.scrollIntoView({ behavior: 'smooth' });
     }
-
-    async function downloadDocument() {
+async function downloadDocument() {
   if (!extractedText) {
     showAlert('No converted text available.', 'error');
     return;
@@ -886,28 +885,25 @@ permalink: /pdf-to-word-ocr-converter/
     const docxLib = window.docx;
 
     if (outputFormat.value === 'docx') {
-      // Ensure docx.js is loaded
       if (!docxLib) {
         showAlert('Word document format is not available. Please download as text file instead.', 'error');
         return;
       }
 
-      // Create a Word document
+      // ✅ Split text into paragraphs for proper Word formatting
+      const paragraphs = extractedText
+        .split(/\r?\n+/)
+        .filter(line => line.trim() !== '')
+        .map(line => new docxLib.Paragraph({
+          children: [new docxLib.TextRun({ text: line, size: 24 })],
+        }));
+
+      // ✅ Create the Word document properly
       const doc = new docxLib.Document({
-        sections: [{
-          children: [
-            new docxLib.Paragraph({
-              children: [
-                new docxLib.TextRun({
-                  text: extractedText,
-                  size: 24,
-                })
-              ]
-            })
-          ]
-        }]
+        sections: [{ children: paragraphs }],
       });
 
+      // ✅ Generate Blob & trigger download
       const blob = await docxLib.Packer.toBlob(doc);
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -917,7 +913,7 @@ permalink: /pdf-to-word-ocr-converter/
       URL.revokeObjectURL(url);
 
     } else {
-      // Download as .txt
+      // Download as .txt file
       const blob = new Blob([extractedText], { type: 'text/plain;charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -934,26 +930,26 @@ permalink: /pdf-to-word-ocr-converter/
   }
 }
 
-    function clearAll() {
-      currentFile = null;
-      extractedText = '';
-      
-      pdfFileInput.value = '';
-      document.getElementById('fileSize').textContent = '0 MB';
-      document.getElementById('pageCount').textContent = '0';
-      document.getElementById('conversionStatus').textContent = 'Ready';
-      document.getElementById('fileInfo').textContent = '';
-      
-      convertBtn.disabled = true;
-      previewBtn.disabled = true;
-      downloadBtn.disabled = true;
-      
-      previewSection.style.display = 'none';
-      progressContainer.style.display = 'none';
-      progressFill.style.width = '0%';
-      
-      showAlert('All fields cleared.', 'info');
-    }
+function clearAll() {
+  currentFile = null;
+  extractedText = '';
+
+  pdfFileInput.value = '';
+  document.getElementById('fileSize').textContent = '0 MB';
+  document.getElementById('pageCount').textContent = '0';
+  document.getElementById('conversionStatus').textContent = 'Ready';
+  document.getElementById('fileInfo').textContent = '';
+
+  convertBtn.disabled = true;
+  previewBtn.disabled = true;
+  downloadBtn.disabled = true;
+
+  previewSection.style.display = 'none';
+  progressContainer.style.display = 'none';
+  progressFill.style.width = '0%';
+
+  showAlert('All fields cleared.', 'info');
+}
 
     function showAlert(message, type) {
       const alertDiv = document.createElement('div');
