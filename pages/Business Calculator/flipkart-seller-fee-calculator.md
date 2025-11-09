@@ -634,7 +634,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
         <label>Package Dimensions (for shipping calculation)</label>
         <div class="dimensions-group">
           <div>
-            <label for="length">Length (cm)</label>
+            <label for="length"> Length (cm)</label>
             <input type="number" id="length" placeholder="Length" min="0" step="0.1">
           </div>
           <div>
