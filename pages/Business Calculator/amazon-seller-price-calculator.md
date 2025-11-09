@@ -1090,81 +1090,32 @@ Margin %: 21.5%
 <script>
   // Amazon referral fee data structure
   const amazonReferralFees = {
-    "Automotive, Car & Accessories": {
-      "Automotive - Helmets & Riding Gloves": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 1000, fee: 6.5 },
-        { maxPrice: Infinity, fee: 8.5 }
-      ],
-      "Automotive - Tyres & Rims": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 500, fee: 5.0 },
-        { maxPrice: Infinity, fee: 7.0 }
-      ],
-      "Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicles": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 50000, fee: 5.0 },
-        { maxPrice: Infinity, fee: 2.0 }
-      ],
-      "Automotive – Car and Bike parts, Brakes, Styling and body fittings, Transmission, Engine parts, Exhaust systems, Interior fitting, Suspension and Wipers": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 500, fee: 14.0 },
-        { maxPrice: 1000, fee: 15.0 },
-        { maxPrice: Infinity, fee: 16.0 }
-      ]
-    },
-    "Electronics": {
-      "Mobile Phones": [
-        { maxPrice: Infinity, fee: 5.0 }
-      ],
-      "Laptops": [
-        { maxPrice: 70000, fee: 6.0 },
-        { maxPrice: Infinity, fee: 7.0 }
-      ],
-      "Tablets": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 12000, fee: 6.0 },
-        { maxPrice: Infinity, fee: 10.0 }
-      ],
-      "Television": [
-        { maxPrice: Infinity, fee: 6.0 }
-      ]
-    },
-    "Books": {
-      "Books": [
-        { maxPrice: 250, fee: 3.0 },
-        { maxPrice: 500, fee: 4.5 },
-        { maxPrice: 1000, fee: 9.0 },
-        { maxPrice: Infinity, fee: 13.5 }
-      ],
-      "School Textbook Bundles": [
-        { maxPrice: 250, fee: 2.0 },
-        { maxPrice: 1000, fee: 3.0 },
-        { maxPrice: 1500, fee: 4.0 },
-        { maxPrice: Infinity, fee: 4.5 }
-      ]
-    },
-    "Clothing & Fashion": {
-      "Apparel - Accessories": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 500, fee: 13.0 },
-        { maxPrice: 1000, fee: 17.0 },
-        { maxPrice: Infinity, fee: 19.0 }
-      ],
-      "Apparel - Shirts": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 500, fee: 4.5 },
-        { maxPrice: 1000, fee: 12.0 },
-        { maxPrice: Infinity, fee: 21.0 }
-      ],
-      "Shoes": [
-        { maxPrice: 300, fee: 0.0 },
-        { maxPrice: 500, fee: 6.0 },
-        { maxPrice: 1000, fee: 10.0 },
-        { maxPrice: Infinity, fee: 16.5 }
-      ]
-    }
-  };
+  "₹0 – ₹300": {
+    averageFee: "0% – 5%",
+    note: "🔹 Low-value items attract buyers — Amazon often charges 0% or very low fees in this range to encourage sales."
+  },
+  "₹301 – ₹500": {
+    averageFee: "5% – 10%",
+    note: "🔹 Most categories fall here — such as books, small electronics, gadget accessories, fashion items, etc."
+  },
+  "₹501 – ₹1000": {
+    averageFee: "10% – 15%",
+    note: "🔹 Mid-range products — most apparel, household items, and automotive parts fall in this range."
+  },
+  "₹1001 – ₹5000": {
+    averageFee: "12% – 16%",
+    note: "🔹 Mid–high value items — like branded shoes, car parts, premium books, some electronics."
+  },
+  "₹5001 – ₹20000": {
+    averageFee: "6% – 10%",
+    note: "🔹 High-value electronics — such as laptops, tablets, TVs; lower percentage commission here."
+  },
+  "₹20000+": {
+    averageFee: "2% – 7%",
+    note: "🔹 Very high-value items or vehicles — such as cars, bikes, large electronics; commission is lowest here."
+  }
+};
+
 
   // Closing fee data
   const closingFees = {
