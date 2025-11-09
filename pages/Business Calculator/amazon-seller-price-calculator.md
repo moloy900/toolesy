@@ -11,14 +11,14 @@ permalink: /amazon-seller-price-calculator-fees-profit/
   content="Free Amazon Seller Price Calculator. Calculate your Amazon FBA fees, profit margins, and ROI for any product category. Make informed selling decisions.">
 <meta name="keywords"
   content="amazon seller calculator, amazon fba calculator, amazon profit calculator, amazon fees calculator, amazon roi calculator, amazon seller tools">
-<meta name="author" content="Your Name">
+<meta name="author" content="Paramdip Nath">
 <meta name="robots" content="index, follow">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Amazon Seller Calculator Styles */
+  /* Amazon Seller Fee Calculator Styles */
   .converter-container {
     padding: 20px;
     max-width: 1200px;
@@ -102,55 +102,44 @@ permalink: /amazon-seller-price-calculator-fees-profit/
     margin: 20px 0;
   }
 
-  .input-section textarea {
+  .input-section input, .input-section select {
     width: 100%;
-    padding: 18px;
+    padding: 12px;
     border: 2px solid #e0e6ed;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 16px;
-    min-height: 220px;
-    resize: vertical;
-    font-family: 'Courier New', monospace;
+    margin-bottom: 15px;
     transition: border-color 0.3s;
   }
 
-  .input-section textarea:focus {
+  .input-section input:focus, .input-section select:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
   }
 
-  .file-upload-section {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-  }
-
-  .file-upload-button {
-    padding: 12px 20px;
-    background: var(--primary);
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
+  .input-section label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-    border: none;
+    color: #2c3e50;
   }
 
-  .file-upload-button:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
   }
 
-  #fileName {
-    font-style: italic;
-    color: #7f8c8d;
+  .checkbox-group input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
   }
 
   .button-section {
@@ -240,35 +229,56 @@ permalink: /amazon-seller-price-calculator-fees-profit/
     font-weight: bold;
   }
 
-  .file-info {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #7f8c8d;
-    width: 100%;
-  }
-
-  .options-section {
-    background: #f8f9fa;
-    padding: 0px;
-    border-radius: 10px;
-    margin: 10px 0;
-  }
-
-  .examples {
+  .results-section {
     margin-top: 30px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
-  .example-text {
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    border-left: 4px solid var(--primary);
-    margin: 10px 0;
-    font-family: monospace;
-    white-space: pre-wrap;
+  .results-section h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .result-item.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary);
+    border-bottom: none;
+    border-top: 2px solid #eee;
+    margin-top: 10px;
+    padding-top: 15px;
+  }
+
+  .result-item.profit {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #28a745;
+    border-bottom: none;
+    margin-top: 10px;
+    padding-top: 15px;
+  }
+
+  .result-item.loss {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #dc3545;
+    border-bottom: none;
+    margin-top: 10px;
+    padding-top: 15px;
   }
 
   .content-placeholder {
@@ -480,121 +490,191 @@ permalink: /amazon-seller-price-calculator-fees-profit/
     to { transform: translateY(0); opacity: 1; }
   }
 
-  /* Calculator specific styles */
-  .calculator-inputs {
+  /* Amazon Calculator specific styles */
+  .calculator-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
   }
 
   .input-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    margin-bottom: 20px;
   }
 
-  .input-label {
+  .dimensions-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .dimension-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fee-breakdown {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #ff9900;
+  }
+
+  .fee-breakdown h4 {
+    color: #ff9900;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .breakdown-item:last-child {
+    border-bottom: none;
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  .info-tooltip {
+    color: #6c757d;
+    cursor: help;
+    margin-left: 5px;
+  }
+
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .tab:hover {
+    background-color: #f8f9fa;
+  }
+
+  .tab.active {
+    border-bottom: 3px solid var(--primary);
     font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 5px;
+    color: var(--primary);
   }
 
-  .input-field, .select-field {
-    padding: 12px;
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .info-box {
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #2196f3;
+  }
+
+  .info-box h4 {
+    margin-bottom: 10px;
+    color: #1976d2;
+  }
+
+  .weight-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .volumetric-display {
+    background: #fff5e6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+    border-left: 4px solid #ff9900;
+  }
+
+  .shipping-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .shipping-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 14px;
-    transition: border-color 0.3s;
+    cursor: pointer;
+    transition: all 0.3s;
   }
 
-  .input-field:focus, .select-field:focus {
-    outline: none;
+  .shipping-option:hover {
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
   }
 
-  .results-section {
-    margin-top: 30px;
-    padding: 25px;
+  .shipping-option.selected {
+    border-color: var(--primary);
+    background-color: #fff5e6;
+  }
+
+  .shipping-option input {
+    width: auto;
+  }
+
+  .rate-card {
     background: white;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
   }
 
-  .results-grid {
+  .rate-tables {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 20px;
   }
 
-  .result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary);
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
   }
 
-  .result-item.highlight {
-    background: #e8f4fd;
-    border-left-color: #2980b9;
-    font-weight: bold;
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
   }
 
-  .result-item.profit {
-    background: #e8f6ef;
-    border-left-color: #27ae60;
-    font-weight: bold;
+  th {
+    background-color: var(--primary);
+    color: white;
   }
 
-  .result-item.loss {
-    background: #fdedec;
-    border-left-color: #e74c3c;
-    font-weight: bold;
-  }
-
-  .result-label {
-    font-weight: 600;
-    color: #2c3e50;
-  }
-
-  .result-value {
-    font-weight: bold;
-    color: #2c3e50;
-  }
-
-  .result-item.profit .result-value {
-    color: #27ae60;
-  }
-
-  .result-item.loss .result-value {
-    color: #e74c3c;
-  }
-
-  .chart-container {
-    margin-top: 30px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  }
-
-  .chart-placeholder {
-    height: 300px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #7f8c8d;
-    font-style: italic;
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
   }
 
   /* Responsive adjustments */
@@ -610,11 +690,6 @@ permalink: /amazon-seller-price-calculator-fees-profit/
     .case-button {
       font-size: 13px;
       padding: 12px 8px;
-    }
-
-    .file-upload-section {
-      flex-direction: column;
-      align-items: flex-start;
     }
 
     .converter-container {
@@ -650,717 +725,1033 @@ permalink: /amazon-seller-price-calculator-fees-profit/
       padding: 20px;
     }
 
-    .calculator-inputs {
+    .calculator-grid {
       grid-template-columns: 1fr;
     }
 
-    .results-grid {
+    .dimensions-group {
+      grid-template-columns: 1fr;
+    }
+
+    .shipping-options {
+      grid-template-columns: 1fr;
+    }
+
+    .weight-info {
+      grid-template-columns: 1fr;
+    }
+
+    .rate-tables {
       grid-template-columns: 1fr;
     }
   }
 </style>
 
 <div class="converter-container">
-  <h1>Amazon Seller Price Calculator</h1>
-  <p class="welcome-message">Calculate your Amazon FBA fees, profit margins, and ROI for any product category. Make informed selling decisions with our comprehensive calculator.</p>
+  <h1>Amazon Seller Fee Calculator</h1>
+  <p class="welcome-message">Calculate your profit margins on Amazon sales with detailed shipping calculations, referral fees, and FBA charges. All calculations in Indian Rupees (₹).</p>
 
   <div class="converter-section">
-    <h2>Product Information</h2>
+    <h2>Amazon Fee Calculator</h2>
 
-    <div class="calculator-inputs">
-      <div class="input-group">
-        <label class="input-label">Product Name</label>
-        <input type="text" id="productName" class="input-field" placeholder="Enter product name">
+    <div class="counter-wrapper">
+      <div class="counter-item">
+        <span>Product Price: </span>
+        <span id="productPriceCounter">₹0.00</span>
       </div>
-      
-      <div class="input-group">
-        <label class="input-label">Select Category</label>
-        <select id="category" class="select-field">
-          <option value="" selected disabled>Select Category</option>
-          <option value="Automotive">Automotive, Car & Accessories</option>
-          <option value="Baby">Baby Products, Toys & Education</option>
-          <option value="Books">Books, Music, Movies, Video Games, Entertainment</option>
-          <option value="Clothing">Clothing, Fashion, Jewellery, Luggage, Shoes</option>
-          <option value="Electronics">Electronics (Camera, Mobile, PC, Wireless) & Accessories</option>
-          <option value="Grocery">Grocery, Food & Pet Supplies</option>
-          <option value="Health">Health, Beauty, Personal Care & Appliances</option>
-          <option value="Home">Home, Decor, Furniture, Garden</option>
-          <option value="Industrial">Industrial, Medical, Scientific & Office</option>
-          <option value="Kitchen">Kitchen, Large & Small Appliances</option>
-          <option value="Others">Others</option>
-          <option value="Sports">Sports, Gym & Sporting Equipment</option>
-        </select>
+      <div class="counter-item">
+        <span>Referral Fee: </span>
+        <span id="referralFeeCounter">₹0.00</span>
       </div>
-      
-      <div class="input-group">
-        <label class="input-label">Select Subcategory</label>
-        <select id="subcategory" class="select-field">
-          <option value="">Select a Subcategory</option>
-        </select>
+      <div class="counter-item">
+        <span>Closing Fee: </span>
+        <span id="closingFeeCounter">₹0.00</span>
       </div>
-      
-      <div class="input-group">
-        <label class="input-label">Product Cost (₹)</label>
-        <input type="number" id="productCost" class="input-field" placeholder="0.00" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label class="input-label">Selling Price (₹)</label>
-        <input type="number" id="sellingPrice" class="input-field" placeholder="0.00" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label class="input-label">Shipping Cost (₹)</label>
-        <input type="number" id="shippingCost" class="input-field" placeholder="0.00" min="0" step="0.01" value="0.00">
-      </div>
-      
-      <div class="input-group">
-        <label class="input-label">Product Weight (lbs)</label>
-        <input type="number" id="productWeight" class="input-field" placeholder="0.00" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label class="input-label">Monthly Units Sold</label>
-        <input type="number" id="monthlyUnits" class="input-field" placeholder="0" min="0" value="1">
+      <div class="counter-item">
+        <span>Shipping Fee: </span>
+        <span id="shippingFeeCounter">₹0.00</span>
       </div>
     </div>
 
-    <div class="options-section">
-      <div class="button-section">
-        <button class="case-button" data-action="calculate">Calculate Profit</button>
-        <button class="case-button success" data-action="save">Save Calculation</button>
-        <button class="case-button warning" data-action="compare">Compare Products</button>
-        <button class="case-button secondary" data-action="clear">Clear All</button>
+    <div class="tabs">
+      <div class="tab active" data-tab="basic">Basic Information</div>
+      <div class="tab" data-tab="shipping">Shipping Details</div>
+      <div class="tab" data-tab="advanced">Advanced Options</div>
+    </div>
+
+    <div class="calculator-grid">
+      <div>
+        <div class="tab-content active" id="basic-tab">
+          <h3>Product Information</h3>
+          
+          <div class="input-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" placeholder="Enter product name">
+          </div>
+          
+          <div class="input-group">
+            <label for="sellingPrice">Selling Price MRP(₹) <span class="info-tooltip" title="The price at which you're selling the product">ℹ️</span></label>
+            <input type="number" id="sellingPrice" placeholder="Enter selling price" min="0" step="0.01">
+          </div>
+          
+          <div class="input-group">
+            <label for="productCost">Product Cost (₹) <span class="info-tooltip" title="Your cost to acquire or manufacture the product">ℹ️</span></label>
+            <input type="number" id="productCost" placeholder="Enter product cost" min="0" step="0.01">
+          </div>
+          
+          <div class="input-group">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="">Select Category</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="subcategory">Subcategory</label>
+            <select id="subcategory">
+              <option value="">Select Subcategory</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="referralFee">Referral Fee (%)</label>
+            <input type="text" id="referralFee" readonly>
+          </div>
+          
+          <div class="input-group">
+            <label for="fulfillmentMethod">Fulfillment Method</label>
+            <select id="fulfillmentMethod">
+              <option value="fc">Fulfillment by Amazon (FBA)</option>
+              <option value="easyShip">Easy Ship</option>
+              <option value="selfShip">Self Ship</option>
+              <option value="sellerFlex">Seller Flex</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="closingFee">Closing Fee (₹)</label>
+            <input type="text" id="closingFee" readonly>
+          </div>
+        </div>
+
+        <div class="tab-content" id="shipping-tab">
+          <h3>Shipping Details</h3>
+          
+          <div class="input-group">
+            <label>Shipping Type</label>
+            <div class="shipping-options">
+              <div class="shipping-option selected" id="nationalShippingOption">
+                <input type="radio" id="nationalShipping" name="shippingType" value="national" checked>
+                <label for="nationalShipping">National Shipping</label>
+              </div>
+              <div class="shipping-option" id="internationalShippingOption">
+                <input type="radio" id="internationalShipping" name="shippingType" value="international">
+                <label for="internationalShipping">International Shipping</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="shippingZone">Shipping Zone</label>
+            <select id="shippingZone">
+              <option value="local">Local (Same City)</option>
+              <option value="regional">Regional (Same Region)</option>
+              <option value="national" selected>National (Across Regions)</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label>Product Dimensions</label>
+            <div class="dimensions-group">
+              <div class="dimension-input">
+                <label for="length">Length (cm)</label>
+                <input type="number" id="length" placeholder="Length" min="0" step="0.1">
+              </div>
+              <div class="dimension-input">
+                <label for="width">Width (cm)</label>
+                <input type="number" id="width" placeholder="Width" min="0" step="0.1">
+              </div>
+              <div class="dimension-input">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="Height" min="0" step="0.1">
+              </div>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="actualWeight">Actual Weight (kg)</label>
+            <input type="number" id="actualWeight" placeholder="Enter weight" min="0" step="0.01">
+          </div>
+          
+          <div class="volumetric-display" id="volumetricWeightDisplay">
+            Volumetric Weight: 0 kg
+          </div>
+          
+          <div class="weight-info">
+            <div class="input-group">
+              <label for="chargeableWeight">Chargeable Weight (kg)</label>
+              <input type="text" id="chargeableWeight" readonly>
+            </div>
+            <div class="input-group">
+              <label for="sizeTier">Size Tier</label>
+              <input type="text" id="sizeTier" readonly>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="shippingFee">Shipping Fee (₹)</label>
+            <input type="text" id="shippingFee" readonly>
+          </div>
+          
+          <div class="info-box">
+            <h4>Shipping Fee Calculation</h4>
+            <p>Shipping fees are calculated based on chargeable weight (actual or volumetric, whichever is higher) and shipping zone.</p>
+            <p>Volumetric Weight = (Length × Width × Height) / 5000</p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="advanced-tab">
+          <h3>Additional Fees</h3>
+          
+          <div class="input-group">
+            <label for="returnRto">Return RTO (₹) <span class="info-tooltip" title="Return to origin charges">ℹ️</span></label>
+            <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
+          </div>
+          
+          <div class="input-group">
+            <label for="packingFees">Packing Fees (₹) <span class="info-tooltip" title="Additional packing material costs">ℹ️</span></label>
+            <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
+          </div>
+          
+          <div class="input-group">
+            <label for="gst">GST (%)</label>
+            <select id="gst">
+              <option value="0">0%</option>
+              <option value="5">5%</option>
+              <option value="12">12%</option>
+              <option value="18" selected>18%</option>
+              <option value="28">28%</option>
+            </select>
+          </div>
+          
+          <div class="info-box">
+            <h4>Additional FBA Fees (If Applicable)</h4>
+            <p><strong>Pick & Pack Fee:</strong> ₹17 for Standard items up to 1kg, ₹5 for each additional kg up to 5kg, ₹2 for each additional 5kg thereafter.</p>
+            <p><strong>Storage Fee:</strong> ₹45 per cubic foot per month.</p>
+            <p><strong>FBA Removal Fees:</strong> ₹10-30 for Standard, ₹100 for Heavy & Bulky.</p>
+          </div>
+        </div>
+        
+        <div class="button-section">
+          <button class="case-button" id="calculateButton">Calculate Fees & Margin</button>
+          <button class="case-button secondary" id="clearButton">Clear</button>
+          <button class="case-button success" id="copyButton">Copy Results</button>
+          <button class="case-button warning" id="detailsButton">Fee Details</button>
+        </div>
+
+        <div id="alertContainer" class="alert-container"></div>
+      </div>
+
+      <div class="results-section">
+        <h3>Calculation Results</h3>
+        
+        <div class="result-item">
+          <span class="result-label">Selling Price:</span>
+          <span class="result-value" id="sellingPriceResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Referral Fee:</span>
+          <span class="result-value" id="referralFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Closing Fee:</span>
+          <span class="result-value" id="closingFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Shipping Fee:</span>
+          <span class="result-value" id="shippingFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Pick & Pack Fee:</span>
+          <span class="result-value" id="pickPackFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Return RTO:</span>
+          <span class="result-value" id="rtoFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Packing Fees:</span>
+          <span class="result-value" id="packingFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">GST:</span>
+          <span class="result-value" id="gstFeeResult">₹0.00</span>
+        </div>
+        
+        <div class="result-item total">
+          <span class="result-label">Total Amazon Fees:</span>
+          <span class="result-value" id="totalFees">₹0.00</span>
+        </div>
+        
+        <div class="result-item profit" id="profitResult">
+          <span class="result-label">Net Profit:</span>
+          <span class="result-value" id="netProfit">₹0.00</span>
+        </div>
+
+        <div class="fee-breakdown">
+          <h4>Profit Breakdown</h4>
+          <div class="breakdown-item">
+            <span>Product Cost:</span>
+            <span id="breakdownProductCost">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Total Fees:</span>
+            <span id="breakdownTotalFees">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Net Profit:</span>
+            <span id="breakdownNetProfit">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span>Profit Margin:</span>
+            <span id="breakdownProfitMargin">0%</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="alertContainer" class="alert-container"></div>
-
-    <div class="results-section">
-      <h2>Profit Calculation Results</h2>
-      <div class="results-grid">
-        <div class="result-item">
-          <span class="result-label">Product Cost</span>
-          <span class="result-value" id="resultCost">₹0.00</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Amazon Referral Fee</span>
-          <span class="result-value" id="resultReferral">₹0.00</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">FBA Fulfillment Fee</span>
-          <span class="result-value" id="resultFulfillment">₹0.00</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Storage Fee</span>
-          <span class="result-value" id="resultStorage">₹0.00</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Shipping Cost</span>
-          <span class="result-value" id="resultShipping">₹0.00</span>
-        </div>
-        <div class="result-item highlight">
-          <span class="result-label">Total Fees</span>
-          <span class="result-value" id="resultTotalFees">₹0.00</span>
-        </div>
-        <div class="result-item" id="profitResult">
-          <span class="result-label">Net Profit</span>
-          <span class="result-value" id="resultProfit">₹0.00</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Profit Margin</span>
-          <span class="result-value" id="resultMargin">0%</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">ROI</span>
-          <span class="result-value" id="resultROI">0%</span>
-        </div>
-        <div class="result-item">
-          <span class="result-label">Monthly Profit</span>
-          <span class="result-value" id="resultMonthly">₹0.00</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="chart-container">
-      <h2>Profit Breakdown</h2>
-      <div class="chart-placeholder">
-        Profit breakdown chart will appear here after calculation
-      </div>
-    </div>
+    {% include share-and-donation.html %}
 
     <div class="examples">
-      <h2>Example Calculations</h2>
+      <h2>Examples</h2>
 
-      <h3>Example 1: Electronics Product</h3>
-      <div class="example-text">Product: Wireless Headphones
+      <h3>Example 1: Small Electronics (FBA)</h3>
+      <div class="example-text">
+Selling Price: ₹1,500
+Product Cost: ₹800
 Category: Electronics
-Subcategory: Headphones
-Cost: ₹25.00 | Selling Price: ₹49.99
-Weight: 0.5 lbs | Monthly Sales: 50 units
+Fulfillment: FBA
+Dimensions: 20 × 15 × 10 cm
+Weight: 0.8 kg
 
 Results:
-- Amazon Referral Fee: ₹7.50 (15%)
-- FBA Fulfillment Fee: ₹3.19
-- Total Fees: ₹10.69
-- Net Profit: ₹14.30 per unit
-- Profit Margin: 28.6%
-- Monthly Profit: ₹715.00</div>
+- Referral Fee: ₹75 (5%)
+- Closing Fee: ₹26
+- Shipping Fee: ₹65
+- Pick & Pack: ₹17
+- Total Fees: ₹183
+- Net Profit: ₹517
+- Profit Margin: 34.5%
+      </div>
 
-      <h3>Example 2: Clothing Product</h3>
-      <div class="example-text">Product: Men's T-shirt
-Category: Clothing
-Subcategory: Men's T-shirts
-Cost: ₹8.00 | Selling Price: ₹19.99
-Weight: 0.3 lbs | Monthly Sales: 100 units
+      <h3>Example 2: Clothing Item (Easy Ship)</h3>
+      <div class="example-text">
+Selling Price: ₹800
+Product Cost: ₹300
+Category: Apparel
+Fulfillment: Easy Ship
+Dimensions: 30 × 20 × 5 cm
+Weight: 0.5 kg
 
 Results:
-- Amazon Referral Fee: ₹3.00 (15%)
-- FBA Fulfillment Fee: ₹2.92
-- Total Fees: ₹5.92
-- Net Profit: ₹6.07 per unit
-- Profit Margin: 30.4%
-- Monthly Profit: ₹607.00</div>
+- Referral Fee: ₹56 (7%)
+- Closing Fee: ₹34
+- Shipping Fee: ₹65
+- Total Fees: ₹155
+- Net Profit: ₹345
+- Profit Margin: 43.1%
+      </div>
+    </div>
+  </div>
+
+  <div class="rate-card">
+    <h2 class="section-title">Amazon Fee Structure</h2>
+    
+    <div class="rate-tables">
+      <div>
+        <h3>Closing Fees - Fulfillment by Amazon (FBA)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Item Price Range (₹)</th>
+              <th>All Categories</th>
+              <th>Exception Categories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>₹ 0 - 300</td>
+              <td>₹ 26</td>
+              <td>₹ 13</td>
+            </tr>
+            <tr>
+              <td>₹ 301 - 500</td>
+              <td>₹ 21</td>
+              <td>₹ 13</td>
+            </tr>
+            <tr>
+              <td>₹ 501 - 1000</td>
+              <td>₹ 26</td>
+              <td>₹ 26</td>
+            </tr>
+            <tr>
+              <td>Above ₹ 1000</td>
+              <td>₹ 51</td>
+              <td>₹ 71</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div>
+        <h3>FBA Weight Handling Fees (Standard)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Weight Range</th>
+              <th>Regional</th>
+              <th>National</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First 500 g</td>
+              <td>₹ 39</td>
+              <td>₹ 65</td>
+            </tr>
+            <tr>
+              <td>500g - 1kg</td>
+              <td>₹ 54</td>
+              <td>₹ 85</td>
+            </tr>
+            <tr>
+              <td>1kg - 2kg</td>
+              <td>₹ 78</td>
+              <td>₹ 122</td>
+            </tr>
+            <tr>
+              <td>Each additional kg after 2kg</td>
+              <td>₹ 24</td>
+              <td>₹ 34</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
   <!-- SEO Content Section -->
   <div class="content-placeholder">
-    <h2>Amazon Seller Price Calculator - Calculate Your Profits</h2>
+    <h2>Amazon Seller Fee Calculator - Optimize Your E-commerce Business</h2>
 
-    <p>Are you an Amazon seller looking to maximize your profits? Our free <strong>Amazon Seller Price Calculator</strong> is the ultimate tool for calculating your Amazon FBA fees, profit margins, and return on investment (ROI) for any product category. This comprehensive calculator helps you make informed selling decisions by providing detailed breakdowns of all Amazon fees and your potential profits. Whether you're a new seller or an experienced Amazon entrepreneur, this tool will save you time and help you avoid costly mistakes.</p>
+    <p>Our free <strong>Amazon Seller Fee Calculator</strong> helps Indian e-commerce sellers accurately calculate all Amazon fees including referral fees, closing fees, FBA charges, and shipping costs. Whether you use Fulfillment by Amazon (FBA), Easy Ship, or Self Ship, this comprehensive tool provides detailed profit margin analysis to help you make informed pricing decisions.</p>
 
-    <h3>How to Use This Amazon Seller Calculator (Step-by-Step):</h3>
+    <h3>How to Use This Amazon Fee Calculator (Step-by-Step):</h3>
     <ul>
-      <li><strong>Select Product Category:</strong> Choose from our comprehensive list of Amazon product categories including Automotive, Baby Products, Electronics, Clothing, and more.</li>
-      <li><strong>Choose Subcategory:</strong> Based on your category selection, pick the appropriate subcategory for more accurate fee calculations.</li>
-      <li><strong>Enter Product Details:</strong> Input your product cost, expected selling price, shipping costs, product weight, and estimated monthly sales.</li>
-      <li><strong>Calculate Profits:</strong> Click the "Calculate Profit" button to see a detailed breakdown of all Amazon fees and your net profit.</li>
-      <li><strong>Analyze Results:</strong> Review your profit margin, ROI, and monthly profit potential to make informed business decisions.</li>
+      <li><strong>Enter Product Details:</strong> Input your product name, selling price, and cost price in Indian Rupees.</li>
+      <li><strong>Select Category:</strong> Choose the appropriate Amazon product category for accurate referral fee calculation.</li>
+      <li><strong>Choose Fulfillment Method:</strong> Select between FBA, Easy Ship, Self Ship, or Seller Flex.</li>
+      <li><strong>Input Shipping Details:</strong> Enter package dimensions and weight for accurate shipping cost calculation.</li>
+      <li><strong>Add Additional Fees:</strong> Include any return RTO charges, packing fees, or applicable GST.</li>
+      <li><strong>Calculate:</strong> Click "Calculate Fees & Margin" to see detailed profit analysis.</li>
+      <li><strong>Analyze Results:</strong> Review net profit, profit margin, and detailed fee breakdown.</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're considering selling wireless headphones on Amazon. You can purchase them for ₹25 each and plan to sell them for ₹49.99. Using our calculator, you select "Electronics" as the category and "Headphones" as the subcategory. After entering the product weight (0.5 lbs) and estimating 50 units sold per month, the calculator reveals that after Amazon's referral fee (15% = ₹7.50) and FBA fulfillment fee (₹3.19), your net profit per unit would be ₹14.30. This gives you a 28.6% profit margin and a monthly profit of ₹715. Without this calculator, you might have underestimated Amazon's fees and overestimated your profits.</p>
+    <p>Imagine you're selling a smartphone accessory on Amazon for ₹1,200 with a product cost of ₹600. Using FBA fulfillment with package dimensions of 15×10×5 cm and weight of 0.3 kg, our calculator shows you'd pay ₹60 in referral fees (5%), ₹26 in closing fees, ₹65 in shipping fees, and ₹17 in pick & pack fees. Your total Amazon fees would be ₹168, leaving you with a net profit of ₹432 and a healthy 36% profit margin.</p>
+
+    <h3>Understanding Amazon Seller Fees:</h3>
+    <p>Amazon charges several types of fees that impact your profitability:</p>
+    <ul>
+      <li><strong>Referral Fees:</strong> Percentage-based fee on the selling price (varies by category from 3-15%)</li>
+      <li><strong>Closing Fees:</strong> Fixed fee based on product price range</li>
+      <li><strong>FBA Fees:</strong> Includes pick & pack, weight handling, and storage fees</li>
+      <li><strong>Shipping Fees:</strong> Based on package dimensions, weight, and shipping zone</li>
+      <li><strong>Additional Fees:</strong> Return RTO charges, packing costs, and applicable GST</li>
+    </ul>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
-      <li><strong>New Amazon Sellers:</strong> Avoid costly mistakes by accurately calculating all Amazon fees before listing products.</li>
-      <li><strong>Experienced Sellers:</strong> Quickly evaluate new product opportunities and optimize pricing strategies.</li>
-      <li><strong>Product Researchers:</strong> Compare profitability across different product categories and niches.</li>
-      <li><strong>Business Owners:</strong> Make data-driven decisions about which products to add to your Amazon inventory.</li>
-      <li><strong>E-commerce Consultants:</strong> Provide clients with accurate profit projections for their Amazon businesses.</li>
+      <li><strong>New Amazon Sellers:</strong> Understand fee structure before listing products</li>
+      <li><strong>Existing Sellers:</strong> Optimize pricing strategies for maximum profitability</li>
+      <li><strong>Product Research:</strong> Evaluate profit potential for new product ideas</li>
+      <li><strong>Inventory Managers:</strong> Plan costs for different product categories</li>
+      <li><strong>E-commerce Consultants:</strong> Provide accurate fee calculations for clients</li>
+      <li><strong>Business Owners:</strong> Make data-driven decisions about Amazon marketplace</li>
     </ul>
 
     <h3>Frequently Asked Questions:</h3>
-    <p><strong>How accurate are the fee calculations in this Amazon seller calculator?</strong><br>
-      Our calculator uses Amazon's current fee structure for 2023, including referral fees, FBA fulfillment fees, and storage fees. However, actual fees may vary slightly based on specific product characteristics and Amazon's periodic fee adjustments.</p>
+    <p><strong>What is the difference between FBA and Easy Ship?</strong><br>
+      FBA (Fulfillment by Amazon) means Amazon stores, packs, and ships your products. Easy Ship means you store products but Amazon handles pickup and delivery.</p>
 
-    <p><strong>Does this calculator work for both FBA and FBM sellers?</strong><br>
-      This calculator is primarily designed for FBA (Fulfillment by Amazon) sellers, as it includes FBA-specific fees. For FBM (Fulfillment by Merchant) sellers, you would need to adjust the shipping costs manually.</p>
+    <p><strong>How are referral fees calculated?</strong><br>
+      Referral fees are a percentage of the total selling price (including shipping if not charged separately) and vary by product category.</p>
 
-    <p><strong>How do you calculate the Amazon referral fee?</strong><br>
-      The referral fee is typically a percentage of the total sale price (including shipping if charged separately). The percentage varies by category, ranging from 6% to 45%, with most categories at 15%.</p>
+    <p><strong>What is volumetric weight and why is it important?</strong><br>
+      Volumetric weight considers package dimensions to calculate shipping costs for lightweight but bulky items. Amazon uses the higher of actual or volumetric weight.</p>
 
-    <p><strong>Can I save my calculations for future reference?</strong><br>
-      Yes, you can use the "Save Calculation" button to store your current calculation in your browser's local storage for future reference.</p>
+    <p><strong>Are there any monthly subscription fees for Amazon sellers?</strong><br>
+      Yes, Amazon charges a professional selling plan fee of ₹4,200 + GST per month, or you can choose individual plan with per-item fees.</p>
 
-    <p><strong>Is this calculator completely free to use?</strong><br>
-      Yes, this is a 100% free tool with no registration required. We don't store any of your sensitive business data on our servers.</p>
+    <p><strong>Is this calculator accurate for all Amazon marketplaces?</strong><br>
+      This calculator is optimized for Amazon India. Fees may vary for other international Amazon marketplaces.</p>
 
-    <h3>Why Choose Our Amazon Seller Price Calculator?</h3>
-    <p>Our <strong>Amazon fee calculator</strong> stands out from other tools because of its comprehensive category-specific calculations, user-friendly interface, and detailed profit breakdown. Unlike simple calculators that only estimate basic fees, our tool considers category-specific referral rates, weight-based FBA fees, and storage costs to give you the most accurate profit projection possible. The dynamic category and subcategory system ensures your calculations are tailored to your specific product type.</p>
+    <h3>Why Choose Our Amazon Seller Fee Calculator?</h3>
+    <p>Our <strong>Amazon Seller Fee Calculator</strong> provides the most comprehensive fee analysis specifically designed for Indian sellers. Unlike basic calculators, we include detailed volumetric weight calculations, multiple fulfillment methods, and accurate category-based referral fees. The tool is optimized for rupee-based calculations and provides practical insights for cost optimization and profit maximization.</p>
 
-    <h3>Understanding Amazon Seller Fees</h3>
-    <p>To maximize your profits on Amazon, it's crucial to understand all the fees involved:</p>
+    <h3>Amazon Fee Calculation Formulas:</h3>
     <ul>
-      <li><strong>Referral Fees:</strong> Percentage-based fee Amazon charges for each sale, varying by product category</li>
-      <li><strong>FBA Fulfillment Fees:</strong> Charges for picking, packing, shipping, and customer service for FBA orders</li>
-      <li><strong>Storage Fees:</strong> Monthly charges for storing your inventory in Amazon fulfillment centers</li>
-      <li><strong>Shipping Costs:</strong> Your costs to get products to Amazon fulfillment centers</li>
-      <li><strong>Other Potential Fees:</strong> Long-term storage fees, removal fees, returns processing fees</li>
+      <li><strong>Referral Fee:</strong> Selling Price × Category Percentage</li>
+      <li><strong>Closing Fee:</strong> Fixed amount based on price range</li>
+      <li><strong>Volumetric Weight:</strong> (Length × Width × Height) / 5000</li>
+      <li><strong>Shipping Fee:</strong> Based on chargeable weight and shipping zone</li>
+      <li><strong>Net Profit:</strong> Selling Price - Product Cost - Total Fees</li>
+      <li><strong>Profit Margin:</strong> (Net Profit / Selling Price) × 100</li>
+    </ul>
+
+    <h3>Tips for Amazon Sellers to Maximize Profit:</h3>
+    <ul>
+      <li><strong>Optimize Packaging:</strong> Use the smallest possible packaging to reduce volumetric weight</li>
+      <li><strong>Choose Right Fulfillment:</strong> Select the most cost-effective fulfillment method for your products</li>
+      <li><strong>Price Strategically:</strong> Consider all fees when setting your selling price</li>
+      <li><strong>Monitor Fee Changes:</strong> Amazon occasionally updates fee structures - stay informed</li>
+      <li><strong>Use FBA Calculator:</strong> Always verify costs using Amazon's official FBA revenue calculator</li>
+      <li><strong>Consider Storage Costs:</strong> Factor in long-term storage fees for slow-moving inventory</li>
     </ul>
   </div>
 </div>
 
-<!-- Compare Products Modal -->
-<div id="compareModal" class="modal">
-  <div class="modal-content" style="max-width: 90%;">
+<!-- Fee Details Modal -->
+<div id="detailsModal" class="modal">
+  <div class="modal-content">
     <div class="modal-header">
-      <h3 class="modal-title">Compare Products</h3>
+      <h3 class="modal-title">Amazon Fee Details</h3>
       <span class="close-modal">&times;</span>
     </div>
     <div class="modal-body">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-        <div>
-          <h4>Product 1</h4>
-          <div class="calculator-inputs">
-            <div class="input-group">
-              <label class="input-label">Product Name</label>
-              <input type="text" id="compareProduct1" class="input-field" placeholder="Product 1">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Cost (₹)</label>
-              <input type="number" id="compareCost1" class="input-field" placeholder="0.00" min="0" step="0.01">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Selling Price (₹)</label>
-              <input type="number" id="comparePrice1" class="input-field" placeholder="0.00" min="0" step="0.01">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Monthly Units</label>
-              <input type="number" id="compareUnits1" class="input-field" placeholder="0" min="0" value="1">
-            </div>
-          </div>
-          <div class="results-grid">
-            <div class="result-item">
-              <span class="result-label">Net Profit</span>
-              <span class="result-value" id="compareProfit1">₹0.00</span>
-            </div>
-            <div class="result-item">
-              <span class="result-label">Profit Margin</span>
-              <span class="result-value" id="compareMargin1">0%</span>
-            </div>
-            <div class="result-item">
-              <span class="result-label">Monthly Profit</span>
-              <span class="result-value" id="compareMonthly1">₹0.00</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h4>Product 2</h4>
-          <div class="calculator-inputs">
-            <div class="input-group">
-              <label class="input-label">Product Name</label>
-              <input type="text" id="compareProduct2" class="input-field" placeholder="Product 2">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Cost (₹)</label>
-              <input type="number" id="compareCost2" class="input-field" placeholder="0.00" min="0" step="0.01">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Selling Price (₹)</label>
-              <input type="number" id="comparePrice2" class="input-field" placeholder="0.00" min="0" step="0.01">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Monthly Units</label>
-              <input type="number" id="compareUnits2" class="input-field" placeholder="0" min="0" value="1">
-            </div>
-          </div>
-          <div class="results-grid">
-            <div class="result-item">
-              <span class="result-label">Net Profit</span>
-              <span class="result-value" id="compareProfit2">₹0.00</span>
-            </div>
-            <div class="result-item">
-              <span class="result-label">Profit Margin</span>
-              <span class="result-value" id="compareMargin2">0%</span>
-            </div>
-            <div class="result-item">
-              <span class="result-label">Monthly Profit</span>
-              <span class="result-value" id="compareMonthly2">₹0.00</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h4>Standard Amazon Fee Structure</h4>
+      <ul>
+        <li><strong>Referral Fees:</strong> 3-15% based on category
+          <ul>
+            <li>Electronics: 5-7%</li>
+            <li>Apparel: 7-12%</li>
+            <li>Books: 3-13.5%</li>
+            <li>Home & Kitchen: 7-12%</li>
+          </ul>
+        </li>
+        <li><strong>Closing Fees:</strong> ₹6-100 based on price range</li>
+        <li><strong>FBA Fees:</strong> ₹17-300+ based on size and weight</li>
+        <li><strong>Shipping Fees:</strong> ₹39-300+ based on zone and weight</li>
+      </ul>
+      
+      <h4>Volumetric Weight Calculation</h4>
+      <p><strong>Formula:</strong> (Length × Width × Height) / 5000</p>
+      <p>Amazon uses the higher of actual weight or volumetric weight to calculate shipping fees.</p>
     </div>
     <div class="modal-footer">
-      <button class="modal-button secondary" id="closeCompare">Close</button>
-      <button class="modal-button primary" id="calculateCompare">Calculate Comparison</button>
+      <button class="modal-button primary" id="closeDetails">Close</button>
     </div>
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Category and Subcategory data
-    const subcategories = {
-      "Automotive": [
-        "Helmets & Riding Gloves",
-        "Car and Bike parts",
-        "Car interior care - Polish",
-        "Automotive - Tyres",
-        "Automotive - Batteries"
+    const calculateButton = document.getElementById('calculateButton');
+    const clearButton = document.getElementById('clearButton');
+    const copyButton = document.getElementById('copyButton');
+    const detailsButton = document.getElementById('detailsButton');
+    const alertContainer = document.getElementById('alertContainer');
+    const detailsModal = document.getElementById('detailsModal');
+    const closeDetails = document.getElementById('closeDetails');
+    const closeModal = document.querySelectorAll('.close-modal');
+    
+    // Amazon referral fee data structure
+    const amazonReferralFees = {
+      "Electronics": {
+        "Mobile Phones": [
+          { maxPrice: Infinity, fee: 5.0 }
+        ],
+        "Laptops": [
+          { maxPrice: 70000, fee: 6.0 },
+          { maxPrice: Infinity, fee: 7.0 }
+        ],
+        "Camera & Photo": [
+          { maxPrice: 1000, fee: 6.0 },
+          { maxPrice: 5000, fee: 8.0 },
+          { maxPrice: Infinity, fee: 10.0 }
+        ]
+      },
+      "Apparel": {
+        "Clothing": [
+          { maxPrice: 500, fee: 7.0 },
+          { maxPrice: 1000, fee: 10.0 },
+          { maxPrice: Infinity, fee: 12.0 }
+        ],
+        "Shoes": [
+          { maxPrice: 750, fee: 7.0 },
+          { maxPrice: Infinity, fee: 10.0 }
+        ]
+      },
+      "Home & Kitchen": {
+        "Home Decor": [
+          { maxPrice: 300, fee: 7.0 },
+          { maxPrice: Infinity, fee: 10.0 }
+        ],
+        "Kitchen & Dining": [
+          { maxPrice: 500, fee: 7.0 },
+          { maxPrice: Infinity, fee: 10.0 }
+        ]
+      },
+      "Books": {
+        "Books": [
+          { maxPrice: 250, fee: 3.0 },
+          { maxPrice: 500, fee: 4.5 },
+          { maxPrice: 1000, fee: 9.0 },
+          { maxPrice: Infinity, fee: 13.5 }
+        ]
+      }
+    };
+
+    // Closing fee data
+    const closingFees = {
+      "fc": [
+        { maxPrice: 300, fee: 26 },
+        { maxPrice: 500, fee: 21 },
+        { maxPrice: 1000, fee: 26 },
+        { maxPrice: Infinity, fee: 51 }
       ],
-      "Baby": [
-        "Baby Strollers",
-        "Baby Car Seats",
-        "Baby Safety - Guards & Locks",
-        "Toys - Soft Toys"
+      "easyShip": [
+        { maxPrice: 300, fee: 6 },
+        { maxPrice: 500, fee: 11 },
+        { maxPrice: 1000, fee: 34 },
+        { maxPrice: Infinity, fee: 65 }
       ],
-      "Books": [
-        "Books",
-        "Movies",
-        "Music",
-        "Video Games - Consoles",
-        "Musical Instruments - Guitars"
+      "selfShip": [
+        { maxPrice: 300, fee: 20 },
+        { maxPrice: 500, fee: 25 },
+        { maxPrice: 1000, fee: 50 },
+        { maxPrice: Infinity, fee: 100 }
       ],
-      "Clothing": [
-        "Men's T-shirts",
-        "Women's Innerwear",
-        "Sarees and Dress Materials",
-        "Fashion Jewellery",
-        "Luggage - Suitcase & Trolleys"
-      ],
-      "Electronics": [
-        "Mobile Phones",
-        "Laptops",
-        "Headphones",
-        "Television",
-        "Printers & Scanners"
-      ],
-      "Grocery": [
-        "Herbs and Spices",
-        "Oils",
-        "Dried Fruits and Nuts",
-        "Pet Food"
-      ],
-      "Health": [
-        "Fragrance",
-        "Haircare & Bath",
-        "Vitamins & Supplements",
-        "Medical Equipment",
-        "Electric Massagers"
-      ],
-      "Home": [
-        "Mattresses",
-        "Wall Art",
-        "Bedsheets & Blankets",
-        "Home Decor Products",
-        "Lawn & Garden Tools"
-      ],
-      "Industrial": [
-        "Scientific Supplies",
-        "Safety Equipment",
-        "Power Tools",
-        "Office Supplies"
-      ],
-      "Kitchen": [
-        "Cookware & Tableware",
-        "Gas Stoves",
-        "Large Appliances",
-        "Small Appliances",
-        "Cleaning Supplies"
-      ],
-      "Sports": [
-        "Cricket Equipment",
-        "Football Equipment",
-        "Badminton Equipment",
-        "Swimming Equipment"
-      ],
-      "Others": [
-        "Fine Art",
-        "Gift Cards",
-        "Other Miscellaneous Products"
+      "sellerFlex": [
+        { maxPrice: 300, fee: 6 },
+        { maxPrice: 500, fee: 11 },
+        { maxPrice: 1000, fee: 34 },
+        { maxPrice: Infinity, fee: 65 }
       ]
     };
 
-    // Category referral fee percentages (approximate Amazon rates)
-    const referralRates = {
-      "Automotive": 12,
-      "Baby": 15,
-      "Books": 15,
-      "Clothing": 17,
-      "Electronics": 8,
-      "Grocery": 15,
-      "Health": 15,
-      "Home": 15,
-      "Industrial": 12,
-      "Kitchen": 15,
-      "Others": 15,
-      "Sports": 15
+    // FBA Weight handling fees
+    const fbaWeightFees = {
+      "standard": {
+        "regional": {
+          "0-0.5": 39,
+          "0.5-1": 54,
+          "1-2": 78,
+          "additionalAfter2": 24
+        },
+        "national": {
+          "0-0.5": 65,
+          "0.5-1": 85,
+          "1-2": 122,
+          "additionalAfter2": 34
+        }
+      }
     };
 
-    // DOM Elements
+    // Pick & Pack fees
+    const pickPackFees = {
+      "standard": {
+        "base": 17,
+        "additionalPerKg": 5
+      }
+    };
+
+    // DOM elements
     const categorySelect = document.getElementById('category');
     const subcategorySelect = document.getElementById('subcategory');
-    const productCost = document.getElementById('productCost');
-    const sellingPrice = document.getElementById('sellingPrice');
-    const shippingCost = document.getElementById('shippingCost');
-    const productWeight = document.getElementById('productWeight');
-    const monthlyUnits = document.getElementById('monthlyUnits');
-    const calculateButton = document.querySelector('[data-action="calculate"]');
-    const saveButton = document.querySelector('[data-action="save"]');
-    const compareButton = document.querySelector('[data-action="compare"]');
-    const clearButton = document.querySelector('[data-action="clear"]');
-    const alertContainer = document.getElementById('alertContainer');
-    
-    // Result elements
-    const resultCost = document.getElementById('resultCost');
-    const resultReferral = document.getElementById('resultReferral');
-    const resultFulfillment = document.getElementById('resultFulfillment');
-    const resultStorage = document.getElementById('resultStorage');
-    const resultShipping = document.getElementById('resultShipping');
-    const resultTotalFees = document.getElementById('resultTotalFees');
-    const resultProfit = document.getElementById('resultProfit');
-    const resultMargin = document.getElementById('resultMargin');
-    const resultROI = document.getElementById('resultROI');
-    const resultMonthly = document.getElementById('resultMonthly');
-    const profitResult = document.getElementById('profitResult');
-    
-    // Modal elements
-    const compareModal = document.getElementById('compareModal');
-    const closeModal = document.querySelectorAll('.close-modal');
-    const closeCompare = document.getElementById('closeCompare');
-    const calculateCompare = document.getElementById('calculateCompare');
+    const referralFeeInput = document.getElementById('referralFee');
+    const fulfillmentMethodSelect = document.getElementById('fulfillmentMethod');
+    const closingFeeInput = document.getElementById('closingFee');
+    const sellingPriceInput = document.getElementById('sellingPrice');
+    const productCostInput = document.getElementById('productCost');
+    const shippingOptions = document.querySelectorAll('input[name="shippingType"]');
+    const lengthInput = document.getElementById('length');
+    const widthInput = document.getElementById('width');
+    const heightInput = document.getElementById('height');
+    const actualWeightInput = document.getElementById('actualWeight');
+    const chargeableWeightInput = document.getElementById('chargeableWeight');
+    const sizeTierInput = document.getElementById('sizeTier');
+    const shippingFeeInput = document.getElementById('shippingFee');
+    const volumetricWeightDisplay = document.getElementById('volumetricWeightDisplay');
+    const shippingZoneSelect = document.getElementById('shippingZone');
 
-    // Event listeners
-    categorySelect.addEventListener('change', updateSubcategories);
-    calculateButton.addEventListener('click', calculateProfit);
-    saveButton.addEventListener('click', saveCalculation);
-    compareButton.addEventListener('click', openCompareModal);
-    clearButton.addEventListener('click', clearAll);
-    
-    // Compare modal event listeners
-    closeModal.forEach(closeBtn => {
-      closeBtn.addEventListener('click', function() {
-        compareModal.style.display = 'none';
+    // Tab functionality
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        this.classList.add('active');
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
       });
     });
-    
-    closeCompare.addEventListener('click', function() {
-      compareModal.style.display = 'none';
-    });
-    
-    calculateCompare.addEventListener('click', calculateComparison);
-    
-    // Close modal when clicking outside
-    window.addEventListener('click', function(event) {
-      if (event.target === compareModal) {
-        compareModal.style.display = 'none';
-      }
-    });
 
-    // Update subcategories based on category selection
-    function updateSubcategories() {
-      const category = categorySelect.value;
-      subcategorySelect.innerHTML = '<option value="">Select a Subcategory</option>';
-
-      if (subcategories[category]) {
-        subcategories[category].forEach(sub => {
-          const option = document.createElement('option');
-          option.value = sub;
-          option.textContent = sub;
-          subcategorySelect.appendChild(option);
+    // Shipping option selection
+    shippingOptions.forEach(option => {
+      option.addEventListener('change', function() {
+        document.querySelectorAll('.shipping-option').forEach(el => {
+          el.classList.remove('selected');
         });
+        document.getElementById(`${this.value}ShippingOption`).classList.add('selected');
+      });
+    });
+
+    // Populate categories
+    function populateCategories() {
+      categorySelect.innerHTML = '<option value="">Select Category</option>';
+      
+      for (const category in amazonReferralFees) {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
       }
     }
 
-    // Calculate FBA fulfillment fee based on weight
-    function calculateFulfillmentFee(weight) {
-      // Simplified FBA fee calculation based on weight
-      if (weight <= 0.5) return 3.19;
-      if (weight <= 1) return 3.69;
-      if (weight <= 1.5) return 4.19;
-      if (weight <= 2) return 4.69;
-      if (weight <= 2.5) return 5.19;
-      if (weight <= 3) return 5.69;
-      if (weight <= 3.5) return 6.19;
-      if (weight <= 4) return 6.69;
-      if (weight <= 4.5) return 7.19;
-      if (weight <= 5) return 7.69;
-      // For weights over 5 lbs, add ₹0.38 per additional 0.5 lb
-      return 7.69 + Math.ceil((weight - 5) * 2) * 0.38;
+    // Update subcategories when category changes
+    function updateSubcategories() {
+      const selectedCategory = categorySelect.value;
+      subcategorySelect.innerHTML = '<option value="">Select Subcategory</option>';
+      
+      if (selectedCategory && amazonReferralFees[selectedCategory]) {
+        for (const subcategory in amazonReferralFees[selectedCategory]) {
+          const option = document.createElement('option');
+          option.value = subcategory;
+          option.textContent = subcategory;
+          subcategorySelect.appendChild(option);
+        }
+      }
+      
+      updateReferralFee();
     }
 
-    // Calculate monthly storage fee
-    function calculateStorageFee(weight, monthlyUnits) {
-      // Simplified storage fee: ₹0.75 per cubic foot per month (standard)
-      // Approximation: 1 lb ≈ 0.1 cubic foot for most products
-      const cubicFeet = weight * 0.1;
-      return cubicFeet * monthlyUnits * 0.75;
+    // Calculate referral fee based on price and category
+    function calculateReferralFee(price, category, subcategory) {
+      if (!category || !subcategory || !amazonReferralFees[category] || !amazonReferralFees[category][subcategory]) {
+        return 0;
+      }
+      
+      const feeStructure = amazonReferralFees[category][subcategory];
+      
+      for (const tier of feeStructure) {
+        if (price <= tier.maxPrice) {
+          return tier.fee;
+        }
+      }
+      
+      return 0;
     }
 
-    // Main profit calculation function
-    function calculateProfit() {
-      // Validate inputs
-      if (!categorySelect.value) {
-        showAlert('Please select a product category.', 'error');
-        return;
-      }
-      
-      if (!subcategorySelect.value) {
-        showAlert('Please select a product subcategory.', 'error');
-        return;
-      }
-      
-      if (!productCost.value || productCost.value <= 0) {
-        showAlert('Please enter a valid product cost.', 'error');
-        return;
-      }
-      
-      if (!sellingPrice.value || sellingPrice.value <= 0) {
-        showAlert('Please enter a valid selling price.', 'error');
-        return;
-      }
-      
-      if (!productWeight.value || productWeight.value <= 0) {
-        showAlert('Please enter a valid product weight.', 'error');
-        return;
-      }
-      
-      if (!monthlyUnits.value || monthlyUnits.value <= 0) {
-        showAlert('Please enter a valid number of monthly units.', 'error');
-        return;
-      }
-
-      // Get input values
-      const cost = parseFloat(productCost.value);
-      const price = parseFloat(sellingPrice.value);
-      const shipping = parseFloat(shippingCost.value) || 0;
-      const weight = parseFloat(productWeight.value);
-      const units = parseInt(monthlyUnits.value);
+    // Update referral fee display
+    function updateReferralFee() {
+      const price = parseFloat(sellingPriceInput.value) || 0;
       const category = categorySelect.value;
-
-      // Calculate fees
-      const referralRate = referralRates[category] || 15;
-      const referralFee = (price * referralRate) / 100;
-      const fulfillmentFee = calculateFulfillmentFee(weight);
-      const storageFee = calculateStorageFee(weight, units) / units; // Per unit
+      const subcategory = subcategorySelect.value;
       
-      const totalFees = referralFee + fulfillmentFee + storageFee + shipping;
-      const netProfit = price - cost - totalFees;
-      const profitMargin = (netProfit / price) * 100;
-      const roi = (netProfit / cost) * 100;
-      const monthlyProfit = netProfit * units;
-
-      // Update results
-      resultCost.textContent = `₹₹{cost.toFixed(2)}`;
-      resultReferral.textContent = `₹₹{referralFee.toFixed(2)} (₹{referralRate}%)`;
-      resultFulfillment.textContent = `₹₹{fulfillmentFee.toFixed(2)}`;
-      resultStorage.textContent = `₹₹{storageFee.toFixed(2)}`;
-      resultShipping.textContent = `₹₹{shipping.toFixed(2)}`;
-      resultTotalFees.textContent = `₹₹{totalFees.toFixed(2)}`;
-      resultProfit.textContent = `₹₹{netProfit.toFixed(2)}`;
-      resultMargin.textContent = `₹{profitMargin.toFixed(1)}%`;
-      resultROI.textContent = `₹{roi.toFixed(1)}%`;
-      resultMonthly.textContent = `₹₹{monthlyProfit.toFixed(2)}`;
+      const referralFeePercentage = calculateReferralFee(price, category, subcategory);
+      referralFeeInput.value = `${referralFeePercentage}%`;
       
-      // Update profit display style based on value
-      if (netProfit > 0) {
-        profitResult.className = 'result-item profit';
-        showAlert('Profit calculation completed successfully!', 'success');
-      } else {
-        profitResult.className = 'result-item loss';
-        showAlert('Warning: This product would result in a loss at the current pricing.', 'error');
+      updateClosingFee();
+      updateCounters();
+    }
+
+    // Calculate closing fee based on price and type
+    function calculateClosingFee(price, type) {
+      if (!closingFees[type]) return 0;
+      
+      const feeStructure = closingFees[type];
+      
+      for (const tier of feeStructure) {
+        if (price <= tier.maxPrice) {
+          return tier.fee;
+        }
       }
+      
+      return 0;
     }
 
-    // Save calculation to localStorage
-    function saveCalculation() {
-      const calculation = {
-        productName: document.getElementById('productName').value || 'Unnamed Product',
-        category: categorySelect.value,
-        subcategory: subcategorySelect.value,
-        cost: productCost.value,
-        price: sellingPrice.value,
-        weight: productWeight.value,
-        units: monthlyUnits.value,
-        profit: resultProfit.textContent,
-        margin: resultMargin.textContent,
-        timestamp: new Date().toISOString()
-      };
+    // Update closing fee display
+    function updateClosingFee() {
+      const price = parseFloat(sellingPriceInput.value) || 0;
+      const type = fulfillmentMethodSelect.value;
       
-      // Get existing calculations or initialize empty array
-      const savedCalculations = JSON.parse(localStorage.getItem('amazonCalculator') || '[]');
+      const closingFee = calculateClosingFee(price, type);
+      closingFeeInput.value = `₹${closingFee}`;
       
-      // Add new calculation
-      savedCalculations.push(calculation);
-      
-      // Save back to localStorage
-      localStorage.setItem('amazonCalculator', JSON.stringify(savedCalculations));
-      
-      showAlert('Calculation saved successfully!', 'success');
+      updateCounters();
     }
 
-    // Open compare products modal
-    function openCompareModal() {
-      // Pre-fill with current values if available
-      if (productCost.value && sellingPrice.value) {
-        document.getElementById('compareProduct1').value = document.getElementById('productName').value || 'Product 1';
-        document.getElementById('compareCost1').value = productCost.value;
-        document.getElementById('comparePrice1').value = sellingPrice.value;
-        document.getElementById('compareUnits1').value = monthlyUnits.value;
+    // Calculate volumetric weight
+    function calculateVolumetricWeight() {
+      const length = parseFloat(lengthInput.value) || 0;
+      const width = parseFloat(widthInput.value) || 0;
+      const height = parseFloat(heightInput.value) || 0;
+      
+      const volumetricWeight = (length * width * height) / 5000;
+      volumetricWeightDisplay.textContent = `Volumetric Weight: ${volumetricWeight.toFixed(2)} kg`;
+      
+      return volumetricWeight;
+    }
+
+    // Calculate chargeable weight (actual or volumetric, whichever is higher)
+    function calculateChargeableWeight() {
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      const volumetricWeight = calculateVolumetricWeight();
+      
+      return Math.max(actualWeight, volumetricWeight);
+    }
+
+    // Calculate shipping fee based on fulfillment method and weight
+    function calculateShippingFee(fulfillmentMethod, weight, zone) {
+      if (fulfillmentMethod === 'selfShip') {
+        return 0;
+      }
+      
+      let fee = 0;
+      
+      if (fulfillmentMethod === 'fc') {
+        const fees = fbaWeightFees.standard[zone];
         
-        // Calculate for product 1
-        calculateComparisonProduct(1);
+        if (weight <= 0.5) {
+          fee = fees["0-0.5"];
+        } else if (weight <= 1) {
+          fee = fees["0.5-1"];
+        } else if (weight <= 2) {
+          fee = fees["1-2"];
+        } else {
+          fee = fees["1-2"];
+          const additionalWeight = weight - 2;
+          fee += additionalWeight * fees.additionalAfter2;
+        }
+      } else if (fulfillmentMethod === 'easyShip') {
+        // Use same fees as FBA national for Easy Ship
+        const fees = fbaWeightFees.standard.national;
+        
+        if (weight <= 0.5) {
+          fee = fees["0-0.5"];
+        } else if (weight <= 1) {
+          fee = fees["0.5-1"];
+        } else if (weight <= 2) {
+          fee = fees["1-2"];
+        } else {
+          fee = fees["1-2"];
+          const additionalWeight = weight - 2;
+          fee += additionalWeight * fees.additionalAfter2;
+        }
       }
       
-      compareModal.style.display = 'block';
+      return fee;
     }
 
-    // Calculate comparison between two products
-    function calculateComparison() {
-      calculateComparisonProduct(1);
-      calculateComparisonProduct(2);
-    }
-
-    // Calculate profit for a comparison product
-    function calculateComparisonProduct(productNum) {
-      const cost = parseFloat(document.getElementById(`compareCost₹{productNum}`).value);
-      const price = parseFloat(document.getElementById(`comparePrice₹{productNum}`).value);
-      const units = parseInt(document.getElementById(`compareUnits₹{productNum}`).value);
+    // Calculate pick & pack fee
+    function calculatePickPackFee(weight) {
+      const fees = pickPackFees.standard;
+      let fee = fees.base;
       
-      if (!cost || !price || !units) {
-        showAlert(`Please enter valid values for Product ₹{productNum}`, 'error');
-        return;
+      if (weight > 1) {
+        const additionalWeight = weight - 1;
+        fee += additionalWeight * fees.additionalPerKg;
       }
       
-      // Simplified calculation for comparison (using average fees)
-      const referralFee = price * 0.15; // 15% average
-      const fulfillmentFee = 3.50; // Average FBA fee
-      const storageFee = 0.50; // Average storage fee per unit
-      
-      const totalFees = referralFee + fulfillmentFee + storageFee;
-      const netProfit = price - cost - totalFees;
-      const profitMargin = (netProfit / price) * 100;
-      const monthlyProfit = netProfit * units;
-      
-      // Update comparison results
-      document.getElementById(`compareProfit₹{productNum}`).textContent = `₹₹{netProfit.toFixed(2)}`;
-      document.getElementById(`compareMargin₹{productNum}`).textContent = `₹{profitMargin.toFixed(1)}%`;
-      document.getElementById(`compareMonthly₹{productNum}`).textContent = `₹₹{monthlyProfit.toFixed(2)}`;
+      return fee;
     }
 
-    // Clear all inputs
-    function clearAll() {
+    // Update shipping calculations
+    function updateShippingCalculations() {
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      
+      const volumetricWeight = calculateVolumetricWeight();
+      const chargeableWeight = calculateChargeableWeight();
+      
+      chargeableWeightInput.value = `${chargeableWeight.toFixed(2)} kg`;
+      sizeTierInput.value = chargeableWeight > 2 ? 'Heavy & Bulky' : 'Standard';
+      
+      const fulfillmentMethod = fulfillmentMethodSelect.value;
+      const zone = shippingZoneSelect.value;
+      const shippingFee = calculateShippingFee(fulfillmentMethod, chargeableWeight, zone);
+      
+      shippingFeeInput.value = `₹${shippingFee.toFixed(2)}`;
+      
+      updateCounters();
+    }
+
+    // Update counters
+    function updateCounters() {
+      const sellingPrice = parseFloat(sellingPriceInput.value) || 0;
+      const category = categorySelect.value;
+      const subcategory = subcategorySelect.value;
+      const referralFeePercentage = calculateReferralFee(sellingPrice, category, subcategory);
+      const referralFeeAmount = (sellingPrice * referralFeePercentage) / 100;
+      
+      const fulfillmentMethod = fulfillmentMethodSelect.value;
+      const closingFeeAmount = calculateClosingFee(sellingPrice, fulfillmentMethod);
+      
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      const volumetricWeight = calculateVolumetricWeight();
+      const chargeableWeight = calculateChargeableWeight();
+      const zone = shippingZoneSelect.value;
+      const shippingFeeAmount = calculateShippingFee(fulfillmentMethod, chargeableWeight, zone);
+      
+      document.getElementById('productPriceCounter').textContent = `₹${sellingPrice.toFixed(2)}`;
+      document.getElementById('referralFeeCounter').textContent = `₹${referralFeeAmount.toFixed(2)}`;
+      document.getElementById('closingFeeCounter').textContent = `₹${closingFeeAmount.toFixed(2)}`;
+      document.getElementById('shippingFeeCounter').textContent = `₹${shippingFeeAmount.toFixed(2)}`;
+    }
+
+    // Calculate all fees and margins
+    function calculateFees() {
+      const sellingPrice = parseFloat(sellingPriceInput.value) || 0;
+      const productCost = parseFloat(productCostInput.value) || 0;
+      const category = categorySelect.value;
+      const subcategory = subcategorySelect.value;
+      const returnRto = parseFloat(document.getElementById('returnRto').value) || 0;
+      const packingFees = parseFloat(document.getElementById('packingFees').value) || 0;
+      const gstRate = parseFloat(document.getElementById('gst').value) || 0;
+      
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      const volumetricWeight = calculateVolumetricWeight();
+      const chargeableWeight = calculateChargeableWeight();
+      
+      const referralFeePercentage = calculateReferralFee(sellingPrice, category, subcategory);
+      const referralFeeAmount = (sellingPrice * referralFeePercentage) / 100;
+      
+      const fulfillmentMethod = fulfillmentMethodSelect.value;
+      const closingFeeAmount = calculateClosingFee(sellingPrice, fulfillmentMethod);
+      
+      const zone = shippingZoneSelect.value;
+      const shippingFeeAmount = calculateShippingFee(fulfillmentMethod, chargeableWeight, zone);
+      
+      const pickPackFeeAmount = (fulfillmentMethod === 'fc') ? calculatePickPackFee(chargeableWeight) : 0;
+      
+      const gstAmount = (sellingPrice * gstRate) / 100;
+      
+      const totalFees = referralFeeAmount + closingFeeAmount + shippingFeeAmount + pickPackFeeAmount + returnRto + packingFees;
+      
+      const netProfit = sellingPrice - productCost - totalFees;
+      const profitMargin = (netProfit / sellingPrice) * 100;
+      
+      document.getElementById('sellingPriceResult').textContent = `₹${sellingPrice.toFixed(2)}`;
+      document.getElementById('referralFeeResult').textContent = `₹${referralFeeAmount.toFixed(2)}`;
+      document.getElementById('closingFeeResult').textContent = `₹${closingFeeAmount.toFixed(2)}`;
+      document.getElementById('shippingFeeResult').textContent = `₹${shippingFeeAmount.toFixed(2)}`;
+      document.getElementById('pickPackFeeResult').textContent = `₹${pickPackFeeAmount.toFixed(2)}`;
+      document.getElementById('rtoFeeResult').textContent = `₹${returnRto.toFixed(2)}`;
+      document.getElementById('packingFeeResult').textContent = `₹${packingFees.toFixed(2)}`;
+      document.getElementById('gstFeeResult').textContent = `₹${gstAmount.toFixed(2)}`;
+      document.getElementById('totalFees').textContent = `₹${totalFees.toFixed(2)}`;
+      document.getElementById('netProfit').textContent = `₹${netProfit.toFixed(2)}`;
+      
+      document.getElementById('breakdownProductCost').textContent = `₹${productCost.toFixed(2)}`;
+      document.getElementById('breakdownTotalFees').textContent = `₹${totalFees.toFixed(2)}`;
+      document.getElementById('breakdownNetProfit').textContent = `₹${netProfit.toFixed(2)}`;
+      document.getElementById('breakdownProfitMargin').textContent = `${profitMargin.toFixed(2)}%`;
+      
+      const profitResult = document.getElementById('profitResult');
+      if (netProfit < 0) {
+        profitResult.className = 'result-item loss';
+      } else {
+        profitResult.className = 'result-item profit';
+      }
+      
+      showAlert('Amazon fee calculation completed successfully!', 'success');
+    }
+
+    // Clear calculator
+    function clearCalculator() {
       document.getElementById('productName').value = '';
-      categorySelect.selectedIndex = 0;
-      subcategorySelect.innerHTML = '<option value="">Select a Subcategory</option>';
-      productCost.value = '';
-      sellingPrice.value = '';
-      shippingCost.value = '0.00';
-      productWeight.value = '';
-      monthlyUnits.value = '1';
+      document.getElementById('sellingPrice').value = '';
+      document.getElementById('productCost').value = '';
+      document.getElementById('category').selectedIndex = 0;
+      document.getElementById('subcategory').innerHTML = '<option value="">Select Subcategory</option>';
+      document.getElementById('referralFee').value = '';
+      document.getElementById('fulfillmentMethod').selectedIndex = 0;
+      document.getElementById('closingFee').value = '';
+      document.getElementById('length').value = '';
+      document.getElementById('width').value = '';
+      document.getElementById('height').value = '';
+      document.getElementById('actualWeight').value = '';
+      document.getElementById('chargeableWeight').value = '';
+      document.getElementById('sizeTier').value = '';
+      document.getElementById('shippingFee').value = '';
+      document.getElementById('returnRto').value = '';
+      document.getElementById('packingFees').value = '';
+      document.getElementById('gst').selectedIndex = 3;
       
-      // Reset results
-      resultCost.textContent = '₹0.00';
-      resultReferral.textContent = '₹0.00';
-      resultFulfillment.textContent = '₹0.00';
-      resultStorage.textContent = '₹0.00';
-      resultShipping.textContent = '₹0.00';
-      resultTotalFees.textContent = '₹0.00';
-      resultProfit.textContent = '₹0.00';
-      resultMargin.textContent = '0%';
-      resultROI.textContent = '0%';
-      resultMonthly.textContent = '₹0.00';
-      profitResult.className = 'result-item';
+      document.querySelectorAll('.shipping-option').forEach(el => {
+        el.classList.remove('selected');
+      });
+      document.getElementById('nationalShippingOption').classList.add('selected');
+      document.getElementById('nationalShipping').checked = true;
       
-      showAlert('All inputs cleared.', 'success');
+      document.getElementById('shippingZone').selectedIndex = 2;
+      
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelector('.tab').classList.add('active');
+      document.getElementById('basic-tab').classList.add('active');
+      
+      updateCounters();
+      showAlert('Calculator has been cleared.', 'success');
     }
 
-    // Show alert message
+    // Copy results
+    function copyResults() {
+      const sellingPrice = document.getElementById('sellingPriceResult').textContent;
+      const netProfit = document.getElementById('netProfit').textContent;
+      const profitMargin = document.getElementById('breakdownProfitMargin').textContent;
+      
+      const resultsText = `Amazon Fee Calculation Results:
+Selling Price: ${sellingPrice}
+Net Profit: ${netProfit}
+Profit Margin: ${profitMargin}`;
+      
+      navigator.clipboard.writeText(resultsText).then(() => {
+        showAlert('Results copied to clipboard!', 'success');
+      }).catch(err => {
+        showAlert('Failed to copy results: ' + err, 'error');
+      });
+    }
+
+    // Show fee details modal
+    function showFeeDetails() {
+      detailsModal.style.display = 'block';
+    }
+
+    // Close modal
+    function closeDetailsModal() {
+      detailsModal.style.display = 'none';
+    }
+
+    // Show alert
     function showAlert(message, type) {
       const alertDiv = document.createElement('div');
-      alertDiv.className = `alert alert-₹{type}`;
+      alertDiv.className = `alert alert-${type}`;
       alertDiv.innerHTML = `
-                    ₹{message}
-                    <span class="close">&times;</span>
-                `;
+        ${message}
+        <span class="close">&times;</span>
+      `;
 
       alertContainer.innerHTML = '';
       alertContainer.appendChild(alertDiv);
 
-      // Add close functionality
       alertDiv.querySelector('.close').addEventListener('click', function () {
         alertDiv.remove();
       });
@@ -1371,5 +1762,41 @@ Results:
         }
       }, 5000);
     }
+
+    // Event listeners
+    calculateButton.addEventListener('click', calculateFees);
+    clearButton.addEventListener('click', clearCalculator);
+    copyButton.addEventListener('click', copyResults);
+    detailsButton.addEventListener('click', showFeeDetails);
+    closeDetails.addEventListener('click', closeDetailsModal);
+    
+    categorySelect.addEventListener('change', updateSubcategories);
+    subcategorySelect.addEventListener('change', updateReferralFee);
+    sellingPriceInput.addEventListener('input', updateReferralFee);
+    fulfillmentMethodSelect.addEventListener('change', updateClosingFee);
+    
+    [lengthInput, widthInput, heightInput, actualWeightInput].forEach(input => {
+      input.addEventListener('input', updateShippingCalculations);
+    });
+    
+    shippingZoneSelect.addEventListener('change', updateShippingCalculations);
+    
+    closeModal.forEach(closeBtn => {
+      closeBtn.addEventListener('click', function() {
+        detailsModal.style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === detailsModal) {
+        detailsModal.style.display = 'none';
+      }
+    });
+
+    // Initialize
+    populateCategories();
+    updateReferralFee();
+    updateClosingFee();
+    updateShippingCalculations();
   });
 </script>
