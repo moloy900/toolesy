@@ -1046,8 +1046,30 @@ Gross Margin: ₹305 (38.1%)</div>
   <p>This Amazon Fee Calculator helps you make informed pricing and shipping decisions while maintaining privacy since all calculations occur in your browser.</p>
 </div>
 
-<script>
+<!-- Rate Card Modal -->
+<div id="rateCardModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">Amazon Rate Card Information</h3>
+      <span class="close-modal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>This calculator uses Amazon India's current fee structure for seller calculations:</p>
+      <ul>
+        <li><strong>Commission Fees:</strong> Based on seller tier (Platinum, Gold, Silver, Bronze)</li>
+        <li><strong>Referral Fees:</strong> Percentage based on product category and price range</li>
+        <li><strong>Closing Fees:</strong> Fixed fees based on fulfillment method and price</li>
+        <li><strong>Shipping Fees:</strong> Based on weight (actual or volumetric, whichever is higher)</li>
+      </ul>
+      <p>All calculations are estimates. Actual fees may vary based on Amazon's current policies.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-button primary" id="closeRateCard">Close</button>
+    </div>
+  </div>
+</div>
 
+<script>
 document.addEventListener('DOMContentLoaded', function () {
     // Amazon referral fee data structure
     const amazonReferralFees = {
