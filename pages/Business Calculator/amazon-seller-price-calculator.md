@@ -684,24 +684,6 @@ permalink: /amazon-seller-price-calculator-fees-profit/
       </div>
       
       <div class="input-group">
-        <label for="commissionType">Commission Type</label>
-        <select id="commissionType">
-          <option value="Non-FBF">Non-FBF</option>
-          <option value="FBF">FBF</option>
-        </select>
-      </div>
-      
-      <div class="input-group">
-        <label for="sellerTier">Seller Tier (Closing/Fixed Fee)</label>
-        <select id="sellerTier">
-          <option value="Platinum">Platinum</option>
-          <option value="Gold">Gold</option>
-          <option value="Silver">Silver</option>
-          <option value="Bronze">Bronze</option>
-        </select>
-      </div>
-      
-      <div class="input-group">
         <label>Package Dimensions & Weight</label>
         <div class="dimensions-group">
           <div>
