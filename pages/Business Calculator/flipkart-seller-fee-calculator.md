@@ -12,7 +12,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 ">
 <meta name="keywords"
   content="flipkart seller calculator, flipkart fees, flipkart commission, seller profit calculator, ecommerce fees, flipkart seller charges, online selling calculator">
-<meta name="author" content="Your Name">
+<meta name="author" content="Paramdip Nath">
 <meta name="robots" content="index, follow">
 
 <!-- Font Awesome -->
@@ -20,13 +20,13 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 
 <style>
   /* Flipkart Calculator Styles */
-  .converter-container {
+  .calculator-container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  .converter-container h1 {
+  .calculator-container h1 {
     color: var(--primary);
     text-align: center;
     margin-bottom: 15px;
@@ -43,7 +43,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     line-height: 1.8;
   }
 
-  .converter-section {
+  .calculator-section {
     margin-bottom: 40px;
     padding: 25px;
     background: #f8f9fa;
@@ -51,7 +51,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     border-left: 4px solid var(--primary);
   }
 
-  .converter-section h2 {
+  .calculator-section h2 {
     color: var(--primary);
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -62,7 +62,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     align-items: center;
   }
 
-  .converter-section p {
+  .calculator-section p {
     margin-bottom: 15px;
     line-height: 1.8;
     color: #333;
@@ -103,51 +103,22 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     margin: 20px 0;
   }
 
-  .input-section textarea {
-    width: 100%;
-    padding: 18px;
-    border: 2px solid #e0e6ed;
-    border-radius: 10px;
-    font-size: 16px;
-    min-height: 220px;
-    resize: vertical;
-    font-family: 'Courier New', monospace;
-    transition: border-color 0.3s;
-  }
-
-  .input-section textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-  }
-
-  .calculator-inputs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 25px 0;
-    padding: 25px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
-
   .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-bottom: 25px;
   }
 
   .input-group label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
     color: #2c3e50;
-    margin-bottom: 5px;
   }
 
   .input-group input, .input-group select {
-    padding: 12px 15px;
+    width: 100%;
+    padding: 15px;
     border: 2px solid #e0e6ed;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     transition: border-color 0.3s;
   }
@@ -158,6 +129,64 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
   }
 
+  .dimensions-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+
+  .results-section {
+    margin: 30px 0;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--success);
+  }
+
+  .results-section h3 {
+    color: var(--success);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .result-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .result-label {
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+
+  .result-value {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--primary);
+  }
+
+  .result-value.profit {
+    color: var(--success);
+  }
+
+  .result-value.loss {
+    color: #e74c3c;
+  }
+
   .button-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -165,7 +194,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     margin: 25px 0;
   }
 
-  .case-button {
+  .calc-button {
     padding: 14px 10px;
     border: none;
     border-radius: 8px;
@@ -178,47 +207,39 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     text-align: center;
   }
 
-  .case-button:hover {
+  .calc-button:hover {
     background: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
-  .case-button:active {
+  .calc-button:active {
     transform: translateY(0);
   }
 
-  .case-button.success {
+  .calc-button.success {
     background: var(--success);
   }
 
-  .case-button.success:hover {
+  .calc-button.success:hover {
     background: #218838;
   }
 
-  .case-button.secondary {
+  .calc-button.secondary {
     background: #6c757d;
   }
 
-  .case-button.secondary:hover {
+  .calc-button.secondary:hover {
     background: #5a6268;
   }
 
-  .case-button.warning {
+  .calc-button.warning {
     background: #ffc107;
     color: #212529;
   }
 
-  .case-button.warning:hover {
+  .calc-button.warning:hover {
     background: #e0a800;
-  }
-
-  .case-button.flipkart {
-    background: #047bd5;
-  }
-
-  .case-button.flipkart:hover {
-    background: #0366b3;
   }
 
   .alert-container {
@@ -253,127 +274,35 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     font-weight: bold;
   }
 
-  .result-section {
-    margin-top: 30px;
-    padding: 25px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  .file-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+    width: 100%;
   }
 
-  .result-section h3 {
-    color: var(--primary);
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-  }
-
-  .result-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-bottom: 25px;
-  }
-
-  .result-card {
-    padding: 20px;
+  .options-section {
     background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary);
-    transition: all 0.3s ease;
-  }
-
-  .result-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .result-card h4 {
-    margin: 0 0 10px 0;
-    color: #2c3e50;
-    font-size: 1rem;
-  }
-
-  .result-card .amount {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
-  }
-
-  .result-card.profit-positive .amount {
-    color: #28a745;
-  }
-
-  .result-card.profit-negative .amount {
-    color: #dc3545;
-  }
-
-  .fee-breakdown {
-    margin-top: 25px;
-  }
-
-  .fee-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    margin: 8px 0;
-    background: white;
-    border-radius: 6px;
-    border-left: 3px solid #e0e6ed;
-    transition: all 0.3s ease;
-  }
-
-  .fee-item:hover {
-    background: #f8f9fa;
-    border-left-color: var(--primary);
-  }
-
-  .fee-item .fee-name {
-    font-weight: 500;
-    color: #2c3e50;
-  }
-
-  .fee-item .fee-amount {
-    font-weight: 600;
-    color: #495057;
-  }
-
-  .fee-divider {
-    border: 0;
-    border-top: 2px solid #e9ecef;
-    margin: 15px 0;
-  }
-
-  .profit-loss-section {
-    margin-top: 20px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 0px;
     border-radius: 10px;
-    border: 2px solid #e9ecef;
-  }
-
-  .profit-loss-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
     margin: 10px 0;
-    background: white;
+  }
+
+  .examples {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
     border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
   }
 
-  .profit-positive {
-    color: #28a745;
-    border-left: 4px solid #28a745;
-  }
-
-  .profit-negative {
-    color: #dc3545;
-    border-left: 4px solid #dc3545;
+  .example-text {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary);
+    margin: 10px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
   }
 
   .content-placeholder {
@@ -476,49 +405,167 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     color: white;
   }
 
-  /* Advanced Options */
-  .advanced-options {
-    margin: 20px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
+  .upload-icon {
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 4px;
   }
 
-  .advanced-toggle {
+  .upload-icon:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: scale(1.1);
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s;
+  }
+
+  .modal-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0;
+  }
+
+  .close-modal {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .close-modal:hover {
+    color: #000;
+  }
+
+  .modal-body {
+    margin-bottom: 20px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
     gap: 10px;
+  }
+
+  .modal-button {
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: none;
   }
 
-  .advanced-content {
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #e0e0e0;
+  .modal-button.primary {
+    background: var(--primary);
+    color: white;
   }
 
-  .advanced-content.show {
-    display: grid;
+  .modal-button.secondary {
+    background: #6c757d;
+    color: white;
   }
 
-  /* Chart Section */
-  .chart-section {
-    margin-top: 30px;
-    padding: 25px;
+  .modal-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Flipkart specific styles */
+  .rate-card {
     background: white;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
   }
 
-  .chart-container {
-    height: 300px;
-    margin-top: 20px;
-    position: relative;
+  .rate-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+
+  .volumetric-weight {
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .discount-info {
+    background: #fff8e1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    border-left: 4px solid #ffc107;
   }
 
   /* Responsive adjustments */
@@ -531,25 +578,25 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
-    .case-button {
+    .calc-button {
       font-size: 13px;
       padding: 12px 8px;
     }
 
-    .converter-container {
+    .calculator-container {
       padding: 15px;
     }
 
-    .converter-section {
+    .calculator-section {
       padding: 20px;
       margin-bottom: 30px;
     }
 
-    .converter-container h1 {
+    .calculator-container h1 {
       font-size: 2rem;
     }
 
-    .converter-section h2 {
+    .calculator-section h2 {
       font-size: 1.3rem;
     }
 
@@ -563,206 +610,207 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       justify-content: center;
     }
 
-    .calculator-inputs {
+    .modal-content {
+      margin: 20% auto;
+      width: 95%;
+      padding: 20px;
+    }
+
+    .rate-tables {
       grid-template-columns: 1fr;
     }
 
-    .result-grid {
+    .dimensions-group {
       grid-template-columns: 1fr;
     }
 
-    .advanced-content {
+    .results-grid {
       grid-template-columns: 1fr;
     }
   }
 </style>
 
-<div class="converter-container">
-  <h1>Flipkart Seller Fee Calculator</h1>
-  <p class="welcome-message">Calculate your exact profit, commission fees, shipping costs, GST, and TCS for selling on Flipkart. Plan your pricing strategy effectively to maximize your earnings.</p>
+<div class="calculator-container">
+  <h1>Flipkart Fee Calculator with Discount</h1>
+  <p class="welcome-message">Calculate your profit margins on Flipkart sales including commission, shipping, and other fees. Easy to use tool for sellers.</p>
 
-  <div class="converter-section">
-    <h2>Flipkart Seller Profit Calculator</h2>
+  <div class="calculator-section">
+    <h2>Flipkart Fee Calculator</h2>
 
     <div class="counter-wrapper">
       <div class="counter-item">
+        <span>Commission Fee: </span>
+        <span id="commissionCount">₹0.00</span>
+      </div>
+      <div class="counter-item">
+        <span>Shipping Fee: </span>
+        <span id="shippingCount">₹0.00</span>
+      </div>
+      <div class="counter-item">
+        <span>Other Fees: </span>
+        <span id="otherFeesCount">₹0.00</span>
+      </div>
+      <div class="counter-item">
         <span>Total Fees: </span>
-        <span id="totalFeesCounter">₹0.00</span>
-      </div>
-      <div class="counter-item">
-        <span>Seller Payout: </span>
-        <span id="payoutCounter">₹0.00</span>
-      </div>
-      <div class="counter-item">
-        <span>Net Profit: </span>
-        <span id="profitCounter">₹0.00</span>
-      </div>
-      <div class="counter-item">
-        <span>Profit Margin: </span>
-        <span id="marginCounter">0%</span>
+        <span id="totalFeesCount">₹0.00</span>
       </div>
     </div>
 
-    <div class="calculator-inputs">
+    <div class="input-section">
+      <h2>Product Information <i class="fas fa-info-circle upload-icon" id="infoIcon" title="Rate Card Information"></i></h2>
+      
       <div class="input-group">
-        <label for="sellingPrice">Selling Price (₹):</label>
-        <input type="number" id="sellingPrice" placeholder="Enter selling price">
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" placeholder="Enter product name">
       </div>
-
+      
       <div class="input-group">
-        <label for="costPrice">Cost Price (₹):</label>
-        <input type="number" id="costPrice" placeholder="Enter product cost">
+        <label for="sellingPrice">Selling Price (₹)</label>
+        <input type="number" id="sellingPrice" placeholder="Enter selling price" min="0" step="0.01">
       </div>
-
+      
       <div class="input-group">
-        <label for="productCategory">Product Category:</label>
-        <select id="productCategory">
-          <optgroup label="Mobiles & Electronics">
-            <option value="mobiles">Mobiles (3%)</option>
-            <option value="electronics">Electronics Accessories (7%)</option>
-            <option value="appliances">Large Appliances (6%)</option>
-          </optgroup>
-          <optgroup label="Fashion">
-            <option value="menfashion">Men Fashion (15%)</option>
-            <option value="womenfashion">Women Fashion (17%)</option>
-          </optgroup>
-          <optgroup label="Home & Lifestyle">
-            <option value="home">Home & Kitchen (10%)</option>
-            <option value="furniture">Furniture (10%)</option>
-            <option value="beauty">Beauty & Personal Care (13%)</option>
-          </optgroup>
-          <optgroup label="Other Categories">
-            <option value="books">Books (8%)</option>
-            <option value="grocery">Grocery (5%)</option>
-            <option value="sports">Sports & Automotive (12%)</option>
-          </optgroup>
+        <label for="discount">Discount (₹ or %)</label>
+        <input type="text" id="discount" placeholder="e.g., 50 or 10%">
+        <div class="discount-info">
+          Enter amount (₹) or percentage (e.g., 10%)
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label for="productPrice">Product Price/Cost (₹)</label>
+        <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
+      </div>
+      
+      <div class="input-group">
+        <label for="commissionType">Commission Type</label>
+        <select id="commissionType">
+          <option value="Non-FBF">Non-FBF</option>
+          <option value="FBF">FBF</option>
         </select>
       </div>
-
+      
       <div class="input-group">
-        <label for="shippingRegion">Shipping Region:</label>
-        <select id="shippingRegion">
-          <option value="local">Local</option>
-          <option value="zonal">Zonal</option>
-          <option value="national">National</option>
+        <label for="sellerTier">Seller Tier</label>
+        <select id="sellerTier">
+          <option value="Platinum">Platinum</option>
+          <option value="Gold">Gold</option>
+          <option value="Silver">Silver</option>
+          <option value="Bronze">Bronze</option>
         </select>
       </div>
-
+      
       <div class="input-group">
-        <label for="productWeight">Weight (kg):</label>
-        <input type="number" step="0.01" id="productWeight" placeholder="0.50" value="0.5">
+        <label>Package Dimensions (for shipping calculation)</label>
+        <div class="dimensions-group">
+          <div>
+            <label for="length">Length (cm)</label>
+            <input type="number" id="length" placeholder="Length" min="0" step="0.1">
+          </div>
+          <div>
+            <label for="breadth">Breadth (cm)</label>
+            <input type="number" id="breadth" placeholder="Breadth" min="0" step="0.1">
+          </div>
+          <div>
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="Height" min="0" step="0.1">
+          </div>
+        </div>
+        <div class="volumetric-weight" id="volumetricWeightDisplay">
+          Volumetric Weight: 0 kg
+        </div>
       </div>
-
+      
       <div class="input-group">
-        <label for="sellerType">Seller Type:</label>
-        <select id="sellerType">
-          <option value="individual">Individual Seller</option>
-          <option value="business">Business Seller</option>
-          <option value="premium">Premium Seller</option>
+        <label for="nationalShipping">National Shipping Fees (₹)</label>
+        <input type="number" id="nationalShipping" placeholder="Calculated automatically" min="0" step="0.01" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="returnRto">Return RTO (₹)</label>
+        <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
+      </div>
+      
+      <div class="input-group">
+        <label for="packingFees">Packing Fees (₹)</label>
+        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
+      </div>
+      
+      <div class="input-group">
+        <label for="gst">GST</label>
+        <select id="gst">
+          <option value="0">0%</option>
+          <option value="5">5%</option>
+          <option value="12">12%</option>
+          <option value="18" selected>18%</option>
+          <option value="28">28%</option>
         </select>
       </div>
     </div>
 
-    <!-- Advanced Options -->
-    <div class="advanced-options">
-      <div class="advanced-toggle" id="advancedToggle">
-        <i class="fas fa-cog"></i>
-        <span>Advanced Options</span>
-        <i class="fas fa-chevron-down" id="advancedArrow"></i>
+    <div class="options-section">
+      <div class="button-section">
+        <button class="calc-button" id="calculateBtn">Calculate Fees & Margin</button>
+        <button class="calc-button secondary" id="clearBtn">Clear</button>
+        <button class="calc-button success" id="saveBtn">Save Results</button>
+        <button class="calc-button warning" id="rateCardBtn">View Rate Card</button>
       </div>
-      <div class="advanced-content" id="advancedContent">
-        <div class="input-group">
-          <label for="fixedFee">Fixed Fee (₹):</label>
-          <input type="number" id="fixedFee" value="0">
-        </div>
-        <div class="input-group">
-          <label for="shippingCharge">Shipping Charge to Customer (₹):</label>
-          <input type="number" id="shippingCharge" value="0">
-        </div>
-        <div class="input-group">
-          <label for="gstRate">GST Rate on Fees (%):</label>
-          <input type="number" id="gstRate" value="18" min="0" max="28">
-        </div>
-        <div class="input-group">
-          <label for="tcsRate">TCS Rate (%):</label>
-          <input type="number" id="tcsRate" value="1" min="0" max="5">
-        </div>
-      </div>
-    </div>
-
-    <div class="button-section">
-      <button class="case-button flipkart" id="calculateBtn">Calculate Fees & Profit</button>
-      <button class="case-button success" id="saveCalculation">Save Calculation</button>
-      <button class="case-button" id="compareScenarios">Compare Scenarios</button>
-      <button class="case-button warning" id="resetCalculator">Reset</button>
     </div>
 
     <div id="alertContainer" class="alert-container"></div>
 
-    <div class="result-section" id="resultSection" style="display: none;">
+    <div class="results-section" id="resultSection" style="display: none;">
       <h3>Calculation Results</h3>
       
-      <div class="result-grid">
-        <div class="result-card">
-          <h4>Total Fees</h4>
-          <div class="amount" id="totalFees">₹0.00</div>
-        </div>
-        <div class="result-card">
-          <h4>Seller Payout</h4>
-          <div class="amount" id="sellerPayout">₹0.00</div>
-        </div>
-        <div class="result-card" id="profitCard">
-          <h4>Net Profit</h4>
-          <div class="amount" id="netProfit">₹0.00</div>
-        </div>
-        <div class="result-card" id="marginCard">
-          <h4>Profit Margin</h4>
-          <div class="amount" id="profitMargin">0%</div>
-        </div>
-      </div>
-
-      <div class="fee-breakdown">
-        <h4>Fee Breakdown</h4>
-        <div class="fee-item">
-          <span class="fee-name">Commission Fee</span>
-          <span class="fee-amount" id="commissionFee">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">Closing Fee</span>
-          <span class="fee-amount" id="closingFee">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">Collection Fee (2%)</span>
-          <span class="fee-amount" id="collectionFee">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">Shipping Fee</span>
-          <span class="fee-amount" id="shippingFee">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">Fixed Fee</span>
-          <span class="fee-amount" id="fixedFeeDisplay">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">GST (<span id="gstRateDisplay">18</span>% on Fees)</span>
-          <span class="fee-amount" id="gstFee">₹0.00</span>
-        </div>
-        <div class="fee-item">
-          <span class="fee-name">TCS (<span id="tcsRateDisplay">1</span>%)</span>
-          <span class="fee-amount" id="tcsFee">₹0.00</span>
+      <div class="results-grid">
+        <div class="result-item">
+          <span class="result-label">Selling Price</span>
+          <span class="result-value" id="sellingPriceResult">₹0.00</span>
         </div>
         
-        <hr class="fee-divider">
+        <div class="result-item">
+          <span class="result-label">Discount Applied</span>
+          <span class="result-value" id="discountResult">₹0.00</span>
+        </div>
         
-        <div class="profit-loss-section">
-          <div class="profit-loss-item" id="finalProfit">
-            <span>Final Profit / Loss:</span>
-            <span>₹0.00</span>
-          </div>
-          <div class="profit-loss-item" id="finalMargin">
-            <span>Profit Margin:</span>
-            <span>0%</span>
-          </div>
+        <div class="result-item">
+          <span class="result-label">Final Selling Price</span>
+          <span class="result-value" id="finalSellingPrice">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Commission Fee</span>
+          <span class="result-value" id="commissionFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Shipping Fee</span>
+          <span class="result-value" id="shippingFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Return RTO</span>
+          <span class="result-value" id="rtoFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">Packing Fees</span>
+          <span class="result-value" id="packingFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
+          <span class="result-label">GST</span>
+          <span class="result-value" id="gstFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item highlight">
+          <span class="result-label">Total Flipkart Fees</span>
+          <span class="result-value" id="totalFees">₹0.00</span>
+        </div>
+        
+        <div class="result-item highlight">
+          <span class="result-label">Gross Margin</span>
+          <span class="result-value" id="grossMargin">₹0.00</span>
         </div>
       </div>
     </div>
@@ -770,458 +818,533 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     {% include share-and-donation.html %}
 
     <div class="examples">
-      <h2>Flipkart Fee Calculation Examples</h2>
+      <h2>Examples</h2>
 
-      <h3>Example 1: Mobile Phone Sale</h3>
-      <div class="example-text">Selling Price: ₹15,000
-Cost Price: ₹12,000
-Category: Mobiles (3% commission)
-Weight: 0.3 kg
-Region: National
+      <h3>Example 1: High Margin Product</h3>
+      <div class="example-text">Selling Price: ₹1000
+Discount: 10%
+Product Cost: ₹500
+Commission: ₹63 (Platinum, Non-FBF)
+Shipping: ₹25
+Total Fees: ₹88
+Gross Margin: ₹412 (41.2%)</div>
 
-Commission: ₹450
-Closing Fee: ₹25
-Collection Fee: ₹300
-Shipping: ₹63
-GST: ₹150.84
-TCS: ₹150
-Total Fees: ₹1,138.84
-Payout: ₹13,861.16
-Profit: ₹1,861.16 (15.51%)</div>
+      <h3>Example 2: Low Margin Product</h3>
+      <div class="example-text">Selling Price: ₹500
+Discount: 5%
+Product Cost: ₹400
+Commission: ₹69 (Silver, Non-FBF)
+Shipping: ₹16
+Total Fees: ₹85
+Gross Margin: ₹15 (3%)</div>
 
-      <h3>Example 2: Fashion Item</h3>
-      <div class="example-text">Selling Price: ₹1,200
-Cost Price: ₹600
-Category: Men Fashion (15% commission)
-Weight: 0.2 kg
-Region: Local
+      <h3>Example 3: Loss Scenario</h3>
+      <div class="example-text">Selling Price: ₹300
+Discount: 20%
+Product Cost: ₹250
+Commission: ₹69 (Bronze, Non-FBF)
+Shipping: ₹25
+Total Fees: ₹94
+Gross Margin: -₹44 (-14.7%)</div>
+    </div>
+  </div>
 
-Commission: ₹180
-Closing Fee: ₹12
-Collection Fee: ₹24
-Shipping: ₹32
-GST: ₹44.64
-TCS: ₹12
-Total Fees: ₹304.64
-Payout: ₹895.36
-Profit: ₹295.36 (49.23%)</div>
-
-      <h3>Example 3: Home & Kitchen Item</h3>
-      <div class="example-text">Selling Price: ₹800
-Cost Price: ₹400
-Category: Home & Kitchen (10% commission)
-Weight: 0.5 kg
-Region: Zonal
-
-Commission: ₹80
-Closing Fee: ₹12
-Collection Fee: ₹16
-Shipping: ₹50
-GST: ₹28.44
-TCS: ₹8
-Total Fees: ₹194.44
-Payout: ₹605.56
-Profit: ₹205.56 (51.39%)</div>
+  <!-- Rate Card Section -->
+  <div class="rate-card">
+    <h2 class="section-title">Flipkart Rate Card</h2>
+    
+    <div class="rate-tables">
+      <div>
+        <h3>Commission & Fixed Fees (₹)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Seller Tier</th>
+              <th>Non-FBF</th>
+              <th>FBF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Platinum</td>
+              <td>₹63</td>
+              <td>₹55</td>
+            </tr>
+            <tr>
+              <td>Gold</td>
+              <td>₹65</td>
+              <td>₹57</td>
+            </tr>
+            <tr>
+              <td>Silver</td>
+              <td>₹69</td>
+              <td>₹61</td>
+            </tr>
+            <tr>
+              <td>Bronze</td>
+              <td>₹69</td>
+              <td>₹61</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div>
+        <h3>National Shipping Fees (₹)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Weight Range</th>
+              <th>National</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0-500 grams</td>
+              <td>₹16</td>
+            </tr>
+            <tr>
+              <td>Incremental 500 grams, upto 1 Kg</td>
+              <td>₹25</td>
+            </tr>
+            <tr>
+              <td>+1Kg, upto 1.5Kg</td>
+              <td>₹30</td>
+            </tr>
+            <tr>
+              <td>+1.5Kg, upto 2Kg</td>
+              <td>₹20</td>
+            </tr>
+            <tr>
+              <td>+2Kg, upto 3Kg (For every 0.5 kg)</td>
+              <td>₹20</td>
+            </tr>
+            <tr>
+              <td>+3Kg, upto 12Kg (For every 1 kg)</td>
+              <td>₹18</td>
+            </tr>
+            <tr>
+              <td>+1Kg, beyond 12Kg (For every 1 kg)</td>
+              <td>₹8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
   <!-- SEO Content Section -->
   <div class="content-placeholder">
-    <h2>Flipkart Seller Fee Calculator 2025 - Complete Guide</h2>
+    <h2>Free Online Flipkart Fee Calculator with Discount</h2>
 
-    <p>Maximize your profits on Flipkart with our comprehensive <strong>Seller Fee Calculator</strong>. This advanced tool helps you understand all the fees, commissions, and charges involved in selling on Flipkart, so you can price your products competitively while maintaining healthy profit margins. Whether you're a new seller or an experienced e-commerce business, this calculator provides accurate insights into your Flipkart selling costs.</p>
+    <p>Need to calculate your profit margins on Flipkart accurately? Our free <strong>Flipkart Fee Calculator with Discount</strong> is the perfect tool for sellers, entrepreneurs, and businesses selling on India's leading e-commerce platform. This powerful calculator instantly computes all Flipkart fees including commission, shipping, packing, RTO, and GST to give you a clear picture of your actual profit margins. There's no download required, no registration needed, and your financial data remains completely private.</p>
 
     <h3>How to Use This Flipkart Fee Calculator (Step-by-Step):</h3>
     <ul>
-      <li><strong>Enter Product Details:</strong> Input your product's selling price, cost price, weight, and select the appropriate category from the dropdown menu.</li>
-      <li><strong>Select Shipping Region:</strong> Choose between Local, Zonal, or National shipping to calculate accurate shipping costs.</li>
-      <li><strong>Choose Seller Type:</strong> Select your seller type (Individual, Business, or Premium) for accurate fee calculations.</li>
-      <li><strong>Calculate:</strong> Click the "Calculate Fees & Profit" button to get a detailed breakdown of all Flipkart charges and your net profit.</li>
-      <li><strong>Analyze Results:</strong> Review the fee breakdown, profit margin, and payout amount to optimize your pricing strategy.</li>
+      <li><strong>Enter Product Details:</strong> Input your product name, selling price, and any discounts (either fixed amount or percentage).</li>
+      <li><strong>Set Cost & Commission:</strong> Enter your product cost and select your seller tier and commission type (FBF or Non-FBF).</li>
+      <li><strong>Package Dimensions:</strong> Input your package dimensions to automatically calculate shipping fees based on volumetric weight.</li>
+      <li><strong>Additional Fees:</strong> Enter any additional fees like packing charges and return RTO costs.</li>
+      <li><strong>Calculate:</strong> Click the "Calculate Fees & Margin" button to instantly see your detailed profit breakdown.</li>
+      <li><strong>Analyze Results:</strong> Review the comprehensive breakdown including all fees and your final profit margin.</li>
     </ul>
 
     <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're selling a mobile phone on Flipkart with a selling price of ₹15,000 and a cost price of ₹12,000. Using our calculator, you'll discover that after all Flipkart fees (commission, closing fee, collection fee, shipping, GST, and TCS), your net profit would be approximately ₹1,861 with a 15.51% profit margin. This insight helps you determine if your pricing is optimal or if you need to adjust to maintain profitability.</p>
+    <p>Imagine you're selling a product for ₹1,000 with a 10% discount. Your product cost is ₹500, and you're a Platinum tier seller using Non-FBF commission. Instead of manually calculating all the complex fees (which can be time-consuming and prone to errors), you can simply enter these values into our calculator. The tool will instantly show that after ₹100 discount, ₹63 commission, ₹25 shipping, and other fees, your actual profit is ₹412 with a 41.2% margin. This quick calculation helps you make informed pricing decisions for your Flipkart business.</p>
 
     <h3>Benefits & Who Should Use This Tool:</h3>
     <ul>
-      <li><strong>New Sellers:</strong> Understand all Flipkart fees before listing your first product to avoid surprises.</li>
-      <li><strong>Experienced Sellers:</strong> Optimize pricing strategies for different product categories and shipping regions.</li>
-      <li><strong>E-commerce Businesses:</strong> Plan inventory and pricing for maximum profitability across your product portfolio.</li>
-      <li><strong>Product Managers:</strong> Calculate accurate landed costs for products sold on Flipkart.</li>
-      <li><strong>Financial Analysts:</strong> Analyze the profitability of Flipkart as a sales channel for your business.</li>
+      <li><strong>Flipkart Sellers:</strong> Accurately calculate profit margins for products to optimize pricing strategies.</li>
+      <li><strong>E-commerce Entrepreneurs:</strong> Evaluate the profitability of different product categories and seller tiers.</li>
+      <li><strong>Business Owners:</strong> Make data-driven decisions about which products to sell on Flipkart.</li>
+      <li><strong>New Sellers:</strong> Understand the complete fee structure before listing products on Flipkart.</li>
+      <li><strong>Experienced Sellers:</strong> Quickly calculate margins for new products or during promotional periods.</li>
+      <li><strong>Product Managers:</strong> Analyze the impact of discounts and promotions on overall profitability.</li>
     </ul>
 
-    <h3>Frequently Asked Questions:</h3>
-    <p><strong>What is the commission rate for different categories on Flipkart?</strong><br>
-      Commission rates vary by category: Mobiles (3%), Electronics Accessories (7%), Large Appliances (6%), Men Fashion (15%), Women Fashion (17%), Home & Kitchen (10%), Furniture (10%), Beauty & Personal Care (13%), Books (8%), Grocery (5%), and Sports & Automotive (12%).</p>
+    <h3>Frequently Asked Questions (FAQ):</h3>
+    <p><strong>Q: What is the difference between FBF and Non-FBF commission?</strong><br>
+      A: FBF (Flipkart Advantage) sellers get lower commission rates as Flipkart handles storage, packing, and shipping. Non-FBF sellers have higher commission but handle these aspects themselves.</p>
 
-    <p><strong>How is the closing fee calculated?</strong><br>
-      Closing fee is based on selling price: ₹6 for products up to ₹250, ₹12 for products between ₹251-₹500, and ₹25 for products above ₹500.</p>
+    <p><strong>Q: How is volumetric weight calculated for shipping?</strong><br>
+      A: Volumetric weight = (Length × Breadth × Height) / 5000 (in cm). Flipkart charges shipping based on whichever is higher - actual weight or volumetric weight.</p>
 
-    <p><strong>What is TCS and why is it charged?</strong><br>
-      TCS (Tax Collected at Source) is a government tax that Flipkart collects on behalf of sellers. It's currently 1% of the selling price and is applicable to all sellers.</p>
+    <p><strong>Q: Is my financial data kept private when I use this calculator?</strong><br>
+      A: Absolutely. All calculations happen locally in your browser. We don't store, transmit, or have access to any of the data you enter into the calculator.</p>
 
-    <p><strong>How does shipping region affect the fees?</strong><br>
-      Shipping costs vary by region: Local (₹30 + ₹10/kg), Zonal (₹45 + ₹10/kg), National (₹60 + ₹10/kg). These costs are borne by the seller unless you charge separate shipping.</p>
+    <p><strong>Q: Can I use this calculator on my mobile phone?</strong><br>
+      A: Yes, our website and calculator are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
 
-    <p><strong>Can I use this calculator for other marketplaces like Amazon or Meesho?</strong><br>
-      This calculator is specifically designed for Flipkart's fee structure. Other marketplaces have different commission rates and fee structures, so you would need a dedicated calculator for each platform.</p>
+    <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
+      A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
 
     <h3>Why Choose Our Flipkart Fee Calculator?</h3>
-    <p>Our <strong>Flipkart Seller Fee Calculator</strong> stands out from other tools because of its accuracy, comprehensiveness, and user-friendly interface. We regularly update our fee structures to match Flipkart's latest policies, ensuring you get the most accurate calculations. The tool also includes advanced options for experienced sellers who want to factor in additional costs or customize tax rates.</p>
+    <p>Our <strong>Flipkart Fee Calculator</strong> stands out from other tools because of its accuracy, comprehensiveness, and privacy features. Unlike many online calculators, we include all relevant Flipkart fees and automatically calculate shipping based on package dimensions. The tool works entirely in your browser, ensuring your sensitive financial information remains completely private. The interface is clean and intuitive, making it easy for anyone to calculate Flipkart profit margins without financial expertise.</p>
 
-    <h3>Understanding Flipkart's Fee Structure</h3>
-    <p>Flipkart charges several types of fees to sellers, which can be categorized as follows:</p>
+    <h3>Understanding Flipkart Fee Structure</h3>
+    <p>Flipkart's fee structure includes several components that impact your final profit margin. The main fees are commission (which varies by category and seller tier), shipping fees (based on weight and distance), fixed fee, collection fee, and GST on these fees. Additionally, sellers may incur costs for packing, returns (RTO), and other value-added services. Understanding this complete fee structure is essential for setting profitable prices on the platform.</p>
+
+    <h3>Common Applications of Flipkart Fee Calculation</h3>
+    <p>Fee calculation has numerous practical applications across various business scenarios:</p>
     <ul>
-      <li><strong>Commission Fee:</strong> Percentage of selling price that varies by product category</li>
-      <li><strong>Fixed Fees:</strong> Closing fee and fixed fee that depend on product price and category</li>
-      <li><strong>Payment Processing:</strong> Collection fee for payment gateway services</li>
-      <li><strong>Shipping Charges:</strong> Costs for picking, packing, and shipping products to customers</li>
-      <li><strong>Taxes:</strong> GST on Flipkart's services and TCS as per government regulations</li>
+      <li><strong>Pricing Strategy:</strong> Determine optimal selling prices to achieve target profit margins</li>
+      <li><strong>Product Selection:</strong> Evaluate which products are most profitable to sell on Flipkart</li>
+      <li><strong>Promotion Planning:</strong> Calculate the impact of discounts and promotions on profitability</li>
+      <li><strong>Tier Optimization:</strong> Determine if upgrading your seller tier would be financially beneficial</li>
+      <li><strong>Inventory Management:</strong> Make informed decisions about which products to restock based on profitability</li>
     </ul>
-    <p>Understanding these fees is crucial for setting the right prices and maintaining profitability on the Flipkart platform.</p>
   </div>
 </div>
 
-<!-- Compare Scenarios Modal -->
-<div id="compareModal" class="modal">
+<!-- Rate Card Modal -->
+<div id="rateCardModal" class="modal">
   <div class="modal-content" style="max-width: 90%;">
     <div class="modal-header">
-      <h3 class="modal-title">Compare Pricing Scenarios</h3>
+      <h3 class="modal-title">Flipkart Rate Card</h3>
       <span class="close-modal">&times;</span>
     </div>
     <div class="modal-body">
-      <div id="comparisonResults">
-        <!-- Comparison results will be inserted here -->
+      <div class="rate-tables">
+        <div>
+          <h3>Commission & Fixed Fees (₹)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Seller Tier</th>
+                <th>Non-FBF</th>
+                <th>FBF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Platinum</td>
+                <td>₹63</td>
+                <td>₹55</td>
+              </tr>
+              <tr>
+                <td>Gold</td>
+                <td>₹65</td>
+                <td>₹57</td>
+              </tr>
+              <tr>
+                <td>Silver</td>
+                <td>₹69</td>
+                <td>₹61</td>
+              </tr>
+              <tr>
+                <td>Bronze</td>
+                <td>₹69</td>
+                <td>₹61</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div>
+          <h3>National Shipping Fees (₹)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Weight Range</th>
+                <th>National</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0-500 grams</td>
+                <td>₹16</td>
+              </tr>
+              <tr>
+                <td>Incremental 500 grams, upto 1 Kg</td>
+                <td>₹25</td>
+              </tr>
+              <tr>
+                <td>+1Kg, upto 1.5Kg</td>
+                <td>₹30</td>
+              </tr>
+              <tr>
+                <td>+1.5Kg, upto 2Kg</td>
+                <td>₹20</td>
+              </tr>
+              <tr>
+                <td>+2Kg, upto 3Kg (For every 0.5 kg)</td>
+                <td>₹20</td>
+              </tr>
+              <tr>
+                <td>+3Kg, upto 12Kg (For every 1 kg)</td>
+                <td>₹18</td>
+              </tr>
+              <tr>
+                <td>+1Kg, beyond 12Kg (For every 1 kg)</td>
+                <td>₹8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <div class="modal-footer">
-      <button class="modal-button secondary" id="closeCompare">Close</button>
+      <button class="modal-button secondary" id="closeRateCard">Close</button>
     </div>
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // DOM Elements
+    // Rate card data
+    const rateCard = {
+      'Platinum': { 'Non-FBF': 63, 'FBF': 55 },
+      'Gold': { 'Non-FBF': 65, 'FBF': 57 },
+      'Silver': { 'Non-FBF': 69, 'FBF': 61 },
+      'Bronze': { 'Non-FBF': 69, 'FBF': 61 }
+    };
+
+    // DOM elements
     const calculateBtn = document.getElementById('calculateBtn');
-    const saveBtn = document.getElementById('saveCalculation');
-    const compareBtn = document.getElementById('compareScenarios');
-    const resetBtn = document.getElementById('resetCalculator');
-    const advancedToggle = document.getElementById('advancedToggle');
-    const advancedContent = document.getElementById('advancedContent');
-    const advancedArrow = document.getElementById('advancedArrow');
-    const resultSection = document.getElementById('resultSection');
+    const clearBtn = document.getElementById('clearBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const rateCardBtn = document.getElementById('rateCardBtn');
     const alertContainer = document.getElementById('alertContainer');
+    const resultSection = document.getElementById('resultSection');
+    const lengthInput = document.getElementById('length');
+    const breadthInput = document.getElementById('breadth');
+    const heightInput = document.getElementById('height');
+    const volumetricWeightDisplay = document.getElementById('volumetricWeightDisplay');
+    const nationalShippingInput = document.getElementById('nationalShipping');
+    const discountInput = document.getElementById('discount');
     
-    // Input Elements
-    const sellingPrice = document.getElementById('sellingPrice');
-    const costPrice = document.getElementById('costPrice');
-    const productCategory = document.getElementById('productCategory');
-    const shippingRegion = document.getElementById('shippingRegion');
-    const productWeight = document.getElementById('productWeight');
-    const sellerType = document.getElementById('sellerType');
-    
-    // Advanced Options
-    const fixedFee = document.getElementById('fixedFee');
-    const shippingCharge = document.getElementById('shippingCharge');
-    const gstRate = document.getElementById('gstRate');
-    const tcsRate = document.getElementById('tcsRate');
-    
-    // Result Elements
-    const totalFeesCounter = document.getElementById('totalFeesCounter');
-    const payoutCounter = document.getElementById('payoutCounter');
-    const profitCounter = document.getElementById('profitCounter');
-    const marginCounter = document.getElementById('marginCounter');
-    
-    const totalFees = document.getElementById('totalFees');
-    const sellerPayout = document.getElementById('sellerPayout');
-    const netProfit = document.getElementById('netProfit');
-    const profitMargin = document.getElementById('profitMargin');
-    const profitCard = document.getElementById('profitCard');
-    const marginCard = document.getElementById('marginCard');
-    
-    const commissionFee = document.getElementById('commissionFee');
-    const closingFee = document.getElementById('closingFee');
-    const collectionFee = document.getElementById('collectionFee');
-    const shippingFee = document.getElementById('shippingFee');
-    const fixedFeeDisplay = document.getElementById('fixedFeeDisplay');
-    const gstFee = document.getElementById('gstFee');
-    const tcsFee = document.getElementById('tcsFee');
-    const gstRateDisplay = document.getElementById('gstRateDisplay');
-    const tcsRateDisplay = document.getElementById('tcsRateDisplay');
-    
-    const finalProfit = document.getElementById('finalProfit');
-    const finalMargin = document.getElementById('finalMargin');
-    
-    // Modal Elements
-    const compareModal = document.getElementById('compareModal');
-    const closeCompare = document.getElementById('closeCompare');
-    const comparisonResults = document.getElementById('comparisonResults');
+    // Modal elements
+    const rateCardModal = document.getElementById('rateCardModal');
     const closeModal = document.querySelectorAll('.close-modal');
+    const closeRateCard = document.getElementById('closeRateCard');
+    const infoIcon = document.getElementById('infoIcon');
 
-    // Commission rates by category
-    const commissionRates = {
-      mobiles: 3,
-      electronics: 7,
-      appliances: 6,
-      menfashion: 15,
-      womenfashion: 17,
-      home: 10,
-      furniture: 10,
-      beauty: 13,
-      books: 8,
-      grocery: 5,
-      sports: 12
-    };
-
-    // Shipping base rates by region
-    const shippingRates = {
-      local: 30,
-      zonal: 45,
-      national: 60
-    };
-
-    // Store calculation history
-    let calculationHistory = [];
-
-    // Event Listeners
+    // Event listeners
     calculateBtn.addEventListener('click', calculateFees);
-    saveBtn.addEventListener('click', saveCalculation);
-    compareBtn.addEventListener('click', compareScenarios);
-    resetBtn.addEventListener('click', resetCalculator);
-    advancedToggle.addEventListener('click', toggleAdvancedOptions);
+    clearBtn.addEventListener('click', clearInputs);
+    saveBtn.addEventListener('click', saveResults);
+    rateCardBtn.addEventListener('click', showRateCard);
+    infoIcon.addEventListener('click', showRateCard);
     
     // Close modal when clicking X
     closeModal.forEach(closeBtn => {
       closeBtn.addEventListener('click', function() {
-        compareModal.style.display = 'none';
+        rateCardModal.style.display = 'none';
       });
     });
 
-    // Close compare modal
-    closeCompare.addEventListener('click', function() {
-      compareModal.style.display = 'none';
+    // Close rate card modal
+    closeRateCard.addEventListener('click', function() {
+      rateCardModal.style.display = 'none';
     });
 
     // Close modal when clicking outside
     window.addEventListener('click', function(event) {
-      if (event.target === compareModal) {
-        compareModal.style.display = 'none';
+      if (event.target === rateCardModal) {
+        rateCardModal.style.display = 'none';
       }
     });
 
-    // Update GST and TCS rate displays when changed
-    gstRate.addEventListener('input', function() {
-      gstRateDisplay.textContent = gstRate.value;
+    // Also calculate when pressing Enter in input fields
+    document.querySelectorAll('input').forEach(input => {
+      input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') calculateFees();
+      });
     });
 
-    tcsRate.addEventListener('input', function() {
-      tcsRateDisplay.textContent = tcsRate.value;
+    // Update shipping when dimensions change
+    [lengthInput, breadthInput, heightInput].forEach(input => {
+      input.addEventListener('input', updateShippingFee);
     });
 
-    function calculateFees() {
-      // Validate inputs
-      if (!sellingPrice.value || !costPrice.value || !productWeight.value) {
-        showAlert('Please fill all required fields!', 'error');
-        return;
-      }
-
-      const sp = parseFloat(sellingPrice.value);
-      const cp = parseFloat(costPrice.value);
-      const weight = parseFloat(productWeight.value);
-      const category = productCategory.value;
-      const region = shippingRegion.value;
-      const fixedFeeVal = parseFloat(fixedFee.value) || 0;
-      const shippingChargeVal = parseFloat(shippingCharge.value) || 0;
-      const gstRateVal = parseFloat(gstRate.value) || 18;
-      const tcsRateVal = parseFloat(tcsRate.value) || 1;
-
-      if (sp <= 0 || cp <= 0 || weight <= 0) {
-        showAlert('Please enter valid positive values!', 'error');
-        return;
-      }
-
-      // Calculate commission
-      const comRate = commissionRates[category];
-      const commission = sp * comRate / 100;
-
-      // Calculate closing fee
-      let closing = sp <= 250 ? 6 : (sp <= 500 ? 12 : 25);
-
-      // Calculate collection fee
-      const collection = sp * 0.02;
-
-      // Calculate shipping fee
-      let ship = shippingRates[region] + (weight * 10);
-
-      // Calculate GST
-      const gst = (gstRateVal / 100) * (commission + collection + closing + ship + fixedFeeVal);
-
-      // Calculate TCS
-      const tcs = sp * (tcsRateVal / 100);
-
-      // Calculate total fees
-      const totalFee = commission + collection + closing + ship + fixedFeeVal + gst + tcs;
-
-      // Calculate payout and profit
-      const payout = sp - totalFee + shippingChargeVal;
-      const profit = payout - cp;
-      const profitPercentage = (profit / cp) * 100;
-
-      // Update counters
-      totalFeesCounter.textContent = `₹${totalFee.toFixed(2)}`;
-      payoutCounter.textContent = `₹${payout.toFixed(2)}`;
-      profitCounter.textContent = `₹${profit.toFixed(2)}`;
-      marginCounter.textContent = `${profitPercentage.toFixed(2)}%`;
-
-      // Update main results
-      totalFees.textContent = `₹${totalFee.toFixed(2)}`;
-      sellerPayout.textContent = `₹${payout.toFixed(2)}`;
-      netProfit.textContent = `₹${profit.toFixed(2)}`;
-      profitMargin.textContent = `${profitPercentage.toFixed(2)}%`;
-
-      // Update fee breakdown
-      commissionFee.textContent = `₹${commission.toFixed(2)}`;
-      closingFee.textContent = `₹${closing.toFixed(2)}`;
-      collectionFee.textContent = `₹${collection.toFixed(2)}`;
-      shippingFee.textContent = `₹${ship.toFixed(2)}`;
-      fixedFeeDisplay.textContent = `₹${fixedFeeVal.toFixed(2)}`;
-      gstFee.textContent = `₹${gst.toFixed(2)}`;
-      tcsFee.textContent = `₹${tcs.toFixed(2)}`;
-
-      // Update final profit/loss
-      finalProfit.innerHTML = `
-        <span>Final Profit / Loss:</span>
-        <span>₹${profit.toFixed(2)}</span>
-      `;
+    // Calculate volumetric weight
+    function calculateVolumetricWeight() {
+      const length = parseFloat(lengthInput.value) || 0;
+      const breadth = parseFloat(breadthInput.value) || 0;
+      const height = parseFloat(heightInput.value) || 0;
       
-      finalMargin.innerHTML = `
-        <span>Profit Margin:</span>
-        <span>${profitPercentage.toFixed(2)}%</span>
-      `;
+      const volumetricWeight = (length * breadth * height) / 5000;
+      volumetricWeightDisplay.textContent = `Volumetric Weight: ${volumetricWeight.toFixed(2)} kg`;
+      
+      return volumetricWeight;
+    }
 
-      // Set profit/loss colors
-      if (profit >= 0) {
-        profitCard.className = 'result-card profit-positive';
-        marginCard.className = 'result-card profit-positive';
-        finalProfit.className = 'profit-loss-item profit-positive';
-        finalMargin.className = 'profit-loss-item profit-positive';
-      } else {
-        profitCard.className = 'result-card profit-negative';
-        marginCard.className = 'result-card profit-negative';
-        finalProfit.className = 'profit-loss-item profit-negative';
-        finalMargin.className = 'profit-loss-item profit-negative';
+    // Calculate shipping fee based on volumetric weight
+    function calculateShippingFee(weight) {
+      if (weight <= 0.5) return 16;
+      if (weight <= 1) return 25;
+      if (weight <= 1.5) return 30;
+      if (weight <= 2) return 20;
+      
+      if (weight <= 3) {
+        // +20 for every 0.5kg beyond 2kg
+        const additionalHalfKgs = Math.ceil((weight - 2) / 0.5);
+        return 20 + (additionalHalfKgs * 20);
       }
+      
+      if (weight <= 12) {
+        // +18 for every 1kg beyond 3kg
+        const additionalKgs = Math.ceil(weight - 3);
+        return 20 + ((3 - 2) / 0.5 * 20) + (additionalKgs * 18);
+      }
+      
+      // Beyond 12kg: +8 for every 1kg
+      const additionalKgs = Math.ceil(weight - 12);
+      return 20 + ((3 - 2) / 0.5 * 20) + ((12 - 3) * 18) + (additionalKgs * 8);
+    }
 
+    // Parse discount input (can be amount or percentage)
+    function parseDiscount(discountStr, sellingPrice) {
+      if (!discountStr) return 0;
+      
+      // Check if it's a percentage
+      if (discountStr.includes('%')) {
+        const percentage = parseFloat(discountStr.replace('%', '')) || 0;
+        return (sellingPrice * percentage) / 100;
+      }
+      
+      // Otherwise treat as fixed amount
+      return parseFloat(discountStr) || 0;
+    }
+
+    // Update shipping fee when dimensions change
+    function updateShippingFee() {
+      const volumetricWeight = calculateVolumetricWeight();
+      const shippingFee = calculateShippingFee(volumetricWeight);
+      nationalShippingInput.value = shippingFee.toFixed(2);
+    }
+
+    // Calculate all fees and margins
+    function calculateFees() {
+      // Get input values
+      const sellingPrice = parseFloat(document.getElementById('sellingPrice').value) || 0;
+      const discountValue = discountInput.value;
+      const productPrice = parseFloat(document.getElementById('productPrice').value) || 0;
+      const commissionType = document.getElementById('commissionType').value;
+      const sellerTier = document.getElementById('sellerTier').value;
+      const returnRto = parseFloat(document.getElementById('returnRto').value) || 0;
+      const packingFees = parseFloat(document.getElementById('packingFees').value) || 0;
+      const gstRate = parseFloat(document.getElementById('gst').value) || 0;
+      
+      // Validate inputs
+      if (sellingPrice <= 0) {
+        showAlert('Please enter a valid selling price.', 'error');
+        return;
+      }
+      
+      // Calculate discount
+      const discountAmount = parseDiscount(discountValue, sellingPrice);
+      const finalSellingPrice = sellingPrice - discountAmount;
+      
+      // Calculate volumetric weight and shipping
+      const volumetricWeight = calculateVolumetricWeight();
+      const shippingFee = calculateShippingFee(volumetricWeight);
+      
+      // Get commission and fixed fees from rate card
+      const commissionFee = rateCard[sellerTier][commissionType];
+      
+      // Calculate GST on final selling price
+      const gstAmount = (finalSellingPrice * gstRate) / 100;
+      
+      // Calculate total Flipkart fees
+      const totalFees = commissionFee + shippingFee + returnRto + packingFees;
+      
+      // Calculate gross margin (excluding GST)
+      const grossMargin = finalSellingPrice - totalFees - productPrice;
+      
+      // Update counters
+      document.getElementById('commissionCount').textContent = `₹${commissionFee.toFixed(2)}`;
+      document.getElementById('shippingCount').textContent = `₹${shippingFee.toFixed(2)}`;
+      document.getElementById('otherFeesCount').textContent = `₹${(returnRto + packingFees).toFixed(2)}`;
+      document.getElementById('totalFeesCount').textContent = `₹${totalFees.toFixed(2)}`;
+      
+      // Update results in the UI
+      document.getElementById('sellingPriceResult').textContent = `₹${sellingPrice.toFixed(2)}`;
+      document.getElementById('discountResult').textContent = `₹${discountAmount.toFixed(2)}`;
+      document.getElementById('finalSellingPrice').textContent = `₹${finalSellingPrice.toFixed(2)}`;
+      document.getElementById('commissionFee').textContent = `₹${commissionFee.toFixed(2)}`;
+      document.getElementById('shippingFee').textContent = `₹${shippingFee.toFixed(2)}`;
+      document.getElementById('rtoFee').textContent = `₹${returnRto.toFixed(2)}`;
+      document.getElementById('packingFee').textContent = `₹${packingFees.toFixed(2)}`;
+      document.getElementById('gstFee').textContent = `₹${gstAmount.toFixed(2)}`;
+      document.getElementById('totalFees').textContent = `₹${totalFees.toFixed(2)}`;
+      document.getElementById('grossMargin').textContent = `₹${grossMargin.toFixed(2)}`;
+      
+      // Color code the gross margin
+      const grossMarginElement = document.getElementById('grossMargin');
+      if (grossMargin < 0) {
+        grossMarginElement.className = 'result-value loss';
+      } else {
+        grossMarginElement.className = 'result-value profit';
+      }
+      
       // Show result section
       resultSection.style.display = 'block';
-
-      // Store calculation
-      const calculation = {
-        timestamp: new Date().toISOString(),
-        sellingPrice: sp,
-        costPrice: cp,
-        category: category,
-        profit: profit,
-        margin: profitPercentage,
-        fees: totalFee
-      };
       
-      calculationHistory.push(calculation);
-      
-      // Keep only last 10 calculations
-      if (calculationHistory.length > 10) {
-        calculationHistory = calculationHistory.slice(-10);
-      }
-
+      // Show success message
       showAlert('Fees calculated successfully!', 'success');
     }
 
-    function saveCalculation() {
-      if (calculationHistory.length === 0) {
-        showAlert('No calculation to save! Please calculate first.', 'error');
-        return;
-      }
-
-      const latestCalculation = calculationHistory[calculationHistory.length - 1];
-      const dataStr = JSON.stringify(latestCalculation, null, 2);
-      const dataBlob = new Blob([dataStr], {type: 'application/json'});
-      
-      const url = URL.createObjectURL(dataBlob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `flipkart-calculation-${new Date().toISOString().slice(0, 10)}.json`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      showAlert('Calculation saved successfully!', 'success');
-    }
-
-    function compareScenarios() {
-      if (calculationHistory.length < 2) {
-        showAlert('Need at least 2 calculations to compare!', 'error');
-        return;
-      }
-
-      // Generate comparison table
-      let comparisonHTML = `
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background: #f8f9fa;">
-              <th style="padding: 12px; text-align: left; border-bottom: 2px solid #dee2e6;">Scenario</th>
-              <th style="padding: 12px; text-align: right; border-bottom: 2px solid #dee2e6;">Selling Price</th>
-              <th style="padding: 12px; text-align: right; border-bottom: 2px solid #dee2e6;">Cost Price</th>
-              <th style="padding: 12px; text-align: right; border-bottom: 2px solid #dee2e6;">Total Fees</th>
-              <th style="padding: 12px; text-align: right; border-bottom: 2px solid #dee2e6;">Profit</th>
-              <th style="padding: 12px; text-align: right; border-bottom: 2px solid #dee2e6;">Margin</th>
-            </tr>
-          </thead>
-          <tbody>
-      `;
-
-      calculationHistory.forEach((calc, index) => {
-        const profitClass = calc.profit >= 0 ? 'profit-positive' : 'profit-negative';
-        comparisonHTML += `
-          <tr>
-            <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Scenario ${index + 1}</td>
-            <td style="padding: 12px; text-align: right; border-bottom: 1px solid #dee2e6;">₹${calc.sellingPrice.toFixed(2)}</td>
-            <td style="padding: 12px; text-align: right; border-bottom: 1px solid #dee2e6;">₹${calc.costPrice.toFixed(2)}</td>
-            <td style="padding: 12px; text-align: right; border-bottom: 1px solid #dee2e6;">₹${calc.fees.toFixed(2)}</td>
-            <td style="padding: 12px; text-align: right; border-bottom: 1px solid #dee2e6;" class="${profitClass}">₹${calc.profit.toFixed(2)}</td>
-            <td style="padding: 12px; text-align: right; border-bottom: 1px solid #dee2e6;" class="${profitClass}">${calc.margin.toFixed(2)}%</td>
-          </tr>
-        `;
-      });
-
-      comparisonHTML += `</tbody></table>`;
-      comparisonResults.innerHTML = comparisonHTML;
-      compareModal.style.display = 'block';
-    }
-
-    function resetCalculator() {
-      sellingPrice.value = '';
-      costPrice.value = '';
-      productWeight.value = '0.5';
-      fixedFee.value = '0';
-      shippingCharge.value = '0';
+    function clearInputs() {
+      document.getElementById('productName').value = '';
+      document.getElementById('sellingPrice').value = '';
+      document.getElementById('discount').value = '';
+      document.getElementById('productPrice').value = '';
+      document.getElementById('length').value = '';
+      document.getElementById('breadth').value = '';
+      document.getElementById('height').value = '';
+      document.getElementById('returnRto').value = '';
+      document.getElementById('packingFees').value = '';
       resultSection.style.display = 'none';
       
       // Reset counters
-      totalFeesCounter.textContent = '₹0.00';
-      payoutCounter.textContent = '₹0.00';
-      profitCounter.textContent = '₹0.00';
-      marginCounter.textContent = '0%';
+      document.getElementById('commissionCount').textContent = '₹0.00';
+      document.getElementById('shippingCount').textContent = '₹0.00';
+      document.getElementById('otherFeesCount').textContent = '₹0.00';
+      document.getElementById('totalFeesCount').textContent = '₹0.00';
       
-      showAlert('Calculator reset!', 'success');
+      updateShippingFee();
+      showAlert('Inputs cleared.', 'success');
     }
 
-    function toggleAdvancedOptions() {
-      advancedContent.classList.toggle('show');
-      advancedArrow.classList.toggle('fa-chevron-down');
-      advancedArrow.classList.toggle('fa-chevron-up');
+    function saveResults() {
+      if (resultSection.style.display === 'none') {
+        showAlert('No results to save. Please calculate fees first.', 'error');
+        return;
+      }
+      
+      // Create a text representation of the results
+      const productName = document.getElementById('productName').value || 'Unnamed Product';
+      const resultText = `Flipkart Fee Calculator Results
+Product: ${productName}
+Selling Price: ${document.getElementById('sellingPriceResult').textContent}
+Discount Applied: ${document.getElementById('discountResult').textContent}
+Final Selling Price: ${document.getElementById('finalSellingPrice').textContent}
+Commission Fee: ${document.getElementById('commissionFee').textContent}
+Shipping Fee: ${document.getElementById('shippingFee').textContent}
+Return RTO: ${document.getElementById('rtoFee').textContent}
+Packing Fees: ${document.getElementById('packingFee').textContent}
+GST: ${document.getElementById('gstFee').textContent}
+Total Flipkart Fees: ${document.getElementById('totalFees').textContent}
+Gross Margin: ${document.getElementById('grossMargin').textContent}
+Calculated on: ${new Date().toLocaleString()}`;
+      
+      // Create a blob and download link
+      const blob = new Blob([resultText], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'flipkart_fee_calculation.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      showAlert('Results saved successfully!', 'success');
+    }
+
+    function showRateCard() {
+      rateCardModal.style.display = 'block';
     }
 
     function showAlert(message, type) {
@@ -1246,5 +1369,8 @@ Profit: ₹205.56 (51.39%)</div>
         }
       }, 5000);
     }
+
+    // Initialize
+    updateShippingFee();
   });
 </script>
