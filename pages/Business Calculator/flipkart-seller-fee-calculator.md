@@ -692,7 +692,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="sellingPrice">Selling Price (₹)</label>
+        <label for="sellingPrice">Selling Price (MRP) (₹)</label>
         <input type="number" id="sellingPrice" placeholder="Enter selling price" min="0" step="0.01">
       </div>
       
@@ -707,6 +707,11 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       <div class="input-group">
         <label for="productPrice">Product Price/Cost (₹)</label>
         <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
+      </div>
+
+       <div class="input-group">
+        <label for="packingFees">Packing Cost (₹)</label>
+        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
       </div>
       
       <div class="input-group">
@@ -778,11 +783,6 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       <div class="input-group">
         <label for="returnRto">Return RTO (₹)</label>
         <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label for="packingFees">Packing Fees (₹)</label>
-        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
       </div>
       
       <div class="input-group">
