@@ -621,7 +621,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="sellerTier">Seller Tier</label>
+        <label for="sellerTier">Seller Tier (Closing/Fixed Fees)</label>
         <select id="sellerTier">
           <option value="Platinum">Platinum</option>
           <option value="Gold">Gold</option>
