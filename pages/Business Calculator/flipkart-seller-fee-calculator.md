@@ -606,6 +606,11 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
         <label for="productPrice">Product Price/Cost (₹)</label>
         <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
       </div>
+
+      <div class="input-group">
+        <label for="packingFees">Packing Cost (₹)</label>
+        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
+      </div>
       
       <div class="input-group">
         <label for="commissionType">Commission Type</label>
@@ -654,11 +659,6 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       <div class="input-group">
         <label for="returnRto">Return RTO (₹)</label>
         <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label for="packingFees">Packing Fees (₹)</label>
-        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
       </div>
       
       <div class="input-group">
