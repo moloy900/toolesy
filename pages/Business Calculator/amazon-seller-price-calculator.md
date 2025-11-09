@@ -639,10 +639,6 @@ permalink: /amazon-seller-price-calculator-fees-profit/
         </div>
       </div>
       
-      <div class="input-group">
-        <label for="productPrice">Product Price/Cost (₹)</label>
-        <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
-      </div>
 
       <div class="input-grid">
         <div class="input-group">
@@ -676,6 +672,11 @@ permalink: /amazon-seller-price-calculator-fees-profit/
           <label for="closingFee">Closing Fee (₹)</label>
           <input type="text" id="closingFee" readonly>
         </div>
+      </div>
+
+      <div class="input-group">
+        <label for="productPrice">Product Price/Cost (₹)</label>
+        <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
       </div>
 
        <div class="input-group">
