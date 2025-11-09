@@ -135,6 +135,12 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     gap: 15px;
   }
 
+  .weight-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
   .results-section {
     margin: 30px 0;
     padding: 25px;
@@ -330,6 +336,81 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     margin-bottom: 25px;
   }
 
+  /* New styles for share and donation buttons */
+  .share-donation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .share-buttons,
+  .donation-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .share-button,
+  .donation-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .share-button:hover,
+  .donation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .facebook {
+    background: #3b5998;
+    color: white;
+  }
+
+  .twitter {
+    background: #1da1f2;
+    color: white;
+  }
+
+  .linkedin {
+    background: #0077b5;
+    color: white;
+  }
+
+  .pinterest {
+    background: #bd081c;
+    color: white;
+  }
+
+  .reddit {
+    background: #FF4500;
+    color: white;
+  }
+
+  .paypal {
+    background: #0070ba;
+    color: white;
+  }
+
+  .coffee {
+    background: #ff813f;
+    color: white;
+  }
+
   .upload-icon {
     color: var(--primary);
     cursor: pointer;
@@ -484,6 +565,23 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     text-align: center;
   }
 
+  .weight-calculation {
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid #ffc107;
+  }
+
+  .weight-result {
+    background: #d1ecf1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border-left: 4px solid #17a2b8;
+    font-weight: 600;
+  }
+
   .discount-info {
     background: #fff8e1;
     padding: 10px 15px;
@@ -549,6 +647,10 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       grid-template-columns: 1fr;
     }
 
+    .weight-group {
+      grid-template-columns: 1fr;
+    }
+
     .results-grid {
       grid-template-columns: 1fr;
     }
@@ -590,7 +692,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="sellingPrice">Selling Price(MRP) (₹)</label>
+        <label for="sellingPrice">Selling Price (₹)</label>
         <input type="number" id="sellingPrice" placeholder="Enter selling price" min="0" step="0.01">
       </div>
       
@@ -606,11 +708,6 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
         <label for="productPrice">Product Price/Cost (₹)</label>
         <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
       </div>
-
-      <div class="input-group">
-        <label for="packingFees">Packing Cost (₹)</label>
-        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
-      </div>
       
       <div class="input-group">
         <label for="commissionType">Commission Type</label>
@@ -621,7 +718,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="sellerTier">Seller Tier (Closing/Fixed Fees)</label>
+        <label for="sellerTier">Seller Tier</label>
         <select id="sellerTier">
           <option value="Platinum">Platinum</option>
           <option value="Gold">Gold</option>
@@ -631,10 +728,10 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label>Package Dimensions (for shipping calculation)</label>
+        <label>Package Dimensions & Weight</label>
         <div class="dimensions-group">
           <div>
-            <label for="length"> Length (cm)</label>
+            <label for="length">Length (cm)</label>
             <input type="number" id="length" placeholder="Length" min="0" step="0.1">
           </div>
           <div>
@@ -646,8 +743,30 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
             <input type="number" id="height" placeholder="Height" min="0" step="0.1">
           </div>
         </div>
-        <div class="volumetric-weight" id="volumetricWeightDisplay">
-          Volumetric Weight: 0 kg
+        
+        <div class="weight-group">
+          <div>
+            <label for="actualWeight">Actual Weight (kg)</label>
+            <input type="number" id="actualWeight" placeholder="Actual weight" min="0" step="0.01">
+          </div>
+          <div>
+            <label for="divisor">Volumetric Divisor</label>
+            <select id="divisor">
+              <option value="5000">5000 (Flipkart/Amazon)</option>
+              <option value="6000">6000 (Other Couriers)</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="weight-calculation" id="weightCalculation">
+          <strong>Weight Calculation:</strong><br>
+          <span id="volumetricCalc">Volumetric Weight = (L × B × H) / 5000</span><br>
+          <span id="actualWeightDisplay">Actual Weight: 0 kg</span><br>
+          <span id="volumetricWeightDisplay">Volumetric Weight: 0 kg</span>
+        </div>
+        
+        <div class="weight-result" id="finalWeightResult">
+          Final Shipping Weight: 0 kg (Based on higher value)
         </div>
       </div>
       
@@ -659,6 +778,11 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       <div class="input-group">
         <label for="returnRto">Return RTO (₹)</label>
         <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
+      </div>
+      
+      <div class="input-group">
+        <label for="packingFees">Packing Fees (₹)</label>
+        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
       </div>
       
       <div class="input-group">
@@ -745,32 +869,44 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     <div class="examples">
       <h2>Examples</h2>
 
-      <h3>Example 1: High Margin Product</h3>
-      <div class="example-text">Selling Price: ₹1000
+      <h3>Example 1: Gangajal (1 Liter Bottle)</h3>
+      <div class="example-text">Selling Price: ₹200
 Discount: 10%
-Product Cost: ₹500
+Product Cost: ₹80
+Dimensions: 9.5cm × 30cm × 9.5cm
+Actual Weight: 1.07kg
+Volumetric Weight: 0.54kg
+Final Weight: 1.07kg (higher value)
 Commission: ₹63 (Platinum, Non-FBF)
 Shipping: ₹25
 Total Fees: ₹88
-Gross Margin: ₹412 (41.2%)</div>
+Gross Margin: ₹92 (46%)</div>
 
-      <h3>Example 2: Low Margin Product</h3>
+      <h3>Example 2: Lightweight Product</h3>
       <div class="example-text">Selling Price: ₹500
 Discount: 5%
-Product Cost: ₹400
+Product Cost: ₹300
+Dimensions: 20cm × 20cm × 10cm
+Actual Weight: 0.3kg
+Volumetric Weight: 0.8kg
+Final Weight: 0.8kg (higher value)
 Commission: ₹69 (Silver, Non-FBF)
 Shipping: ₹16
 Total Fees: ₹85
-Gross Margin: ₹15 (3%)</div>
+Gross Margin: ₹115 (23%)</div>
 
-      <h3>Example 3: Loss Scenario</h3>
-      <div class="example-text">Selling Price: ₹300
-Discount: 20%
-Product Cost: ₹250
-Commission: ₹69 (Bronze, Non-FBF)
-Shipping: ₹25
-Total Fees: ₹94
-Gross Margin: -₹44 (-14.7%)</div>
+      <h3>Example 3: Heavy Small Product</h3>
+      <div class="example-text">Selling Price: ₹800
+Discount: 15%
+Product Cost: ₹400
+Dimensions: 10cm × 10cm × 5cm
+Actual Weight: 2.5kg
+Volumetric Weight: 0.1kg
+Final Weight: 2.5kg (higher value)
+Commission: ₹65 (Gold, Non-FBF)
+Shipping: ₹30
+Total Fees: ₹95
+Gross Margin: ₹305 (38.1%)</div>
     </div>
   </div>
 
@@ -860,64 +996,84 @@ Gross Margin: -₹44 (-14.7%)</div>
 
   <!-- SEO Content Section -->
   <div class="content-placeholder">
-    <h2>Free Online Flipkart Fee Calculator with Discount</h2>
+    <h2>Free Online Flipkart Fee Calculator with Volumetric Weight</h2>
 
-    <p>Need to calculate your profit margins on Flipkart accurately? Our free <strong>Flipkart Fee Calculator with Discount</strong> is the perfect tool for sellers, entrepreneurs, and businesses selling on India's leading e-commerce platform. This powerful calculator instantly computes all Flipkart fees including commission, shipping, packing, RTO, and GST to give you a clear picture of your actual profit margins. There's no download required, no registration needed, and your financial data remains completely private.</p>
+    <p>Need to calculate your profit margins on Flipkart accurately? Our free <strong>Flipkart Fee Calculator with Volumetric Weight</strong> is the perfect tool for sellers, entrepreneurs, and businesses selling on India's leading e-commerce platform. This advanced calculator automatically computes shipping fees based on both actual weight and volumetric weight, ensuring accurate cost calculations for all types of products including liquids like Gangajal, lightweight bulky items, and heavy compact products.</p>
 
-    <h3>How to Use This Flipkart Fee Calculator (Step-by-Step):</h3>
+    <h3>How Volumetric Weight Calculation Works</h3>
+    <p>Flipkart and Amazon use a sophisticated shipping cost calculation method that considers both the <strong>actual weight</strong> and <strong>volumetric weight</strong> of your package, charging based on whichever is higher:</p>
+    
     <ul>
-      <li><strong>Enter Product Details:</strong> Input your product name, selling price, and any discounts (either fixed amount or percentage).</li>
-      <li><strong>Set Cost & Commission:</strong> Enter your product cost and select your seller tier and commission type (FBF or Non-FBF).</li>
-      <li><strong>Package Dimensions:</strong> Input your package dimensions to automatically calculate shipping fees based on volumetric weight.</li>
-      <li><strong>Additional Fees:</strong> Enter any additional fees like packing charges and return RTO costs.</li>
-      <li><strong>Calculate:</strong> Click the "Calculate Fees & Margin" button to instantly see your detailed profit breakdown.</li>
-      <li><strong>Analyze Results:</strong> Review the comprehensive breakdown including all fees and your final profit margin.</li>
+      <li><strong>Actual Weight:</strong> The physical weight of your product including packaging</li>
+      <li><strong>Volumetric Weight:</strong> Calculated as (Length × Breadth × Height) / 5000</li>
+      <li><strong>Final Shipping Weight:</strong> The higher value between actual and volumetric weight</li>
     </ul>
 
-    <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're selling a product for ₹1,000 with a 10% discount. Your product cost is ₹500, and you're a Platinum tier seller using Non-FBF commission. Instead of manually calculating all the complex fees (which can be time-consuming and prone to errors), you can simply enter these values into our calculator. The tool will instantly show that after ₹100 discount, ₹63 commission, ₹25 shipping, and other fees, your actual profit is ₹412 with a 41.2% margin. This quick calculation helps you make informed pricing decisions for your Flipkart business.</p>
-
-    <h3>Benefits & Who Should Use This Tool:</h3>
+    <h3>Real-Life Examples:</h3>
+    
+    <h4>🧊 Example 1: Gangajal (1 Liter Bottle)</h4>
     <ul>
-      <li><strong>Flipkart Sellers:</strong> Accurately calculate profit margins for products to optimize pricing strategies.</li>
-      <li><strong>E-commerce Entrepreneurs:</strong> Evaluate the profitability of different product categories and seller tiers.</li>
-      <li><strong>Business Owners:</strong> Make data-driven decisions about which products to sell on Flipkart.</li>
-      <li><strong>New Sellers:</strong> Understand the complete fee structure before listing products on Flipkart.</li>
-      <li><strong>Experienced Sellers:</strong> Quickly calculate margins for new products or during promotional periods.</li>
-      <li><strong>Product Managers:</strong> Analyze the impact of discounts and promotions on overall profitability.</li>
+      <li><strong>Actual Weight:</strong> 1.07 kg (1000g water + 70g bottle)</li>
+      <li><strong>Dimensions:</strong> 9.5cm × 30cm × 9.5cm</li>
+      <li><strong>Volumetric Weight:</strong> (9.5 × 30 × 9.5) / 5000 = 0.54 kg</li>
+      <li><strong>Final Weight:</strong> 1.07 kg (actual weight is higher)</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: What is the difference between FBF and Non-FBF commission?</strong><br>
-      A: FBF (Flipkart Advantage) sellers get lower commission rates as Flipkart handles storage, packing, and shipping. Non-FBF sellers have higher commission but handle these aspects themselves.</p>
-
-    <p><strong>Q: How is volumetric weight calculated for shipping?</strong><br>
-      A: Volumetric weight = (Length × Breadth × Height) / 5000 (in cm). Flipkart charges shipping based on whichever is higher - actual weight or volumetric weight.</p>
-
-    <p><strong>Q: Is my financial data kept private when I use this calculator?</strong><br>
-      A: Absolutely. All calculations happen locally in your browser. We don't store, transmit, or have access to any of the data you enter into the calculator.</p>
-
-    <p><strong>Q: Can I use this calculator on my mobile phone?</strong><br>
-      A: Yes, our website and calculator are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
-
-    <p><strong>Q: Do I need to create an account or pay to use this?</strong><br>
-      A: No, this is a completely free tool. There is no sign-up, no subscription, and no hidden fees.</p>
-
-    <h3>Why Choose Our Flipkart Fee Calculator?</h3>
-    <p>Our <strong>Flipkart Fee Calculator</strong> stands out from other tools because of its accuracy, comprehensiveness, and privacy features. Unlike many online calculators, we include all relevant Flipkart fees and automatically calculate shipping based on package dimensions. The tool works entirely in your browser, ensuring your sensitive financial information remains completely private. The interface is clean and intuitive, making it easy for anyone to calculate Flipkart profit margins without financial expertise.</p>
-
-    <h3>Understanding Flipkart Fee Structure</h3>
-    <p>Flipkart's fee structure includes several components that impact your final profit margin. The main fees are commission (which varies by category and seller tier), shipping fees (based on weight and distance), fixed fee, collection fee, and GST on these fees. Additionally, sellers may incur costs for packing, returns (RTO), and other value-added services. Understanding this complete fee structure is essential for setting profitable prices on the platform.</p>
-
-    <h3>Common Applications of Flipkart Fee Calculation</h3>
-    <p>Fee calculation has numerous practical applications across various business scenarios:</p>
+    <h4>📦 Example 2: Lightweight Bulky Item</h4>
     <ul>
-      <li><strong>Pricing Strategy:</strong> Determine optimal selling prices to achieve target profit margins</li>
-      <li><strong>Product Selection:</strong> Evaluate which products are most profitable to sell on Flipkart</li>
-      <li><strong>Promotion Planning:</strong> Calculate the impact of discounts and promotions on profitability</li>
-      <li><strong>Tier Optimization:</strong> Determine if upgrading your seller tier would be financially beneficial</li>
-      <li><strong>Inventory Management:</strong> Make informed decisions about which products to restock based on profitability</li>
+      <li><strong>Actual Weight:</strong> 0.3 kg</li>
+      <li><strong>Dimensions:</strong> 20cm × 20cm × 10cm</li>
+      <li><strong>Volumetric Weight:</strong> (20 × 20 × 10) / 5000 = 0.8 kg</li>
+      <li><strong>Final Weight:</strong> 0.8 kg (volumetric weight is higher)</li>
     </ul>
+
+    <h3>Why This Calculator is Essential for Sellers</h3>
+    <p>Understanding volumetric weight is crucial because:</p>
+    <ul>
+      <li><strong>Avoid Cost Surprises:</strong> Many sellers underestimate shipping costs for lightweight but bulky items</li>
+      <li><strong>Optimize Packaging:</strong> Reduce package dimensions to lower volumetric weight</li>
+      <li><strong>Accurate Pricing:</strong> Set product prices that account for true shipping costs</li>
+      <li><strong>Product Selection:</strong> Choose products with favorable weight-to-size ratios</li>
+    </ul>
+
+    <h3>Platform-wise Volumetric Weight Rules</h3>
+    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+      <thead>
+        <tr style="background-color: #047bd5; color: white;">
+          <th style="padding: 12px; text-align: left;">Platform</th>
+          <th style="padding: 12px; text-align: left;">Weight Rule</th>
+          <th style="padding: 12px; text-align: left;">Volumetric Divisor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 12px;"><strong>Amazon</strong></td>
+          <td style="padding: 12px;">Higher of (Actual, Volumetric)</td>
+          <td style="padding: 12px;">5000</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 12px;"><strong>Flipkart</strong></td>
+          <td style="padding: 12px;">Higher of (Actual, Volumetric)</td>
+          <td style="padding: 12px;">5000</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 12px;"><strong>Other Couriers</strong></td>
+          <td style="padding: 12px;">Higher of (Actual, Volumetric)</td>
+          <td style="padding: 12px;">5000 or 6000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>How to Use This Calculator Effectively</h3>
+    <ul>
+      <li><strong>Measure Accurately:</strong> Use precise dimensions of your packaged product</li>
+      <li><strong>Weigh Properly:</strong> Include all packaging materials in actual weight</li>
+      <li><strong>Choose Correct Divisor:</strong> Use 5000 for Flipkart/Amazon, 6000 for other couriers</li>
+      <li><strong>Optimize Packaging:</strong> If volumetric weight is higher, consider smaller packaging</li>
+      <li><strong>Compare Scenarios:</strong> Test different packaging options to find the most cost-effective solution</li>
+    </ul>
+
+    <p>This calculator takes the guesswork out of Flipkart fee calculations and helps you make informed decisions about product pricing, packaging, and profitability. All calculations happen locally in your browser, ensuring complete privacy of your business data.</p>
   </div>
 </div>
 
@@ -1034,7 +1190,10 @@ Gross Margin: -₹44 (-14.7%)</div>
     const lengthInput = document.getElementById('length');
     const breadthInput = document.getElementById('breadth');
     const heightInput = document.getElementById('height');
-    const volumetricWeightDisplay = document.getElementById('volumetricWeightDisplay');
+    const actualWeightInput = document.getElementById('actualWeight');
+    const divisorSelect = document.getElementById('divisor');
+    const weightCalculation = document.getElementById('weightCalculation');
+    const finalWeightResult = document.getElementById('finalWeightResult');
     const nationalShippingInput = document.getElementById('nationalShipping');
     const discountInput = document.getElementById('discount');
     
@@ -1077,9 +1236,9 @@ Gross Margin: -₹44 (-14.7%)</div>
       });
     });
 
-    // Update shipping when dimensions change
-    [lengthInput, breadthInput, heightInput].forEach(input => {
-      input.addEventListener('input', updateShippingFee);
+    // Update weight calculation when dimensions or weight change
+    [lengthInput, breadthInput, heightInput, actualWeightInput, divisorSelect].forEach(input => {
+      input.addEventListener('input', updateWeightCalculation);
     });
 
     // Calculate volumetric weight
@@ -1087,14 +1246,59 @@ Gross Margin: -₹44 (-14.7%)</div>
       const length = parseFloat(lengthInput.value) || 0;
       const breadth = parseFloat(breadthInput.value) || 0;
       const height = parseFloat(heightInput.value) || 0;
+      const divisor = parseFloat(divisorSelect.value) || 5000;
       
-      const volumetricWeight = (length * breadth * height) / 5000;
-      volumetricWeightDisplay.textContent = `Volumetric Weight: ${volumetricWeight.toFixed(2)} kg`;
-      
+      const volumetricWeight = (length * breadth * height) / divisor;
       return volumetricWeight;
     }
 
-    // Calculate shipping fee based on volumetric weight
+    // Calculate final shipping weight (higher of actual or volumetric)
+    function calculateFinalWeight() {
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      const volumetricWeight = calculateVolumetricWeight();
+      
+      return Math.max(actualWeight, volumetricWeight);
+    }
+
+    // Update weight calculation display
+    function updateWeightCalculation() {
+      const length = parseFloat(lengthInput.value) || 0;
+      const breadth = parseFloat(breadthInput.value) || 0;
+      const height = parseFloat(heightInput.value) || 0;
+      const actualWeight = parseFloat(actualWeightInput.value) || 0;
+      const divisor = parseFloat(divisorSelect.value) || 5000;
+      
+      const volumetricWeight = calculateVolumetricWeight();
+      const finalWeight = calculateFinalWeight();
+      
+      // Update calculation display
+      document.getElementById('volumetricCalc').textContent = 
+        `Volumetric Weight = (${length} × ${breadth} × ${height}) / ${divisor} = ${volumetricWeight.toFixed(2)} kg`;
+      
+      document.getElementById('actualWeightDisplay').textContent = 
+        `Actual Weight: ${actualWeight.toFixed(2)} kg`;
+      
+      document.getElementById('volumetricWeightDisplay').textContent = 
+        `Volumetric Weight: ${volumetricWeight.toFixed(2)} kg`;
+      
+      // Update final weight result
+      let weightType = '';
+      if (actualWeight > volumetricWeight) {
+        weightType = 'Actual Weight is higher';
+      } else if (volumetricWeight > actualWeight) {
+        weightType = 'Volumetric Weight is higher';
+      } else {
+        weightType = 'Both weights are equal';
+      }
+      
+      finalWeightResult.textContent = 
+        `Final Shipping Weight: ${finalWeight.toFixed(2)} kg (${weightType})`;
+      
+      // Update shipping fee
+      updateShippingFee(finalWeight);
+    }
+
+    // Calculate shipping fee based on final weight
     function calculateShippingFee(weight) {
       if (weight <= 0.5) return 16;
       if (weight <= 1) return 25;
@@ -1132,10 +1336,9 @@ Gross Margin: -₹44 (-14.7%)</div>
       return parseFloat(discountStr) || 0;
     }
 
-    // Update shipping fee when dimensions change
-    function updateShippingFee() {
-      const volumetricWeight = calculateVolumetricWeight();
-      const shippingFee = calculateShippingFee(volumetricWeight);
+    // Update shipping fee when weight changes
+    function updateShippingFee(finalWeight) {
+      const shippingFee = calculateShippingFee(finalWeight);
       nationalShippingInput.value = shippingFee.toFixed(2);
     }
 
@@ -1161,9 +1364,9 @@ Gross Margin: -₹44 (-14.7%)</div>
       const discountAmount = parseDiscount(discountValue, sellingPrice);
       const finalSellingPrice = sellingPrice - discountAmount;
       
-      // Calculate volumetric weight and shipping
-      const volumetricWeight = calculateVolumetricWeight();
-      const shippingFee = calculateShippingFee(volumetricWeight);
+      // Calculate final weight and shipping
+      const finalWeight = calculateFinalWeight();
+      const shippingFee = calculateShippingFee(finalWeight);
       
       // Get commission and fixed fees from rate card
       const commissionFee = rateCard[sellerTier][commissionType];
@@ -1218,6 +1421,7 @@ Gross Margin: -₹44 (-14.7%)</div>
       document.getElementById('length').value = '';
       document.getElementById('breadth').value = '';
       document.getElementById('height').value = '';
+      document.getElementById('actualWeight').value = '';
       document.getElementById('returnRto').value = '';
       document.getElementById('packingFees').value = '';
       resultSection.style.display = 'none';
@@ -1228,7 +1432,7 @@ Gross Margin: -₹44 (-14.7%)</div>
       document.getElementById('otherFeesCount').textContent = '₹0.00';
       document.getElementById('totalFeesCount').textContent = '₹0.00';
       
-      updateShippingFee();
+      updateWeightCalculation();
       showAlert('Inputs cleared.', 'success');
     }
 
@@ -1296,6 +1500,6 @@ Calculated on: ${new Date().toLocaleString()}`;
     }
 
     // Initialize
-    updateShippingFee();
+    updateWeightCalculation();
   });
 </script>
