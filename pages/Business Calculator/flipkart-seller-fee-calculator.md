@@ -652,7 +652,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="sellingPrice">Selling Price (MRP) (₹)</label>
+        <label for="sellingPrice">MRP Price(₹)</label>
         <input type="number" id="sellingPrice" placeholder="Enter selling price" min="0" step="0.01">
       </div>
       
