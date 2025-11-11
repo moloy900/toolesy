@@ -1505,91 +1505,139 @@ Gross Margin: ₹157 (800 - 243 - 400)</div>
       shippingFeeInput.value = shippingFee.toFixed(2);
     }
 
+
+
+    // Update the Tier Type change event listener
+tierTypeSelect.addEventListener('change', function() {
+  updateSellerTierOptions();
+  
+  if (this.value === 'FBF') {
+    // Change label to "Pick & Pack Fee" for FBF
+    packingCostGroup.querySelector('label').textContent = 'Pick & Pack Fee (₹)';
+    packingFeesInput.placeholder = 'Enter pick & pack fee';
+    fbaSection.style.display = 'block'; // Show FBA section
+  } else {
+    // Change label back to "Packing Cost" for Non-FBF
+    packingCostGroup.querySelector('label').textContent = 'Packing Cost (₹)';
+    packingFeesInput.placeholder = 'Enter packing charges';
+    fbaSection.style.display = 'none'; // Hide FBA section
+    // Clear storage fee when switching to Non-FBF
+    document.getElementById('storageFee').value = '';
+  }
+});
+
+
     // Calculate all fees and margins
     function calculateFees() {
-      // Get input values
-      const sellingPrice = parseFloat(document.getElementById('sellingPrice').value) || 0;
-      const discountValue = discountInput.value;
-      const productPrice = parseFloat(document.getElementById('productPrice').value) || 0;
-      const tierType = document.getElementById('tierType').value;
-      const sellerTier = document.getElementById('sellerTier').value;
-      const packingFees = parseFloat(document.getElementById('packingFees').value) || 0;
-      const gstRate = parseFloat(document.getElementById('gst').value) || 0;
-      const shippingType = shippingTypeSelect.value;
-      const commissionValue = commissionFeeInput.value;
-      
-      // Validate inputs
-      if (sellingPrice <= 0) {
-        showAlert('Please enter a valid selling price.', 'error');
-        return;
-      }
-      
-      if (!commissionValue) {
-        showAlert('Please enter a commission fee.', 'error');
-        return;
-      }
-      
-      // Calculate discount
-      const discountAmount = parseDiscount(discountValue, sellingPrice);
-      const finalSellingPrice = sellingPrice - discountAmount;
-      
-      // Calculate commission
-      const commissionFee = parseCommission(commissionValue, finalSellingPrice);
-      
-      // Get Seller Tier Fee from rate card
-      const sellerTierFee = rateCard[sellerTier][tierType];
-      
-      // Calculate final weight and shipping
-      const finalWeight = calculateFinalWeight();
-      const shippingFee = calculateShippingFee(finalWeight, shippingType);
-      
-      // Calculate FBA fees if applicable
-      let fbaFees = 0;
-      if (tierType === 'FBF') {
-        const storageFee = parseFloat(document.getElementById('storageFee').value) || 0;
-        fbaFees = storageFee;
-      }
-      
-      // Calculate GST on final selling price
-      const gstAmount = (finalSellingPrice * gstRate) / 100;
-      
-      // Calculate total Flipkart fees using the new formula
-      const totalFees = sellerTierFee + commissionFee + shippingFee + packingFees + fbaFees;
-      
-      // Calculate gross margin (excluding GST)
-      const grossMargin = finalSellingPrice - totalFees - productPrice;
-      
-      // Update counters
-      document.getElementById('sellerTierCount').textContent = `₹${sellerTierFee.toFixed(2)}`;
-      document.getElementById('commissionCount').textContent = `₹${commissionFee.toFixed(2)}`;
-      document.getElementById('shippingCount').textContent = `₹${shippingFee.toFixed(2)}`;
-      document.getElementById('totalFeesCount').textContent = `₹${totalFees.toFixed(2)}`;
-      
-      // Update results in the UI
-      document.getElementById('sellingPriceResult').textContent = `₹${sellingPrice.toFixed(2)}`;
-      document.getElementById('discountResult').textContent = `₹${discountAmount.toFixed(2)}`;
-      document.getElementById('finalSellingPrice').textContent = `₹${finalSellingPrice.toFixed(2)}`;
-      document.getElementById('sellerTierFee').textContent = `₹${sellerTierFee.toFixed(2)}`;
-      document.getElementById('commissionFeeResult').textContent = `₹${commissionFee.toFixed(2)}`;
-      document.getElementById('shippingFeeResult').textContent = `₹${shippingFee.toFixed(2)}`;
-      document.getElementById('packingFee').textContent = `₹${packingFees.toFixed(2)}`;
-      document.getElementById('gstFee').textContent = `₹${gstAmount.toFixed(2)}`;
-      document.getElementById('totalFees').textContent = `₹${totalFees.toFixed(2)}`;
-      document.getElementById('grossMargin').textContent = `₹${grossMargin.toFixed(2)}`;
-      
-      // Color code the gross margin
-      const grossMarginElement = document.getElementById('grossMargin');
-      if (grossMargin < 0) {
-        grossMarginElement.className = 'result-value loss';
-      } else {
-        grossMarginElement.className = 'result-value profit';
-      }
-      
-      // Show result section
-      resultSection.style.display = 'block';
-      
-      // Show success message
-      showAlert('Fees calculated successfully!', 'success');
+ // Get input values
+  const sellingPrice = parseFloat(document.getElementById('sellingPrice').value) || 0;
+  const discountValue = discountInput.value;
+  const productPrice = parseFloat(document.getElementById('productPrice').value) || 0;
+  const tierType = document.getElementById('tierType').value;
+  const sellerTier = document.getElementById('sellerTier').value;
+  const packingFees = parseFloat(document.getElementById('packingFees').value) || 0;
+  const gstRate = parseFloat(document.getElementById('gst').value) || 0;
+  const shippingType = shippingTypeSelect.value;
+  const commissionValue = commissionFeeInput.value;
+  
+  // Validate inputs
+  if (sellingPrice <= 0) {
+    showAlert('Please enter a valid selling price.', 'error');
+    return;
+  }
+  
+  if (!commissionValue) {
+    showAlert('Please enter a commission fee.', 'error');
+    return;
+  }
+  
+  // Calculate discount
+  const discountAmount = parseDiscount(discountValue, sellingPrice);
+  const finalSellingPrice = sellingPrice - discountAmount;
+  
+  // Calculate commission
+  const commissionFee = parseCommission(commissionValue, finalSellingPrice);
+  
+  // Get Seller Tier Fee from rate card
+  const sellerTierFee = rateCard[sellerTier][tierType];
+  
+  // Calculate final weight and shipping
+  const finalWeight = calculateFinalWeight();
+  const shippingFee = calculateShippingFee(finalWeight, shippingType);
+  
+  // Calculate Storage Fee only for FBF tier type
+  let storageFee = 0;
+  if (tierType === 'FBF') {
+    storageFee = parseFloat(document.getElementById('storageFee').value) || 0;
+  }
+  
+  // Calculate GST on final selling price
+  const gstAmount = (finalSellingPrice * gstRate) / 100;
+  
+  // Calculate total Flipkart fees - INCLUDING STORAGE FEE FOR FBF
+  const totalFees = sellerTierFee + commissionFee + shippingFee + packingFees + storageFee;
+  
+  // Calculate gross margin (excluding GST)
+  const grossMargin = finalSellingPrice - totalFees - productPrice - gstAmount;
+  
+  // Update counters
+  document.getElementById('sellerTierCount').textContent = `₹${sellerTierFee.toFixed(2)}`;
+  document.getElementById('commissionCount').textContent = `₹${commissionFee.toFixed(2)}`;
+  document.getElementById('shippingCount').textContent = `₹${shippingFee.toFixed(2)}`;
+  document.getElementById('totalFeesCount').textContent = `₹${totalFees.toFixed(2)}`;
+  
+  // Update results in the UI
+  document.getElementById('sellingPriceResult').textContent = `₹${sellingPrice.toFixed(2)}`;
+  document.getElementById('discountResult').textContent = `₹${discountAmount.toFixed(2)}`;
+  document.getElementById('finalSellingPrice').textContent = `₹${finalSellingPrice.toFixed(2)}`;
+  document.getElementById('sellerTierFee').textContent = `₹${sellerTierFee.toFixed(2)}`;
+  document.getElementById('commissionFeeResult').textContent = `₹${commissionFee.toFixed(2)}`;
+  document.getElementById('shippingFeeResult').textContent = `₹${shippingFee.toFixed(2)}`;
+  document.getElementById('packingFee').textContent = `₹${packingFees.toFixed(2)}`;
+  document.getElementById('gstFee').textContent = `₹${gstAmount.toFixed(2)}`;
+  
+  // Add Storage Fee to results display if FBF is selected
+  if (tierType === 'FBF') {
+    // Check if storage fee row already exists, if not create it
+    let storageFeeRow = document.getElementById('storageFeeResult');
+    if (!storageFeeRow) {
+      storageFeeRow = document.createElement('div');
+      storageFeeRow.className = 'result-item';
+      storageFeeRow.id = 'storageFeeResult';
+      storageFeeRow.innerHTML = `
+        <span class="result-label">Storage Fee (FBF)</span>
+        <span class="result-value" id="storageFeeValue">₹0.00</span>
+      `;
+      // Insert before total fees
+      const totalFeesElement = document.getElementById('totalFees').parentElement;
+      totalFeesElement.parentNode.insertBefore(storageFeeRow, totalFeesElement);
+    }
+    document.getElementById('storageFeeValue').textContent = `₹${storageFee.toFixed(2)}`;
+    storageFeeRow.style.display = 'block';
+  } else {
+    // Hide storage fee row for Non-FBF
+    const storageFeeRow = document.getElementById('storageFeeResult');
+    if (storageFeeRow) {
+      storageFeeRow.style.display = 'none';
+    }
+  }
+  
+  document.getElementById('totalFees').textContent = `₹${totalFees.toFixed(2)}`;
+  document.getElementById('grossMargin').textContent = `₹${grossMargin.toFixed(2)}`;
+  
+  // Color code the gross margin
+  const grossMarginElement = document.getElementById('grossMargin');
+  if (grossMargin < 0) {
+    grossMarginElement.className = 'result-value loss';
+  } else {
+    grossMarginElement.className = 'result-value profit';
+  }
+  
+  // Show result section
+  resultSection.style.display = 'block';
+  
+  // Show success message
+  showAlert('Fees calculated successfully!', 'success');
     }
 
     function clearInputs() {
