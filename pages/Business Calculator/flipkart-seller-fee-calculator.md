@@ -18,6 +18,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
 <style>
   /* Flipkart Calculator Styles */
   .calculator-container {
@@ -516,6 +517,40 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     border-left: 4px solid #ffc107;
   }
 
+  /* FBA Section */
+  .fba-section {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid #4caf50;
+    display: none;
+  }
+
+  /* Commission Type Toggle */
+  .commission-toggle {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e0e6ed;
+  }
+
+  .commission-toggle-btn {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  .commission-toggle-btn.active {
+    background: var(--primary);
+    color: white;
+  }
+
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .counter-wrapper {
@@ -591,16 +626,16 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
 
     <div class="counter-wrapper">
       <div class="counter-item">
+        <span>Seller Tier Fee: </span>
+        <span id="sellerTierCount">₹0.00</span>
+      </div>
+      <div class="counter-item">
         <span>Commission Fee: </span>
         <span id="commissionCount">₹0.00</span>
       </div>
       <div class="counter-item">
         <span>Shipping Fee: </span>
         <span id="shippingCount">₹0.00</span>
-      </div>
-      <div class="counter-item">
-        <span>Other Fees: </span>
-        <span id="otherFeesCount">₹0.00</span>
       </div>
       <div class="counter-item">
         <span>Total Fees: </span>
@@ -630,31 +665,51 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="productPrice">Product Price/Cost (₹)</label>
-        <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
-      </div>
-
-       <div class="input-group">
-        <label for="packingFees">Packing Cost (₹)</label>
-        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
-      </div>
-      
-      <div class="input-group">
-        <label for="commissionType">Commission Type</label>
-        <select id="commissionType">
+        <label for="tierType">Tier Type</label>
+        <select id="tierType">
           <option value="Non-FBF">Non-FBF</option>
           <option value="FBF">FBF</option>
         </select>
       </div>
       
       <div class="input-group">
+        <label for="productPrice">Product Price/Cost (₹)</label>
+        <input type="number" id="productPrice" placeholder="Enter product cost" min="0" step="0.01">
+      </div>
+
+      <!-- Packing Cost / Pick & Pack Fee (changes based on Tier Type) -->
+      <div class="input-group" id="packingCostGroup">
+        <label for="packingFees">Packing Cost (₹)</label>
+        <input type="number" id="packingFees" placeholder="Enter packing charges" min="0" step="0.01">
+      </div>
+      
+      <!-- Commission Fee with Percentage/Fixed Toggle -->
+      <div class="input-group">
+        <label for="commissionType">Commission Fee</label>
+        <div class="commission-toggle">
+          <div class="commission-toggle-btn active" data-type="percentage">Percentage (%)</div>
+          <div class="commission-toggle-btn" data-type="fixed">Fixed Amount (₹)</div>
+        </div>
+        <input type="text" id="commissionFeeInput" placeholder="Enter commission percentage e.g., 15%">
+        <div class="discount-info" id="commissionInfo">
+          Enter commission percentage (e.g., 15%)
+        </div>
+      </div>
+      
+      <div class="input-group">
         <label for="sellerTier">Seller Tier (Closing/Fixed Fee)</label>
         <select id="sellerTier">
-          <option value="Platinum">Platinum</option>
-          <option value="Gold">Gold</option>
-          <option value="Silver">Silver</option>
-          <option value="Bronze">Bronze</option>
+          <!-- Options will be dynamically populated based on Tier Type -->
         </select>
+      </div>
+      
+      <!-- FBA Section -->
+      <div class="fba-section" id="fbaSection">
+        <h3>FBA (Fulfillment by Amazon) Fees</h3>
+        <div class="input-group">
+          <label for="storageFee">Storage Fee (₹)</label>
+          <input type="number" id="storageFee" placeholder="Enter storage fee" min="0" step="0.01">
+        </div>
       </div>
       
       <div class="input-group">
@@ -701,13 +756,17 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
       </div>
       
       <div class="input-group">
-        <label for="nationalShipping">National Shipping Fees (₹)</label>
-        <input type="number" id="nationalShipping" placeholder="Calculated automatically" min="0" step="0.01" readonly>
+        <label for="shippingType">Shipping Type</label>
+        <select id="shippingType">
+          <option value="Local">Local</option>
+          <option value="Zonal">Zonal</option>
+          <option value="National">National</option>
+        </select>
       </div>
       
       <div class="input-group">
-        <label for="returnRto">Return RTO (₹)</label>
-        <input type="number" id="returnRto" placeholder="Enter RTO charges" min="0" step="0.01">
+        <label for="shippingFee">Shipping Fees (₹)</label>
+        <input type="number" id="shippingFeeInput" placeholder="Calculated automatically" min="0" step="0.01" readonly>
       </div>
       
       <div class="input-group">
@@ -718,6 +777,9 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
           <option value="12">12%</option>
           <option value="18" selected>18%</option>
           <option value="28">28%</option>
+          <option value="40">40%</option>
+          <option value="3">3%</option>
+          <option value="0.25">0.25%</option>
         </select>
       </div>
     </div>
@@ -753,22 +815,22 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
         </div>
         
         <div class="result-item">
+          <span class="result-label">Seller Tier Fee (Fixed Fee)</span>
+          <span class="result-value" id="sellerTierFee">₹0.00</span>
+        </div>
+        
+        <div class="result-item">
           <span class="result-label">Commission Fee</span>
-          <span class="result-value" id="commissionFee">₹0.00</span>
+          <span class="result-value" id="commissionFeeResult">₹0.00</span>
         </div>
         
         <div class="result-item">
           <span class="result-label">Shipping Fee</span>
-          <span class="result-value" id="shippingFee">₹0.00</span>
+          <span class="result-value" id="shippingFeeResult">₹0.00</span>
         </div>
         
         <div class="result-item">
-          <span class="result-label">Return RTO</span>
-          <span class="result-value" id="rtoFee">₹0.00</span>
-        </div>
-        
-        <div class="result-item">
-          <span class="result-label">Packing Fees</span>
+          <span class="result-label">Packing/Pick & Pack Fees</span>
           <span class="result-value" id="packingFee">₹0.00</span>
         </div>
         
@@ -794,7 +856,7 @@ permalink: /flipkart-fee-calculator-calculate-profit-seller-payout/
     <div class="examples">
       <h2>Examples</h2>
 
-      <h3>Example 1: Gangajal (1 Liter Bottle)</h3>
+      <h3>Example 1: Gangajal (1 Liter Bottle) - Non-FBF</h3>
       <div class="example-text">Selling Price: ₹200
 Discount: 10%
 Product Cost: ₹80
@@ -802,12 +864,14 @@ Dimensions: 9.5cm × 30cm × 9.5cm
 Actual Weight: 1.07kg
 Volumetric Weight: 0.54kg
 Final Weight: 1.07kg (higher value)
-Commission: ₹63 (Platinum, Non-FBF)
+Tier Type: Non-FBF
+Seller Tier: Gold - ₹65
+Commission: 15% (₹30)
 Shipping: ₹25
-Total Fees: ₹88
-Gross Margin: ₹92 (46%)</div>
+Total Fees: ₹120 (65 + 30 + 25)
+Gross Margin: ₹0 (200 - 120 - 80)</div>
 
-      <h3>Example 2: Lightweight Product</h3>
+      <h3>Example 2: Lightweight Product - FBF</h3>
       <div class="example-text">Selling Price: ₹500
 Discount: 5%
 Product Cost: ₹300
@@ -815,12 +879,14 @@ Dimensions: 20cm × 20cm × 10cm
 Actual Weight: 0.3kg
 Volumetric Weight: 0.8kg
 Final Weight: 0.8kg (higher value)
-Commission: ₹69 (Silver, Non-FBF)
+Tier Type: FBF
+Seller Tier: Gold - ₹57
+Commission: 12% (₹60)
 Shipping: ₹16
-Total Fees: ₹85
-Gross Margin: ₹115 (23%)</div>
+Total Fees: ₹133 (57 + 60 + 16)
+Gross Margin: ₹67 (500 - 133 - 300)</div>
 
-      <h3>Example 3: Heavy Small Product</h3>
+      <h3>Example 3: Heavy Small Product - Non-FBF</h3>
       <div class="example-text">Selling Price: ₹800
 Discount: 15%
 Product Cost: ₹400
@@ -828,10 +894,12 @@ Dimensions: 10cm × 10cm × 5cm
 Actual Weight: 2.5kg
 Volumetric Weight: 0.1kg
 Final Weight: 2.5kg (higher value)
-Commission: ₹65 (Gold, Non-FBF)
+Tier Type: Non-FBF
+Seller Tier: Silver - ₹69
+Commission: 18% (₹144)
 Shipping: ₹30
-Total Fees: ₹95
-Gross Margin: ₹305 (38.1%)</div>
+Total Fees: ₹243 (69 + 144 + 30)
+Gross Margin: ₹157 (800 - 243 - 400)</div>
     </div>
   </div>
 
@@ -876,41 +944,57 @@ Gross Margin: ₹305 (38.1%)</div>
       </div>
       
       <div>
-        <h3>National Shipping Fees (₹)</h3>
+        <h3>Shipping Fees (₹)</h3>
         <table>
           <thead>
             <tr>
               <th>Weight Range</th>
+              <th>Local</th>
+              <th>Zonal</th>
               <th>National</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>0-500 grams</td>
+              <td>₹0</td>
+              <td>₹0</td>
               <td>₹16</td>
             </tr>
             <tr>
               <td>Incremental 500 grams, upto 1 Kg</td>
+              <td>₹5</td>
+              <td>₹20</td>
               <td>₹25</td>
             </tr>
             <tr>
               <td>+1Kg, upto 1.5Kg</td>
+              <td>₹20</td>
+              <td>₹20</td>
               <td>₹30</td>
             </tr>
             <tr>
               <td>+1.5Kg, upto 2Kg</td>
+              <td>₹10</td>
+              <td>₹20</td>
               <td>₹20</td>
             </tr>
             <tr>
               <td>+2Kg, upto 3Kg (For every 0.5 kg)</td>
+              <td>₹8</td>
+              <td>₹15</td>
               <td>₹20</td>
             </tr>
             <tr>
               <td>+3Kg, upto 12Kg (For every 1 kg)</td>
+              <td>₹8</td>
+              <td>₹12</td>
               <td>₹18</td>
             </tr>
             <tr>
               <td>+1Kg, beyond 12Kg (For every 1 kg)</td>
+              <td>₹4</td>
+              <td>₹5</td>
               <td>₹8</td>
             </tr>
           </tbody>
@@ -1047,41 +1131,57 @@ Gross Margin: ₹305 (38.1%)</div>
         </div>
         
         <div>
-          <h3>National Shipping Fees (₹)</h3>
+          <h3>Shipping Fees (₹)</h3>
           <table>
             <thead>
               <tr>
                 <th>Weight Range</th>
+                <th>Local</th>
+                <th>Zonal</th>
                 <th>National</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>0-500 grams</td>
+                <td>₹0</td>
+                <td>₹0</td>
                 <td>₹16</td>
               </tr>
               <tr>
                 <td>Incremental 500 grams, upto 1 Kg</td>
+                <td>₹5</td>
+                <td>₹20</td>
                 <td>₹25</td>
               </tr>
               <tr>
                 <td>+1Kg, upto 1.5Kg</td>
+                <td>₹20</td>
+                <td>₹20</td>
                 <td>₹30</td>
               </tr>
               <tr>
                 <td>+1.5Kg, upto 2Kg</td>
+                <td>₹10</td>
+                <td>₹20</td>
                 <td>₹20</td>
               </tr>
               <tr>
                 <td>+2Kg, upto 3Kg (For every 0.5 kg)</td>
+                <td>₹8</td>
+                <td>₹15</td>
                 <td>₹20</td>
               </tr>
               <tr>
                 <td>+3Kg, upto 12Kg (For every 1 kg)</td>
+                <td>₹8</td>
+                <td>₹12</td>
                 <td>₹18</td>
               </tr>
               <tr>
                 <td>+1Kg, beyond 12Kg (For every 1 kg)</td>
+                <td>₹4</td>
+                <td>₹5</td>
                 <td>₹8</td>
               </tr>
             </tbody>
@@ -1119,8 +1219,17 @@ Gross Margin: ₹305 (38.1%)</div>
     const divisorSelect = document.getElementById('divisor');
     const weightCalculation = document.getElementById('weightCalculation');
     const finalWeightResult = document.getElementById('finalWeightResult');
-    const nationalShippingInput = document.getElementById('nationalShipping');
+    const shippingFeeInput = document.getElementById('shippingFeeInput');
     const discountInput = document.getElementById('discount');
+    const tierTypeSelect = document.getElementById('tierType');
+    const packingCostGroup = document.getElementById('packingCostGroup');
+    const packingFeesInput = document.getElementById('packingFees');
+    const fbaSection = document.getElementById('fbaSection');
+    const shippingTypeSelect = document.getElementById('shippingType');
+    const commissionFeeInput = document.getElementById('commissionFeeInput');
+    const commissionInfo = document.getElementById('commissionInfo');
+    const commissionToggleBtns = document.querySelectorAll('.commission-toggle-btn');
+    const sellerTierSelect = document.getElementById('sellerTier');
     
     // Modal elements
     const rateCardModal = document.getElementById('rateCardModal');
@@ -1128,12 +1237,62 @@ Gross Margin: ₹305 (38.1%)</div>
     const closeRateCard = document.getElementById('closeRateCard');
     const infoIcon = document.getElementById('infoIcon');
 
+    // Commission type (percentage or fixed)
+    let commissionType = 'percentage';
+
+    // Function to update Seller Tier dropdown based on Tier Type
+    function updateSellerTierOptions() {
+      const tierType = tierTypeSelect.value;
+      sellerTierSelect.innerHTML = '';
+      
+      for (const [tier, fees] of Object.entries(rateCard)) {
+        const option = document.createElement('option');
+        option.value = tier;
+        option.textContent = `${tier} - ₹${fees[tierType]}`;
+        sellerTierSelect.appendChild(option);
+      }
+    }
+
     // Event listeners
     calculateBtn.addEventListener('click', calculateFees);
     clearBtn.addEventListener('click', clearInputs);
     saveBtn.addEventListener('click', saveResults);
     rateCardBtn.addEventListener('click', showRateCard);
     infoIcon.addEventListener('click', showRateCard);
+    
+    // Update Seller Tier dropdown when Tier Type changes
+    tierTypeSelect.addEventListener('change', function() {
+      updateSellerTierOptions();
+      
+      if (this.value === 'FBF') {
+        // Change label to "Pick & Pack Fee" for FBF
+        packingCostGroup.querySelector('label').textContent = 'Pick & Pack Fee (₹)';
+        packingFeesInput.placeholder = 'Enter pick & pack fee';
+        fbaSection.style.display = 'block';
+      } else {
+        // Change label back to "Packing Cost" for Non-FBF
+        packingCostGroup.querySelector('label').textContent = 'Packing Cost (₹)';
+        packingFeesInput.placeholder = 'Enter packing charges';
+        fbaSection.style.display = 'none';
+      }
+    });
+    
+    // Commission type toggle
+    commissionToggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        commissionToggleBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        commissionType = this.getAttribute('data-type');
+        
+        if (commissionType === 'percentage') {
+          commissionFeeInput.placeholder = 'Enter commission percentage e.g., 15%';
+          commissionInfo.textContent = 'Enter commission percentage (e.g., 15%)';
+        } else {
+          commissionFeeInput.placeholder = 'Enter commission amount e.g., 50';
+          commissionInfo.textContent = 'Enter commission amount in rupees (e.g., 50)';
+        }
+      });
+    });
     
     // Close modal when clicking X
     closeModal.forEach(closeBtn => {
@@ -1164,6 +1323,12 @@ Gross Margin: ₹305 (38.1%)</div>
     // Update weight calculation when dimensions or weight change
     [lengthInput, breadthInput, heightInput, actualWeightInput, divisorSelect].forEach(input => {
       input.addEventListener('input', updateWeightCalculation);
+    });
+
+    // Update shipping fee when shipping type changes
+    shippingTypeSelect.addEventListener('change', function() {
+      const finalWeight = calculateFinalWeight();
+      updateShippingFee(finalWeight);
     });
 
     // Calculate volumetric weight
@@ -1223,28 +1388,100 @@ Gross Margin: ₹305 (38.1%)</div>
       updateShippingFee(finalWeight);
     }
 
-    // Calculate shipping fee based on final weight
-    function calculateShippingFee(weight) {
-      if (weight <= 0.5) return 16;
-      if (weight <= 1) return 25;
-      if (weight <= 1.5) return 30;
-      if (weight <= 2) return 20;
+    // Calculate shipping fee based on final weight and shipping type
+    function calculateShippingFee(weight, shippingType) {
+      // Shipping rates by type
+      const rates = {
+        'Local': {
+          base: 0,
+          increments: {
+            '0.5': 5,
+            '1.0': 20,
+            '1.5': 10,
+            '2.0': 8,
+            '3.0': 8,
+            '12.0': 4
+          }
+        },
+        'Zonal': {
+          base: 0,
+          increments: {
+            '0.5': 20,
+            '1.0': 20,
+            '1.5': 20,
+            '2.0': 15,
+            '3.0': 12,
+            '12.0': 5
+          }
+        },
+        'National': {
+          base: 16,
+          increments: {
+            '0.5': 25,
+            '1.0': 30,
+            '1.5': 20,
+            '2.0': 20,
+            '3.0': 18,
+            '12.0': 8
+          }
+        }
+      };
       
+      const rate = rates[shippingType];
+      let fee = rate.base;
+      
+      if (weight <= 0.5) return fee;
+      
+      // Incremental 500 grams up to 1 kg
+      if (weight <= 1) {
+        return fee + rate.increments['0.5'];
+      }
+      
+      // 1 kg to 1.5 kg
+      if (weight <= 1.5) {
+        return fee + rate.increments['1.0'];
+      }
+      
+      // 1.5 kg to 2 kg
+      if (weight <= 2) {
+        return fee + rate.increments['1.5'];
+      }
+      
+      // 2 kg to 3 kg (for every 0.5 kg)
       if (weight <= 3) {
-        // +20 for every 0.5kg beyond 2kg
         const additionalHalfKgs = Math.ceil((weight - 2) / 0.5);
-        return 20 + (additionalHalfKgs * 20);
+        return fee + rate.increments['1.5'] + (additionalHalfKgs * rate.increments['2.0']);
       }
       
+      // 3 kg to 12 kg (for every 1 kg)
       if (weight <= 12) {
-        // +18 for every 1kg beyond 3kg
         const additionalKgs = Math.ceil(weight - 3);
-        return 20 + ((3 - 2) / 0.5 * 20) + (additionalKgs * 18);
+        return fee + rate.increments['1.5'] + (Math.ceil((3 - 2) / 0.5) * rate.increments['2.0']) + (additionalKgs * rate.increments['3.0']);
       }
       
-      // Beyond 12kg: +8 for every 1kg
+      // Beyond 12 kg (for every 1 kg)
       const additionalKgs = Math.ceil(weight - 12);
-      return 20 + ((3 - 2) / 0.5 * 20) + ((12 - 3) * 18) + (additionalKgs * 8);
+      return fee + rate.increments['1.5'] + (Math.ceil((3 - 2) / 0.5) * rate.increments['2.0']) + ((12 - 3) * rate.increments['3.0']) + (additionalKgs * rate.increments['12.0']);
+    }
+
+    // Parse commission input (can be percentage or fixed amount)
+    function parseCommission(commissionStr, sellingPrice) {
+      if (!commissionStr) return 0;
+      
+      // Check if it's a percentage
+      if (commissionType === 'percentage') {
+        if (commissionStr.includes('%')) {
+          const percentage = parseFloat(commissionStr.replace('%', '')) || 0;
+          return (sellingPrice * percentage) / 100;
+        } else {
+          // If no % symbol but in percentage mode, treat as percentage
+          const percentage = parseFloat(commissionStr) || 0;
+          return (sellingPrice * percentage) / 100;
+        }
+      } else {
+        // Fixed amount mode
+        return parseFloat(commissionStr) || 0;
+      }
     }
 
     // Parse discount input (can be amount or percentage)
@@ -1263,8 +1500,9 @@ Gross Margin: ₹305 (38.1%)</div>
 
     // Update shipping fee when weight changes
     function updateShippingFee(finalWeight) {
-      const shippingFee = calculateShippingFee(finalWeight);
-      nationalShippingInput.value = shippingFee.toFixed(2);
+      const shippingType = shippingTypeSelect.value;
+      const shippingFee = calculateShippingFee(finalWeight, shippingType);
+      shippingFeeInput.value = shippingFee.toFixed(2);
     }
 
     // Calculate all fees and margins
@@ -1273,11 +1511,12 @@ Gross Margin: ₹305 (38.1%)</div>
       const sellingPrice = parseFloat(document.getElementById('sellingPrice').value) || 0;
       const discountValue = discountInput.value;
       const productPrice = parseFloat(document.getElementById('productPrice').value) || 0;
-      const commissionType = document.getElementById('commissionType').value;
+      const tierType = document.getElementById('tierType').value;
       const sellerTier = document.getElementById('sellerTier').value;
-      const returnRto = parseFloat(document.getElementById('returnRto').value) || 0;
       const packingFees = parseFloat(document.getElementById('packingFees').value) || 0;
       const gstRate = parseFloat(document.getElementById('gst').value) || 0;
+      const shippingType = shippingTypeSelect.value;
+      const commissionValue = commissionFeeInput.value;
       
       // Validate inputs
       if (sellingPrice <= 0) {
@@ -1285,39 +1524,54 @@ Gross Margin: ₹305 (38.1%)</div>
         return;
       }
       
+      if (!commissionValue) {
+        showAlert('Please enter a commission fee.', 'error');
+        return;
+      }
+      
       // Calculate discount
       const discountAmount = parseDiscount(discountValue, sellingPrice);
       const finalSellingPrice = sellingPrice - discountAmount;
       
+      // Calculate commission
+      const commissionFee = parseCommission(commissionValue, finalSellingPrice);
+      
+      // Get Seller Tier Fee from rate card
+      const sellerTierFee = rateCard[sellerTier][tierType];
+      
       // Calculate final weight and shipping
       const finalWeight = calculateFinalWeight();
-      const shippingFee = calculateShippingFee(finalWeight);
+      const shippingFee = calculateShippingFee(finalWeight, shippingType);
       
-      // Get commission and fixed fees from rate card
-      const commissionFee = rateCard[sellerTier][commissionType];
+      // Calculate FBA fees if applicable
+      let fbaFees = 0;
+      if (tierType === 'FBF') {
+        const storageFee = parseFloat(document.getElementById('storageFee').value) || 0;
+        fbaFees = storageFee;
+      }
       
       // Calculate GST on final selling price
       const gstAmount = (finalSellingPrice * gstRate) / 100;
       
-      // Calculate total Flipkart fees
-      const totalFees = commissionFee + shippingFee + returnRto + packingFees;
+      // Calculate total Flipkart fees using the new formula
+      const totalFees = sellerTierFee + commissionFee + shippingFee + packingFees + fbaFees;
       
       // Calculate gross margin (excluding GST)
       const grossMargin = finalSellingPrice - totalFees - productPrice;
       
       // Update counters
+      document.getElementById('sellerTierCount').textContent = `₹${sellerTierFee.toFixed(2)}`;
       document.getElementById('commissionCount').textContent = `₹${commissionFee.toFixed(2)}`;
       document.getElementById('shippingCount').textContent = `₹${shippingFee.toFixed(2)}`;
-      document.getElementById('otherFeesCount').textContent = `₹${(returnRto + packingFees).toFixed(2)}`;
       document.getElementById('totalFeesCount').textContent = `₹${totalFees.toFixed(2)}`;
       
       // Update results in the UI
       document.getElementById('sellingPriceResult').textContent = `₹${sellingPrice.toFixed(2)}`;
       document.getElementById('discountResult').textContent = `₹${discountAmount.toFixed(2)}`;
       document.getElementById('finalSellingPrice').textContent = `₹${finalSellingPrice.toFixed(2)}`;
-      document.getElementById('commissionFee').textContent = `₹${commissionFee.toFixed(2)}`;
-      document.getElementById('shippingFee').textContent = `₹${shippingFee.toFixed(2)}`;
-      document.getElementById('rtoFee').textContent = `₹${returnRto.toFixed(2)}`;
+      document.getElementById('sellerTierFee').textContent = `₹${sellerTierFee.toFixed(2)}`;
+      document.getElementById('commissionFeeResult').textContent = `₹${commissionFee.toFixed(2)}`;
+      document.getElementById('shippingFeeResult').textContent = `₹${shippingFee.toFixed(2)}`;
       document.getElementById('packingFee').textContent = `₹${packingFees.toFixed(2)}`;
       document.getElementById('gstFee').textContent = `₹${gstAmount.toFixed(2)}`;
       document.getElementById('totalFees').textContent = `₹${totalFees.toFixed(2)}`;
@@ -1347,14 +1601,15 @@ Gross Margin: ₹305 (38.1%)</div>
       document.getElementById('breadth').value = '';
       document.getElementById('height').value = '';
       document.getElementById('actualWeight').value = '';
-      document.getElementById('returnRto').value = '';
       document.getElementById('packingFees').value = '';
+      document.getElementById('commissionFeeInput').value = '';
+      document.getElementById('storageFee').value = '';
       resultSection.style.display = 'none';
       
       // Reset counters
+      document.getElementById('sellerTierCount').textContent = '₹0.00';
       document.getElementById('commissionCount').textContent = '₹0.00';
       document.getElementById('shippingCount').textContent = '₹0.00';
-      document.getElementById('otherFeesCount').textContent = '₹0.00';
       document.getElementById('totalFeesCount').textContent = '₹0.00';
       
       updateWeightCalculation();
@@ -1369,15 +1624,18 @@ Gross Margin: ₹305 (38.1%)</div>
       
       // Create a text representation of the results
       const productName = document.getElementById('productName').value || 'Unnamed Product';
+      const tierType = document.getElementById('tierType').value;
+      const packingLabel = tierType === 'FBF' ? 'Pick & Pack Fee' : 'Packing Cost';
+      
       const resultText = `Flipkart Fee Calculator Results
 Product: ${productName}
 Selling Price: ${document.getElementById('sellingPriceResult').textContent}
 Discount Applied: ${document.getElementById('discountResult').textContent}
 Final Selling Price: ${document.getElementById('finalSellingPrice').textContent}
-Commission Fee: ${document.getElementById('commissionFee').textContent}
-Shipping Fee: ${document.getElementById('shippingFee').textContent}
-Return RTO: ${document.getElementById('rtoFee').textContent}
-Packing Fees: ${document.getElementById('packingFee').textContent}
+Seller Tier Fee (Fixed Fee): ${document.getElementById('sellerTierFee').textContent}
+Commission Fee: ${document.getElementById('commissionFeeResult').textContent}
+Shipping Fee: ${document.getElementById('shippingFeeResult').textContent}
+${packingLabel}: ${document.getElementById('packingFee').textContent}
 GST: ${document.getElementById('gstFee').textContent}
 Total Flipkart Fees: ${document.getElementById('totalFees').textContent}
 Gross Margin: ${document.getElementById('grossMargin').textContent}
@@ -1425,6 +1683,7 @@ Calculated on: ${new Date().toLocaleString()}`;
     }
 
     // Initialize
+    updateSellerTierOptions();
     updateWeightCalculation();
   });
 </script>
