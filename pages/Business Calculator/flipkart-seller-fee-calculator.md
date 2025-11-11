@@ -1389,80 +1389,55 @@ Gross Margin: ₹157 (800 - 243 - 400)</div>
     }
 
     // Calculate shipping fee based on final weight and shipping type
-    function calculateShippingFee(weight, shippingType) {
-      // Shipping rates by type
-      const rates = {
-        'Local': {
-          base: 0,
-          increments: {
-            '0.5': 5,
-            '1.0': 20,
-            '1.5': 10,
-            '2.0': 8,
-            '3.0': 8,
-            '12.0': 4
-          }
-        },
-        'Zonal': {
-          base: 0,
-          increments: {
-            '0.5': 20,
-            '1.0': 20,
-            '1.5': 20,
-            '2.0': 15,
-            '3.0': 12,
-            '12.0': 5
-          }
-        },
-        'National': {
-          base: 16,
-          increments: {
-            '0.5': 25,
-            '1.0': 30,
-            '1.5': 20,
-            '2.0': 20,
-            '3.0': 18,
-            '12.0': 8
-          }
-        }
-      };
-      
-      const rate = rates[shippingType];
-      let fee = rate.base;
-      
-      if (weight <= 0.5) return fee;
-      
-      // Incremental 500 grams up to 1 kg
-      if (weight <= 1) {
-        return fee + rate.increments['0.5'];
+function calculateShippingFee(weight, shippingType) {
+  // Shipping rates by type
+  const rates = {
+    'Local': {
+      base: 0,
+      increments: {
+        '0.5': 0,
+        '1.0': 5,
+        '1.5': 20,
+        '2.0': 20,
+        '3.0': 8,
+        '12.0': 4
       }
-      
-      // 1 kg to 1.5 kg
-      if (weight <= 1.5) {
-        return fee + rate.increments['1.0'];
+    },
+    'Zonal': {
+      base: 0,
+      increments: {
+        '0.5': 0,
+        '1.0': 20,
+        '1.5': 20,
+        '2.0': 15,
+        '3.0': 12,
+        '12.0': 5
       }
-      
-      // 1.5 kg to 2 kg
-      if (weight <= 2) {
-        return fee + rate.increments['1.5'];
+    },
+    'National': {
+      base: 0,
+      increments: {
+        '0.5': 16,
+        '1.0': 25,
+        '1.5': 30,
+        '2.0': 20,
+        '3.0': 18,
+        '12.0': 8
       }
-      
-      // 2 kg to 3 kg (for every 0.5 kg)
-      if (weight <= 3) {
-        const additionalHalfKgs = Math.ceil((weight - 2) / 0.5);
-        return fee + rate.increments['1.5'] + (additionalHalfKgs * rate.increments['2.0']);
-      }
-      
-      // 3 kg to 12 kg (for every 1 kg)
-      if (weight <= 12) {
-        const additionalKgs = Math.ceil(weight - 3);
-        return fee + rate.increments['1.5'] + (Math.ceil((3 - 2) / 0.5) * rate.increments['2.0']) + (additionalKgs * rate.increments['3.0']);
-      }
-      
-      // Beyond 12 kg (for every 1 kg)
-      const additionalKgs = Math.ceil(weight - 12);
-      return fee + rate.increments['1.5'] + (Math.ceil((3 - 2) / 0.5) * rate.increments['2.0']) + ((12 - 3) * rate.increments['3.0']) + (additionalKgs * rate.increments['12.0']);
     }
+  };
+
+  const rate = rates[shippingType];
+  let fee = rate.base;
+
+  if (weight <= 0.5) return fee + rate.increments['0.5'];
+  if (weight <= 1) return fee + rate.increments['1.0'];
+  if (weight <= 1.5) return fee + rate.increments['1.5'];
+  if (weight <= 2) return fee + rate.increments['2.0'];
+  if (weight <= 3) return fee + rate.increments['3.0'];
+  if (weight <= 12) return fee + rate.increments['12.0'];
+  return fee + rate.increments['12.0'];
+}
 
     // Parse commission input (can be percentage or fixed amount)
     function parseCommission(commissionStr, sellingPrice) {
