@@ -17,6 +17,7 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
 <style>
   /* Length Converter Styles */
   .converter-container {
@@ -661,6 +662,8 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
     <div class="unit-system">
       <button class="system-button active" data-system="metric">Metric Units</button>
       <button class="system-button" data-system="imperial">Imperial Units</button>
+      <button class="system-button" data-system="astronomical">Astronomical</button>
+      <button class="system-button" data-system="specialized">Specialized</button>
       <button class="system-button" data-system="all">All Units</button>
     </div>
 
@@ -684,6 +687,20 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
             <option value="yd">Yard (yd)</option>
             <option value="mi">Mile (mi)</option>
             <option value="nmi">Nautical Mile (nmi)</option>
+            <option value="fth">Fathom (fth)</option>
+            <option value="ch">Chain (ch)</option>
+            <option value="rd">Rod / Pole / Perch (rd)</option>
+          </optgroup>
+          <optgroup label="Astronomical Units">
+            <option value="au">Astronomical Unit (AU)</option>
+            <option value="ly">Light Year (ly)</option>
+            <option value="pc">Parsec (pc)</option>
+          </optgroup>
+          <optgroup label="Scientific & Specialized Units">
+            <option value="angstrom">Angstrom (Å)</option>
+            <option value="planck">Planck Length</option>
+            <option value="cubit">Cubit</option>
+            <option value="league">League</option>
           </optgroup>
         </select>
       </div>
@@ -711,6 +728,20 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
             <option value="yd">Yard (yd)</option>
             <option value="mi">Mile (mi)</option>
             <option value="nmi">Nautical Mile (nmi)</option>
+            <option value="fth">Fathom (fth)</option>
+            <option value="ch">Chain (ch)</option>
+            <option value="rd">Rod / Pole / Perch (rd)</option>
+          </optgroup>
+          <optgroup label="Astronomical Units">
+            <option value="au">Astronomical Unit (AU)</option>
+            <option value="ly">Light Year (ly)</option>
+            <option value="pc">Parsec (pc)</option>
+          </optgroup>
+          <optgroup label="Scientific & Specialized Units">
+            <option value="angstrom">Angstrom (Å)</option>
+            <option value="planck">Planck Length</option>
+            <option value="cubit">Cubit</option>
+            <option value="league">League</option>
           </optgroup>
         </select>
       </div>
@@ -835,11 +866,20 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
 1 inch = 2.54 centimeters
 1 yard = 0.9144 meters</div>
 
-      <h3>Common Equivalents:</h3>
-      <div class="example-text">1 nautical mile = 1.852 kilometers
-1 light-year = 9.461e+12 kilometers
+      <h3>Astronomical Units:</h3>
+      <div class="example-text">1 light-year = 9.461e+12 kilometers
 1 astronomical unit = 1.496e+8 kilometers
-1 parsec = 3.086e+13 kilometers</div>
+1 parsec = 3.086e+13 kilometers
+1 parsec = 3.262 light-years</div>
+
+      <h3>Specialized Units:</h3>
+      <div class="example-text">1 fathom = 6 feet = 1.8288 meters
+1 chain = 66 feet = 20.1168 meters
+1 rod = 16.5 feet = 5.0292 meters
+1 league = 3 miles = 4.828 kilometers
+1 cubit ≈ 0.4572 meters (Egyptian)
+1 angstrom = 1e-10 meters
+1 Planck length = 1.616e-35 meters</div>
     </div>
   </div>
 
@@ -869,11 +909,12 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
       <li><strong>Travelers & Navigators:</strong> Understand distance measurements when traveling between countries using different measurement systems.</li>
       <li><strong>DIY Enthusiasts:</strong> Convert measurements for home improvement projects using tools and materials from different countries.</li>
       <li><strong>Scientists & Researchers:</strong> Work with length data from international collaborators using consistent units.</li>
+      <li><strong>Astronomers & Physicists:</strong> Convert between astronomical units, light-years, and parsecs for space measurements.</li>
     </ul>
 
     <h3>Frequently Asked Questions</h3>
     <p><strong>What is the difference between metric and imperial units?</strong><br>
-      A: Metric units (meters, centimeters, kilometers) are based on powers of 10 and used worldwide. Imperial units (inches, feet, yards, miles) are primarily used in the United States and are based on historical measurements.</p>
+      Metric units (meters, centimeters, kilometers) are based on powers of 10 and used worldwide. Imperial units (inches, feet, yards, miles) are primarily used in the United States and are based on historical measurements.</p>
 
     <p><strong>How accurate are the conversions?</strong><br>
       Our conversions are highly accurate, using standardized conversion factors. For example, 1 inch is exactly 2.54 centimeters by international agreement.</p>
@@ -881,11 +922,11 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
     <p><strong>What is a nautical mile and how does it differ from a regular mile?</strong><br>
       A nautical mile is based on the circumference of the Earth and equals 1 minute of latitude (approximately 1.852 km). A statute mile (regular mile) is 1.609 km and is used for land measurements.</p>
 
-    <p><strong>Can I convert very large or very small measurements?</strong><br>
-      Yes, the tool handles measurements from nanometers (billionths of a meter) to kilometers and beyond. You can also use scientific notation for extreme values.</p>
+    <p><strong>What are astronomical units used for?</strong><br>
+      Astronomical units (AU) measure distances within our solar system (Earth to Sun distance). Light-years measure interstellar distances, and parsecs are used in professional astronomy.</p>
 
-    <p><strong>Is this tool available on mobile devices?</strong><br>
-      Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
+    <p><strong>Can I convert very large or very small measurements?</strong><br>
+      Yes, the tool handles measurements from Planck lengths (the smallest possible length) to light-years and beyond. You can also use scientific notation for extreme values.</p>
 
     <h3>Why Choose Our Length Unit Converter?</h3>
     <p>Our <strong>online length converter</strong> stands out from other tools because of its comprehensive coverage, accuracy, and privacy features. Unlike many online tools, we don't store your data on our servers - all conversions happen in your browser. This means your measurement data remains completely private. The tool also works offline once loaded, making it reliable even with unstable internet connections.</p>
@@ -895,7 +936,9 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
     <ul>
       <li><strong>Metric System:</strong> International standard used in science, engineering, and most countries worldwide. Based on meters with decimal multiples and subdivisions.</li>
       <li><strong>Imperial System:</strong> Traditional system used primarily in the United States. Based on historical units like inches, feet, and yards.</li>
-      <li><strong>SI Units:</strong> The International System of Units, which includes the meter as the base unit of length, used in scientific contexts globally.</li>
+      <li><strong>Astronomical Units:</strong> Specialized units for measuring vast distances in space, including astronomical units, light-years, and parsecs.</li>
+      <li><strong>Historical Units:</strong> Traditional units like cubits, fathoms, and leagues used in navigation, surveying, and historical contexts.</li>
+      <li><strong>Scientific Units:</strong> Extremely small units like angstroms (atomic scale) and Planck lengths (quantum scale).</li>
     </ul>
 
     <h3>Common Applications of Length Conversion</h3>
@@ -907,6 +950,8 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
       <li><strong>Travel & Navigation:</strong> Convert distance measurements for trip planning</li>
       <li><strong>Manufacturing:</strong> Work with machinery and tools calibrated in different units</li>
       <li><strong>Science & Research:</strong> Standardize measurements from international studies and publications</li>
+      <li><strong>Astronomy:</strong> Convert between different astronomical distance units</li>
+      <li><strong>History & Archaeology:</strong> Understand measurements in historical contexts</li>
     </ul>
   </div>
 </div>
@@ -936,11 +981,22 @@ permalink: /length-unit-converter-convert-metric-and-imperial-units/
       </div>
       
       <div style="margin-bottom: 20px;">
-        <h4>Special Units:</h4>
-        <div class="example-text">1 nautical mile = 1.852 kilometers
-1 light-year = 9.461e+12 kilometers
-1 astronomical unit = 1.496e+8 kilometers
-1 parsec = 3.086e+13 kilometers</div>
+        <h4>Astronomical Units:</h4>
+        <div class="example-text">1 light-year = 9.46073e+15 meters
+1 astronomical unit = 1.495978707e+11 meters
+1 parsec = 3.085677581e+16 meters
+1 parsec = 3.26156 light-years</div>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <h4>Specialized Units:</h4>
+        <div class="example-text">1 fathom = 1.8288 meters
+1 chain = 20.1168 meters
+1 rod = 5.0292 meters
+1 league = 4828 meters
+1 cubit = 0.4572 meters
+1 angstrom = 1e-10 meters
+1 Planck length = 1.616255e-35 meters</div>
       </div>
       
       <div>
@@ -1063,7 +1119,21 @@ Target Value = (Input Value × Input Factor) ÷ Output Factor</div>
       ft: 0.3048,
       yd: 0.9144,
       mi: 1609.344,
-      nmi: 1852
+      nmi: 1852,
+      fth: 1.8288,      // Fathom
+      ch: 20.1168,      // Chain
+      rd: 5.0292,       // Rod/Pole/Perch
+      
+      // Astronomical units
+      au: 149597870700, // Astronomical Unit
+      ly: 9460730472580800, // Light Year
+      pc: 30856775814913672, // Parsec
+      
+      // Scientific & Specialized units
+      angstrom: 0.0000000001,
+      planck: 1.616255e-35,
+      cubit: 0.4572,
+      league: 4828
     };
 
     // Conversion history
@@ -1197,6 +1267,11 @@ Target Value = (Input Value × Input Factor) ÷ Output Factor</div>
     function formatNumber(value, precision) {
       const format = numberFormat.value;
       
+      // For very small or very large numbers, use scientific notation
+      if (Math.abs(value) < 0.0001 || Math.abs(value) > 1000000) {
+        return value.toExponential(precision);
+      }
+      
       switch (format) {
         case 'scientific':
           return value.toExponential(precision);
@@ -1244,6 +1319,10 @@ Target Value = (Input Value × Input Factor) ÷ Output Factor</div>
           option.style.display = '';
         } else if (system === 'imperial' && parentGroup === 'Imperial Units') {
           option.style.display = '';
+        } else if (system === 'astronomical' && parentGroup === 'Astronomical Units') {
+          option.style.display = '';
+        } else if (system === 'specialized' && parentGroup === 'Scientific & Specialized Units') {
+          option.style.display = '';
         } else {
           option.style.display = 'none';
         }
@@ -1259,6 +1338,10 @@ Target Value = (Input Value × Input Factor) ÷ Output Factor</div>
         } else if (system === 'metric' && parentGroup === 'Metric Units') {
           option.style.display = '';
         } else if (system === 'imperial' && parentGroup === 'Imperial Units') {
+          option.style.display = '';
+        } else if (system === 'astronomical' && parentGroup === 'Astronomical Units') {
+          option.style.display = '';
+        } else if (system === 'specialized' && parentGroup === 'Scientific & Specialized Units') {
           option.style.display = '';
         } else {
           option.style.display = 'none';
