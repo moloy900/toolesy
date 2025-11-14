@@ -1395,48 +1395,73 @@ function calculateShippingFee(weight, shippingType) {
     'Local': {
       base: 0,
       increments: {
-        '0.5': 0,
-        '1.0': 5,
-        '1.5': 20,
-        '2.0': 20,
-        '3.0': 8,
-        '12.0': 4
+        '0.5': 5,    // 0.5kg to 1kg
+        '1.0': 20,   // 1kg to 1.5kg
+        '1.5': 10,   // 1.5kg to 2kg
+        '2.0': 8,    // 2kg to 3kg (per 0.5kg)
+        '3.0': 8,    // 3kg to 12kg (per kg)
+        '12.0': 4    // beyond 12kg (per kg)
       }
     },
     'Zonal': {
       base: 0,
       increments: {
-        '0.5': 0,
-        '1.0': 20,
-        '1.5': 20,
-        '2.0': 15,
-        '3.0': 12,
-        '12.0': 5
+        '0.5': 20,   // 0.5kg to 1kg
+        '1.0': 20,   // 1kg to 1.5kg
+        '1.5': 20,   // 1.5kg to 2kg
+        '2.0': 15,   // 2kg to 3kg (per 0.5kg)
+        '3.0': 12,   // 3kg to 12kg (per kg)
+        '12.0': 5    // beyond 12kg (per kg)
       }
     },
     'National': {
-      base: 0,
+      base: 16,     // 0–0.5kg base charge
       increments: {
-        '0.5': 16,
-        '1.0': 25,
-        '1.5': 30,
-        '2.0': 20,
-        '3.0': 18,
-        '12.0': 8
+        '0.5': 25,  // up to 1kg
+        '1.0': 30,  // up to 1.5kg
+        '1.5': 20,  // up to 2kg
+        '2.0': 20,  // 2–3kg (per 0.5kg)
+        '3.0': 18,  // 3–12kg (per kg)
+        '12.0': 8   // beyond 12kg (per kg)
       }
     }
   };
-
+  
   const rate = rates[shippingType];
   let fee = rate.base;
-
-  if (weight <= 0.5) return fee + rate.increments['0.5'];
-  if (weight <= 1) return fee + rate.increments['1.0'];
-  if (weight <= 1.5) return fee + rate.increments['1.5'];
-  if (weight <= 2) return fee + rate.increments['2.0'];
-  if (weight <= 3) return fee + rate.increments['3.0'];
-  if (weight <= 12) return fee + rate.increments['12.0'];
-  return fee + rate.increments['12.0'];
+  
+  if (weight <= 0.5) return fee;
+  
+  // Incremental 500 grams up to 1 kg
+  if (weight <= 1) {
+    return rate.base + rate.increments['0.5'];
+  }
+  
+  // 1 kg to 1.5 kg
+  if (weight <= 1.5) {
+    return rate.base + rate.increments['1.0'];
+  }
+  
+  // 1.5 kg to 2 kg
+  if (weight <= 2) {
+    return rate.base + rate.increments['1.5'];
+  }
+  
+  // 2 kg to 3 kg (for every 0.5 kg)
+  if (weight <= 3) {
+    const additionalHalfKgs = Math.ceil((weight - 2) / 0.5);
+    return rate.base + (additionalHalfKgs * rate.increments['2.0']);
+  }
+  
+  // 3 kg to 12 kg (for every 1 kg)
+  if (weight <= 12) {
+    const additionalKgs = Math.ceil(weight - 3);
+    return rate.base + (additionalKgs * rate.increments['3.0']);
+  }
+  
+  // Beyond 12 kg (for every 1 kg)
+  const additionalKgs = Math.ceil(weight - 12);
+  return rate.base + ((12 - 3) * rate.increments['3.0']) + (additionalKgs * rate.increments['12.0']);
 }
 
     // Parse commission input (can be percentage or fixed amount)
