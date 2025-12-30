@@ -1687,56 +1687,41 @@ permalink: /favicon-generator-all-size-favicon-with-html-head-link-code/
     }
 
     function showHtmlCode() {
-      // Generate HTML code
-      const code = generateHtmlCode();
-      htmlCode.innerHTML = code;
-      codeSection.classList.add('show');
-      
-      // Update code lines count
-      const lines = code.split('\n').length;
-      document.getElementById('codeLines').textContent = lines;
-    }
+  let code = `<!-- Paste this code inside <head> -->\n\n`;
 
-    function generateHtmlCode() {
-      let code = `<!-- Paste this code in your HTML <head> section -->\n\n`;
-      
-      // Standard favicon links
-      code += `<!-- Standard favicons -->\n`;
-      generatedFavicons.forEach(favicon => {
-        if (favicon.width <= 64) { // Standard favicon sizes
-          code += `<link rel="icon" type="image/png" sizes="${favicon.width}x${favicon.height}" href="/${favicon.filename}">\n`;
-        }
-      });
-      
-      // Apple Touch Icons
-      if (generateApple.checked) {
-        code += `\n<!-- Apple Touch Icons -->\n`;
-        const appleIcon = generatedFavicons.find(f => f.width === 180);
-        if (appleIcon) {
-          code += `<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">\n`;
-        }
-      }
-      
-      // Web App Manifest
-      if (generateManifest.checked) {
-        code += `\n<!-- Web App Manifest -->\n`;
-        code += `<link rel="manifest" href="/site.webmanifest">\n`;
-      }
-      
-      // Theme colors
-      code += `\n<!-- Theme Colors -->\n`;
-      code += `<meta name="msapplication-TileColor" content="${backgroundColor.value}">\n`;
-      code += `<meta name="theme-color" content="${backgroundColor.value}">\n`;
-      
-      // Microsoft tiles
-      code += `\n<!-- Microsoft Tiles -->\n`;
-      const msTile = generatedFavicons.find(f => f.width === 144);
-      if (msTile) {
-        code += `<meta name="msapplication-TileImage" content="/mstile-144x144.png">\n`;
-      }
-      
-      return code;
+  code += `<!-- Standard Favicons -->\n`;
+  generatedFavicons.forEach(favicon => {
+    if (favicon.width <= 64) {
+      code += `<link rel="icon" type="image/png" sizes="${favicon.width}x${favicon.height}" href="{{ '/assets/favicon/${favicon.filename}' | relative_url }}">\n`;
     }
+  });
+
+  if (generateApple?.checked) {
+    const appleIcon = generatedFavicons.find(f => f.width === 180);
+    if (appleIcon) {
+      code += `\n<!-- Apple Touch Icon -->\n`;
+      code += `<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">\n`;
+    }
+  }
+
+  if (generateManifest?.checked) {
+    code += `\n<!-- Web App Manifest -->\n`;
+    code += `<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">\n`;
+  }
+
+  code += `\n<!-- Theme Colors -->\n`;
+  code += `<meta name="theme-color" content="${backgroundColor.value}">\n`;
+  code += `<meta name="msapplication-TileColor" content="${backgroundColor.value}">\n`;
+
+  const msTile = generatedFavicons.find(f => f.width === 144);
+  if (msTile) {
+    code += `\n<!-- Microsoft Tile -->\n`;
+    code += `<meta name="msapplication-TileImage" content="{{ '/assets/favicon/mstile-144x144.png' | relative_url }}">\n`;
+  }
+
+  return code;
+}
+
 
     function copyHtmlCode() {
       const code = htmlCode.textContent;
