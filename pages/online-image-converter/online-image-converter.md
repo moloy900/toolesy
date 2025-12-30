@@ -946,7 +946,7 @@ permalink: /online-image-converter-png-to-jpg-jpg-to-png-webp-to-jpg/
       You can convert images up to 10MB each. For batch conversion, there's no limit on the number of files, as long as each individual file is under 10MB.</p>
 
     <p><strong>Are my images kept private and secure when I use this tool?</strong><br>
-      A> Absolutely! This is a core feature of our tool. All image processing happens locally in your browser using JavaScript. Your images are never uploaded to our servers, meaning we never see, store, or have access to your images. Your privacy is 100% guaranteed.</p>
+      Absolutely! This is a core feature of our tool. All image processing happens locally in your browser using JavaScript. Your images are never uploaded to our servers, meaning we never see, store, or have access to your images. Your privacy is 100% guaranteed.</p>
 
     <p><strong>Can I use this tool on my mobile phone?</strong><br>
       Yes, our website and tool are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets. You can convert images directly from your phone's gallery.</p>
