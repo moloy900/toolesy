@@ -1696,7 +1696,7 @@ permalink: /favicon-generator-all-size-favicon-with-html-head-link-code/
       const lines = code.split('\n').length;
       document.getElementById('codeLines').textContent = lines;
     }
-
+  
     function generateHtmlCode() {
       let code = `<!-- Paste this code in your HTML <head> section -->\n\n`;
       
