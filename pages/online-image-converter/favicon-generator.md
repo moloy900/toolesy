@@ -1356,7 +1356,7 @@ permalink: /favicon-generator-all-size-favicon-with-html-head-link-code/
       
       const file = fileList[0];
       const validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/svg+xml'];
-      const maxSize = 5 * 1024 * 1024; // 5MB
+      const maxSize = 20 * 1024 * 1024; // 5MB
       
       if (!validTypes.includes(file.type)) {
         showAlert(`Unsupported file type: ${file.name}. Please upload PNG, JPG, GIF, or SVG images.`, 'error');
@@ -1364,7 +1364,7 @@ permalink: /favicon-generator-all-size-favicon-with-html-head-link-code/
       }
       
       if (file.size > maxSize) {
-        showAlert(`File too large: ${file.name}. Maximum size is 5MB.`, 'error');
+        showAlert(`File too large: ${file.name}. Maximum size is 20MB.`, 'error');
         return;
       }
       
