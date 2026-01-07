@@ -954,7 +954,7 @@ permalink: /online-image-resizer-resize-compress-convert-images/
     </ul>
   </div>
 </div>
-
+ 
 <!-- Loading Overlay -->
 <div class="loading-overlay" id="loadingOverlay">
   <div class="loading-spinner"></div>
