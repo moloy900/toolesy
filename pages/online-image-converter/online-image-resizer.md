@@ -920,24 +920,24 @@ permalink: /online-image-resizer-resize-compress-convert-images/
       <li><strong>Real Estate Agents:</strong> Optimize property photos for online listings and brochures.</li>
     </ul>
 
-    <h3>Frequently Asked Questions (FAQ):</h3>
-    <p><strong>Q: What image formats does this resizer support?</strong><br>
-      A: We support all major image formats: JPEG, PNG, GIF, WebP, and BMP. You can also convert between these formats during resizing.</p>
+    <h3>Frequently Asked Questions</h3>
+    <p><strong>What image formats does this resizer support?</strong><br>
+      We support all major image formats: JPEG, PNG, GIF, WebP, and BMP. You can also convert between these formats during resizing.</p>
 
-    <p><strong>Q: Is there a file size limit for images?</strong><br>
-      A: You can upload images up to 10MB. For most web purposes, this is more than sufficient. Larger images can be resized before uploading.</p>
+    <p><strong>Is there a file size limit for images?</strong><br>
+      You can upload images up to 10MB. For most web purposes, this is more than sufficient. Larger images can be resized before uploading.</p>
 
-    <p><strong>Q: Are my images kept private and secure?</strong><br>
-      A: Absolutely. All image processing happens locally in your browser. Your images are never uploaded to our servers, meaning we never see, store, or have access to your files. They remain 100% private on your device.</p>
+    <p><strong>Are my images kept private and secure?</strong><br>
+      Absolutely. All image processing happens locally in your browser. Your images are never uploaded to our servers, meaning we never see, store, or have access to your files. They remain 100% private on your device.</p>
 
-    <p><strong>Q: Can I resize multiple images at once?</strong><br>
-      A: Currently, our tool processes one image at a time for optimal quality control. For batch processing, you can use the tool multiple times.</p>
+    <p><strong>Can I resize multiple images at once?</strong><br>
+      Currently, our tool processes one image at a time for optimal quality control. For batch processing, you can use the tool multiple times.</p>
 
-    <p><strong>Q: What's the difference between resizing and compressing?</strong><br>
-      A: Resizing changes the physical dimensions (pixel width and height) of an image. Compressing reduces the file size without necessarily changing dimensions, usually by adjusting the quality/compression level.</p>
+    <p><strong>What's the difference between resizing and compressing?</strong><br>
+      Resizing changes the physical dimensions (pixel width and height) of an image. Compressing reduces the file size without necessarily changing dimensions, usually by adjusting the quality/compression level.</p>
 
-    <p><strong>Q: Do I need to install software or create an account?</strong><br>
-      A: No installation and no account required. This is a completely free online tool that works directly in your web browser.</p>
+    <p><strong>Do I need to install software or create an account?</strong><br>
+      No installation and no account required. This is a completely free online tool that works directly in your web browser.</p>
 
     <h3>Why Choose Our Image Resizer?</h3>
     <p>Our <strong>online image resizer</strong> stands out with its user-friendly interface, powerful features, and privacy-first approach. Unlike many online tools, we don't upload your images to servers - all processing happens locally in your browser. This ensures your photos remain completely private. The tool works offline once loaded, provides real-time previews, and maintains excellent image quality throughout the resizing process.</p>
