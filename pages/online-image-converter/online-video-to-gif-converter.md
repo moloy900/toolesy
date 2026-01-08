@@ -11,7 +11,7 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
   content="Free online video to GIF converter tool. Convert MP4, WebM, MOV videos to animated GIFs instantly. Adjust size, speed, quality, and duration.">
 <meta name="keywords"
   content="video to gif converter, gif maker, video converter, mp4 to gif, webm to gif, mov to gif, animated gif creator, gif editor, video gif converter">
-<meta name="author" content="Paramdip Nath">
+<meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
 
 <!-- Font Awesome -->
@@ -1065,24 +1065,24 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
       <li><strong>Memers:</strong> Quickly turn viral video moments into meme-ready GIFs for sharing across platforms.</li>
     </ul>
 
-    <h3>Frequently Asked Questions</h3>
-    <p><strong>What video formats does this converter support?</strong><br>
-      We support all major video formats: MP4, WebM, MOV, AVI, MKV, FLV, and more. Most modern video files are compatible.</p>
+    <h3>Frequently Asked Questions (FAQ):</h3>
+    <p><strong>Q: What video formats does this converter support?</strong><br>
+      A: We support all major video formats: MP4, WebM, MOV, AVI, MKV, FLV, and more. Most modern video files are compatible.</p>
 
-    <p><strong>Is there a file size limit for videos?</strong><br>
-      You can upload videos up to 100MB. For larger files, we recommend trimming or compressing the video first.</p>
+    <p><strong>Q: Is there a file size limit for videos?</strong><br>
+      A: You can upload videos up to 100MB. For larger files, we recommend trimming or compressing the video first.</p>
 
-    <p><strong>Are my videos kept private and secure?</strong><br>
-      Absolutely. All video processing happens locally in your browser. Your videos are never uploaded to our servers, meaning we never see, store, or have access to your files. They remain 100% private on your device.</p>
+    <p><strong>Q: Are my videos kept private and secure?</strong><br>
+      A: Absolutely. All video processing happens locally in your browser. Your videos are never uploaded to our servers, meaning we never see, store, or have access to your files. They remain 100% private on your device.</p>
 
-    <p><strong>Can I convert long videos to GIF?</strong><br>
-      We recommend keeping GIFs under 15 seconds for optimal file size and compatibility. Our trim tool helps you select the best segment.</p>
+    <p><strong>Q: Can I convert long videos to GIF?</strong><br>
+      A: We recommend keeping GIFs under 15 seconds for optimal file size and compatibility. Our trim tool helps you select the best segment.</p>
 
-    <p><strong>What's the difference between FPS and quality settings?</strong><br>
-      FPS (frames per second) controls how many video frames become GIF frames - higher FPS means smoother animation but larger file size. Quality affects color depth and compression - higher quality means better colors but larger file size.</p>
+    <p><strong>Q: What's the difference between FPS and quality settings?</strong><br>
+      A: FPS (frames per second) controls how many video frames become GIF frames - higher FPS means smoother animation but larger file size. Quality affects color depth and compression - higher quality means better colors but larger file size.</p>
 
-    <p><strong>Do I need to install software or create an account?</strong><br>
-      No installation and no account required. This is a completely free online tool that works directly in your web browser.</p>
+    <p><strong>Q: Do I need to install software or create an account?</strong><br>
+      A: No installation and no account required. This is a completely free online tool that works directly in your web browser.</p>
 
     <h3>Why Choose Our Video to GIF Converter?</h3>
     <p>Our <strong>online video to GIF converter</strong> stands out with its advanced features, user-friendly interface, and privacy-first approach. Unlike many online converters, we don't upload your videos to servers - all processing happens locally in your browser. This ensures your videos remain completely private. The tool provides real-time previews, precise trimming controls, and optimized presets for various platforms.</p>
@@ -1957,4 +1957,1524 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
     updateFpsFromSlider();
     updateQualityFromSlider();
   });
+</script>
+যে video টা upload করবো সেই video টা gif করবে
+text
+---
+layout: default
+title: "Online Video to GIF Converter - Convert Videos to GIFs"
+permalink: /online-video-to-gif-converter/
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Video to GIF Converter - Convert MP4, WebM, MOV to GIF</title>
+<meta name="description"
+  content="Free online video to GIF converter tool. Convert MP4, WebM, MOV videos to animated GIFs instantly. Adjust size, speed, quality, and duration.">
+<meta name="keywords"
+  content="video to gif converter, gif maker, video converter, mp4 to gif, webm to gif, mov to gif, animated gif creator, gif editor, video gif converter">
+<meta name="author" content="Your Name">
+<meta name="robots" content="index, follow">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* Video to GIF Converter Styles */
+  .converter-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .converter-container h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 15px;
+  }
+
+  .welcome-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .converter-section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .converter-section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .converter-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .counter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .counter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .counter-item span:first-child {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .counter-item span:last-child {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .upload-area {
+    border: 3px dashed #3498db;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f8fafc;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .upload-area:hover {
+    background: #e8f4fc;
+    border-color: #2980b9;
+  }
+
+  .upload-area i {
+    font-size: 64px;
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+
+  .upload-area h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+
+  .upload-area p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+
+  .file-upload-section {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+  }
+
+  .file-upload-button {
+    padding: 12px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+  }
+
+  .file-upload-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+
+  #fileName {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+
+  .preview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+  }
+
+  @media (max-width: 768px) {
+    .preview-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .preview-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .preview-box h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .video-preview, .gif-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #000;
+    border: 1px solid #e0e0e0;
+  }
+
+  .gif-preview {
+    background: #f8f9fa;
+  }
+
+  .video-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .control-button {
+    padding: 8px 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .options-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+  }
+
+  .conversion-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .option-label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .option-value {
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  .option-input {
+    padding: 12px;
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .option-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+
+  .slider-container {
+    padding: 10px 0;
+  }
+
+  .slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #e0e0e0;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+  }
+
+  .time-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .time-input {
+    padding: 8px;
+    border: 2px solid #e0e6ed;
+    border-radius: 6px;
+    width: 80px;
+    text-align: center;
+  }
+
+  .preset-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .preset-button {
+    padding: 12px;
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .preset-button:hover {
+    border-color: var(--primary);
+    background: #f0f8ff;
+  }
+
+  .preset-button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  .button-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 25px 0;
+  }
+
+  .action-button {
+    padding: 14px 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .action-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .action-button:active {
+    transform: translateY(0);
+  }
+
+  .action-button.success {
+    background: var(--success);
+  }
+
+  .action-button.success:hover {
+    background: #218838;
+  }
+
+  .action-button.secondary {
+    background: #6c757d;
+  }
+
+  .action-button.secondary:hover {
+    background: #5a6268;
+  }
+
+  .action-button.warning {
+    background: #ffc107;
+    color: #212529;
+  }
+
+  .action-button.warning:hover {
+    background: #e0a800;
+  }
+
+  .alert-container {
+    margin-top: 20px;
+    min-height: 50px;
+  }
+
+  .alert {
+    padding: 14px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  .alert .close {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .file-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+    width: 100%;
+  }
+
+  .examples {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .example-item {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .example-dimensions {
+    font-weight: bold;
+    color: var(--primary);
+    margin: 10px 0;
+  }
+
+  .content-placeholder {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+
+  .content-placeholder ul {
+    margin: 15px 0;
+    padding-left: 30px;
+  }
+
+  .content-placeholder li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .content-placeholder h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* Share and donation buttons */
+  .share-donation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .share-buttons,
+  .donation-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .share-button,
+  .donation-button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .share-button:hover,
+  .donation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .facebook {
+    background: #3b5998;
+    color: white;
+  }
+
+  .twitter {
+    background: #1da1f2;
+    color: white;
+  }
+
+  .linkedin {
+    background: #0077b5;
+    color: white;
+  }
+
+  .pinterest {
+    background: #bd081c;
+    color: white;
+  }
+
+  .reddit {
+    background: #FF4500;
+    color: white;
+  }
+
+  .paypal {
+    background: #0070ba;
+    color: white;
+  }
+
+  .coffee {
+    background: #ff813f;
+    color: white;
+  }
+
+  /* Progress bar styles */
+  .progress-container {
+    margin: 20px 0;
+    display: none;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #4dabf7);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .progress-text {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* Loading overlay */
+  .loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Trim section */
+  .trim-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+
+  .trim-slider-container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    margin: 15px 0;
+  }
+
+  .trim-slider {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .trim-time-display {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .counter-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .button-section {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .action-button {
+      font-size: 13px;
+      padding: 12px 8px;
+    }
+
+    .file-upload-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .converter-container {
+      padding: 15px;
+    }
+
+    .converter-section {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .converter-container h1 {
+      font-size: 2rem;
+    }
+
+    .converter-section h2 {
+      font-size: 1.3rem;
+    }
+
+    .share-donation-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .share-buttons,
+    .donation-buttons {
+      justify-content: center;
+    }
+
+    .conversion-options {
+      grid-template-columns: 1fr;
+    }
+
+    .preset-buttons {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<div class="converter-container">
+  <h1>Free Online Video to GIF Converter</h1>
+  <p class="welcome-message">Convert MP4, WebM, MOV videos to animated GIFs instantly. Adjust size, speed, quality, and trim videos before conversion.</p>
+
+  <div class="converter-section">
+    <h2>Video to GIF Converter Tool</h2>
+
+    <div class="counter-wrapper">
+      <div class="counter-item">
+        <span>Video Duration: </span>
+        <span id="videoDuration">0s</span>
+      </div>
+      <div class="counter-item">
+        <span>Video Size: </span>
+        <span id="videoSize">0 MB</span>
+      </div>
+      <div class="counter-item">
+        <span>GIF Size: </span>
+        <span id="gifSize">0 MB</span>
+      </div>
+      <div class="counter-item">
+        <span>Compression: </span>
+        <span id="compressionRatio">0%</span>
+      </div>
+    </div>
+
+    <!-- Upload Area -->
+    <div class="upload-area" id="uploadArea">
+      <i class="fas fa-video"></i>
+      <h3>Drop your video here or click to browse</h3>
+      <p>Supports MP4, WebM, MOV, AVI, MKV (Max 100MB)</p>
+      <button class="file-upload-button">
+        <i class="fas fa-folder-open"></i> Browse Videos
+      </button>
+      <input type="file" id="fileUpload" accept="video/*" style="display: none;">
+    </div>
+
+    <!-- File Info -->
+    <div class="file-upload-section" id="fileInfoSection" style="display: none;">
+      <div>
+        <strong>Selected Video:</strong> <span id="fileName">No file selected</span>
+      </div>
+      <div class="file-info">
+        <span id="fileDetails"></span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container" id="progressContainer">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text" id="progressText">0%</div>
+    </div>
+
+    <!-- Previews -->
+    <div class="preview-container">
+      <div class="preview-box">
+        <h3>Original Video</h3>
+        <video id="videoPreview" class="video-preview" controls>
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+          <button class="control-button" id="playBtn">
+            <i class="fas fa-play"></i> Play
+          </button>
+          <button class="control-button" id="pauseBtn">
+            <i class="fas fa-pause"></i> Pause
+          </button>
+          <button class="control-button" id="muteBtn">
+            <i class="fas fa-volume-up"></i> Mute
+          </button>
+        </div>
+      </div>
+      <div class="preview-box">
+        <h3>Converted GIF</h3>
+        <img id="gifPreview" class="gif-preview" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8f9fa'/><text x='200' y='150' text-anchor='middle' fill='%23999' font-family='Arial' font-size='16'>GIF Preview</text></svg>" alt="GIF Preview">
+        <div class="video-controls">
+          <button class="control-button" id="playGifBtn">
+            <i class="fas fa-play"></i> Play GIF
+          </button>
+          <button class="control-button" id="pauseGifBtn">
+            <i class="fas fa-pause"></i> Pause
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trim Section -->
+    <div class="trim-section">
+      <h3>Trim Video</h3>
+      <div class="trim-slider-container">
+        <input type="range" class="trim-slider" id="trimStart" min="0" max="100" value="0">
+        <input type="range" class="trim-slider" id="trimEnd" min="0" max="100" value="100">
+        <div class="trim-time-display">
+          <span>Start: <span id="trimStartTime">00:00</span></span>
+          <span>End: <span id="trimEndTime">00:00</span></span>
+          <span>Duration: <span id="trimDuration">00:00</span></span>
+        </div>
+      </div>
+      <div class="time-selector">
+        <label>Start Time:</label>
+        <input type="number" id="startSeconds" class="time-input" min="0" value="0"> sec
+        <label>End Time:</label>
+        <input type="number" id="endSeconds" class="time-input" min="0" value="10"> sec
+        <button class="control-button" id="applyTrim">Apply</button>
+      </div>
+    </div>
+
+    <!-- Conversion Options -->
+    <div class="options-section">
+      <h3>GIF Settings</h3>
+      
+      <div class="conversion-options">
+        <div class="option-group">
+          <label class="option-label">
+            Width (px)
+            <span class="option-value" id="widthValue">640</span>
+          </label>
+          <input type="range" class="slider" id="widthSlider" min="100" max="1920" value="640">
+          <input type="number" class="option-input" id="widthInput" min="100" max="1920" value="640">
+        </div>
+        
+        <div class="option-group">
+          <label class="option-label">
+            FPS (Frames per Second)
+            <span class="option-value" id="fpsValue">15</span>
+          </label>
+          <input type="range" class="slider" id="fpsSlider" min="5" max="30" value="15">
+          <input type="number" class="option-input" id="fpsInput" min="5" max="30" value="15">
+        </div>
+        
+        <div class="option-group">
+          <label class="option-label">
+            Quality (%)
+            <span class="option-value" id="qualityValue">80</span>
+          </label>
+          <input type="range" class="slider" id="qualitySlider" min="10" max="100" value="80">
+          <input type="number" class="option-input" id="qualityInput" min="10" max="100" value="80">
+        </div>
+      </div>
+
+      <!-- Preset Sizes -->
+      <h3 style="margin-top: 30px;">Preset Sizes</h3>
+      <div class="preset-buttons">
+        <button class="preset-button" data-width="320" data-height="240" data-fps="10">Small (320×240)</button>
+        <button class="preset-button" data-width="640" data-height="480" data-fps="15">Medium (640×480)</button>
+        <button class="preset-button active" data-width="800" data-height="600" data-fps="20">Large (800×600)</button>
+        <button class="preset-button" data-width="1280" data-height="720" data-fps="25">HD (1280×720)</button>
+        <button class="preset-button" data-width="400" data-height="300" data-fps="12">Social Media (400×300)</button>
+        <button class="preset-button" data-width="200" data-height="150" data-fps="8">Thumbnail (200×150)</button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-section">
+        <button class="action-button" id="convertBtn">
+          <i class="fas fa-sync-alt"></i> Convert to GIF
+        </button>
+        <button class="action-button success" id="downloadBtn" disabled>
+          <i class="fas fa-download"></i> Download GIF
+        </button>
+        <button class="action-button secondary" id="clearBtn">
+          <i class="fas fa-trash"></i> Clear
+        </button>
+      </div>
+    </div>
+
+    <div id="alertContainer" class="alert-container"></div>
+
+    <!-- Examples Section -->
+    <div class="examples">
+      <h2>Common Use Cases</h2>
+      
+      <div class="example-grid">
+        <div class="example-item">
+          <i class="fab fa-whatsapp" style="font-size: 2rem; color: #25D366; margin-bottom: 10px;"></i>
+          <h4>WhatsApp Stickers</h4>
+          <p class="example-dimensions">512×512 px</p>
+          <p>Create animated stickers for WhatsApp</p>
+        </div>
+        
+        <div class="example-item">
+          <i class="fab fa-discord" style="font-size: 2rem; color: #5865F2; margin-bottom: 10px;"></i>
+          <h4>Discord Emojis</h4>
+          <p class="example-dimensions">128×128 px</p>
+          <p>Animated emojis for Discord servers</p>
+        </div>
+        
+        <div class="example-item">
+          <i class="fab fa-twitter" style="font-size: 2rem; color: #1DA1F2; margin-bottom: 10px;"></i>
+          <h4>Twitter GIFs</h4>
+          <p class="example-dimensions">400×225 px</p>
+          <p>Share animated moments on Twitter</p>
+        </div>
+        
+        <div class="example-item">
+          <i class="fas fa-blog" style="font-size: 2rem; color: #FF5722; margin-bottom: 10px;"></i>
+          <h4>Blog Animations</h4>
+          <p class="example-dimensions">600×400 px</p>
+          <p>Animated illustrations for blogs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-spinner"></div>
+  <p>Converting video to GIF...</p>
+  <p id="conversionStatus">Processing frames: 0%</p>
+</div>
+
+<script>
+// Include GIF encoder library
+// Note: In a real implementation, you would need to include a proper GIF encoder library
+// For this example, we'll simulate the conversion process
+
+document.addEventListener('DOMContentLoaded', function () {
+  // DOM Elements
+  const uploadArea = document.getElementById('uploadArea');
+  const fileUpload = document.getElementById('fileUpload');
+  const fileInfoSection = document.getElementById('fileInfoSection');
+  const fileName = document.getElementById('fileName');
+  const fileDetails = document.getElementById('fileDetails');
+  const videoPreview = document.getElementById('videoPreview');
+  const gifPreview = document.getElementById('gifPreview');
+  const alertContainer = document.getElementById('alertContainer');
+  const loadingOverlay = document.getElementById('loadingOverlay');
+  const progressContainer = document.getElementById('progressContainer');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+  const conversionStatus = document.getElementById('conversionStatus');
+  
+  // Buttons
+  const convertBtn = document.getElementById('convertBtn');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  
+  // Video controls
+  const playBtn = document.getElementById('playBtn');
+  const pauseBtn = document.getElementById('pauseBtn');
+  const muteBtn = document.getElementById('muteBtn');
+  const playGifBtn = document.getElementById('playGifBtn');
+  const pauseGifBtn = document.getElementById('pauseGifBtn');
+  
+  // Dimension controls
+  const widthSlider = document.getElementById('widthSlider');
+  const widthInput = document.getElementById('widthInput');
+  const widthValue = document.getElementById('widthValue');
+  const fpsSlider = document.getElementById('fpsSlider');
+  const fpsInput = document.getElementById('fpsInput');
+  const fpsValue = document.getElementById('fpsValue');
+  const qualitySlider = document.getElementById('qualitySlider');
+  const qualityInput = document.getElementById('qualityInput');
+  const qualityValue = document.getElementById('qualityValue');
+  
+  // Trim controls
+  const trimStart = document.getElementById('trimStart');
+  const trimEnd = document.getElementById('trimEnd');
+  const trimStartTime = document.getElementById('trimStartTime');
+  const trimEndTime = document.getElementById('trimEndTime');
+  const trimDuration = document.getElementById('trimDuration');
+  const startSeconds = document.getElementById('startSeconds');
+  const endSeconds = document.getElementById('endSeconds');
+  const applyTrim = document.getElementById('applyTrim');
+  
+  // Preset buttons
+  const presetButtons = document.querySelectorAll('.preset-button');
+  
+  // Stats elements
+  const videoDuration = document.getElementById('videoDuration');
+  const videoSize = document.getElementById('videoSize');
+  const gifSize = document.getElementById('gifSize');
+  const compressionRatio = document.getElementById('compressionRatio');
+  
+  // State variables
+  let videoFile = null;
+  let videoDurationValue = 0;
+  let videoFileSize = 0;
+  let convertedGifUrl = null;
+  let convertedGifSize = 0;
+  let isConverting = false;
+  let trimStartSeconds = 0;
+  let trimEndSeconds = 10;
+  
+  // Event Listeners
+  uploadArea.addEventListener('click', () => fileUpload.click());
+  fileUpload.addEventListener('change', handleFileUpload);
+  
+  // Video controls
+  playBtn.addEventListener('click', () => videoPreview.play());
+  pauseBtn.addEventListener('click', () => videoPreview.pause());
+  muteBtn.addEventListener('click', toggleMute);
+  
+  // GIF controls
+  playGifBtn.addEventListener('click', () => {
+    if (convertedGifUrl) {
+      gifPreview.src = convertedGifUrl;
+    }
+  });
+  
+  pauseGifBtn.addEventListener('click', () => {
+    // GIFs autoplay, but we can reload to "pause"
+    gifPreview.src = gifPreview.src;
+  });
+  
+  // Dimension controls
+  widthSlider.addEventListener('input', updateWidthFromSlider);
+  widthInput.addEventListener('input', updateWidthFromInput);
+  fpsSlider.addEventListener('input', updateFpsFromSlider);
+  fpsInput.addEventListener('input', updateFpsFromInput);
+  qualitySlider.addEventListener('input', updateQualityFromSlider);
+  qualityInput.addEventListener('input', updateQualityFromInput);
+  
+  // Trim controls
+  trimStart.addEventListener('input', updateTrimStart);
+  trimEnd.addEventListener('input', updateTrimEnd);
+  startSeconds.addEventListener('input', updateTrimFromInputs);
+  endSeconds.addEventListener('input', updateTrimFromInputs);
+  applyTrim.addEventListener('click', applyTrimSettings);
+  
+  // Preset buttons
+  presetButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      presetButtons.forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      
+      const width = parseInt(button.dataset.width);
+      const fps = parseInt(button.dataset.fps);
+      
+      updateDimensions(width, fps);
+    });
+  });
+  
+  // Action buttons
+  convertBtn.addEventListener('click', convertVideoToGif);
+  downloadBtn.addEventListener('click', downloadGif);
+  clearBtn.addEventListener('click', clearAll);
+  
+  // Functions
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    if (!file.type.startsWith('video/')) {
+      showAlert('Please select a video file (MP4, WebM, MOV, AVI, MKV).', 'error');
+      return;
+    }
+    
+    if (file.size > 100 * 1024 * 1024) {
+      showAlert('File size should be less than 100MB.', 'error');
+      return;
+    }
+    
+    videoFile = file;
+    const url = URL.createObjectURL(file);
+    
+    videoPreview.src = url;
+    videoPreview.onloadedmetadata = function() {
+      videoDurationValue = videoPreview.duration;
+      videoFileSize = file.size;
+      
+      // Update UI
+      fileName.textContent = file.name;
+      fileDetails.textContent = `${formatTime(videoDurationValue)} • ${formatFileSize(file.size)} • ${file.type}`;
+      fileInfoSection.style.display = 'flex';
+      
+      // Update counters
+      videoDuration.textContent = formatTime(videoDurationValue);
+      videoSize.textContent = formatFileSize(file.size);
+      gifSize.textContent = '0 MB';
+      compressionRatio.textContent = '0%';
+      
+      // Set initial trim values
+      trimEndSeconds = Math.min(10, videoDurationValue);
+      updateTrimControls();
+      
+      showAlert('Video uploaded successfully! You can now trim and convert it.', 'success');
+    };
+    
+    videoPreview.onerror = function() {
+      showAlert('Error loading video file. Please try another format.', 'error');
+    };
+  }
+  
+  function updateWidthFromSlider() {
+    const width = parseInt(widthSlider.value);
+    widthInput.value = width;
+    widthValue.textContent = width;
+  }
+  
+  function updateWidthFromInput() {
+    let width = parseInt(widthInput.value);
+    width = Math.min(1920, Math.max(100, width));
+    widthInput.value = width;
+    widthSlider.value = width;
+    widthValue.textContent = width;
+  }
+  
+  function updateFpsFromSlider() {
+    const fps = parseInt(fpsSlider.value);
+    fpsInput.value = fps;
+    fpsValue.textContent = fps;
+  }
+  
+  function updateFpsFromInput() {
+    let fps = parseInt(fpsInput.value);
+    fps = Math.min(30, Math.max(5, fps));
+    fpsInput.value = fps;
+    fpsSlider.value = fps;
+    fpsValue.textContent = fps;
+  }
+  
+  function updateQualityFromSlider() {
+    const quality = parseInt(qualitySlider.value);
+    qualityInput.value = quality;
+    qualityValue.textContent = quality;
+  }
+  
+  function updateQualityFromInput() {
+    let quality = parseInt(qualityInput.value);
+    quality = Math.min(100, Math.max(10, quality));
+    qualityInput.value = quality;
+    qualitySlider.value = quality;
+    qualityValue.textContent = quality;
+  }
+  
+  function updateDimensions(width, fps) {
+    updateWidth(width);
+    updateFps(fps);
+  }
+  
+  function updateWidth(width) {
+    width = Math.min(1920, Math.max(100, width));
+    widthInput.value = width;
+    widthValue.textContent = width;
+    widthSlider.value = width;
+  }
+  
+  function updateFps(fps) {
+    fps = Math.min(30, Math.max(5, fps));
+    fpsInput.value = fps;
+    fpsValue.textContent = fps;
+    fpsSlider.value = fps;
+  }
+  
+  function updateTrimStart() {
+    const startPercent = parseInt(trimStart.value);
+    trimStartSeconds = (startPercent / 100) * videoDurationValue;
+    updateTrimDisplay();
+  }
+  
+  function updateTrimEnd() {
+    const endPercent = parseInt(trimEnd.value);
+    trimEndSeconds = (endPercent / 100) * videoDurationValue;
+    updateTrimDisplay();
+  }
+  
+  function updateTrimFromInputs() {
+    trimStartSeconds = parseFloat(startSeconds.value) || 0;
+    trimEndSeconds = parseFloat(endSeconds.value) || 10;
+    
+    if (trimEndSeconds > videoDurationValue) {
+      trimEndSeconds = videoDurationValue;
+      endSeconds.value = trimEndSeconds;
+    }
+    
+    if (trimStartSeconds >= trimEndSeconds) {
+      trimStartSeconds = trimEndSeconds - 1;
+      startSeconds.value = trimStartSeconds;
+    }
+    
+    updateTrimControls();
+    updateTrimDisplay();
+  }
+  
+  function applyTrimSettings() {
+    updateTrimFromInputs();
+    showAlert(`Video trimmed to ${formatTime(trimEndSeconds - trimStartSeconds)}`, 'success');
+  }
+  
+  function updateTrimControls() {
+    const startPercent = (trimStartSeconds / videoDurationValue) * 100;
+    const endPercent = (trimEndSeconds / videoDurationValue) * 100;
+    
+    trimStart.value = startPercent;
+    trimEnd.value = endPercent;
+    
+    startSeconds.value = trimStartSeconds.toFixed(1);
+    endSeconds.value = trimEndSeconds.toFixed(1);
+  }
+  
+  function updateTrimDisplay() {
+    trimStartTime.textContent = formatTime(trimStartSeconds);
+    trimEndTime.textContent = formatTime(trimEndSeconds);
+    trimDuration.textContent = formatTime(trimEndSeconds - trimStartSeconds);
+  }
+  
+  function toggleMute() {
+    videoPreview.muted = !videoPreview.muted;
+    muteBtn.innerHTML = videoPreview.muted ? 
+      '<i class="fas fa-volume-mute"></i> Unmute' : 
+      '<i class="fas fa-volume-up"></i> Mute';
+  }
+  
+  async function convertVideoToGif() {
+    if (!videoFile || !videoPreview.src) {
+      showAlert('Please upload a video first.', 'error');
+      return;
+    }
+    
+    if (isConverting) {
+      showAlert('Conversion is already in progress.', 'warning');
+      return;
+    }
+    
+    isConverting = true;
+    showLoading(true);
+    progressContainer.style.display = 'block';
+    convertBtn.disabled = true;
+    
+    try {
+      const width = parseInt(widthInput.value);
+      const fps = parseInt(fpsInput.value);
+      const quality = parseInt(qualityInput.value) / 100;
+      
+      // Calculate dimensions maintaining aspect ratio
+      const videoWidth = videoPreview.videoWidth;
+      const videoHeight = videoPreview.videoHeight;
+      const aspectRatio = videoWidth / videoHeight;
+      const height = Math.round(width / aspectRatio);
+      
+      // Create canvas for processing
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = width;
+      canvas.height = height;
+      
+      // Set up GIF encoder
+      const gif = new GIF({
+        workers: 2,
+        quality: Math.round(quality * 100),
+        width: width,
+        height: height,
+        workerScript: 'https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.worker.js'
+      });
+      
+      const totalFrames = Math.round((trimEndSeconds - trimStartSeconds) * fps);
+      const frameInterval = 1000 / fps;
+      
+      // Seek to start position
+      videoPreview.currentTime = trimStartSeconds;
+      
+      // Wait for seek to complete
+      await new Promise(resolve => {
+        videoPreview.onseeked = resolve;
+      });
+      
+      // Process frames
+      for (let i = 0; i < totalFrames; i++) {
+        if (!isConverting) break;
+        
+        // Capture frame
+        ctx.drawImage(videoPreview, 0, 0, width, height);
+        
+        // Add frame to GIF
+        gif.addFrame(ctx, {copy: true, delay: frameInterval});
+        
+        // Update progress
+        const progress = ((i + 1) / totalFrames) * 100;
+        progressFill.style.width = `${progress}%`;
+        progressText.textContent = `${Math.round(progress)}%`;
+        conversionStatus.textContent = `Processing frame ${i + 1} of ${totalFrames}`;
+        
+        // Seek to next frame
+        const nextTime = trimStartSeconds + (i + 1) * (1 / fps);
+        if (nextTime <= trimEndSeconds) {
+          videoPreview.currentTime = nextTime;
+          // Wait for next frame
+          await new Promise(resolve => {
+            const handler = () => {
+              videoPreview.removeEventListener('seeked', handler);
+              resolve();
+            };
+            videoPreview.addEventListener('seeked', handler);
+          });
+        }
+      }
+      
+      if (!isConverting) {
+        showAlert('Conversion cancelled.', 'warning');
+        return;
+      }
+      
+      // Render GIF
+      gif.on('finished', function(blob) {
+        const url = URL.createObjectURL(blob);
+        convertedGifUrl = url;
+        convertedGifSize = blob.size;
+        
+        // Update preview
+        gifPreview.src = convertedGifUrl;
+        
+        // Update stats
+        gifSize.textContent = formatFileSize(convertedGifSize);
+        const compression = ((videoFileSize - convertedGifSize) / videoFileSize * 100).toFixed(1);
+        compressionRatio.textContent = `${compression}%`;
+        
+        // Enable download button
+        downloadBtn.disabled = false;
+        
+        showLoading(false);
+        progressContainer.style.display = 'none';
+        convertBtn.disabled = false;
+        isConverting = false;
+        
+        showAlert(`Successfully converted to GIF! Size reduced by ${compression}%.`, 'success');
+      });
+      
+      gif.on('progress', function(p) {
+        const progress = p * 100;
+        progressFill.style.width = `${progress}%`;
+        progressText.textContent = `${Math.round(progress)}%`;
+        conversionStatus.textContent = `Encoding GIF: ${Math.round(progress)}%`;
+      });
+      
+      gif.render();
+      
+    } catch (error) {
+      console.error('Conversion error:', error);
+      showAlert('Error converting video: ' + error.message, 'error');
+      showLoading(false);
+      progressContainer.style.display = 'none';
+      convertBtn.disabled = false;
+      isConverting = false;
+    }
+  }
+  
+  function downloadGif() {
+    if (!convertedGifUrl) {
+      showAlert('Please convert the video to GIF first.', 'error');
+      return;
+    }
+    
+    const width = parseInt(widthInput.value);
+    const fps = parseInt(fpsInput.value);
+    const duration = (trimEndSeconds - trimStartSeconds).toFixed(1);
+    
+    const filename = `converted_${width}x${Math.round(width/(videoPreview.videoWidth/videoPreview.videoHeight))}_${fps}fps_${duration}s.gif`;
+    
+    const link = document.createElement('a');
+    link.href = convertedGifUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    showAlert(`GIF downloaded as ${filename}`, 'success');
+  }
+  
+  function clearAll() {
+    // Reset file input
+    fileUpload.value = '';
+    
+    // Reset video preview
+    videoPreview.src = '';
+    videoPreview.pause();
+    
+    // Reset GIF preview
+    gifPreview.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%23f8f9fa'/><text x='200' y='150' text-anchor='middle' fill='%23999' font-family='Arial' font-size='16'>GIF Preview</text></svg>";
+    
+    // Hide file info
+    fileInfoSection.style.display = 'none';
+    
+    // Hide progress
+    progressContainer.style.display = 'none';
+    
+    // Reset stats
+    videoDuration.textContent = '0s';
+    videoSize.textContent = '0 MB';
+    gifSize.textContent = '0 MB';
+    compressionRatio.textContent = '0%';
+    
+    // Reset dimensions
+    updateDimensions(640, 15);
+    qualityInput.value = 80;
+    qualitySlider.value = 80;
+    qualityValue.textContent = '80';
+    
+    // Reset trim
+    trimStartSeconds = 0;
+    trimEndSeconds = 10;
+    updateTrimControls();
+    updateTrimDisplay();
+    
+    // Reset state
+    videoFile = null;
+    videoDurationValue = 0;
+    videoFileSize = 0;
+    convertedGifUrl = null;
+    convertedGifSize = 0;
+    isConverting = false;
+    
+    // Disable download button
+    downloadBtn.disabled = true;
+    convertBtn.disabled = false;
+    
+    // Reset preset buttons
+    presetButtons.forEach((button, index) => {
+      button.classList.remove('active');
+      if (index === 2) button.classList.add('active'); // Large preset
+    });
+    
+    showAlert('All cleared. Ready for new video.', 'success');
+  }
+  
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  }
+  
+  function formatFileSize(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+  
+  function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type}`;
+    alertDiv.innerHTML = `
+      ${message}
+      <span class="close">&times;</span>
+    `;
+    
+    alertContainer.innerHTML = '';
+    alertContainer.appendChild(alertDiv);
+    
+    // Add close functionality
+    alertDiv.querySelector('.close').addEventListener('click', function () {
+      alertDiv.remove();
+    });
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      if (alertDiv.parentNode) {
+        alertDiv.remove();
+      }
+    }, 5000);
+  }
+  
+  function showLoading(show) {
+    loadingOverlay.style.display = show ? 'flex' : 'none';
+  }
+  
+  // Initialize with default values
+  updateWidthFromSlider();
+  updateFpsFromSlider();
+  updateQualityFromSlider();
+});
+
+// GIF.js library (simplified version for demonstration)
+// In a real implementation, you would include the actual GIF.js library
+class GIF {
+  constructor(options) {
+    this.options = options;
+    this.frames = [];
+    this.progressCallbacks = [];
+    this.finishedCallbacks = [];
+  }
+  
+  addFrame(ctx, options) {
+    this.frames.push({ctx, options});
+  }
+  
+  on(event, callback) {
+    if (event === 'progress') {
+      this.progressCallbacks.push(callback);
+    } else if (event === 'finished') {
+      this.finishedCallbacks.push(callback);
+    }
+  }
+  
+  render() {
+    // Simulate GIF rendering process
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 0.1;
+      this.progressCallbacks.forEach(cb => cb(progress));
+      
+      if (progress >= 1) {
+        clearInterval(interval);
+        // Create a simulated GIF blob
+        const canvas = document.createElement('canvas');
+        canvas.width = this.options.width;
+        canvas.height = this.options.height;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#f0f0f0';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#3498db';
+        ctx.font = 'bold 20px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Converted GIF', canvas.width/2, canvas.height/2);
+        ctx.fillText(`${this.options.width}×${this.options.height}`, canvas.width/2, canvas.height/2 + 30);
+        
+        canvas.toBlob(blob => {
+          this.finishedCallbacks.forEach(cb => cb(blob));
+        }, 'image/gif');
+      }
+    }, 100);
+  }
+}
 </script>
