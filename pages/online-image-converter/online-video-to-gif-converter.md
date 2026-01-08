@@ -19,6 +19,7 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
 
 <!-- FFmpeg.wasm -->
 <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.6/dist/ffmpeg.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
 
 <style>
   /* Video to GIF Converter Styles */
