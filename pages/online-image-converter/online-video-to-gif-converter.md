@@ -1394,6 +1394,7 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
     convertBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert to GIF';
     isConverting = false;
   }
+    }
     // Get conversion parameters from UI
     function getConversionParams() {
       const duration = parseFloat(gifDuration.value);
