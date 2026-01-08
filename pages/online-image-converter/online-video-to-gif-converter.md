@@ -1261,94 +1261,139 @@ permalink: /online-video-to-gif-converter-convert-videos-to-gifs/
     }
     
     // Convert video to GIF
-    async function convertVideoToGif() {
-      if (!ffmpeg || !videoFile) {
-        showAlert('Converter not ready. Please try again in a moment.', 'error');
-        return;
-      }
+    async function convertWithGifJS() {
+  if (!videoFile || !videoPlayer) {
+    showAlert('Please upload a video first.', 'error');
+    return;
+  }
+  
+  try {
+    isConverting = true;
+    conversionStartTime = Date.now();
+    
+    // Disable buttons during conversion
+    convertBtn.disabled = true;
+    convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Converting...';
+    
+    // Show progress bar
+    progressContainer.style.display = 'block';
+    updateProgress(10, 'Initializing GIF encoder...');
+    
+    // Get parameters
+    const params = getConversionParams();
+    
+    // Create canvas for frame extraction
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Set dimensions
+    let width = params.width > 0 ? params.width : 640;
+    let height = Math.round(width * (videoPlayer.videoHeight / videoPlayer.videoWidth));
+    
+    canvas.width = width;
+    canvas.height = height;
+    
+    // Create GIF instance
+    const gif = new GIF({
+      workers: 2,
+      quality: params.quality || 10,
+      width: width,
+      height: height,
+      workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
+    });
+    
+    // Set up GIF events
+    gif.on('progress', function(p) {
+      const percent = 30 + Math.round(p * 50);
+      updateProgress(percent, `Encoding GIF: ${Math.round(p * 100)}%`);
+    });
+    
+    // Seek to start time
+    videoPlayer.currentTime = params.start;
+    
+    // Wait for seek
+    await new Promise(resolve => {
+      videoPlayer.onseeked = resolve;
+    });
+    
+    updateProgress(20, 'Capturing video frames...');
+    
+    // Capture frames
+    const frameInterval = 1 / params.fps;
+    const totalFrames = Math.floor(params.duration * params.fps);
+    
+    for (let i = 0; i < totalFrames; i++) {
+      // Draw frame to canvas
+      ctx.drawImage(videoPlayer, 0, 0, width, height);
       
-      try {
-        isConverting = true;
-        conversionStartTime = Date.now();
-        
-        // Disable buttons during conversion
-        convertBtn.disabled = true;
-        convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Converting...';
-        
-        // Show progress bar
-        progressContainer.style.display = 'block';
-        updateProgress(10, 'Loading video file...');
-        
-        // Get conversion parameters
-        const params = getConversionParams();
-        
-        // Write video file to FFmpeg's virtual filesystem
-        updateProgress(20, 'Preparing video for conversion...');
-        const videoData = await videoFile.arrayBuffer();
-        await ffmpeg.writeFile('input.mp4', new Uint8Array(videoData));
-        
-        // Build FFmpeg command
-        const command = buildFFmpegCommand(params);
-        
-        // Execute FFmpeg command
-        updateProgress(30, 'Converting video to GIF...');
-        await ffmpeg.exec(command.split(' '));
-        
-        // Read the output GIF
-        updateProgress(80, 'Finalizing GIF...');
-        const gifData = await ffmpeg.readFile('output.gif');
-        
-        // Create blob and URL for the GIF
-        const gifBlob = new Blob([gifData], { type: 'image/gif' });
-        
-        // Clean up previous GIF URL if exists
-        if (gifUrl) {
-          URL.revokeObjectURL(gifUrl);
-        }
-        
-        gifUrl = URL.createObjectURL(gifBlob);
-        
-        // Display the GIF
-        gifPreview.src = gifUrl;
-        gifPreview.style.display = 'block';
-        gifPlaceholder.style.display = 'none';
-        
-        // Update counters
-        const gifSizeMB = (gifBlob.size / (1024 * 1024)).toFixed(2);
-        document.getElementById('gifSize').textContent = `${gifSizeMB} MB`;
-        
-        const conversionTime = ((Date.now() - conversionStartTime) / 1000).toFixed(1);
-        document.getElementById('conversionTime').textContent = `${conversionTime} seconds`;
-        
-        // Enable download and preview buttons
-        downloadGifBtn.disabled = false;
-        previewBtn.disabled = false;
-        
-        // Update progress to complete
-        updateProgress(100, 'Conversion complete!');
-        
-        // Show success message
-        showAlert(`Video converted to GIF successfully! File size: ${gifSizeMB} MB`, 'success');
-        
-      } catch (error) {
-        console.error('Conversion error:', error);
-        showAlert('Failed to convert video to GIF. Please try again with different settings.', 'error');
-        
-        // Update progress to show error
-        updateProgress(0, 'Conversion failed');
-        
-      } finally {
-        // Reset UI
-        setTimeout(() => {
-          progressContainer.style.display = 'none';
-        }, 2000);
-        
-        convertBtn.disabled = false;
-        convertBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert to GIF';
-        isConverting = false;
-      }
+      // Add frame to GIF
+      gif.addFrame(canvas, { delay: 1000 / params.fps, copy: true });
+      
+      // Update progress
+      const progress = 20 + (i / totalFrames) * 10;
+      updateProgress(progress, `Capturing frame ${i + 1} of ${totalFrames}`);
+      
+      // Seek to next frame
+      videoPlayer.currentTime = params.start + (i * frameInterval);
+      
+      // Small delay for seek
+      await new Promise(resolve => setTimeout(resolve, 50));
     }
     
+    updateProgress(80, 'Rendering GIF...');
+    
+    // Render GIF
+    await new Promise((resolve, reject) => {
+      gif.on('finished', function(blob) {
+        resolve(blob);
+      });
+      
+      gif.on('error', function(error) {
+        reject(error);
+      });
+      
+      gif.render();
+    }).then(async function(blob) {
+      // Create URL for the GIF
+      if (gifUrl) {
+        URL.revokeObjectURL(gifUrl);
+      }
+      
+      gifUrl = URL.createObjectURL(blob);
+      
+      // Display the GIF
+      gifPreview.src = gifUrl;
+      gifPreview.style.display = 'block';
+      gifPlaceholder.style.display = 'none';
+      
+      // Update counters
+      const gifSizeMB = (blob.size / (1024 * 1024)).toFixed(2);
+      document.getElementById('gifSize').textContent = `${gifSizeMB} MB`;
+      
+      const conversionTime = ((Date.now() - conversionStartTime) / 1000).toFixed(1);
+      document.getElementById('conversionTime').textContent = `${conversionTime} seconds`;
+      
+      // Enable download and preview buttons
+      downloadGifBtn.disabled = false;
+      previewBtn.disabled = false;
+      
+      updateProgress(100, 'Conversion complete!');
+      showAlert(`Video converted to GIF successfully! File size: ${gifSizeMB} MB`, 'success');
+    });
+    
+  } catch (error) {
+    console.error('GIF.js conversion error:', error);
+    showAlert('Failed to convert video to GIF. Please try with shorter duration.', 'error');
+    updateProgress(0, 'Conversion failed');
+  } finally {
+    setTimeout(() => {
+      progressContainer.style.display = 'none';
+    }, 2000);
+    
+    convertBtn.disabled = false;
+    convertBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Convert to GIF';
+    isConverting = false;
+  }
     // Get conversion parameters from UI
     function getConversionParams() {
       const duration = parseFloat(gifDuration.value);
