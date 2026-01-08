@@ -114,7 +114,9 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border: none;
   }
 
@@ -162,6 +164,21 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     max-height: 360px;
     border-radius: 8px;
     background: #000;
+    display: none;
+  }
+
+  #videoPlaceholder {
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 40px;
+    text-align: center;
+  }
+
+  #videoPlaceholder i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 10px;
+    display: block;
   }
 
   /* Conversion Options */
@@ -285,7 +302,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
 
   .progress-fill {
     height: 100%;
-    background-color: var(--primary);
+    background: linear-gradient(90deg, var(--primary), #2980b9);
     width: 0%;
     transition: width 0.3s ease;
     border-radius: 10px;
@@ -311,6 +328,18 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .alert-success {
@@ -331,10 +360,24 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     border: 1px solid #bee5eb;
   }
 
-  .alert .close {
+  .alert .close-btn {
     cursor: pointer;
     font-weight: bold;
     font-size: 1.2rem;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .alert .close-btn:hover {
+    background: rgba(0,0,0,0.1);
   }
 
   /* GIF Preview */
@@ -360,38 +403,18 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     display: none;
   }
 
-  .preview-placeholder {
+  #gifPlaceholder {
     color: #7f8c8d;
     font-style: italic;
     padding: 40px;
     text-align: center;
   }
 
-  /* SEO Content */
-  .content-placeholder {
-    padding: 25px;
-    background: white;
-    border-radius: 12px;
-    margin-top: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .content-placeholder ul {
-    margin: 15px 0;
-    padding-left: 30px;
-  }
-
-  .content-placeholder li {
+  #gifPlaceholder i {
+    font-size: 3rem;
+    color: #ccc;
     margin-bottom: 10px;
-    line-height: 1.6;
-    color: #555;
-  }
-
-  .content-placeholder h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
+    display: block;
   }
 
   /* Share Section */
@@ -443,6 +466,33 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     margin: 10px 0;
     font-family: monospace;
     white-space: pre-wrap;
+  }
+
+  /* SEO Content */
+  .content-placeholder {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .content-placeholder ul {
+    margin: 15px 0;
+    padding-left: 30px;
+  }
+
+  .content-placeholder li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .content-placeholder h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   /* Responsive Design */
@@ -550,16 +600,16 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
       </button>
       <span id="fileName">No video selected</span>
       <div class="file-info">
-        Supported formats: MP4, WebM, MOV, AVI (Max 100MB)
+        Supported formats: MP4, WebM, MOV, AVI (Max 50MB for better performance)
       </div>
     </div>
 
     <!-- Video Preview -->
     <div class="video-preview-section">
       <div class="video-preview-container">
-        <video id="videoPlayer" controls style="display: none;"></video>
-        <div id="videoPlaceholder" class="preview-placeholder">
-          <i class="fas fa-video fa-3x" style="color: #ccc; margin-bottom: 10px;"></i>
+        <video id="videoPlayer" controls></video>
+        <div id="videoPlaceholder">
+          <i class="fas fa-video"></i>
           <p>Video preview will appear here</p>
         </div>
       </div>
@@ -574,7 +624,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
       
       <div class="option-group">
         <label class="option-label">Duration (seconds)</label>
-        <input type="number" id="duration" class="option-input" min="0.5" max="30" value="3" step="0.1">
+        <input type="number" id="duration" class="option-input" min="0.5" max="10" value="3" step="0.1">
       </div>
       
       <div class="option-group">
@@ -592,9 +642,10 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
         <label class="option-label">Frame Rate (FPS)</label>
         <select id="fps" class="option-select">
           <option value="5">5 FPS (Smaller file)</option>
+          <option value="8">8 FPS</option>
           <option value="10" selected>10 FPS (Recommended)</option>
+          <option value="12">12 FPS</option>
           <option value="15">15 FPS (Smooth)</option>
-          <option value="24">24 FPS (High quality)</option>
         </select>
       </div>
       
@@ -610,7 +661,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
       <div class="option-group">
         <label class="option-label">Loop</label>
         <select id="loop" class="option-select">
-          <option value="0">Infinite Loop</option>
+          <option value="0" selected>Infinite Loop</option>
           <option value="1">Play Once</option>
         </select>
       </div>
@@ -632,11 +683,8 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
       <button class="case-button success" id="downloadBtn" disabled>
         <i class="fas fa-download"></i> Download GIF
       </button>
-      <button class="case-button secondary" id="previewBtn" disabled>
-        <i class="fas fa-eye"></i> Preview GIF
-      </button>
-      <button class="case-button warning" id="resetBtn">
-        <i class="fas fa-redo"></i> Reset All
+      <button class="case-button secondary" id="clearBtn">
+        <i class="fas fa-redo"></i> Clear All
       </button>
     </div>
 
@@ -664,8 +712,8 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
       <h3>GIF Preview</h3>
       <div class="preview-container">
         <img id="gifPreview" alt="Converted GIF Preview">
-        <div id="gifPlaceholder" class="preview-placeholder">
-          <i class="fas fa-image fa-3x" style="color: #ccc; margin-bottom: 10px;"></i>
+        <div id="gifPlaceholder">
+          <i class="fas fa-image"></i>
           <p>Converted GIF will appear here</p>
         </div>
       </div>
@@ -711,9 +759,9 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
 
     <h3>Step-by-Step Conversion Process</h3>
     <ol>
-      <li><strong>Upload Your Video:</strong> Click the upload button and select your video file. The tool supports files up to 100MB.</li>
+      <li><strong>Upload Your Video:</strong> Click the upload button and select your video file. The tool supports files up to 50MB for optimal performance.</li>
       <li><strong>Preview & Select Segment:</strong> Use the video player to preview your video and identify the perfect clip for conversion.</li>
-      <li><strong>Customize Settings:</strong> Adjust start time, duration (up to 30 seconds), resolution, frame rate, and quality.</li>
+      <li><strong>Customize Settings:</strong> Adjust start time, duration (up to 10 seconds), resolution, frame rate, and quality.</li>
       <li><strong>Convert to GIF:</strong> Click the convert button. FFmpeg.wasm will process your video locally in the browser.</li>
       <li><strong>Download & Share:</strong> Once conversion is complete, download your GIF and share it on social media, messaging apps, or websites.</li>
     </ol>
@@ -754,7 +802,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     <h3>Frequently Asked Questions</h3>
     
     <p><strong>Is there a file size limit for videos?</strong><br>
-    Yes, the tool supports videos up to 100MB. For larger videos, we recommend trimming them first using video editing software.</p>
+    Yes, the tool supports videos up to 50MB for optimal performance. For larger videos, we recommend trimming them first using video editing software.</p>
     
     <p><strong>What video formats are supported?</strong><br>
     The converter supports MP4, WebM, MOV, and AVI formats. Most videos from smartphones, cameras, and screen recorders work perfectly.</p>
@@ -763,7 +811,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
     Absolutely! This is the most important feature. All processing happens locally in your browser using WebAssembly. Your video is never uploaded to any server – we never see, store, or have access to your content.</p>
     
     <p><strong>What's the maximum duration for a GIF?</strong><br>
-    You can create GIFs up to 30 seconds long. For practical use and optimal file sizes, we recommend keeping GIFs under 10 seconds.</p>
+    You can create GIFs up to 10 seconds long. For practical use and optimal performance, we recommend keeping GIFs under 5 seconds.</p>
     
     <p><strong>Do I need to install any software?</strong><br>
     No installation required! The converter works directly in your web browser. Just visit the page and start converting.</p>
@@ -802,11 +850,8 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
   </div>
 </div>
 
-<!-- FFmpeg.wasm Script -->
-<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.6/dist/ffmpeg.min.js"></script>
-
 <script>
-// Main Application Script
+// Enhanced Video to GIF Converter with better error handling
 document.addEventListener('DOMContentLoaded', function() {
   // DOM Elements
   const videoInput = document.getElementById('videoInput');
@@ -817,20 +862,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const gifPlaceholder = document.getElementById('gifPlaceholder');
   const convertBtn = document.getElementById('convertBtn');
   const downloadBtn = document.getElementById('downloadBtn');
-  const previewBtn = document.getElementById('previewBtn');
-  const resetBtn = document.getElementById('resetBtn');
+  const clearBtn = document.getElementById('clearBtn');
   const alertContainer = document.getElementById('alertContainer');
   const progressContainer = document.getElementById('progressContainer');
   const progressFill = document.getElementById('progressFill');
   const progressText = document.getElementById('progressText');
-  
-  // Input elements
-  const startTime = document.getElementById('startTime');
-  const duration = document.getElementById('duration');
-  const width = document.getElementById('width');
-  const fps = document.getElementById('fps');
-  const quality = document.getElementById('quality');
-  const loop = document.getElementById('loop');
   
   // Stats elements
   const videoDuration = document.getElementById('videoDuration');
@@ -838,87 +874,107 @@ document.addEventListener('DOMContentLoaded', function() {
   const gifSize = document.getElementById('gifSize');
   const conversionTime = document.getElementById('conversionTime');
   
+  // Options
+  const startTime = document.getElementById('startTime');
+  const duration = document.getElementById('duration');
+  const width = document.getElementById('width');
+  const fps = document.getElementById('fps');
+  const quality = document.getElementById('quality');
+  const loop = document.getElementById('loop');
+  
   // State variables
   let currentVideoFile = null;
   let currentVideoUrl = null;
   let currentGifUrl = null;
   let ffmpeg = null;
   let isConverting = false;
-  let conversionStartTimestamp = null;
+  let isFFmpegLoaded = false;
   
-  // Initialize FFmpeg
-  async function initFFmpeg() {
+  // Initialize on page load
+  initializeApp();
+  
+  // Event Listeners
+  videoInput.addEventListener('change', handleVideoUpload);
+  convertBtn.addEventListener('click', convertVideoToGif);
+  downloadBtn.addEventListener('click', downloadGif);
+  clearBtn.addEventListener('click', clearAll);
+  
+  // Initialize the application
+  async function initializeApp() {
+    showAlert('Initializing video converter...', 'info');
+    updateProgress(10, 'Loading converter...');
+    
     try {
-      if (!ffmpeg) {
-        // Show loading message
-        showAlert('Loading video converter...', 'info');
-        
-        // Create FFmpeg instance
-        const { createFFmpeg, fetchFile } = FFmpeg;
-        ffmpeg = createFFmpeg({ 
-          log: false,
-          corePath: 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js',
-        });
-        
-        // Load FFmpeg
-        progressContainer.style.display = 'block';
-        updateProgress(10, 'Loading FFmpeg...');
-        
-        await ffmpeg.load();
-        
-        updateProgress(100, 'FFmpeg loaded successfully');
-        showAlert('Video converter is ready!', 'success');
-        
-        // Hide progress after a moment
-        setTimeout(() => {
-          progressContainer.style.display = 'none';
-        }, 1500);
-        
-        console.log('FFmpeg loaded successfully');
-      }
+      // Load FFmpeg dynamically
+      await loadFFmpeg();
+      isFFmpegLoaded = true;
+      updateProgress(100, 'Converter ready!');
+      showAlert('Video converter is ready to use!', 'success');
+      
+      // Hide progress after a moment
+      setTimeout(() => {
+        progressContainer.style.display = 'none';
+      }, 1500);
+      
     } catch (error) {
-      console.error('Failed to load FFmpeg:', error);
-      showAlert('Failed to load video converter. Please refresh the page and try again.', 'error');
+      console.error('Failed to initialize FFmpeg:', error);
+      showAlert('FFmpeg failed to load. Please refresh the page.', 'error');
     }
   }
   
-  // Call initialization
-  initFFmpeg();
-  
-  // Event Listeners
-  
-  // File input change
-  videoInput.addEventListener('change', handleVideoUpload);
-  
-  // Convert button
-  convertBtn.addEventListener('click', convertVideoToGif);
-  
-  // Download button
-  downloadBtn.addEventListener('click', downloadGif);
-  
-  // Preview button
-  previewBtn.addEventListener('click', previewGif);
-  
-  // Reset button
-  resetBtn.addEventListener('click', resetConverter);
-  
-  // Functions
+  // Load FFmpeg with better error handling
+  async function loadFFmpeg() {
+    return new Promise((resolve, reject) => {
+      // Check if FFmpeg is already loaded
+      if (window.FFmpeg && window.FFmpeg.createFFmpeg) {
+        createFFmpegInstance();
+        resolve();
+        return;
+      }
+      
+      // Load FFmpeg script
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.6/dist/ffmpeg.min.js';
+      script.onload = () => {
+        if (window.FFmpeg && window.FFmpeg.createFFmpeg) {
+          createFFmpegInstance();
+          resolve();
+        } else {
+          reject(new Error('FFmpeg not found after loading'));
+        }
+      };
+      script.onerror = reject;
+      document.head.appendChild(script);
+      
+      function createFFmpegInstance() {
+        try {
+          const { createFFmpeg } = window.FFmpeg;
+          ffmpeg = createFFmpeg({ 
+            log: false,
+            corePath: 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/ffmpeg-core.js'
+          });
+        } catch (error) {
+          reject(error);
+        }
+      }
+    });
+  }
   
   // Handle video upload
   async function handleVideoUpload(event) {
     const file = event.target.files[0];
     if (!file) return;
     
-    // Validate file
-    if (file.size > 100 * 1024 * 1024) {
-      showAlert('File size exceeds 100MB limit. Please select a smaller video.', 'error');
+    // Validate file size (50MB limit for better performance)
+    if (file.size > 50 * 1024 * 1024) {
+      showAlert('File size exceeds 50MB limit. Please select a smaller video for better performance.', 'error');
       return;
     }
     
     // Validate file type
     const validTypes = ['video/mp4', 'video/webm', 'video/quicktime', 'video/x-msvideo'];
     const validExtensions = ['.mp4', '.webm', '.mov', '.avi', '.mkv'];
-    const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+    const fileExtension = '.' + file.name.toLowerCase().split('.').pop();
     
     if (!validTypes.includes(file.type) && !validExtensions.includes(fileExtension)) {
       showAlert('Unsupported file format. Please upload MP4, WebM, MOV, or AVI video.', 'error');
@@ -926,7 +982,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     try {
-      // Clean up previous video URL
+      // Clean up previous URL
       if (currentVideoUrl) {
         URL.revokeObjectURL(currentVideoUrl);
       }
@@ -935,19 +991,23 @@ document.addEventListener('DOMContentLoaded', function() {
       currentVideoUrl = URL.createObjectURL(file);
       
       // Update UI
-      fileName.textContent = file.name;
+      fileName.textContent = file.name + ` (${(file.size / (1024 * 1024)).toFixed(1)} MB)`;
       
       // Setup video player
       videoPlayer.src = currentVideoUrl;
       videoPlayer.style.display = 'block';
       videoPlaceholder.style.display = 'none';
       
-      // Wait for video metadata
+      // Wait for video metadata to load
       await new Promise((resolve) => {
-        videoPlayer.onloadedmetadata = () => {
-          // Update duration input max
-          const maxDuration = Math.min(30, Math.floor(videoPlayer.duration));
-          duration.max = maxDuration;
+        const onLoaded = () => {
+          videoPlayer.removeEventListener('loadedmetadata', onLoaded);
+          videoPlayer.removeEventListener('error', onError);
+          
+          // Update duration max to video duration (max 10 seconds for GIF)
+          const videoDuration = Math.min(10, videoPlayer.duration);
+          duration.max = videoDuration.toFixed(1);
+          duration.value = Math.min(3, videoDuration).toFixed(1);
           
           // Update stats
           updateStats(file);
@@ -955,28 +1015,35 @@ document.addEventListener('DOMContentLoaded', function() {
           // Enable convert button
           convertBtn.disabled = false;
           
+          showAlert('Video loaded successfully! You can now convert it to GIF.', 'success');
           resolve();
         };
         
-        videoPlayer.onerror = () => {
-          showAlert('Failed to load video. The file may be corrupted or in an unsupported format.', 'error');
+        const onError = () => {
+          videoPlayer.removeEventListener('loadedmetadata', onLoaded);
+          videoPlayer.removeEventListener('error', onError);
+          showAlert('Failed to load video. The file may be corrupted.', 'error');
           resolve();
         };
+        
+        videoPlayer.addEventListener('loadedmetadata', onLoaded);
+        videoPlayer.addEventListener('error', onError);
+        
+        // Timeout fallback
+        setTimeout(resolve, 5000);
       });
       
-      showAlert('Video uploaded successfully! You can now convert it to GIF.', 'success');
-      
     } catch (error) {
-      console.error('Error handling video upload:', error);
-      showAlert('Failed to process video file. Please try again with a different video.', 'error');
+      console.error('Error loading video:', error);
+      showAlert('Error loading video file. Please try another file.', 'error');
     }
   }
   
   // Update statistics
   function updateStats(file) {
     // Video duration
-    const duration = videoPlayer.duration || 0;
-    videoDuration.textContent = `${duration.toFixed(1)}s`;
+    const dur = videoPlayer.duration || 0;
+    videoDuration.textContent = `${dur.toFixed(1)}s`;
     
     // Video size
     const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
@@ -990,7 +1057,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Convert video to GIF
   async function convertVideoToGif() {
     if (!currentVideoFile) {
-      showAlert('Please upload a video file first.', 'error');
+      showAlert('Please upload a video first.', 'error');
       return;
     }
     
@@ -1000,80 +1067,124 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Ensure FFmpeg is loaded
-    if (!ffmpeg || !ffmpeg.isLoaded()) {
-      showAlert('Initializing converter... Please wait.', 'info');
-      await initFFmpeg();
+    if (!isFFmpegLoaded || !ffmpeg) {
+      showAlert('Converter is still loading. Please wait...', 'info');
+      progressContainer.style.display = 'block';
+      updateProgress(20, 'Loading converter...');
       
-      if (!ffmpeg || !ffmpeg.isLoaded()) {
-        showAlert('Converter failed to initialize. Please refresh the page.', 'error');
+      try {
+        await loadFFmpeg();
+        isFFmpegLoaded = true;
+      } catch (error) {
+        showAlert('Failed to load converter. Please refresh the page.', 'error');
+        progressContainer.style.display = 'none';
         return;
       }
     }
     
     try {
       isConverting = true;
-      conversionStartTimestamp = Date.now();
-      
-      // Disable buttons during conversion
       convertBtn.disabled = true;
       convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Converting...';
       
-      // Show progress bar
+      // Show progress
       progressContainer.style.display = 'block';
-      updateProgress(10, 'Preparing video...');
+      updateProgress(10, 'Starting conversion...');
       
-      // Get conversion parameters
-      const params = getConversionParams();
+      // Load FFmpeg if not already loaded
+      if (!ffmpeg.isLoaded()) {
+        updateProgress(20, 'Loading FFmpeg core...');
+        await ffmpeg.load();
+      }
       
-      // Write video file to FFmpeg's virtual filesystem
-      updateProgress(20, 'Loading video into converter...');
+      // Get parameters
+      const start = startTime.value;
+      const dur = duration.value;
+      const w = width.value;
+      const f = fps.value;
+      const qual = quality.value;
+      const lp = loop.value;
+      
+      // Validate parameters
+      if (dur > 10) {
+        showAlert('Duration should be 10 seconds or less for optimal performance.', 'error');
+        return;
+      }
+      
+      // Write video file to FFmpeg
+      updateProgress(30, 'Processing video file...');
       const videoData = await readFileAsArrayBuffer(currentVideoFile);
       ffmpeg.FS('writeFile', 'input.mp4', new Uint8Array(videoData));
       
-      // Build FFmpeg command
-      const command = buildFFmpegCommand(params);
+      // Run FFmpeg command with progress tracking
+      updateProgress(50, 'Converting to GIF...');
       
-      // Execute FFmpeg command
-      updateProgress(30, 'Converting video frames...');
-      await ffmpeg.run(...command);
+      // Simple progress simulation
+      const progressInterval = setInterval(() => {
+        const currentProgress = parseInt(progressFill.style.width) || 50;
+        if (currentProgress < 90) {
+          updateProgress(currentProgress + 5, 'Converting to GIF...');
+        }
+      }, 500);
       
-      // Read the output GIF
-      updateProgress(80, 'Finalizing GIF...');
-      const gifData = ffmpeg.FS('readFile', 'output.gif');
+      const startTimeStamp = Date.now();
       
-      // Create blob and URL for the GIF
-      const gifBlob = new Blob([gifData.buffer], { type: 'image/gif' });
+      try {
+        // Build FFmpeg command based on quality
+        let ffmpegCommand = [
+          '-ss', start,
+          '-t', dur,
+          '-i', 'input.mp4',
+          '-vf', `fps=${f},scale=${w}:-1:flags=lanczos`,
+          '-loop', lp
+        ];
+        
+        // Add quality settings
+        if (qual === 'high') {
+          ffmpegCommand.push('-b:v', '2M');
+        } else if (qual === 'low') {
+          ffmpegCommand.push('-b:v', '512k');
+        } else {
+          ffmpegCommand.push('-b:v', '1M'); // Medium quality
+        }
+        
+        ffmpegCommand.push('output.gif');
+        
+        await ffmpeg.run(...ffmpegCommand);
+      } finally {
+        clearInterval(progressInterval);
+      }
       
-      // Clean up previous GIF URL
+      // Read output GIF
+      updateProgress(95, 'Finalizing GIF...');
+      const data = ffmpeg.FS('readFile', 'output.gif');
+      
+      // Check if GIF was created
+      if (data.length === 0) {
+        throw new Error('Empty GIF file created');
+      }
+      
+      // Create blob and URL
       if (currentGifUrl) {
         URL.revokeObjectURL(currentGifUrl);
       }
       
-      currentGifUrl = URL.createObjectURL(gifBlob);
+      currentGifUrl = URL.createObjectURL(new Blob([data.buffer], { type: 'image/gif' }));
       
-      // Display the GIF
-      gifPreview.src = currentGifUrl;
-      gifPreview.style.display = 'block';
-      gifPlaceholder.style.display = 'none';
+      // Display GIF
+      displayGif(currentGifUrl);
       
       // Update stats
-      const gifSizeMB = (gifBlob.size / (1024 * 1024)).toFixed(2);
+      const gifSizeMB = (data.length / (1024 * 1024)).toFixed(2);
       gifSize.textContent = `${gifSizeMB} MB`;
       
-      const conversionTimeSec = ((Date.now() - conversionStartTimestamp) / 1000).toFixed(1);
+      const conversionTimeSec = ((Date.now() - startTimeStamp) / 1000).toFixed(1);
       conversionTime.textContent = `${conversionTimeSec}s`;
       
-      // Enable download and preview buttons
-      downloadBtn.disabled = false;
-      previewBtn.disabled = false;
-      
-      // Update progress to complete
       updateProgress(100, 'Conversion complete!');
+      showAlert(`GIF created successfully! File size: ${gifSizeMB} MB`, 'success');
       
-      // Show success message
-      showAlert(`Video converted to GIF successfully! File size: ${gifSizeMB} MB`, 'success');
-      
-      // Auto-hide progress after 2 seconds
+      // Hide progress after a moment
       setTimeout(() => {
         progressContainer.style.display = 'none';
       }, 2000);
@@ -1085,11 +1196,13 @@ document.addEventListener('DOMContentLoaded', function() {
       let errorMessage = 'Failed to convert video to GIF. ';
       
       if (error.message.includes('memory') || error.message.includes('Cannot enlarge memory')) {
-        errorMessage += 'The video might be too large or long. Try a shorter clip, lower resolution, or lower frame rate.';
-      } else if (error.message.includes('Invalid data')) {
+        errorMessage += 'The video might be too large. Try a shorter duration or lower resolution.';
+      } else if (error.message.includes('Invalid data') || error.message.includes('format')) {
         errorMessage += 'The video format might not be fully supported. Try converting to MP4 first.';
+      } else if (error.message.includes('Empty GIF')) {
+        errorMessage += 'No frames were captured. Check your start time and duration settings.';
       } else {
-        errorMessage += 'Please try again with different settings.';
+        errorMessage += 'Please try different settings.';
       }
       
       showAlert(errorMessage, 'error');
@@ -1103,43 +1216,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Get conversion parameters from UI
-  function getConversionParams() {
-    return {
-      start: startTime.value,
-      duration: duration.value,
-      width: width.value,
-      fps: fps.value,
-      quality: quality.value,
-      loop: loop.value
-    };
-  }
-  
-  // Build FFmpeg command from parameters
-  function buildFFmpegCommand(params) {
-    const command = [
-      '-ss', params.start,         // Start time
-      '-t', params.duration,       // Duration
-      '-i', 'input.mp4',           // Input file
-      '-vf', `fps=${params.fps},scale=${params.width}:-1:flags=lanczos`, // Filters
-    ];
+  // Display GIF
+  function displayGif(gifUrl) {
+    gifPreview.src = gifUrl;
+    gifPreview.style.display = 'block';
+    gifPlaceholder.style.display = 'none';
     
-    // Add quality settings
-    if (params.quality === 'high') {
-      command.push('-b:v', '2M');
-    } else if (params.quality === 'low') {
-      command.push('-b:v', '512k');
-    } else {
-      command.push('-b:v', '1M'); // Medium quality
-    }
+    // Enable download button
+    downloadBtn.disabled = false;
     
-    // Add loop settings (0 = infinite, 1 = play once)
-    command.push('-loop', params.loop);
-    
-    // Output file
-    command.push('output.gif');
-    
-    return command;
+    // Scroll to preview
+    gifPreview.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   
   // Download GIF
@@ -1151,7 +1238,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const link = document.createElement('a');
     link.href = currentGifUrl;
-    link.download = `converted-${Date.now()}.gif`;
+    link.download = `video-gif-${Date.now()}.gif`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -1159,23 +1246,8 @@ document.addEventListener('DOMContentLoaded', function() {
     showAlert('GIF downloaded successfully!', 'success');
   }
   
-  // Preview GIF
-  function previewGif() {
-    if (!currentGifUrl) {
-      showAlert('No GIF available to preview.', 'error');
-      return;
-    }
-    
-    // GIF is already displayed, just ensure it's visible
-    gifPreview.style.display = 'block';
-    gifPlaceholder.style.display = 'none';
-    
-    // Scroll to preview section
-    document.querySelector('.preview-section').scrollIntoView({ behavior: 'smooth' });
-  }
-  
-  // Reset converter
-  function resetConverter() {
+  // Clear everything
+  function clearAll() {
     // Clean up URLs
     if (currentVideoUrl) {
       URL.revokeObjectURL(currentVideoUrl);
@@ -1208,18 +1280,9 @@ document.addEventListener('DOMContentLoaded', function() {
     gifSize.textContent = '0 MB';
     conversionTime.textContent = '0s';
     
-    // Reset inputs to defaults
-    startTime.value = 0;
-    duration.value = 3;
-    width.value = 480;
-    fps.value = 10;
-    quality.value = 'medium';
-    loop.value = '0';
-    
     // Disable buttons
     convertBtn.disabled = true;
     downloadBtn.disabled = true;
-    previewBtn.disabled = true;
     
     // Clear alerts
     alertContainer.innerHTML = '';
@@ -1227,32 +1290,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide progress
     progressContainer.style.display = 'none';
     
-    showAlert('Converter has been reset. You can upload a new video.', 'info');
+    showAlert('Converter has been reset. Upload a new video to start.', 'info');
   }
   
   // Update progress bar
   function updateProgress(percent, message) {
     progressFill.style.width = `${percent}%`;
     progressText.textContent = message;
+    progressContainer.style.display = 'block';
   }
   
   // Show alert message
   function showAlert(message, type) {
+    // Create new alert
     const alertDiv = document.createElement('div');
     alertDiv.className = `alert alert-${type}`;
     alertDiv.innerHTML = `
-      ${message}
-      <span class="close" onclick="this.parentElement.remove()">&times;</span>
+      <span>${message}</span>
+      <button class="close-btn" onclick="this.parentElement.remove()">&times;</button>
     `;
     
-    alertContainer.insertBefore(alertDiv, alertContainer.firstChild);
+    // Add to container
+    alertContainer.appendChild(alertDiv);
     
-    // Auto-remove after 5 seconds
-    setTimeout(() => {
-      if (alertDiv.parentNode) {
-        alertDiv.remove();
-      }
-    }, 5000);
+    // Auto-remove after 5 seconds (except info alerts)
+    if (type !== 'info') {
+      setTimeout(() => {
+        if (alertDiv.parentNode) {
+          alertDiv.remove();
+        }
+      }, 5000);
+    }
   }
   
   // Helper function to read file as ArrayBuffer
