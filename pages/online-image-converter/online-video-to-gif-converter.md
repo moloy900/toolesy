@@ -547,91 +547,59 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Convert to GIF using canvas
   async function convertToGif() {
-    if (!currentVideoFile) {
-      showAlert('Please upload a video first.', 'error');
-      return;
-    }
-    
-    try {
-      // Disable convert button
-      convertBtn.disabled = true;
-      convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating GIF...';
-      
-      // Show progress
-      progressContainer.style.display = 'block';
-      updateProgress(10, 'Starting conversion...');
-      
-      // Get parameters
-      const start = parseFloat(startTime.value);
-      const dur = parseFloat(duration.value);
-      const w = parseInt(width.value);
-      const f = parseInt(fps.value);
-      
-      // Validate parameters
-      if (dur > 5) {
-        showAlert('Duration should be 5 seconds or less for better performance.', 'error');
-        return;
-      }
-      
-      // Create canvas for animation
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      
-      // Calculate height based on video aspect ratio
-      const aspectRatio = videoPlayer.videoHeight / videoPlayer.videoWidth;
-      const h = Math.round(w * aspectRatio);
-      canvas.width = w;
-      canvas.height = h;
-      
-      updateProgress(20, 'Setting up canvas...');
-      
-      // Seek to start time
-      videoPlayer.currentTime = start;
-      
-      // Wait for seek to complete
-      await new Promise(resolve => {
-        videoPlayer.onseeked = resolve;
-        setTimeout(resolve, 500);
-      });
-      
-      // Calculate frame count
-      const frameCount = Math.floor(dur * f);
-      const frameDelay = 1000 / f; // Delay between frames in ms
-      
-      updateProgress(30, 'Capturing frames...');
-      
-      // Create frames array
-      const frames = [];
-      
-      for (let i = 0; i < frameCount; i++) {
-        try {
-          // Draw current video frame to canvas
-          ctx.drawImage(videoPlayer, 0, 0, w, h);
-          
-          // Add frame number to canvas
-          ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-          ctx.fillRect(10, 10, 100, 30);
-          ctx.fillStyle = 'white';
-          ctx.font = '14px Arial';
-          ctx.fillText(`Frame ${i + 1}`, 20, 30);
-          
-          // Get canvas as data URL
-          const frameData = canvas.toDataURL('image/jpeg', 0.8);
-          frames.push(frameData);
-          
-          // Update progress
-          const progress = 30 + (i / frameCount) * 50;
-          updateProgress(progress, `Processing frame ${i + 1} of ${frameCount}`);
-          
-          // Seek to next frame
-          videoPlayer.currentTime = start + (i * (1/f));
-          await new Promise(resolve => setTimeout(resolve, 50));
-          
-        } catch (error) {
-          console.warn(`Error capturing frame ${i}:`, error);
-          // Continue with next frame
-        }
-      }
+  if (!currentVideoFile) {
+    showAlert('Please upload a video first.', 'error');
+    return;
+  }
+
+  const { createFFmpeg, fetchFile } = FFmpeg;
+  const ffmpeg = createFFmpeg({ log: true });
+
+  try {
+    progressContainer.style.display = 'block';
+    updateProgress(10, 'Loading FFmpeg...');
+
+    await ffmpeg.load();
+
+    updateProgress(30, 'Reading video file...');
+    ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(currentVideoFile));
+
+    const start = startTime.value;
+    const dur = duration.value;
+    const w = width.value;
+    const f = fps.value;
+
+    updateProgress(60, 'Converting to GIF...');
+
+    await ffmpeg.run(
+      '-ss', start,
+      '-t', dur,
+      '-i', 'input.mp4',
+      '-vf', `fps=${f},scale=${w}:-1:flags=lanczos`,
+      'output.gif'
+    );
+
+    updateProgress(90, 'Finalizing GIF...');
+
+    const data = ffmpeg.FS('readFile', 'output.gif');
+    const gifBlob = new Blob([data.buffer], { type: 'image/gif' });
+
+    if (currentGifUrl) URL.revokeObjectURL(currentGifUrl);
+    currentGifUrl = URL.createObjectURL(gifBlob);
+
+    gifPreview.src = currentGifUrl;
+    gifPreview.style.display = 'block';
+    gifPlaceholder.style.display = 'none';
+
+    downloadBtn.disabled = false;
+    updateProgress(100, 'GIF created successfully!');
+    showAlert('Real animated GIF created from video!', 'success');
+
+  } catch (err) {
+    console.error(err);
+    showAlert('GIF conversion failed.', 'error');
+  }
+}
       
       updateProgress(80, 'Creating GIF from frames...');
       
