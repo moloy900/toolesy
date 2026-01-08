@@ -16,6 +16,7 @@ permalink: /free-online-video-to-gif-converter-convert-videos-to-gif-instantly/
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.6/dist/ffmpeg.min.js"></script>
 
 <style>
   /* Main Container */
