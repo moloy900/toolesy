@@ -11,7 +11,7 @@ permalink: /robotstxt-generator-create-robotstxt-file-instantly/
   content="Free online robots.txt generator tool. Create optimized robots.txt files for your website to control search engine crawling and indexing behavior instantly.">
 <meta name="keywords"
   content="robots.txt generator, robots.txt file, search engine optimization, seo tool, web crawler control, robots exclusion protocol, google bot, bing bot">
-<meta name="author" content="Your Name">
+<meta name="author" content="Paramdip Nath">
 <meta name="robots" content="index, follow">
 
 <!-- Font Awesome -->
