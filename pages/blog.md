@@ -616,27 +616,8 @@ permalink: /blog/
                     image: '',
                     date: new Date().toISOString(),
                     timestamp: Date.now()
-                },
-                {
-                    id: 'post_2',
-                    title: 'How to Use Our CSS Beautifier Tool',
-                    category: 'Tutorials',
-                    excerpt: 'Learn how to format and beautify your CSS code with our free online tool. Step-by-step guide included.',
-                    content: '<p>Our CSS Beautifier tool helps you format messy CSS code into clean, readable code. Here is a step-by-step guide on how to use it effectively.</p><h3>Step 1: Paste Your CSS</h3><p>Copy your CSS code from any source and paste it into the input area.</p><h3>Step 2: Customize Settings</h3><p>Adjust indentation options, select spaces or tabs, and choose your preferred formatting style.</p><h3>Step 3: Beautify or Minify</h3><p>Click "Beautify CSS" to format your code or "Minify CSS" to compress it for production.</p><h3>Step 4: Copy or Download</h3><p>Use the copy button to grab your formatted code or download it as a CSS file.</p>',
-                    image: '',
-                    date: new Date(Date.now() - 86400000).toISOString(),
-                    timestamp: Date.now() - 86400000
-                },
-                {
-                    id: 'post_3',
-                    title: 'Top 5 Time-Saving Tools for Developers',
-                    category: 'Tips',
-                    excerpt: 'Discover the most useful tools that can boost your productivity and save you hours of work every week.',
-                    content: '<p>As developers, we are always looking for ways to work smarter, not harder. Here are 5 tools that can save you significant time:</p><ul><li><strong>CSS Beautifier:</strong> Instantly format messy CSS code.</li><li><strong>JSON Formatter:</strong> Make JSON data readable and easy to debug.</li><li><strong>Random Name Generator:</strong> Generate realistic names for testing and demos.</li><li><strong>GST Calculator:</strong> Calculate taxes instantly for invoices.</li><li><strong>Email Extractor:</strong> Extract email addresses from any text in seconds.</li></ul><p>Try these tools on toolsy.com and see the difference!</p>',
-                    image: '',
-                    date: new Date(Date.now() - 172800000).toISOString(),
-                    timestamp: Date.now() - 172800000
                 }
+              
             ];
             savePosts();
         }
