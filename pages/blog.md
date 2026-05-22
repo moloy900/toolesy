@@ -212,18 +212,13 @@ permalink: /blog/
         color: #999;
     }
 
-    /* Create Post Section (Admin Only - Hidden by Default) */
+    /* Create Post Section (Admin) */
     .create-post-section {
         background: #f8f9fa;
         padding: 30px;
         border-radius: 12px;
         border-left: 4px solid var(--primary);
         margin-bottom: 40px;
-        display: none;
-    }
-
-    .create-post-section.active {
-        display: block;
     }
 
     .create-post-form .form-group {
@@ -274,136 +269,27 @@ permalink: /blog/
         transform: translateY(-2px);
     }
 
-    /* Admin Login Modal */
-    .admin-login-modal {
-        display: none;
-        position: fixed;
-        z-index: 1001;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        animation: fadeIn 0.3s;
-    }
-
-    .admin-login-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 30px;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 400px;
-        animation: slideIn 0.3s;
-    }
-
-    .admin-login-header {
+    .admin-toggle {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
-    .admin-login-header h3 {
-        color: var(--primary);
-        margin: 0 0 10px 0;
-    }
-
-    .admin-login-input {
-        width: 100%;
-        padding: 12px 15px;
-        margin: 10px 0;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        font-size: 16px;
-    }
-
-    .admin-login-btn {
-        width: 100%;
-        padding: 12px;
-        background: var(--primary);
+    .admin-toggle-btn {
+        background: #6c757d;
         color: white;
+        padding: 10px 20px;
         border: none;
         border-radius: 6px;
-        font-size: 16px;
-        font-weight: 600;
         cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .admin-login-btn:hover {
-        background: var(--secondary);
-    }
-
-    .login-error {
-        color: #dc3545;
         font-size: 14px;
-        margin-top: 10px;
-        text-align: center;
+    }
+
+    .admin-panel {
         display: none;
     }
 
-    /* Secret Admin Button (Floating) */
-    .secret-admin-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background: var(--primary);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        z-index: 999;
-        opacity: 0.5;
-    }
-
-    .secret-admin-btn:hover {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-
-    /* Admin Panel Controls */
-    .admin-controls {
-        position: fixed;
-        bottom: 20px;
-        right: 90px;
-        background: white;
-        padding: 10px 15px;
-        border-radius: 30px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        display: none;
-        gap: 10px;
-        z-index: 999;
-    }
-
-    .admin-controls.active {
-        display: flex;
-    }
-
-    .admin-control-btn {
-        background: var(--primary);
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 12px;
-    }
-
-    .admin-control-btn:hover {
-        background: var(--secondary);
-    }
-
-    .admin-control-btn.logout {
-        background: #dc3545;
-    }
-
-    .admin-control-btn.logout:hover {
-        background: #c82333;
+    .admin-panel.active {
+        display: block;
     }
 
     /* Modal for Viewing Full Post */
@@ -594,18 +480,6 @@ permalink: /blog/
             margin: 10% auto;
             width: 95%;
         }
-
-        .secret-admin-btn {
-            width: 40px;
-            height: 40px;
-            bottom: 15px;
-            right: 15px;
-        }
-
-        .admin-controls {
-            bottom: 15px;
-            right: 70px;
-        }
     }
 </style>
 
@@ -613,75 +487,54 @@ permalink: /blog/
     <h1>Blog Posting System</h1>
     <p class="blog-intro">Welcome to toolsy.com blog! Read our latest articles, tutorials, and updates about our tools and services.</p>
 
-    <!-- Secret Admin Button (Floating) -->
-    <div class="secret-admin-btn" id="secretAdminBtn" title="Admin Login">
-        <i class="fas fa-user-shield"></i>
-    </div>
-
-    <!-- Admin Controls (shown after login) -->
-    <div class="admin-controls" id="adminControls">
-        <button class="admin-control-btn" id="showCreatePostBtn">
-            <i class="fas fa-plus"></i> New Post
-        </button>
-        <button class="admin-control-btn logout" id="logoutBtn">
-            <i class="fas fa-sign-out-alt"></i> Logout
+    <!-- Admin Toggle Button -->
+    <div class="admin-toggle">
+        <button class="admin-toggle-btn" onclick="toggleAdminPanel()">
+            <i class="fas fa-user-shield"></i> Admin Panel (Create Post)
         </button>
     </div>
 
-    <!-- Admin Login Modal -->
-    <div id="adminLoginModal" class="admin-login-modal">
-        <div class="admin-login-content">
-            <div class="admin-login-header">
-                <i class="fas fa-user-shield" style="font-size: 48px; color: var(--primary);"></i>
-                <h3>Admin Login</h3>
-                <p style="color: #666; font-size: 14px;">Enter your credentials to access the admin panel</p>
-            </div>
-            <input type="password" id="adminPassword" class="admin-login-input" placeholder="Enter Admin Password">
-            <button class="admin-login-btn" onclick="verifyAdminLogin()">Login</button>
-            <div id="loginError" class="login-error">Invalid password! Please try again.</div>
+    <!-- Create Post Section (Admin Only) -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="create-post-section">
+            <h2>Create New Blog Post</h2>
+            <form id="createPostForm" class="create-post-form">
+                <div class="form-group">
+                    <label for="postTitle">Post Title *</label>
+                    <input type="text" id="postTitle" name="postTitle" placeholder="Enter post title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="postCategory">Category *</label>
+                    <select id="postCategory" name="postCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="Tools">Tools</option>
+                        <option value="Tutorials">Tutorials</option>
+                        <option value="Updates">Updates</option>
+                        <option value="News">News</option>
+                        <option value="Tips">Tips & Tricks</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="postExcerpt">Short Excerpt (Summary) *</label>
+                    <textarea id="postExcerpt" rows="3" placeholder="Write a short summary of your post..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="postContent">Full Content *</label>
+                    <textarea id="postContent" rows="8" placeholder="Write your full blog post content here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="postImage">Featured Image URL (Optional)</label>
+                    <input type="text" id="postImage" placeholder="https://example.com/image.jpg">
+                </div>
+
+                <button type="submit" class="submit-post-btn">Publish Post</button>
+                <div id="postFormMessage" class="form-message"></div>
+            </form>
         </div>
-    </div>
-
-    <!-- Create Post Section (Admin Only - Hidden by Default) -->
-    <div id="createPostSection" class="create-post-section">
-        <h2><i class="fas fa-pen-fancy"></i> Create New Blog Post</h2>
-        <form id="createPostForm" class="create-post-form">
-            <div class="form-group">
-                <label for="postTitle">Post Title *</label>
-                <input type="text" id="postTitle" name="postTitle" placeholder="Enter post title" required>
-            </div>
-
-            <div class="form-group">
-                <label for="postCategory">Category *</label>
-                <select id="postCategory" name="postCategory" required>
-                    <option value="">Select Category</option>
-                    <option value="Tools">Tools</option>
-                    <option value="Tutorials">Tutorials</option>
-                    <option value="Updates">Updates</option>
-                    <option value="News">News</option>
-                    <option value="Tips">Tips & Tricks</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="postExcerpt">Short Excerpt (Summary) *</label>
-                <textarea id="postExcerpt" rows="3" placeholder="Write a short summary of your post..." required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="postContent">Full Content *</label>
-                <textarea id="postContent" rows="8" placeholder="Write your full blog post content here..." required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="postImage">Featured Image URL (Optional)</label>
-                <input type="text" id="postImage" placeholder="https://example.com/image.jpg">
-            </div>
-
-            <button type="submit" class="submit-post-btn">Publish Post</button>
-            <button type="button" class="submit-post-btn" id="cancelPostBtn" style="background: #6c757d; margin-left: 10px;">Cancel</button>
-            <div id="postFormMessage" class="form-message"></div>
-        </form>
     </div>
 
     <div class="blog-content">
@@ -742,13 +595,9 @@ permalink: /blog/
 </div>
 
 <script>
-    // Blog Posting System with Hidden Admin Panel
+    // Blog Posting System
     let allPosts = [];
     let currentCategory = 'all';
-    let isAdminLoggedIn = false;
-
-    // Admin password (change this to your desired password)
-    const ADMIN_PASSWORD = 'admin123';
 
     // Load posts from localStorage
     function loadPosts() {
@@ -840,7 +689,7 @@ permalink: /blog/
                     <div class="blog-card-footer">
                         <span class="blog-category">${post.category}</span>
                         <a href="#" class="read-more" onclick="event.stopPropagation(); viewPost('${post.id}')">Read More <i class="fas fa-arrow-right"></i></a>
-                        ${isAdminLoggedIn ? `<div class="admin-actions" onclick="event.stopPropagation()">
+                        ${isAdminMode() ? `<div class="admin-actions" onclick="event.stopPropagation()">
                             <button class="edit-post" onclick="editPost('${post.id}')"><i class="fas fa-edit"></i> Edit</button>
                             <button class="delete-post" onclick="deletePost('${post.id}')"><i class="fas fa-trash"></i> Delete</button>
                         </div>` : ''}
@@ -939,18 +788,10 @@ permalink: /blog/
 
     // Edit post
     function editPost(postId) {
-        if (!isAdminLoggedIn) {
-            showAlert('Please login as admin to edit posts.', 'error');
-            return;
-        }
-        
         const post = allPosts.find(p => p.id === postId);
         if (!post) return;
         
-        // Show create post section
-        document.getElementById('createPostSection').classList.add('active');
-        
-        // Fill the form with post data for editing
+        // Fill the admin form with post data for editing
         document.getElementById('postTitle').value = post.title;
         document.getElementById('postCategory').value = post.category;
         document.getElementById('postExcerpt').value = post.excerpt;
@@ -976,7 +817,6 @@ permalink: /blog/
             showPostMessage('Post updated successfully!', 'success');
             form.reset();
             form.onsubmit = originalSubmit;
-            document.getElementById('createPostSection').classList.remove('active');
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
@@ -985,16 +825,12 @@ permalink: /blog/
         showPostMessage('Editing post: "' + post.title + '". Update the fields and click Publish to save changes.', 'success');
         
         // Scroll to form
-        document.getElementById('createPostSection').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('adminPanel').classList.add('active');
+        document.getElementById('createPostForm').scrollIntoView({ behavior: 'smooth' });
     }
 
     // Delete post
     function deletePost(postId) {
-        if (!isAdminLoggedIn) {
-            showAlert('Please login as admin to delete posts.', 'error');
-            return;
-        }
-        
         if (confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
             allPosts = allPosts.filter(p => p.id !== postId);
             savePosts();
@@ -1016,46 +852,24 @@ permalink: /blog/
         });
     }
 
-    // Admin Login Functions
-    function showAdminLogin() {
-        document.getElementById('adminLoginModal').style.display = 'block';
-        document.getElementById('adminPassword').value = '';
-        document.getElementById('loginError').style.display = 'none';
-    }
-
-    function verifyAdminLogin() {
-        const password = document.getElementById('adminPassword').value;
-        if (password === ADMIN_PASSWORD) {
-            isAdminLoggedIn = true;
-            document.getElementById('adminLoginModal').style.display = 'none';
-            document.getElementById('adminControls').classList.add('active');
-            showAlert('Admin login successful! You can now create, edit, and delete posts.', 'success');
-            displayPosts(); // Refresh posts to show admin actions
-        } else {
-            document.getElementById('loginError').style.display = 'block';
+    // Toggle admin panel
+    function toggleAdminPanel() {
+        const panel = document.getElementById('adminPanel');
+        panel.classList.toggle('active');
+        
+        if (panel.classList.contains('active')) {
+            // Check if admin password is needed (simple check)
+            const adminPassword = prompt('Enter admin password to access post creation:');
+            if (adminPassword !== 'admin123') {
+                panel.classList.remove('active');
+                showAlert('Incorrect password! Access denied.', 'error');
+            }
         }
     }
 
-    function adminLogout() {
-        isAdminLoggedIn = false;
-        document.getElementById('adminControls').classList.remove('active');
-        document.getElementById('createPostSection').classList.remove('active');
-        showAlert('Logged out of admin panel.', 'success');
-        displayPosts(); // Refresh posts to hide admin actions
-    }
-
-    function showCreatePost() {
-        if (!isAdminLoggedIn) {
-            showAdminLogin();
-            return;
-        }
-        document.getElementById('createPostSection').classList.add('active');
-        document.getElementById('createPostSection').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function hideCreatePost() {
-        document.getElementById('createPostSection').classList.remove('active');
-        document.getElementById('createPostForm').reset();
+    // Check if admin mode is active
+    function isAdminMode() {
+        return document.getElementById('adminPanel').classList.contains('active');
     }
 
     // Helper functions
@@ -1090,18 +904,6 @@ permalink: /blog/
         }, 4000);
     }
 
-    // Close modal when clicking outside
-    window.addEventListener('click', function(e) {
-        const modal = document.getElementById('postModal');
-        const loginModal = document.getElementById('adminLoginModal');
-        if (e.target === modal) {
-            closeModal();
-        }
-        if (e.target === loginModal) {
-            loginModal.style.display = 'none';
-        }
-    });
-
     // Form submission handler
     document.addEventListener('DOMContentLoaded', function() {
         loadPosts();
@@ -1115,23 +917,10 @@ permalink: /blog/
             });
         });
         
-        // Secret admin button
-        document.getElementById('secretAdminBtn').addEventListener('click', showAdminLogin);
-        
-        // Admin control buttons
-        document.getElementById('showCreatePostBtn').addEventListener('click', showCreatePost);
-        document.getElementById('logoutBtn').addEventListener('click', adminLogout);
-        document.getElementById('cancelPostBtn').addEventListener('click', hideCreatePost);
-        
         // Create post form
         const createForm = document.getElementById('createPostForm');
         createForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            if (!isAdminLoggedIn) {
-                showAdminLogin();
-                return;
-            }
             
             const title = document.getElementById('postTitle').value;
             const category = document.getElementById('postCategory').value;
@@ -1147,10 +936,17 @@ permalink: /blog/
             createPost(title, category, excerpt, content, image);
             showPostMessage('Post published successfully!', 'success');
             createForm.reset();
-            document.getElementById('createPostSection').classList.remove('active');
             
             // Scroll to top to see new post
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('postModal');
+            if (e.target === modal) {
+                closeModal();
+            }
         });
         
         // Add CSS for alerts if not present
@@ -1168,3 +964,4 @@ permalink: /blog/
         }
     });
 </script>
+```
