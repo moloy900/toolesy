@@ -484,7 +484,7 @@ permalink: /blog/
 </style>
 
 <div class="blog-container">
-    <h1>Blog Posting System</h1>
+    <h1>Toolsy Blog</h1>
     <p class="blog-intro">Welcome to toolsy.com blog! Read our latest articles, tutorials, and updates about our tools and services.</p>
 
     <!-- Admin Toggle Button -->
