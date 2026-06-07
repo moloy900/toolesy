@@ -647,85 +647,206 @@ Results:
   </div>
 
   <!-- SEO Content Section -->
-  <div class="content-placeholder">
-    <h2>Etsy Price Calculator - Optimize Your Etsy Business</h2>
 
-    <p>Our free <strong>Etsy Price Calculator</strong> helps Etsy sellers accurately determine the true cost of selling their products on the platform. By accounting for all Etsy fees, production costs, shipping, and taxes, you can set prices that ensure profitability while remaining competitive. All calculations are displayed in Indian Rupees (₹) for your convenience.</p>
+<div class="content-placeholder">
 
-    <h3>How to Use This Etsy Price Calculator (Step-by-Step):</h3>
-    <ul>
-      <li><strong>Enter Product Price:</strong> Input the selling price of your product in Indian Rupees.</li>
-      <li><strong>Add Shipping Fee:</strong> Include the shipping cost you'll charge the customer.</li>
-      <li><strong>Input Production Cost:</strong> Enter the cost of materials and labor to create your product.</li>
-      <li><strong>Specify Weight:</strong> Enter the product weight in grams for shipping calculations.</li>
-      <li><strong>Configure Fees:</strong> Toggle Offsite Ads fee and enter VAT rate if applicable.</li>
-      <li><strong>Add Set-Up Fee:</strong> Include any one-time set-up costs for custom products.</li>
-      <li><strong>Calculate:</strong> Click the "Calculate" button to see your net profit and profit margin.</li>
-    </ul>
+  <h2>Etsy Price Calculator – Calculate Etsy Fees, Selling Costs, Profit Margins & Product Pricing Accurately</h2>
 
-    <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're selling handmade candles on Etsy priced at ₹1,200. Your production cost is ₹350 per candle, shipping is ₹80, and you've opted into Etsy's Offsite Ads program. Using our calculator, you'll discover that after accounting for all Etsy fees (listing fee, transaction fee, payment processing, and offsite ads), your net profit would be ₹526.40 with a 43.9% profit margin. This helps you determine if your pricing is sustainable or if you need to adjust your costs or selling price.</p>
+  <p>Running a successful Etsy shop requires more than creating beautiful products. Whether you sell handmade crafts, personalized gifts, jewelry, digital downloads, artwork, home décor, candles, sewing supplies, vintage collectibles, or custom products, understanding your true costs is essential. Many Etsy sellers underestimate fees and expenses, resulting in lower profits than expected. Our free <strong>Etsy Price Calculator</strong> helps you determine the actual profitability of every sale by considering Etsy fees, production costs, shipping expenses, taxes, advertising charges, and other business expenses.</p>
 
-    <h3>Understanding Etsy Fees:</h3>
-    <p>Etsy charges several types of fees that impact your profitability:</p>
-    <ul>
-      <li><strong>Listing Fee:</strong> ₹20 per listing (active for 4 months)</li>
-      <li><strong>Transaction Fee:</strong> 6.5% of the total sale price (including shipping)</li>
-      <li><strong>Payment Processing Fee:</strong> 3% of the total sale price + ₹4 fixed fee</li>
-      <li><strong>Offsite Ads Fee:</strong> 15% of sale price when buyers come from Etsy ads on other platforms (optional but automatic for sellers making over $10,000/year)</li>
-      <li><strong>VAT/GST:</strong> Applicable tax rates based on your location and customer location</li>
-    </ul>
+  <p>Instead of guessing how much profit you'll earn from a sale, this calculator provides a detailed breakdown of your revenue, expenses, fees, and final profit margin. Whether you're just opening your first Etsy shop or managing a growing handmade business, this tool helps you make informed pricing decisions and build a sustainable business.</p>
 
-    <h3>Benefits & Who Should Use This Tool:</h3>
-    <ul>
-      <li><strong>New Etsy Sellers:</strong> Understand the complete fee structure before listing products.</li>
-      <li><strong>Existing Sellers:</strong> Optimize pricing strategies to maximize profitability.</li>
-      <li><strong>Handmade Business Owners:</strong> Accurately calculate true production costs and profit margins.</li>
-      <li><strong>Digital Product Sellers:</strong> Price digital downloads effectively with minimal overhead.</li>
-      <li><strong>Vintage & Craft Suppliers:</strong> Determine sustainable pricing for sourced items.</li>
-    </ul>
+  <p>Pricing products correctly is one of the most important factors in long-term Etsy success. If prices are too low, you may struggle to cover costs and grow your business. If prices are too high, potential customers may choose competing products. The goal is to find the right balance between profitability and competitiveness. This calculator helps you achieve exactly that.</p>
 
-    <h3>Frequently Asked Questions:</h3>
-    <p><strong>Are Etsy fees the same for all countries?</strong><br>
-      While the percentage fees are generally consistent, fixed fees like listing fees are converted to local currency. Payment processing fees may also vary slightly by region.</p>
+  <p>All calculations are displayed in Indian Rupees (₹), making the tool especially useful for Indian Etsy sellers, crafters, artists, and entrepreneurs who want to understand their earnings without manually converting currencies or calculating fees.</p>
 
-    <p><strong>Can I opt out of Etsy's Offsite Ads program?</strong><br>
-      Sellers making less than $10,000 in a 12-month period can opt out of Offsite Ads. Higher-volume sellers are automatically enrolled and cannot opt out.</p>
+  <h3>How to Use This Etsy Price Calculator (Step-by-Step):</h3>
 
-    <p><strong>How often does Etsy charge the listing fee?</strong><br>
-      Listing fees are charged when you create or renew a listing. Each listing is active for 4 months or until it sells.</p>
+  <p>The calculator is designed to be simple enough for beginners while providing detailed insights for experienced Etsy sellers. Follow these steps to estimate your actual earnings.</p>
 
-    <p><strong>Does this calculator include all possible Etsy fees?</strong><br>
-      This calculator includes the major fees that most sellers encounter. Additional fees like pattern website fees or local advertising fees are not included.</p>
+  <ul>
+    <li><strong>Enter Product Selling Price:</strong> Input the price at which you plan to sell your item on Etsy.</li>
 
-    <p><strong>Is my data saved when I use this calculator?</strong><br>
-      No, all calculations happen in your browser and no data is stored on our servers. Your pricing information remains completely private.</p>
+```
+<li><strong>Add Shipping Charges:</strong> Include the shipping amount charged to customers or your actual shipping expense.</li>
 
-    <h3>Why Choose Our Etsy Price Calculator?</h3>
-    <p>Our <strong>Etsy Price Calculator</strong> provides the most comprehensive fee calculation specifically tailored for Indian sellers. Unlike simple percentage calculators, our tool accounts for all Etsy's complex fee structures including fixed payment processing fees and optional advertising costs. The interface is designed specifically for Etsy sellers, with all calculations happening securely in your browser to protect your sensitive business information.</p>
+<li><strong>Enter Production Cost:</strong> Add the cost of raw materials, labor, packaging, and manufacturing.</li>
 
-    <h3>Pricing Strategy Tips for Etsy Sellers</h3>
-    <p>To maximize your success on Etsy, consider these pricing strategies:</p>
-    <ul>
-      <li><strong>Cost-Plus Pricing:</strong> Calculate all costs and add your desired profit margin.</li>
-      <li><strong>Competitive Analysis:</strong> Research similar products but don't engage in price wars.</li>
-      <li><strong>Value-Based Pricing:</strong> Price according to the perceived value and uniqueness of your product.</li>
-      <li><strong>Tiered Pricing:</strong> Offer multiple price points for different versions or quantities.</li>
-      <li><strong>Psychological Pricing:</strong> Use pricing endings like ₹999 instead of ₹1000 for better conversion.</li>
-      <li><strong>Seasonal Adjustments:</strong> Adjust prices during high-demand seasons or for limited editions.</li>
-    </ul>
+<li><strong>Specify Product Weight:</strong> Enter the product weight if shipping calculations are required.</li>
 
-    <h3>Common Mistakes to Avoid in Etsy Pricing</h3>
-    <p>Many Etsy sellers underpric their products by making these common errors:</p>
-    <ul>
-      <li><strong>Forgetting Hidden Costs:</strong> Not accounting for packaging materials, electricity, or tool maintenance.</li>
-      <li><strong>Undervaluing Time:</strong> Not paying yourself a fair hourly wage for your creative work.</li>
-      <li><strong>Ignoring Fee Increases:</strong> Etsy occasionally updates its fee structure - stay informed.</li>
-      <li><strong>Copying Competitors:</strong> Your costs and business model are unique - price accordingly.</li>
-      <li><strong>Neglecting Profit Margin:</strong> Ensure your pricing allows for business growth and reinvestment.</li>
-    </ul>
-  </div>
+<li><strong>Configure Etsy Fees:</strong> Include transaction fees, payment processing fees, and optional Offsite Ads fees.</li>
+
+<li><strong>Add One-Time Costs:</strong> Include setup costs for customized or made-to-order products.</li>
+
+<li><strong>Calculate Profit:</strong> Click the calculate button to generate a detailed fee and profit breakdown.</li>
+
+<li><strong>Review Results:</strong> Analyze your net earnings, profit margin percentage, and total costs.</li>
+
+<li><strong>Adjust Pricing:</strong> Experiment with different selling prices to determine the most profitable option.</li>
+```
+
+  </ul>
+
+  <p>By using this calculator before listing products, sellers can avoid underpricing and make better financial decisions.</p>
+
+  <h3>Real-Life Example & Use Case:</h3>
+
+  <p>Imagine you create handmade scented candles and sell them through Etsy. Each candle requires wax, fragrance oils, jars, labels, packaging materials, and labor. Your total production cost is ₹350 per candle, and shipping costs ₹80.</p>
+
+  <p>You decide to list the candle for ₹1,200. At first glance, it may appear that you are earning ₹850 profit. However, Etsy fees, payment processing charges, advertising expenses, taxes, and listing fees must also be deducted.</p>
+
+  <p>After entering all costs into the calculator, you discover that your actual profit is approximately ₹526. This information helps you determine whether your pricing strategy is sustainable and whether adjustments are needed.</p>
+
+  <p>The same calculation method can be applied to jewelry, greeting cards, crochet products, digital templates, printable planners, paintings, wedding invitations, customized gifts, and thousands of other product categories sold on Etsy.</p>
+
+  <h3>Understanding Etsy Fees</h3>
+
+  <p>One of the most common mistakes made by Etsy sellers is failing to understand the platform's fee structure. Even relatively small fees can significantly impact profitability over time.</p>
+
+  <p>Etsy charges several types of fees, each serving a different purpose within the marketplace ecosystem.</p>
+
+  <ul>
+    <li><strong>Listing Fee:</strong> Etsy charges a fee whenever a product is listed or renewed. Listings remain active for a limited period or until sold.</li>
+
+```
+<li><strong>Transaction Fee:</strong> Etsy takes a percentage of the total sale amount, including shipping charges.</li>
+
+<li><strong>Payment Processing Fee:</strong> Fees are charged for securely processing customer payments.</li>
+
+<li><strong>Offsite Ads Fee:</strong> Additional charges apply when a sale originates through Etsy's external advertising network.</li>
+
+<li><strong>Currency Conversion Fees:</strong> Charges may apply when dealing with multiple currencies.</li>
+
+<li><strong>VAT/GST:</strong> Applicable taxes based on seller location and regional regulations.</li>
+
+<li><strong>Optional Marketing Costs:</strong> Additional advertising expenses for promoted listings.</li>
+```
+
+  </ul>
+
+  <p>Understanding these fees is critical because they directly affect your profit margins and pricing decisions.</p>
+
+  <h3>Benefits & Who Should Use This Tool?</h3>
+
+  <p>This calculator is designed for a wide range of Etsy sellers and creative entrepreneurs.</p>
+
+  <ul>
+    <li><strong>New Etsy Sellers:</strong> Learn the true cost of selling before launching products.</li>
+
+```
+<li><strong>Experienced Shop Owners:</strong> Optimize pricing strategies and improve profitability.</li>
+
+<li><strong>Handmade Product Creators:</strong> Accurately calculate labor, materials, and overhead costs.</li>
+
+<li><strong>Digital Product Sellers:</strong> Determine ideal pricing for digital downloads and templates.</li>
+
+<li><strong>Jewelry Designers:</strong> Calculate profits after material and marketplace costs.</li>
+
+<li><strong>Artists & Illustrators:</strong> Price artwork and prints sustainably.</li>
+
+<li><strong>Vintage Product Sellers:</strong> Evaluate margins on sourced inventory.</li>
+
+<li><strong>Craft Supply Businesses:</strong> Analyze wholesale and retail pricing opportunities.</li>
+
+<li><strong>Personalized Gift Sellers:</strong> Account for customization time and materials.</li>
+
+<li><strong>Small Business Owners:</strong> Build long-term pricing strategies based on accurate financial data.</li>
+```
+
+  </ul>
+
+  <h3>Frequently Asked Questions:</h3>
+
+  <p><strong>Are Etsy fees the same in every country?</strong><br>
+  While most percentage-based fees are generally similar, payment processing charges, taxes, and currency conversion costs may vary depending on your country.</p>
+
+  <p><strong>Can I opt out of Offsite Ads?</strong><br>
+  Smaller sellers may have the option to opt out. However, larger sellers who exceed Etsy's eligibility thresholds may be automatically enrolled.</p>
+
+  <p><strong>How often are listing fees charged?</strong><br>
+  Listing fees are generally charged when creating or renewing listings. The exact timing depends on Etsy's current policies.</p>
+
+  <p><strong>Should I include packaging costs in my calculations?</strong><br>
+  Yes. Packaging materials such as boxes, labels, tissue paper, stickers, and protective inserts should always be included when calculating product costs.</p>
+
+  <p><strong>Can this calculator help with digital products?</strong><br>
+  Absolutely. Digital sellers can enter design costs, software expenses, and Etsy fees to calculate accurate profit margins.</p>
+
+  <p><strong>Is my pricing information stored anywhere?</strong><br>
+  No. All calculations occur directly within your browser, ensuring complete privacy and security.</p>
+
+  <h3>Why Choose Our Etsy Price Calculator?</h3>
+
+  <p>Unlike basic calculators that only estimate percentages, our Etsy Price Calculator provides a more complete view of your business profitability. It helps sellers understand how multiple costs work together and affect earnings.</p>
+
+  <p>The tool is especially useful for handmade businesses because creative entrepreneurs often have expenses that are overlooked, such as labor time, equipment maintenance, design software, packaging materials, photography costs, and advertising expenses.</p>
+
+  <p>By combining all these factors into a single calculation, the tool helps sellers establish sustainable pricing strategies that support growth while remaining competitive in the marketplace.</p>
+
+  <p>Because everything is processed locally within your browser, your product pricing data remains confidential and secure.</p>
+
+  <h3>Pricing Strategy Tips for Etsy Sellers</h3>
+
+  <p>Successful Etsy sellers understand that pricing is both an art and a science. The following strategies can help improve profitability.</p>
+
+  <ul>
+    <li><strong>Use Cost-Plus Pricing:</strong> Calculate all costs and add a reasonable profit margin.</li>
+
+```
+<li><strong>Research Competitors:</strong> Analyze similar products without simply copying competitors' prices.</li>
+
+<li><strong>Focus on Value:</strong> Unique handmade products often justify premium pricing.</li>
+
+<li><strong>Create Product Tiers:</strong> Offer basic, premium, and deluxe versions to reach different customer segments.</li>
+
+<li><strong>Offer Bundles:</strong> Increase average order value through multi-item packages.</li>
+
+<li><strong>Use Psychological Pricing:</strong> Prices such as ₹999 often perform better than ₹1000.</li>
+
+<li><strong>Adjust Seasonally:</strong> Take advantage of holiday demand and special occasions.</li>
+
+<li><strong>Review Prices Regularly:</strong> Update pricing when material or shipping costs change.</li>
+
+<li><strong>Charge for Customization:</strong> Personalized products should reflect the additional time required.</li>
+
+<li><strong>Track Profit Margins:</strong> Monitor earnings regularly to maintain business sustainability.</li>
+```
+
+  </ul>
+
+  <h3>Common Mistakes to Avoid in Etsy Pricing</h3>
+
+  <p>Many Etsy sellers unintentionally reduce their profits because they overlook important expenses. Avoiding these common mistakes can significantly improve your business performance.</p>
+
+  <ul>
+    <li><strong>Ignoring Hidden Costs:</strong> Small expenses add up over time and should be included in calculations.</li>
+
+```
+<li><strong>Undervaluing Your Time:</strong> Labor is one of the most important costs in handmade businesses.</li>
+
+<li><strong>Competing Only on Price:</strong> Constantly lowering prices can damage profitability.</li>
+
+<li><strong>Forgetting Packaging Expenses:</strong> Shipping supplies should be treated as business costs.</li>
+
+<li><strong>Not Accounting for Returns:</strong> Product replacements and refunds impact earnings.</li>
+
+<li><strong>Ignoring Advertising Costs:</strong> Marketing expenses should be factored into pricing decisions.</li>
+
+<li><strong>Failing to Track Fees:</strong> Etsy's fee structure may change over time.</li>
+
+<li><strong>Copying Competitor Prices Blindly:</strong> Every seller has different costs and business goals.</li>
+
+<li><strong>Setting Prices Emotionally:</strong> Pricing should be based on data, not assumptions.</li>
+
+<li><strong>Neglecting Business Growth:</strong> Profit margins should allow for reinvestment and expansion.</li>
+```
+
+  </ul>
+
+  <p>Whether you sell handmade crafts, digital products, vintage collectibles, custom gifts, artwork, jewelry, or craft supplies, understanding your costs is the foundation of a profitable Etsy business. This Etsy Price Calculator helps you accurately estimate fees, expenses, and profits so you can price products confidently, grow sustainably, and make smarter business decisions.</p>
+
 </div>
+
 
 <!-- Fee Details Modal -->
 <div id="detailsModal" class="modal">
