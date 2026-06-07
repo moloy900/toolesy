@@ -718,136 +718,188 @@ Results:
     </div>
   </div>
 
-  <!-- SEO Content Section -->
-  <div class="content-placeholder">
-    <h2>Alibaba Price Calculator - Optimize Your B2B Pricing Strategy</h2>
+ <!-- SEO Content Section -->
 
-    <p>Our free <strong>Alibaba Price Calculator</strong> helps B2B sellers and manufacturers accurately determine the true cost of selling products on Alibaba.com. By accounting for all Alibaba fees, commission structures, membership costs, and operational expenses, you can set competitive wholesale prices while ensuring healthy profit margins. All calculations are displayed in Indian Rupees (₹) for your convenience.</p>
+<div class="content-placeholder">
 
-    <h3>How to Use This Alibaba Price Calculator (Step-by-Step):</h3>
-    <ul>
-      <li><strong>Enter Product Price:</strong> Input your wholesale selling price in Indian Rupees.</li>
-      <li><strong>Configure Commission Fee:</strong> Set Alibaba's commission percentage (typically 1-5%).</li>
-      <li><strong>Set Payment Processing Fee:</strong> Enter payment gateway fees (usually 2.5-4%).</li>
-      <li><strong>Add Listing Fee:</strong> Include any one-time listing costs.</li>
-      <li><strong>Choose Membership Plan:</strong> Select your Alibaba membership level.</li>
-      <li><strong>Input Costs:</strong> Enter product cost, shipping, and additional expenses.</li>
-      <li><strong>Set Sales Volume:</strong> Estimate your monthly sales volume.</li>
-      <li><strong>Calculate:</strong> Click "Calculate" to see your net profit and margin analysis.</li>
-    </ul>
+  <h2>Alibaba Price Calculator – Calculate True Selling Costs & Profit Margins</h2>
 
-    <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're a manufacturer selling industrial equipment on Alibaba at ₹50,000 per unit. Your production cost is ₹35,000, shipping is ₹2,000 per unit, and you pay 3% commission to Alibaba plus 3.5% payment processing fees. With the Premium membership (₹35,000 annually) and selling 10 units monthly, our calculator shows you'd generate ₹500,000 in monthly revenue with ₹404,583 in total costs, resulting in ₹95,417 monthly profit and a 19.1% profit margin. This helps you evaluate if your pricing strategy is sustainable for business growth.</p>
+  <p>Selling products on Alibaba can open the door to international customers, large wholesale orders, and long-term business growth. However, many new sellers make a common mistake: they focus only on the product price and forget to account for commissions, payment processing charges, membership fees, shipping expenses, and other operating costs. As a result, they may generate strong sales but earn far less profit than expected.</p>
 
-    <h3>Understanding Alibaba Fees & Membership Plans:</h3>
-    <p>Alibaba offers different membership tiers with varying benefits:</p>
-    <ul>
-      <li><strong>Free Plan:</strong> Basic listing capabilities with standard commission rates</li>
-      <li><strong>Basic Plan (₹15,000/year):</strong> Enhanced visibility and lower commission rates</li>
-      <li><strong>Premium Plan (₹35,000/year):</strong> Maximum exposure, premium support, and best commission rates</li>
-    </ul>
+  <p>Our free <strong>Alibaba Price Calculator</strong> helps manufacturers, exporters, wholesalers, trading companies, and B2B sellers understand the complete financial picture before listing products on Alibaba. Instead of guessing whether a product is profitable, you can calculate your actual revenue, expenses, net profit, and profit margin based on realistic business costs.</p>
 
-    <p><strong>Standard Fee Structure:</strong></p>
-    <ul>
-      <li><strong>Commission Fees:</strong> 1-5% of transaction value (varies by product category and membership)</li>
-      <li><strong>Payment Processing:</strong> 2.5-4% depending on payment method and volume</li>
-      <li><strong>Listing Fees:</strong> Optional premium listing features available</li>
-      <li><strong>Membership Fees:</strong> Annual subscription for enhanced services</li>
-    </ul>
+  <p>The calculator is designed to be simple enough for beginners while providing enough detail for experienced exporters. Whether you sell industrial equipment, apparel, electronics, home products, machinery, raw materials, or custom-manufactured goods, this tool helps you make informed pricing decisions.</p>
 
-    <h3>Benefits & Who Should Use This Tool:</h3>
-    <ul>
-      <li><strong>Manufacturers:</strong> Determine optimal wholesale pricing for international markets</li>
-      <li><strong>Exporters:</strong> Calculate true costs when selling through Alibaba's B2B platform</li>
-      <li><strong>Wholesalers:</strong> Analyze profitability across different product categories</li>
-      <li><strong>Startup Businesses:</strong> Plan pricing strategy before entering international markets</li>
-      <li><strong>Existing Sellers:</strong> Optimize membership plans and commission structures</li>
-    </ul>
+  <p>All calculations are displayed in Indian Rupees (₹), making it especially useful for Indian exporters and manufacturers who want to evaluate international selling opportunities while understanding their costs in local currency.</p>
 
-    <h3>Frequently Asked Questions:</h3>
-    <p><strong>Are Alibaba fees the same for all product categories?</strong><br>
-      No, commission rates vary by product category. Electronics typically have lower rates than custom manufacturing services.</p>
+  <h3>How to Use This Alibaba Price Calculator (Step-by-Step):</h3>
 
-    <p><strong>Can I negotiate commission rates with Alibaba?</strong><br>
-      Premium members often get better commission rates. High-volume sellers may also qualify for custom rates.</p>
+  <ul>
+    <li><strong>Enter Product Selling Price:</strong> Start by entering the wholesale price at which you plan to sell your product on Alibaba. This should be the amount charged to your buyer before deductions.</li>
 
-    <p><strong>Is the membership fee worth it for small businesses?</strong><br>
-      It depends on your sales volume. Our calculator helps you determine the break-even point for membership upgrades.</p>
+```
+<li><strong>Set Alibaba Commission Percentage:</strong> Depending on your product category and seller arrangement, Alibaba may charge a commission percentage on completed transactions.</li>
 
-    <p><strong>Does this calculator include all possible Alibaba fees?</strong><br>
-      This calculator includes the major fees most sellers encounter. Additional services like advertising or premium support may have separate costs.</p>
+<li><strong>Add Payment Processing Fees:</strong> Most transactions involve payment processing costs. These fees vary depending on payment methods, transaction value, and region.</li>
 
-    <p><strong>Is my pricing data secure when using this calculator?</strong><br>
-      Yes, all calculations happen in your browser and no data is stored on our servers. Your business information remains completely private.</p>
+<li><strong>Include Listing Costs:</strong> If you use premium listings, advertising options, or paid promotional features, include those expenses here.</li>
 
-    <h3>Why Choose Our Alibaba Price Calculator?</h3>
-    <p>Our <strong>Alibaba Price Calculator</strong> provides the most comprehensive fee analysis specifically designed for B2B sellers on Alibaba.com. Unlike simple percentage calculators, our tool accounts for complex fee structures including annual membership costs, variable commission rates, and monthly sales volume. The interface is tailored for wholesale businesses, with all calculations happening securely in your browser to protect your sensitive pricing information.</p>
+<li><strong>Select Membership Plan:</strong> Choose the membership level that best matches your Alibaba account. Membership costs can significantly affect overall profitability.</li>
 
-    <h3>Pricing Strategy Tips for Alibaba Sellers</h3>
-    <p>To maximize your success on Alibaba, consider these B2B pricing strategies:</p>
-    <ul>
-      <li><strong>Volume-Based Pricing:</strong> Offer tiered pricing for different order quantities</li>
-      <li><strong>MOQ Strategy:</strong> Set minimum order quantities to ensure profitability</li>
-      <li><strong>International Pricing:</strong> Account for currency fluctuations and international shipping</li>
-      <li><strong>Customization Premium:</strong> Charge appropriately for custom orders and specifications</li>
-      <li><strong>Membership Optimization:</strong> Choose the right membership level based on your sales volume</li>
-      <li><strong>Seasonal Adjustments:</strong> Adjust prices based on global demand patterns</li>
-    </ul>
+<li><strong>Enter Product Cost:</strong> Include manufacturing cost, procurement cost, packaging expenses, and any direct production-related costs.</li>
 
-    <h3>Common Mistakes to Avoid in B2B Pricing</h3>
-    <p>Many Alibaba sellers make these pricing errors that hurt profitability:</p>
-    <ul>
-      <li><strong>Undercutting Too Much:</strong> Competing solely on price can lead to unsustainable margins</li>
-      <li><strong>Ignoring Hidden Costs:</strong> Forgetting international transaction fees or compliance costs</li>
-      <li><strong>One-Size-Fits-All Pricing:</strong> Not adjusting prices for different markets or customer types</li>
-      <li><strong>Neglecting Membership ROI:</strong> Not calculating whether premium features justify their cost</li>
-      <li><strong>Static Pricing:</strong> Not regularly reviewing and adjusting prices based on costs and competition</li>
-    </ul>
-  </div>
+<li><strong>Add Shipping Costs:</strong> Include estimated logistics expenses, freight charges, packaging materials, and delivery-related costs.</li>
+
+<li><strong>Input Monthly Sales Volume:</strong> Estimate how many units you expect to sell each month. This helps spread annual costs across actual sales volume.</li>
+
+<li><strong>Calculate Results:</strong> Review revenue, total expenses, net profit, and profit margin to determine whether your pricing strategy is sustainable.</li>
+```
+
+  </ul>
+
+  <h3>Real-Life Example & Use Case:</h3>
+
+  <p>Imagine a manufacturer based in India that produces industrial water pumps for export markets. The company sells each unit for ₹50,000 through Alibaba. The manufacturing cost is ₹35,000 per unit, shipping and packaging cost ₹2,000, and payment processing plus commission fees total approximately 6.5% of the order value.</p>
+
+  <p>At first glance, selling at ₹50,000 appears highly profitable. However, after deducting production costs, logistics expenses, Alibaba fees, payment processing charges, and annual membership costs, the actual profit may be significantly lower than expected.</p>
+
+  <p>Using the Alibaba Price Calculator, the business can determine exactly how much profit remains after every expense is accounted for. This allows management to decide whether prices should be increased, costs reduced, or sales volume expanded to achieve desired profit targets.</p>
+
+  <p>The calculator is equally useful for smaller businesses. Even a startup exporter selling handmade products or private-label goods can use the tool to evaluate profitability before investing in inventory or advertising campaigns.</p>
+
+  <h3>Understanding Alibaba Fees & Membership Plans:</h3>
+
+  <p>Before listing products on Alibaba, it is important to understand that sales revenue is not the same as profit. Several fees and operating costs influence the final amount you keep from each transaction.</p>
+
+  <p>Alibaba offers different membership levels designed to help businesses increase visibility, attract buyers, and access additional platform features. Choosing the right membership plan depends on your sales volume, product category, and growth objectives.</p>
+
+  <ul>
+    <li><strong>Free Membership:</strong> Suitable for businesses that want to explore the platform before making a financial commitment. It provides basic exposure and standard access to buyers.</li>
+
+```
+<li><strong>Basic Membership:</strong> Offers improved visibility, additional marketing tools, and enhanced opportunities to attract international buyers.</li>
+
+<li><strong>Premium Membership:</strong> Designed for serious exporters seeking maximum exposure, advanced support, and stronger lead-generation capabilities.</li>
+```
+
+  </ul>
+
+  <p><strong>Common Fee Categories:</strong></p>
+
+  <ul>
+    <li><strong>Transaction Commissions:</strong> A percentage of sales revenue that varies depending on product category and seller agreement.</li>
+
+```
+<li><strong>Payment Processing Charges:</strong> Costs associated with receiving payments through supported payment methods.</li>
+
+<li><strong>Advertising Expenses:</strong> Sponsored listings and promotional campaigns designed to increase product visibility.</li>
+
+<li><strong>Membership Fees:</strong> Annual subscription costs for enhanced platform benefits.</li>
+
+<li><strong>Operational Costs:</strong> Product sourcing, manufacturing, packaging, quality control, compliance, and logistics expenses.</li>
+```
+
+  </ul>
+
+  <h3>Benefits & Who Should Use This Tool:</h3>
+
+  <ul>
+    <li><strong>Manufacturers:</strong> Determine profitable export pricing before approaching international buyers.</li>
+
+```
+<li><strong>Exporters:</strong> Understand how fees affect profitability when selling to global markets.</li>
+
+<li><strong>Wholesalers:</strong> Compare pricing strategies across multiple product categories.</li>
+
+<li><strong>Trading Companies:</strong> Evaluate supplier costs, commissions, and margins before accepting large orders.</li>
+
+<li><strong>Private Label Sellers:</strong> Analyze profitability while accounting for branding and packaging expenses.</li>
+
+<li><strong>Startups:</strong> Plan international expansion strategies with realistic profit expectations.</li>
+
+<li><strong>Established Sellers:</strong> Optimize pricing models and improve overall financial performance.</li>
+```
+
+  </ul>
+
+  <h3>Frequently Asked Questions:</h3>
+
+  <p><strong>Do all Alibaba sellers pay the same fees?</strong><br>
+  No. Fees may vary depending on product category, membership level, transaction type, and specific seller agreements.</p>
+
+  <p><strong>Why should I calculate profit before listing products?</strong><br>
+  Many businesses focus on sales volume while overlooking hidden costs. Profit calculations help ensure that growth remains financially sustainable.</p>
+
+  <p><strong>Can this calculator help determine minimum selling price?</strong><br>
+  Yes. By entering your costs and desired profit margin, you can estimate the minimum price required to maintain profitability.</p>
+
+  <p><strong>Should shipping costs be included?</strong><br>
+  Absolutely. Shipping, packaging, and logistics expenses often represent a significant portion of total costs, especially for international orders.</p>
+
+  <p><strong>Can I use this calculator for custom manufacturing projects?</strong><br>
+  Yes. Custom orders often involve additional expenses such as tooling, samples, design work, and compliance requirements that should be considered.</p>
+
+  <p><strong>Is my business information stored?</strong><br>
+  No. Calculations are performed locally in your browser. Your pricing information remains private and is not stored on external servers.</p>
+
+  <h3>Why Choose Our Alibaba Price Calculator?</h3>
+
+  <p>Many online profit calculators only perform basic percentage calculations. While those tools may provide rough estimates, they rarely reflect the complexities of real-world B2B selling.</p>
+
+  <p>Our Alibaba Price Calculator is designed specifically for exporters and wholesale sellers. It helps businesses evaluate the impact of membership fees, commissions, payment charges, shipping expenses, and sales volume on profitability.</p>
+
+  <p>The interface is straightforward and easy to use, allowing sellers to compare different scenarios quickly. You can experiment with different selling prices, fee percentages, and membership plans to determine the most profitable strategy.</p>
+
+  <p>Because calculations are performed directly in your browser, the tool is also privacy-focused. Sensitive pricing information never needs to leave your device.</p>
+
+  <h3>Pricing Strategy Tips for Alibaba Sellers</h3>
+
+  <p>Successful Alibaba sellers rarely rely on simple cost-plus pricing. Instead, they develop pricing strategies that balance competitiveness, profitability, and long-term growth.</p>
+
+  <ul>
+    <li><strong>Use Tiered Pricing:</strong> Offer lower prices for larger order quantities while maintaining healthy margins.</li>
+
+```
+<li><strong>Set Realistic MOQs:</strong> Minimum order quantities help ensure that small orders remain profitable.</li>
+
+<li><strong>Monitor Competitors:</strong> Regularly review competitor pricing while focusing on value rather than simply being the cheapest seller.</li>
+
+<li><strong>Include Compliance Costs:</strong> Certifications, testing, inspections, and regulatory requirements should be reflected in pricing.</li>
+
+<li><strong>Account for Currency Fluctuations:</strong> International business often involves exchange-rate risks.</li>
+
+<li><strong>Review Costs Frequently:</strong> Material prices, shipping rates, and labor costs can change significantly over time.</li>
+
+<li><strong>Evaluate Membership ROI:</strong> Higher membership plans should generate enough additional sales to justify their cost.</li>
+```
+
+  </ul>
+
+  <h3>Common Mistakes to Avoid in B2B Pricing</h3>
+
+  <p>Many exporters struggle not because of poor products, but because of pricing mistakes. Avoiding these common errors can significantly improve profitability.</p>
+
+  <ul>
+    <li><strong>Competing Only on Price:</strong> Constantly lowering prices can damage margins and make growth unsustainable.</li>
+
+```
+<li><strong>Ignoring Hidden Costs:</strong> Transaction fees, compliance expenses, refunds, and support costs should be included in calculations.</li>
+
+<li><strong>Using the Same Price for Every Market:</strong> Different regions may support different pricing levels.</li>
+
+<li><strong>Not Tracking Profit Margins:</strong> Revenue growth means little if profit margins continue shrinking.</li>
+
+<li><strong>Failing to Recalculate Regularly:</strong> Pricing should be reviewed whenever costs or market conditions change.</li>
+
+<li><strong>Overlooking Membership Costs:</strong> Annual subscription fees should be allocated across expected sales volume.</li>
+
+<li><strong>Ignoring Long-Term Sustainability:</strong> Pricing should support future growth, not just short-term sales.</li>
+```
+
+  </ul>
+
 </div>
 
-<!-- Fee Details Modal -->
-<div id="detailsModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 class="modal-title">Alibaba Fee Details</h3>
-      <span class="close-modal">&times;</span>
-    </div>
-    <div class="modal-body">
-      <h4>Standard Alibaba Fee Structure</h4>
-      <ul>
-        <li><strong>Commission Fees:</strong> 1-5% of transaction value
-          <ul>
-            <li>Electronics: 1-3%</li>
-            <li>Apparel: 3-5%</li>
-            <li>Industrial: 2-4%</li>
-            <li>Custom Manufacturing: 3-5%</li>
-          </ul>
-        </li>
-        <li><strong>Payment Processing:</strong> 2.5-4% depending on method</li>
-        <li><strong>Listing Fees:</strong> Free basic listings, premium features available</li>
-        <li><strong>Membership Plans:</strong>
-          <ul>
-            <li>Free: ₹0/year</li>
-            <li>Basic: ₹15,000/year</li>
-            <li>Premium: ₹35,000/year</li>
-          </ul>
-        </li>
-      </ul>
-      
-      <h4>Fee Calculation Example</h4>
-      <p>For a ₹10,000 product with 3% commission and 3.5% payment processing:</p>
-      <ul>
-        <li>Commission: 3% of ₹10,000 = ₹300</li>
-        <li>Payment Processing: 3.5% of ₹10,000 = ₹350</li>
-        <li>Total Fees: ₹300 + ₹350 = ₹650</li>
-      </ul>
-    </div>
-    <div class="modal-footer">
-      <button class="modal-button primary" id="closeDetails">Close</button>
-    </div>
-  </div>
-</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
