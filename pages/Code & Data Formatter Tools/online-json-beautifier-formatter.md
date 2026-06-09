@@ -849,8 +849,7 @@ permalink: /online-json-beautifier-formatter/
 
     <h3>One Final Thought (JSON Doesn't Have to Be Painful):</h3>
     <p>JSON is the language of modern data exchange. APIs, configs, databases—they all speak JSON. But that doesn't mean you have to suffer through reading minified, unformatted, or invalid JSON. The beautifier, minifier, validator, and tree view in this tool turn JSON from a source of frustration into a source of clarity. Next time you're staring at a wall of JSON text with no line breaks, or you're trying to find a syntax error in a configuration file, or you're trying to understand a deeply nested API response, don't struggle. Just paste it into this tool. Format it. Validate it. Explore it in tree view. Then copy it and get back to work. Your eyes—and your sanity—will thank you.</p>
-</div>
-</div>
+
 
 <!-- File Upload Modal -->
 <div id="uploadModal" class="modal">
