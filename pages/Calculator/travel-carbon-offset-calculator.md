@@ -1191,84 +1191,97 @@ permalink: /travel-carbon-offset-calculator/
     </div>
   </div>
 
-  <!-- SEO Content Section -->
-  <div class="content-placeholder">
+  ```html
+<!-- SEO Content Section -->
+<div class="content-placeholder">
     <h2>Travel Carbon Offset Calculator - Make Your Travels Climate Positive</h2>
 
-    <p>Travel opens our minds and connects us with the world, but it also contributes to climate change through carbon emissions. Our <strong>Travel Carbon Offset Calculator</strong> helps you understand the environmental impact of your journeys and take meaningful action. Calculate your travel carbon footprint across all transportation methods and discover how to offset your emissions through verified environmental projects that make a real difference.</p>
+    <p>Let’s be honest for a second. Most of us love to travel. We love the excitement of a new city, the peace of a quiet beach, or the adventure of a mountain trail. But there’s an uncomfortable truth that nags at the back of our minds, especially if you care about the planet: getting there often involves burning fossil fuels. A lot of them. A single round-trip flight from New York to London can produce more carbon dioxide per passenger than someone in a developing country emits in an entire year. That’s not a fun fact—it’s a sobering one. But here’s the good news: you don’t have to stop traveling to be a good person. You just have to travel smarter. Our <strong>Travel Carbon Offset Calculator</strong> helps you do exactly that. You tell us where you’re going, how you’re getting there, and we’ll tell you exactly how much CO₂ your trip is creating. Then we’ll show you how to offset those emissions—for surprisingly little money—by supporting real-world projects that actually remove carbon or prevent it from entering the atmosphere. Reforestation, renewable energy, clean cookstoves in developing countries—your offset dollars go to work. The goal isn’t to make you feel guilty about traveling. It’s to make your travels climate-positive, so you can explore the world without harming it.</p>
 
     <h3>How to Use This Carbon Offset Calculator (Step-by-Step):</h3>
     <ul>
-      <li><strong>Enter Travel Distances:</strong> Input distances for flights, car trips, train journeys, bus travel, and cruises using our intuitive interface.</li>
-      <li><strong>Select Vehicle Types:</strong> Choose specific vehicle types and classes for accurate emission calculations.</li>
-      <li><strong>Set Calculation Parameters:</strong> Adjust carbon pricing and travel period to match your preferences.</li>
-      <li><strong>Calculate:</strong> Click "Calculate Emissions" to see your total carbon footprint and offset cost.</li>
-      <li><strong>Choose Offset Projects:</strong> Select from verified environmental projects like reforestation, renewable energy, or clean cookstoves.</li>
-      <li><strong>Take Action:</strong> Use the "Offset Now" feature to contribute to climate solutions.</li>
+      <li><strong>Enter Travel Distances (Be Honest, It's Just Data):</strong> For each leg of your trip—flights, car rides, train journeys, bus travel, even cruises—enter the distance. You can use kilometers or miles; the calculator converts automatically. If you’re flying from Chicago to Denver, that’s roughly 1,400 km. If you’re driving from Paris to Barcelona, that’s about 1,030 km. Don’t stress about exact numbers—estimates are fine. The calculator also has a “Round Trip” checkbox so you don’t have to double-enter.</li>
+      <li><strong>Select Vehicle Types (Details Matter):</strong> A Boeing 747 burns a lot more fuel per passenger than a modern Airbus A350. An SUV emits more than a hybrid sedan. A diesel train is different from an electric one. The calculator gives you specific options: flight class (economy, business, first—higher classes take more space, so you’re responsible for more emissions), car type (small, medium, large, hybrid, electric), train type (high-speed electric, regional diesel), and bus type. Taking the time to select the right option makes your calculation more accurate.</li>
+      <li><strong>Set Calculation Parameters (Customize It):</strong> You can adjust the carbon price per ton of CO₂. The default is $25, which is a solid average for high-quality verified offsets, but prices range from $10 to $50 depending on the project type. You can also set your travel period (one-time trip, monthly, or annual) to calculate emissions for commuting or regular business travel. This is great for companies doing carbon accounting.</li>
+      <li><strong>Calculate (See the Number):</strong> Click “Calculate Emissions” and get ready. The calculator shows your total carbon footprint in kilograms or tons of CO₂. It also shows equivalents: how many tree seedlings would need to grow for 10 years to absorb that much carbon, or how many miles the average car would need to drive to emit the same amount. These comparisons make the abstract number feel real.</li>
+      <li><strong>Choose Offset Projects (Your Money, Your Impact):</strong> Not all carbon offsets are equal. You can choose from verified projects: reforestation (planting trees that absorb CO₂), renewable energy (building wind or solar farms that replace coal), clean cookstoves (replacing open fires that burn wood or charcoal), or methane capture (turning landfill gas into energy). Each has different co-benefits—reforestation helps biodiversity, clean cookstoves reduce indoor air pollution and save lives. Pick the one that resonates with you.</li>
+      <li><strong>Take Action (Offset Now):</strong> The calculator tells you exactly how much it will cost to offset your trip. For most flights, it’s surprisingly affordable—often $10 to $50 per person for a long-haul round trip. You can use the “Offset Now” feature to donate directly to a verified offset provider. You’ll get a certificate showing your trip is carbon neutral. Share it with friends, post it on social media, or just keep it for your own peace of mind.</li>
     </ul>
 
-    <h3>Real-Life Example & Use Case:</h3>
-    <p>The Johnson family is planning a vacation from New York to Paris. They use our calculator to understand their environmental impact: a round-trip flight (11,000km total) in economy class generates approximately 1.2 tons of CO₂ per person. For their family of four, this totals 4.8 tons of CO₂. The calculator shows this is equivalent to the annual emissions of an average car, and would require 120 tree seedlings growing for 10 years to absorb. For $120 (at $25/ton), they can fully offset their emissions by supporting a renewable energy project in India that replaces coal power with solar energy, making their vacation carbon neutral.</p>
+    <h3>Real-Life Example & Use Case (Meet the Patels):</h3>
+    <p>The Patel family—Ravi, his wife Sunita, and their two teenagers—are planning a dream vacation from their home in Mumbai to Bali, Indonesia. They’re excited, but Ravi has been reading about climate change and feels uneasy about the flight. He decides to use our calculator.</p>
+    <p>First, they enter the flight details: Mumbai to Bali is about 5,000 kilometers one way, so 10,000 kilometers round trip. They select economy class. The calculator tells them that each person’s share of the flight emissions is approximately 1.4 tons of CO₂. For four people, that’s 5.6 tons total. The calculator also shows equivalents: that’s the same as driving a car for about 14,000 miles, or the amount of carbon that 140 tree seedlings would absorb over 10 years.</p>
+    <p>The offset cost at $25/ton is $140 for the whole family. That’s less than one dinner out in Bali. Ravi clicks on the reforestation project option—a verified program in Madagascar that plants native trees, restores wildlife habitat, and employs local villagers. He pays $140, gets a carbon-neutral certificate for the family’s flights, and feels genuinely good about their vacation. The kids even use it as a school project about climate action. That’s the power of this tool: it turns an abstract sense of guilt into concrete, affordable action.</p>
+    <p><strong>Business traveler example:</strong> Priya is a consultant who flies from Delhi to Singapore (about 4,100 km round trip) every month for client meetings. That’s 12 trips per year, nearly 50,000 kilometers. Her annual flight emissions are about 7 tons of CO₂. At $25/ton, offsetting her business travel costs $175 per year—less than the price of one flight upgrade. Her company reimburses her, and they add the offsets to their corporate sustainability report. Simple, measurable, meaningful.</p>
 
-    <h3>Benefits & Who Should Use This Tool:</h3>
+    <h3>Benefits & Who Should Use This Tool (Probably You):</h3>
     <ul>
-      <li><strong>Eco-Conscious Travelers:</strong> Understand and mitigate your travel environmental impact</li>
-      <strong>Business Travelers:</strong> Calculate and offset corporate travel emissions for CSR reporting</li>
-      <li><strong>Tour Operators:</strong> Provide carbon offset options to clients for sustainable tourism</li>
-      <li><strong>Event Planners:</strong> Calculate and offset emissions for conferences and meetings</li>
-      <li><strong>Students & Educators:</strong> Learn about carbon footprints and climate solutions</li>
-      <li><strong>Climate Advocates:</strong> Raise awareness about travel emissions and offsetting</li>
+      <li><strong>Eco-Conscious Travelers (That’s You, Hopefully):</strong> You want to see the world but don’t want to destroy it. The calculator gives you a clear, guilt-free path. Calculate your trip, pay a small amount to offset, and travel with a clean conscience. You can even offset past trips if you’re feeling retrospective.</li>
+      <li><strong>Business Travelers & Corporate Sustainability Teams:</strong> Many companies now track their carbon footprint as part of ESG (Environmental, Social, Governance) reporting. This calculator helps you quantify emissions from employee travel and purchase offsets at scale. Some companies even build offset costs into their travel booking systems so every flight is automatically offset. It’s good for the planet and good for the brand.</li>
+      <li><strong>Tour Operators & Travel Agencies:</strong> Offering carbon offset options to your clients is a competitive differentiator. More and more travelers want sustainable options. You can use the calculator to estimate emissions for your tour packages and offer a “carbon neutral” add-on. It’s usually a small percentage of the trip cost, and customers appreciate the transparency.</li>
+      <li><strong>Event Planners:</strong> Conferences, weddings, and corporate retreats all involve travel—often hundreds or thousands of people flying in. Use the calculator to estimate total event emissions, then add a small offset fee to registration or the overall budget. You can even plant trees in the event’s name and give attendees a certificate. It turns a carbon-intensive gathering into a climate-positive one.</li>
+      <li><strong>Students & Educators:</strong> Climate change is the defining issue of our time. The calculator is an excellent teaching tool. Have students calculate their family’s annual travel emissions, then research offset projects. It makes the abstract concept of “carbon footprint” tangible. They can even create a school-wide offset campaign.</li>
+      <li><strong>Climate Advocates & Influencers:</strong> You’re already talking about the climate crisis. Use the calculator to lead by example. Share your own offset certificates on social media. Show your followers that you’re not just talking—you’re acting. It’s a small gesture that builds credibility.</li>
     </ul>
 
-    <h3>Frequently Asked Questions:</h3>
-    <p><strong>How accurate are the carbon emission calculations?</strong><br>
-      Our calculations use emission factors from reputable sources including the EPA, DEFRA, and ICAO. While individual results may vary based on specific circumstances, the estimates provide a reliable benchmark for understanding travel impacts.</p>
+    <h3>Frequently Asked Questions (Real Answers):</h3>
+    <p><strong>How accurate are the carbon emission calculations? Can I trust them?</strong><br>
+      The calculator uses emission factors from authoritative sources: the EPA (Environmental Protection Agency), DEFRA (UK Department for Environment, Food & Rural Affairs), and ICAO (International Civil Aviation Organization). These are the same sources that governments and large corporations use. However, any carbon calculator is an estimate. Actual emissions depend on many variables: exact aircraft model, load factor (how full the plane is), weather, routing, etc. The calculator gives you a reliable benchmark—accurate enough for offsetting, even if not perfect to the last kilogram. For most travelers, the difference between the estimate and the real number is less than 10-15%, which is fine for practical purposes.</p>
 
-    <p><strong>What does "carbon offsetting" actually mean?</strong><br>
-      Carbon offsetting involves investing in environmental projects that reduce or remove greenhouse gas emissions equivalent to those you've produced. These projects are verified by third-party standards to ensure they deliver real, additional climate benefits.</p>
+    <p><strong>What does “carbon offsetting” actually mean? Is it just a feel-good scam?</strong><br>
+      Fair question. Some cheap, unverified offsets have been scams in the past. But high-quality offsets are real and effective. Here’s how it works: you pay a project to reduce or remove one ton of CO₂ that would not have been reduced otherwise. For example, a reforestation project plants trees on degraded land. Those trees absorb CO₂ as they grow. Without the project, the land would stay bare. The carbon reduction is “additional”—it wouldn’t have happened without your payment. Verification standards like Gold Standard and Verified Carbon Standard (VCS) ensure the projects are real, measurable, and permanent. Our calculator only suggests projects with these certifications. So no, not a scam. It’s a legitimate market-based tool for climate action.</p>
 
-    <p><strong>Are offset projects actually effective?</strong><br>
-      Verified carbon offset projects undergo rigorous certification processes to ensure they deliver genuine emission reductions. Look for projects certified under standards like Gold Standard, Verified Carbon Standard (VCS), or Climate Action Reserve.</p>
+    <p><strong>Are offset projects actually effective? Do trees really get planted?</strong><br>
+      Verified projects undergo rigorous third-party audits. For reforestation projects, auditors check that trees are actually planted, that they survive, and that the land wasn’t forested before (otherwise it’s not new carbon removal). They also ensure local communities benefit and that biodiversity is protected. Renewable energy projects (wind, solar) are even easier to verify—you can literally see the turbines or panels, and the electricity meter shows how much fossil fuel was displaced. So yes, effective projects exist. But you have to choose certified ones. The calculator’s recommendations are pre-vetted.</p>
 
-    <p><strong>Should I reduce my travel or just offset it?</strong><br>
-      The most effective approach is to first reduce emissions where possible (choosing trains over short flights, packing light, selecting efficient vehicles) and then offset the remaining unavoidable emissions.</p>
+    <p><strong>Should I reduce my travel first, or just offset it? What’s the right order?</strong><br>
+      The most responsible approach is: reduce first, then offset the rest. Don’t use offsetting as a “license to pollute” while making no other changes. Ask yourself: can I take the train instead of flying for short trips? (Trains emit 80-90% less CO₂ per passenger than planes for distances under 800 km). Can I combine multiple trips into one longer journey? Can I fly economy instead of business or first class? (Business class has about 3x the carbon footprint per passenger because of extra space). Can I pack lighter? (Extra weight burns more fuel). Once you’ve reduced what you reasonably can, offset the remaining unavoidable emissions. That’s the balanced, effective approach.</p>
 
-    <p><strong>How much does carbon offsetting typically cost?</strong><br>
-      Offset costs range from $10-50 per ton of CO₂ depending on project type and certification standard. Our calculator uses $25/ton as a default, representing the average cost of high-quality offset projects.</p>
+    <p><strong>How much does carbon offsetting typically cost? Is it expensive?</strong><br>
+      Surprisingly affordable. High-quality offsets typically cost $10 to $50 per ton of CO₂. The calculator uses $25/ton as a default. For a round-trip flight from New York to Los Angeles (about 8,000 km total), emissions are roughly 1.2 tons per person. That’s $30. For a round-trip from London to New York (11,000 km), about 1.8 tons → $45. For a family of four on that trip: $180. Compare that to the cost of flights, hotels, and meals—it’s a tiny fraction. Most people spend more on airport coffee and snacks. Offsetting is one of the most cost-effective climate actions an individual can take.</p>
 
-    <h3>The Science Behind Carbon Calculations</h3>
-    <p>Our calculator uses established emission factors and methodologies:</p>
+    <p><strong>What about non-CO₂ emissions from planes? Does the calculator account for them?</strong><br>
+      Yes. Airplanes also emit nitrogen oxides (NOx), water vapor, and soot, which have warming effects at high altitudes. This is called “radiative forcing.” The calculator multiplies the CO₂ emissions by a factor of 1.9 for aviation to account for these non-CO₂ effects. That’s the standard approach recommended by the IPCC and used by most serious calculators. For ground transportation (cars, trains, buses), we only count CO₂, because the non-CO₂ effects are much smaller at low altitudes.</p>
+
+    <h3>The Science Behind Carbon Calculations (For the Nerds):</h3>
+    <p>This is how the math works under the hood. You don’t need to memorize it, but understanding it builds trust in the numbers.</p>
     <ul>
-      <li><strong>Aviation:</strong> Accounts for CO₂ emissions plus radiative forcing impact (multiplier of 1.9 for high-altitude effects)</li>
-      <li><strong>Road Transport:</strong> Differentiates between vehicle types, fuel efficiency, and occupancy rates</li>
-      <li><strong>Rail Travel:</strong> Considers electricity source mix for electric trains and fuel type for diesel</li>
-      <li><strong>Accommodation:</strong> Estimates emissions based on energy use per night in different hotel categories</li>
-      <li><strong>Carbon Sequestration:</strong> Uses average tree growth rates of 22 kg CO₂ per year per tree</li>
+      <li><strong>Aviation Emissions:</strong> Fuel burn per passenger depends on aircraft type, distance, and seat configuration. A long-haul flight burns about 0.2 kg of jet fuel per passenger per kilometer. Jet fuel emits 3.16 kg of CO₂ per kg burned. So 0.2 kg fuel × 3.16 = 0.63 kg CO₂ per passenger-km. But then we multiply by 1.9 for radiative forcing, giving about 1.2 kg CO₂e per passenger-km. For a 5,000 km flight: 5,000 × 1.2 = 6,000 kg (6 tons) per passenger. That’s the calculator’s baseline.</li>
+      <li><strong>Road Transport:</strong> A typical petrol car emits about 0.25 kg CO₂ per km. A hybrid: 0.15 kg/km. An electric car: depends on the electricity grid. In a coal-heavy grid, an EV might emit 0.12 kg/km (from power plant emissions). In a renewable-heavy grid, near zero. The calculator uses grid average for the region you select.</li>
+      <li><strong>Rail Travel:</strong> High-speed electric trains in Europe emit about 0.03 kg CO₂ per passenger-km (mostly from electricity generation). Diesel trains emit about 0.08 kg/km. Both are far lower than flying—often 10-20x lower.</li>
+      <li><strong>Carbon Sequestration (Trees):</strong> A newly planted tree absorbs about 22 kg of CO₂ per year as it grows, averaged over its first 20 years. So to offset 1 ton (1,000 kg), you need about 45 tree-years of growth. That could be 45 trees growing for 1 year, 9 trees growing for 5 years, or 4.5 trees growing for 10 years. The calculator uses “10 tree seedlings growing for 10 years” as a standard equivalence.</li>
     </ul>
 
-    <h3>Types of Carbon Offset Projects</h3>
-    <p>High-quality carbon offset projects deliver multiple benefits beyond emission reduction:</p>
+    <h3>Types of Carbon Offset Projects (Where Your Money Goes):</h3>
+    <p>Not all offsets are the same. Here’s what your money actually funds when you choose different project types:</p>
     <ul>
-      <li><strong>Reforestation & Afforestation:</strong> Planting trees that absorb CO₂ while restoring habitats and preventing soil erosion</li>
-      <li><strong>Renewable Energy:</strong> Funding wind, solar, and hydro projects that displace fossil fuel electricity</li>
-      <li><strong>Energy Efficiency:</strong> Distributing efficient cookstoves or LED lights to reduce fuel consumption</li>
-      <li><strong>Methane Capture:</strong> Capturing landfill gas or agricultural methane for energy production</li>
-      <li><strong>Forest Conservation:</strong> Protecting existing forests from deforestation through community programs</li>
+      <li><strong>Reforestation & Afforestation (Planting Trees):</strong> Your money buys tree seedlings, pays for planting, and covers maintenance and monitoring for several years. These projects often also restore wildlife habitat, prevent soil erosion, and provide local employment. The downside: trees take years to absorb significant carbon, so the climate benefit is delayed. But long-term, reforestation is powerful and popular.</li>
+      <li><strong>Renewable Energy (Wind, Solar, Hydro):</strong> Your money helps build wind farms or solar plants in places that currently rely on coal or natural gas. By displacing fossil fuel electricity, these projects avoid emissions immediately. They also reduce air pollution and create local energy independence. This is the fastest-acting offset type.</li>
+      <li><strong>Clean Cookstoves (Health + Climate):</strong> In many developing countries, people cook over open fires using wood or charcoal. These fires release black carbon (soot) and CO₂, and the smoke causes respiratory disease—killing nearly 4 million people per year, mostly women and children. Clean cookstoves burn fuel more efficiently or use solar, reducing emissions by 50-80% and saving lives. Your offset dollars fund stove distribution and training.</li>
+      <li><strong>Methane Capture (Landfill Gas):</strong> Landfills generate methane as organic waste decomposes. Methane is 28x more potent as a greenhouse gas than CO₂ over 100 years. Methane capture projects collect the gas and burn it to generate electricity, converting a super-potent gas into much less harmful CO₂. These projects are highly effective but less sexy than tree planting.</li>
+      <li><strong>Forest Conservation (REDD+):</strong> These projects pay local communities to protect existing forests from logging or clearing for agriculture. Deforestation is a major carbon source (about 10% of global emissions). Keeping forests standing avoids those emissions. These projects also protect biodiversity and indigenous lands. However, they’re harder to verify than tree planting—you have to prove the forest would have been cut down without the project.</li>
     </ul>
 
-    <h3>Sustainable Travel Strategies</h3>
-    <p>Beyond offsetting, consider these approaches to reduce your travel footprint:</p>
+    <h3>Sustainable Travel Strategies (Reduce Before You Offset):</h3>
+    <p>Offsetting is great, but reducing your emissions in the first place is even better. Here are practical strategies that actually work:</p>
     <ul>
-      <li><strong>Trip Consolidation:</strong> Combine multiple trips into one longer journey</li>
-      <li><strong>Transport Choice:</strong> Prefer trains over planes for distances under 800km</li>
-      <li><strong>Eco-Accommodation:</strong> Choose hotels with sustainability certifications</li>
-      <li><strong>Local Experiences:</strong> Support local economies and reduce transport needs</li>
-      <li><strong>Digital Alternatives:</strong> Consider virtual meetings when travel isn't essential</li>
-      <li><strong>Slow Travel:</strong> Stay longer in fewer places for deeper cultural immersion</li>
+      <li><strong>Trip Consolidation (Fewer, Longer Trips):</strong> Instead of taking three short weekend trips by plane, take one longer trip by train or by plane but stay longer. Each flight has a fixed “takeoff and landing” emissions cost that’s independent of distance. So many short flights are worse than one long flight.</li>
+      <li><strong>Choose Trains Over Planes for Short Distances:</strong> For distances under 800 km (500 miles), trains emit 80-90% less CO₂ per passenger than planes. Plus, train stations are often city-center to city-center, saving taxi or transit time. The train is often faster once you factor in airport security and transfers. Win-win.</li>
+      <li><strong>Pack Light (Every Kilo Matters):</strong> Heavier planes burn more fuel. The difference between a 10 kg suitcase and a 20 kg suitcase might not seem like much, but across 100 passengers, it adds up to tons of extra emissions. Pack only what you need.</li>
+      <li><strong>Fly Economy (Seriously):</strong> Business class seats take up about 2-3x the space of economy seats, so the emissions per passenger are 2-3x higher. First class is even worse. If you can afford business class, you can afford to fly economy and donate the savings to offsets. Your carbon footprint will thank you.</li>
+      <li><strong>Choose Non-Stop Flights:</strong> Takeoffs and landings are the most fuel-intensive parts of a flight. A connecting flight with two landings and two takeoffs emits more than a direct flight, even if the total distance is the same. Pay a bit more for non-stop when possible.</li>
+      <li><strong>Stay in Eco-Accommodation:</strong> Choose hotels with sustainability certifications like LEED, Green Key, or EarthCheck. They use renewable energy, conserve water, reduce waste, and sometimes offer electric vehicle charging. Your vacation dollars reward good behavior.</li>
+      <li><strong>Support Local (Don’t Fly Across the World to Eat at McDonald’s):</strong> Eating local food, using local transport, and buying local products reduces the carbon footprint of your trip by avoiding imported goods that were shipped or flown in. Plus, it’s a better cultural experience.</li>
     </ul>
-  </div>
+
+    <h3>The Bigger Picture (Why Offsetting Matters):</h3>
+    <p>Some people argue that carbon offsetting is a distraction—that we should focus on reducing emissions at the source instead of paying to “undo” them. And they’re partly right. Offsetting is not a substitute for systemic change. We still need renewable energy, electric vehicles, reforestation at scale, and climate policy. But here’s the thing: individual action and systemic change aren’t opponents. They’re teammates. When you offset your travel, you’re not just “easing your guilt.” You’re funding real projects that reduce real emissions. You’re sending a market signal that there’s demand for carbon reduction. You’re normalizing the idea that we should take responsibility for our climate impact. And you’re empowering yourself to act now, instead of waiting for governments to solve everything. Offsetting won’t save the world alone. But combined with reduction, advocacy, and lifestyle changes, it’s a powerful tool in the toolbox. Use it.</p>
+
+    <h3>One Final Thought (Travel Well, Leave Light):</h3>
+    <p>The world is beautiful, and you should see it. Meet people in faraway places. Try strange foods. Watch the sun set over oceans and mountains and deserts. Travel is one of the great joys of being human. But do it with awareness. Every flight, every drive, every cruise has a cost that’s not measured in dollars. Now you have a way to pay that cost. Not to erase it—you can’t un-burn jet fuel. But to balance the scales. To invest in a future where travel and the planet can coexist. Next time you book a trip, use the calculator. See the number. Pay the offset. It’s small, it’s easy, and it matters. Then go have the adventure of a lifetime, with a clean conscience and a lighter footprint.</p>
 </div>
-
+</div>
+```
 <!-- Offset Confirmation Modal -->
 <div id="offsetModal" class="modal">
   <div class="modal-content">
