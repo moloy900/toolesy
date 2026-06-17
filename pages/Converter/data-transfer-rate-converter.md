@@ -568,91 +568,556 @@ OC-3: 155.52 Mbps = 3 T3 lines</div>
     </div>
   </div>
 
-  <!-- SEO Content Section -->
-  <div class="content-placeholder">
-    <h2>Free Online Data Transfer Rate Converter Tool</h2>
+<!-- SEO Content Section -->
+<div class="content-placeholder">
+  <h2>Free Online Data Transfer Rate Converter Tool</h2>
 
-    <p>Working with network speeds, internet bandwidth, or data transfer measurements? Our free <strong>Data Transfer Rate Converter tool</strong> is the perfect solution for network engineers, IT professionals, students, and anyone dealing with digital data transmission. This comprehensive tool allows you to instantly convert between all major data transfer rate units including bits per second (bps, kbps, Mbps, Gbps, Tbps), bytes per second (B/s, kB/s, MB/s, GB/s, TB/s), binary units (Kib/s, Mib/s, Gib/s, Tib/s), and telecom standards (T1, T3, E1). There's no download required, no registration needed, and your data privacy is guaranteed as all calculations happen securely right in your browser.</p>
+  <p>
+    In a world where internet connectivity powers everything from video
+    streaming and cloud computing to online gaming and remote work,
+    understanding data transfer speeds has become increasingly important.
+    Whether you're comparing internet plans, configuring network equipment,
+    managing servers, or simply trying to estimate how long a large file will
+    take to download, knowing how different data transfer units relate to one
+    another can save time and prevent confusion.
+  </p>
 
-    <h3>How to Use This Data Transfer Rate Converter (Step-by-Step):</h3>
-    <ul>
-      <li><strong>Select Your Input:</strong> Enter the value you want to convert in any of the input fields (bps, Mbps, MB/s, etc.).</li>
-      <li><strong>Automatic Calculation:</strong> The tool automatically calculates and displays all equivalent values in real-time as you type.</li>
-      <li><strong>Review Results:</strong> Check the conversion results section for accurate conversions between all related data rate units.</li>
-      <li><strong>Copy or Reset:</strong> Use the "Copy Results" button to save your conversions or "Reset All" to start over with new values.</li>
-    </ul>
+  <p>
+    Our <strong>Free Online Data Transfer Rate Converter Tool</strong> is
+    designed to make these calculations quick, accurate, and effortless. The
+    converter supports a wide range of units, including bits per second,
+    kilobits per second, megabits per second, gigabits per second, bytes per
+    second, megabytes per second, binary data units, and traditional telecom
+    standards such as T1, T3, and E1.
+  </p>
 
-    <h3>Real-Life Example & Use Case:</h3>
-    <p>Imagine you're a network administrator comparing internet service plans. One provider advertises 500 Mbps download speed, while another advertises 60 MB/s. Instead of manually calculating the conversion (which could lead to errors), you simply enter "500" in the Mbps field. The tool instantly shows you the equivalent value of 62.5 MB/s, making it clear that the second provider offers slightly higher speed. This helps you make informed decisions about internet service purchases and network capacity planning.</p>
+  <p>
+    Instead of manually calculating conversions or searching for formulas,
+    users can instantly convert between units and better understand network
+    performance, internet bandwidth, file transfer speeds, and communication
+    systems.
+  </p>
 
-    <h3>Benefits & Who Should Use This Tool:</h3>
-    <ul>
-      <li><strong>Network Engineers:</strong> Convert between different data rate measurement systems for network design and troubleshooting.</li>
-      <li><strong>IT Professionals:</strong> Quickly convert between bits and bytes for bandwidth monitoring and capacity planning.</li>
-      <li><strong>Students & Educators:</strong> Learn data rate unit relationships and verify homework calculations with instant conversions.</li>
-      <li><strong>Telecom Professionals:</strong> Convert between traditional telecom rates (T1, T3, E1) and modern bandwidth measurements.</li>
-      <li><strong>Internet Users:</strong> Understand and compare internet speed measurements from different providers.</li>
-    </ul>
+  <p>
+    Because all calculations are performed directly in your browser, your data
+    remains private and secure. No information is uploaded, stored, or shared,
+    making the tool suitable for both personal and professional use.
+  </p>
 
-    <h3>Frequently Asked Questions</h3>
-    <p><strong>What is the difference between Mbps and MB/s?</strong><br>
-      Mbps (Megabits per second) measures data transfer rate in bits, while MB/s (Megabytes per second) measures in bytes. Since 1 byte = 8 bits, to convert Mbps to MB/s, divide by 8. For example, 100 Mbps = 12.5 MB/s.</p>
+  <h3>How to Use This Data Transfer Rate Converter (Step-by-Step)</h3>
 
-    <p><strong>What are binary (IEC) units like Mib/s vs decimal units like Mbps?</strong><br>
-      Decimal units use base-10 (1 Mbps = 1,000,000 bps), while binary units use base-2 (1 Mib/s = 1,048,576 bps). Binary units are often used in computer memory and storage contexts.</p>
+  <p>
+    The converter has been designed with simplicity in mind. Even users with
+    little technical knowledge can quickly perform accurate conversions.
+  </p>
 
-    <p><strong>Is my data kept private when I use this converter?</strong><br>
-      Absolutely. All calculations happen locally in your browser. Your data transfer rate values are never sent to any server, meaning we never see, store, or have access to your data. It is 100% secure and private.</p>
+  <ul>
+    <li>
+      <strong>Enter a Value:</strong> Type the data transfer rate you want to
+      convert into any available input field.
+    </li>
 
-    <p><strong>Can I use this tool on my mobile device?</strong><br>
-      Yes, our website and converter are fully responsive and optimized to work perfectly on all devices, including smartphones and tablets.</p>
+    <li>
+      <strong>Select the Appropriate Unit:</strong> Choose the unit that
+      represents your current measurement, such as Mbps, Gbps, MB/s, or kbps.
+    </li>
 
-    <p><strong>What are T1, T3, and E1 lines used for?</strong><br>
-      These are digital transmission standards used in telecommunications. T1 (1.544 Mbps) and T3 (44.736 Mbps) are North American standards, while E1 (2.048 Mbps) is the European equivalent, commonly used for business internet and voice services.</p>
+    <li>
+      <strong>Automatic Conversion:</strong> As soon as you enter a value, the
+      converter automatically calculates equivalent values in all supported
+      units.
+    </li>
 
-    <h3>Why Choose Our Data Transfer Rate Converter?</h3>
-    <p>Our <strong>online data transfer rate converter</strong> stands out from other tools because of its comprehensive coverage, accuracy, and privacy features. Unlike many online converters, we don't process your data on our servers - all calculations happen in your browser. This means your sensitive network data, bandwidth measurements, and professional work remain completely private. The tool also works offline once loaded, making it reliable even with unstable internet connections.</p>
+    <li>
+      <strong>Review Results:</strong> Compare values across different
+      measurement systems to better understand actual transfer speeds.
+    </li>
 
-    <h3>Common Applications of Data Transfer Rate Conversion</h3>
-    <p>Data transfer rate conversion has numerous practical applications across various fields:</p>
-    <ul>
-      <li><strong>Network Design:</strong> Convert between different bandwidth measurement systems for network architecture planning</li>
-      <li><strong>Internet Service Comparison:</strong> Compare internet speed offerings from different providers using consistent units</li>
-      <li><strong>Data Center Management:</strong> Standardize bandwidth measurements across different systems and reports</li>
-      <li><strong>Education & Training:</strong> Teach students the relationships between different data rate units and measurement systems</li>
-      <li><strong>Telecommunications:</strong> Convert legacy telecom rates to modern bandwidth measurements for technology migration</li>
-    </ul>
+    <li>
+      <strong>Copy Results:</strong> Easily copy conversion results for use in
+      reports, documentation, or project planning.
+    </li>
 
-    <h3>Understanding Data Transfer Rate Units</h3>
-    <p>Data transfer rate measurement involves several different unit systems, each serving specific contexts:</p>
-    <ul>
-      <li><strong>Bits per second (bps):</strong> Fundamental unit used in networking and telecommunications</li>
-      <li><strong>Bytes per second (B/s):</strong> Commonly used in file transfer and storage contexts</li>
-      <li><strong>Decimal multiples (kbps, Mbps, Gbps):</strong> Use base-10, standard in networking</li>
-      <li><strong>Binary multiples (Kib/s, Mib/s, Gib/s):</strong> Use base-2, often used in computing contexts</li>
-      <li><strong>Telecom standards (T1, T3, E1):</strong> Legacy digital transmission rates still used in business networks</li>
-    </ul>
+    <li>
+      <strong>Reset When Needed:</strong> Clear all fields instantly and start
+      a new calculation whenever necessary.
+    </li>
+  </ul>
 
-    <h3>Professional Applications</h3>
-    <p>This converter is essential for professionals in various fields:</p>
-    <ul>
-      <li><strong>Network Architecture:</strong> Design networks with appropriate bandwidth capacity using consistent units</li>
-      <li><strong>Cloud Computing:</strong> Calculate data transfer costs and requirements between different cloud services</li>
-      <li><strong>Video Streaming:</strong> Convert between video bitrates and internet speed requirements</li>
-      <li><strong>Data Backup:</strong> Estimate backup times based on available bandwidth and data size</li>
-      <li><strong>VoIP Planning:</strong> Calculate bandwidth requirements for voice over IP services</li>
-    </ul>
+  <h3>Why Data Transfer Rate Conversion Matters</h3>
 
-    <h3>Practical Conversion Examples</h3>
-    <p>Understanding these common conversions can help in everyday IT tasks:</p>
-    <ul>
-      <li><strong>Internet Speed:</strong> 100 Mbps internet = 12.5 MB/s actual download speed</li>
-      <li><strong>File Transfer:</strong> 1 GB file at 50 MB/s takes 20 seconds to transfer</li>
-      <li><strong>Network Upgrade:</strong> Upgrading from T1 (1.544 Mbps) to fiber (100 Mbps) provides ~65x more bandwidth</li>
-      <li><strong>Storage vs Transfer:</strong> 1 TB hard drive would take ~2.5 hours to fill at 100 MB/s transfer rate</li>
-    </ul>
-  </div>
+  <p>
+    Data transfer rates are used everywhere in modern technology. Internet
+    providers advertise download speeds, cloud platforms specify bandwidth
+    limits, network administrators monitor traffic, and businesses evaluate
+    infrastructure performance using these measurements.
+  </p>
+
+  <p>
+    Unfortunately, different industries and technologies often use different
+    units. One company may advertise a connection speed in megabits per second
+    while another references megabytes per second. Without understanding the
+    relationship between these units, it becomes difficult to make accurate
+    comparisons.
+  </p>
+
+  <p>
+    A conversion tool eliminates this confusion by providing instant,
+    standardized results that can be easily compared and understood.
+  </p>
+
+  <h3>Real-Life Example: Comparing Internet Plans</h3>
+
+  <p>
+    Imagine you're choosing between two broadband providers. One advertises a
+    speed of 500 Mbps, while another claims download speeds of 60 MB/s.
+  </p>
+
+  <p>
+    At first glance, it may seem difficult to determine which service is
+    faster. By entering 500 Mbps into the converter, you instantly discover
+    that it equals approximately 62.5 MB/s.
+  </p>
+
+  <p>
+    This reveals that the second provider's advertised speed of 60 MB/s is
+    slightly lower than the first provider's 500 Mbps service.
+  </p>
+
+  <p>
+    Such comparisons are common when evaluating internet packages, business
+    connectivity solutions, or enterprise network upgrades.
+  </p>
+
+  <h3>Who Should Use This Data Transfer Rate Converter?</h3>
+
+  <ul>
+    <li>
+      <strong>Network Engineers:</strong> Design and troubleshoot networks
+      using consistent bandwidth measurements.
+    </li>
+
+    <li>
+      <strong>IT Administrators:</strong> Monitor network utilization and
+      perform capacity planning.
+    </li>
+
+    <li>
+      <strong>Students:</strong> Learn networking concepts and verify homework
+      calculations.
+    </li>
+
+    <li>
+      <strong>Telecommunications Professionals:</strong> Convert traditional
+      telecom standards into modern bandwidth units.
+    </li>
+
+    <li>
+      <strong>Cloud Architects:</strong> Estimate transfer requirements for
+      cloud infrastructure.
+    </li>
+
+    <li>
+      <strong>Gamers and Streamers:</strong> Understand upload and download
+      requirements for online activities.
+    </li>
+
+    <li>
+      <strong>General Internet Users:</strong> Compare internet packages and
+      estimate file download times.
+    </li>
+  </ul>
+
+  <h3>Understanding the Basics of Data Transfer Rates</h3>
+
+  <p>
+    A data transfer rate measures how much information can move from one
+    location to another during a specific period of time. Most commonly, these
+    rates are measured per second.
+  </p>
+
+  <p>
+    The basic unit is bits per second (bps). Larger units are created by
+    multiplying this value by thousands, millions, billions, or trillions.
+  </p>
+
+  <ul>
+    <li><strong>bps</strong> – Bits per second</li>
+    <li><strong>kbps</strong> – Kilobits per second</li>
+    <li><strong>Mbps</strong> – Megabits per second</li>
+    <li><strong>Gbps</strong> – Gigabits per second</li>
+    <li><strong>Tbps</strong> – Terabits per second</li>
+  </ul>
+
+  <p>
+    Similarly, file transfers are often measured using bytes instead of bits:
+  </p>
+
+  <ul>
+    <li><strong>B/s</strong> – Bytes per second</li>
+    <li><strong>kB/s</strong> – Kilobytes per second</li>
+    <li><strong>MB/s</strong> – Megabytes per second</li>
+    <li><strong>GB/s</strong> – Gigabytes per second</li>
+    <li><strong>TB/s</strong> – Terabytes per second</li>
+  </ul>
+
+  <h3>Bits vs Bytes: The Most Important Concept</h3>
+
+  <p>
+    One of the most common mistakes people make is confusing bits with bytes.
+  </p>
+
+  <p>
+    A byte consists of eight bits. This means:
+  </p>
+
+  <ul>
+    <li>1 Byte = 8 Bits</li>
+    <li>1 MB/s = 8 Mbps</li>
+    <li>100 Mbps = 12.5 MB/s</li>
+    <li>1 Gbps = 125 MB/s</li>
+  </ul>
+
+  <p>
+    Internet providers typically advertise speeds in bits per second, while
+    operating systems often display download speeds in bytes per second. This
+    difference explains why actual download numbers may appear smaller than the
+    advertised internet speed.
+  </p>
+
+<h3>Decimal vs Binary Data Rate Units</h3>
+
+<p>
+  When working with data transfer speeds, you may encounter both decimal and
+  binary measurement systems. Although they appear similar, they are based on
+  different mathematical standards and can produce slightly different values.
+</p>
+
+<p>
+  The decimal system is commonly used in networking, telecommunications, and
+  internet service advertisements. It follows powers of 10.
+</p>
+
+<ul>
+  <li>1 kbps = 1,000 bits per second</li>
+  <li>1 Mbps = 1,000,000 bits per second</li>
+  <li>1 Gbps = 1,000,000,000 bits per second</li>
+  <li>1 Tbps = 1,000,000,000,000 bits per second</li>
+</ul>
+
+<p>
+  The binary system, often used in computing environments, follows powers of
+  2. These units are identified using the IEC naming convention.
+</p>
+
+<ul>
+  <li>1 Kib/s = 1,024 bits per second</li>
+  <li>1 Mib/s = 1,048,576 bits per second</li>
+  <li>1 Gib/s = 1,073,741,824 bits per second</li>
+  <li>1 Tib/s = 1,099,511,627,776 bits per second</li>
+</ul>
+
+<p>
+  While the difference between decimal and binary units is relatively small at
+  lower speeds, it becomes more noticeable when working with gigabit and
+  terabit connections.
+</p>
+
+<h3>Telecommunication Standards Explained</h3>
+
+<p>
+  Before modern fiber-optic and broadband networks became widespread,
+  telecommunications companies relied on dedicated digital transmission
+  standards. Many of these standards are still used in enterprise networking
+  and legacy infrastructure.
+</p>
+
+<ul>
+  <li><strong>T1 Line:</strong> 1.544 Mbps</li>
+  <li><strong>T3 Line:</strong> 44.736 Mbps</li>
+  <li><strong>E1 Line:</strong> 2.048 Mbps</li>
+  <li><strong>E3 Line:</strong> 34.368 Mbps</li>
+</ul>
+
+<p>
+  T1 and T3 standards originated in North America, while E1 and E3 became
+  widely adopted throughout Europe and many other regions. Businesses often
+  continue using these technologies because of their reliability and dedicated
+  bandwidth capabilities.
+</p>
+
+<h3>Calculating Download Times</h3>
+
+<p>
+  One practical use of data transfer rate conversion is estimating how long a
+  file download will take. By understanding the relationship between file size
+  and transfer speed, users can make realistic expectations about download and
+  upload durations.
+</p>
+
+<p>
+  For example, if you need to download a 10 GB file over a connection capable
+  of delivering 100 Mbps:
+</p>
+
+<ul>
+  <li>100 Mbps = 12.5 MB/s</li>
+  <li>10 GB = 10,240 MB</li>
+  <li>10,240 ÷ 12.5 ≈ 819 seconds</li>
+  <li>Approximate download time = 13.6 minutes</li>
+</ul>
+
+<p>
+  Actual results may vary due to network congestion, protocol overhead, server
+  limitations, and other real-world factors.
+</p>
+
+<h3>Upload Speed vs Download Speed</h3>
+
+<p>
+  Many internet connections provide different speeds for downloading and
+  uploading data. Residential broadband plans often prioritize download
+  performance because users typically consume more content than they upload.
+</p>
+
+<p>
+  However, upload speed becomes extremely important for activities such as:
+</p>
+
+<ul>
+  <li>Cloud backups</li>
+  <li>Video conferencing</li>
+  <li>Live streaming</li>
+  <li>Remote work</li>
+  <li>Uploading large media files</li>
+  <li>Hosting online services</li>
+</ul>
+
+<p>
+  Converting upload and download rates into familiar units helps users better
+  understand the actual performance they can expect from their connection.
+</p>
+
+<h3>Data Center and Cloud Computing Applications</h3>
+
+<p>
+  Modern data centers process enormous amounts of information every second.
+  Cloud service providers must manage data transfer rates across thousands of
+  servers, storage systems, and customer applications.
+</p>
+
+<p>
+  Engineers regularly convert between different bandwidth units when planning
+  infrastructure, estimating costs, and monitoring system performance.
+</p>
+
+<p>
+  For example, a cloud backup system transferring data at 10 Gbps can move
+  approximately 1.25 GB every second. Understanding these relationships is
+  critical when designing scalable cloud environments.
+</p>
+
+<h3>Video Streaming and Content Delivery</h3>
+
+<p>
+  Streaming services rely heavily on bandwidth calculations to deliver smooth
+  viewing experiences. Different video resolutions require different transfer
+  rates.
+</p>
+
+<ul>
+  <li>SD Video: 1–3 Mbps</li>
+  <li>HD Video: 5–10 Mbps</li>
+  <li>Full HD: 10–20 Mbps</li>
+  <li>4K Ultra HD: 25–50 Mbps</li>
+  <li>8K Video: 50–100+ Mbps</li>
+</ul>
+
+<p>
+  Network administrators and content creators often use conversion tools to
+  estimate required bandwidth and optimize streaming performance.
+</p>
+
+<h3>Gaming and Online Entertainment</h3>
+
+<p>
+  Gamers frequently evaluate internet plans based on bandwidth specifications.
+  While online games often require relatively modest transfer rates, downloads
+  for modern games can exceed 100 GB.
+</p>
+
+<p>
+  Understanding the relationship between Mbps and MB/s helps gamers estimate
+  installation times and choose suitable internet packages.
+</p>
+
+<h3>Frequently Asked Questions</h3>
+
+<p>
+  <strong>What is the difference between Mbps and MB/s?</strong><br>
+  Mbps measures megabits per second, while MB/s measures megabytes per second.
+  Since one byte equals eight bits, 100 Mbps equals approximately 12.5 MB/s.
+</p>
+
+<p>
+  <strong>Why do internet providers advertise Mbps instead of MB/s?</strong><br>
+  Telecommunications companies traditionally use bit-based measurements for
+  network speeds, which is why most internet packages are advertised using
+  Mbps or Gbps.
+</p>
+
+<p>
+  <strong>Are binary units more accurate than decimal units?</strong><br>
+  Neither system is more accurate. They simply use different mathematical
+  standards. Decimal units are common in networking, while binary units are
+  common in computing.
+</p>
+
+<p>
+  <strong>Can I use this converter on mobile devices?</strong><br>
+  Yes. The converter works smoothly on smartphones, tablets, laptops, and
+  desktop computers.
+</p>
+
+<p>
+  <strong>Does the converter require an internet connection?</strong><br>
+  Once the page is fully loaded, many browser-based converters can continue
+  functioning locally without constant internet access.
+</p>
+
+<h3>Common Data Transfer Rate Conversions</h3>
+
+<p>
+  These are some of the most frequently encountered conversions in networking
+  and IT environments:
+</p>
+
+<ul>
+  <li>10 Mbps = 1.25 MB/s</li>
+  <li>50 Mbps = 6.25 MB/s</li>
+  <li>100 Mbps = 12.5 MB/s</li>
+  <li>500 Mbps = 62.5 MB/s</li>
+  <li>1 Gbps = 125 MB/s</li>
+  <li>10 Gbps = 1.25 GB/s</li>
+  <li>40 Gbps = 5 GB/s</li>
+  <li>100 Gbps = 12.5 GB/s</li>
+</ul>
+
+<h3>Professional Applications Across Industries</h3>
+
+<p>
+  Data transfer rate conversion is valuable in a wide range of professional
+  environments.
+</p>
+
+<ul>
+  <li>
+    <strong>Network Engineering:</strong> Designing high-performance network
+    infrastructure.
+  </li>
+
+  <li>
+    <strong>Cybersecurity:</strong> Monitoring traffic flow and analyzing
+    network activity.
+  </li>
+
+  <li>
+    <strong>Cloud Computing:</strong> Estimating bandwidth consumption and
+    transfer costs.
+  </li>
+
+  <li>
+    <strong>Broadcasting:</strong> Managing video streams and media delivery.
+  </li>
+
+  <li>
+    <strong>Software Development:</strong> Optimizing applications for network
+    efficiency.
+  </li>
+
+  <li>
+    <strong>Scientific Research:</strong> Handling large-scale data transfers
+    between research facilities.
+  </li>
+</ul>
+
+<h3>How Faster Networks Have Changed Technology</h3>
+
+<p>
+  Over the past few decades, network speeds have increased dramatically. Early
+  dial-up internet connections operated at only a few kilobits per second,
+  while modern fiber-optic networks routinely deliver gigabit speeds.
+</p>
+
+<p>
+  These advances have enabled cloud computing, high-definition streaming,
+  online gaming, remote collaboration, and real-time communication on a global
+  scale.
+</p>
+
+<p>
+  As technologies such as artificial intelligence, virtual reality, and the
+  Internet of Things continue to grow, demand for higher transfer rates will
+  only increase.
+</p>
+
+<h3>Benefits of Using an Online Data Transfer Rate Converter</h3>
+
+<ul>
+  <li>Instant and accurate calculations</li>
+  <li>Supports dozens of transfer rate units</li>
+  <li>No manual formulas required</li>
+  <li>Helpful for education and professional work</li>
+  <li>Reduces conversion errors</li>
+  <li>Works across multiple devices</li>
+  <li>Useful for networking, cloud computing, and telecommunications</li>
+</ul>
+
+<h3>Why Choose Our Data Transfer Rate Converter?</h3>
+
+<p>
+  Our converter combines accuracy, speed, simplicity, and privacy in a single
+  tool. Whether you're comparing internet plans, planning a network upgrade,
+  estimating transfer times, or studying computer networking, the converter
+  provides reliable results in seconds.
+</p>
+
+<p>
+  Because all calculations happen locally in your browser, your network data
+  and measurements remain private and secure. No information is uploaded or
+  stored on external servers.
+</p>
+
+<h3>Final Thoughts</h3>
+
+<p>
+  Understanding data transfer rates is essential in today's connected world.
+  From internet subscriptions and cloud services to video streaming and
+  enterprise networking, transfer speed measurements influence countless
+  technology decisions.
+</p>
+
+<p>
+  By learning the relationships between bits, bytes, decimal units, binary
+  units, and telecommunications standards, users can make more informed
+  choices about network infrastructure and digital services.
+</p>
+
+<p>
+  Our Free Online Data Transfer Rate Converter simplifies these calculations by
+  providing fast, accurate conversions across a wide range of units. Whether
+  you're a student, IT professional, network engineer, telecom specialist, or
+  everyday internet user, this tool helps you understand and compare data
+  transfer speeds with confidence.
+</p>
+
+<p>
+  Bookmark this converter for quick access whenever you need reliable,
+  hassle-free data transfer rate conversions.
+</p>
+
 </div>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
