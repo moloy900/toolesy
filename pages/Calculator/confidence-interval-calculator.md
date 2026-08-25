@@ -977,7 +977,7 @@ permalink: /confidence-interval-calculator-calculate-statistical-intervals-onlin
     </div>
   </div>
 
-  ```html
+  html
 <!-- SEO Content Section -->
 <div class="content-placeholder">
 
@@ -1174,7 +1174,7 @@ permalink: /confidence-interval-calculator-calculate-statistical-intervals-onlin
 
 </div>
 </div>
-```
+
 
 
 <script>

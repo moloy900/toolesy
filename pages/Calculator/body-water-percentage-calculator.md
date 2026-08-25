@@ -741,7 +741,7 @@ permalink: /body-water-percentage-calculator-calculate-your-body-water-percentag
     </div>
   </div>
 
-  ```html
+  html
 <!-- SEO Content Section -->
 <div class="content-placeholder">
 
@@ -978,7 +978,7 @@ permalink: /body-water-percentage-calculator-calculate-your-body-water-percentag
     </div>
   </div>
 </div>
-```
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {

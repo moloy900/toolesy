@@ -869,7 +869,7 @@ Results:
   <ul>
     <li><strong>Select Product Category:</strong> Begin by choosing the category that best matches your product. Different categories often have different referral fee percentages and fulfillment costs.</li>
 
-```
+
 <li><strong>Choose Product Subcategory:</strong> Select the most accurate subcategory to improve fee estimation accuracy.</li>
 
 <li><strong>Enter Product Cost:</strong> Add your product sourcing or manufacturing cost. This is one of the most important inputs for calculating profitability.</li>
@@ -885,7 +885,7 @@ Results:
 <li><strong>Calculate Results:</strong> Click the calculate button to instantly view Amazon fees, net profit, profit margin, ROI, and projected monthly earnings.</li>
 
 <li><strong>Compare Different Scenarios:</strong> Adjust prices, costs, and sales volume to discover the most profitable business strategy.</li>
-```
+
 
   </ul>
 
@@ -906,7 +906,7 @@ Results:
   <ul>
     <li><strong>New Amazon Sellers:</strong> Understand Amazon's fee structure before investing in inventory and avoid costly beginner mistakes.</li>
 
-```
+
 <li><strong>Experienced FBA Sellers:</strong> Evaluate new product opportunities quickly and optimize pricing strategies.</li>
 
 <li><strong>Private Label Brands:</strong> Calculate profitability before launching branded products.</li>
@@ -924,7 +924,7 @@ Results:
 <li><strong>Dropshippers:</strong> Understand whether supplier pricing leaves enough room for marketplace fees and profits.</li>
 
 <li><strong>Growing Brands:</strong> Monitor profitability as product costs and marketplace fees change over time.</li>
-```
+
 
   </ul>
 
@@ -968,7 +968,7 @@ Results:
   <ul>
     <li><strong>Referral Fees:</strong> Amazon charges a commission based on product category and selling price. Different categories have different referral percentages.</li>
 
-```
+
 <li><strong>FBA Fulfillment Fees:</strong> Charges for picking, packing, shipping, customer service, and order handling.</li>
 
 <li><strong>Storage Fees:</strong> Monthly fees for inventory stored in Amazon fulfillment centers.</li>
@@ -986,7 +986,7 @@ Results:
 <li><strong>Packaging Costs:</strong> Expenses related to product packaging, labels, inserts, and branding materials.</li>
 
 <li><strong>Compliance Costs:</strong> Testing, certifications, registrations, and documentation required for certain product categories.</li>
-```
+
 
   </ul>
 
@@ -997,7 +997,7 @@ Results:
   <ul>
     <li><strong>Source Products Efficiently:</strong> Negotiate better pricing with suppliers to improve margins.</li>
 
-```
+
 <li><strong>Optimize Product Packaging:</strong> Smaller and lighter products often incur lower fulfillment fees.</li>
 
 <li><strong>Monitor Competitor Pricing:</strong> Stay competitive while protecting your margins.</li>
@@ -1015,7 +1015,7 @@ Results:
 <li><strong>Focus on High-Margin Products:</strong> Identify products that generate strong profits relative to sales volume.</li>
 
 <li><strong>Use Data for Decisions:</strong> Always calculate profitability before changing prices or launching new products.</li>
-```
+
 
   </ul>
 

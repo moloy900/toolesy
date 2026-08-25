@@ -897,7 +897,7 @@ Results:
     </div>
   </div>
 
-  ```html
+  html
 <div class="content-placeholder">
 
   <h2>JioMart Price Calculator – Calculate Selling Price, Profit Margin & GST for Your Products</h2>
@@ -1138,7 +1138,7 @@ Results:
   </p>
 
 </div>
-```
+
 
 
 <!-- Compare Products Modal -->

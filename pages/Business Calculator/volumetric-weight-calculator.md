@@ -717,7 +717,7 @@ Shipping Cost: ₹720 (at ₹50/kg)
     </div>
   </div>
 
-  ```html
+  html
 <div class="content-placeholder">
 
   <h2>Volumetric Weight Calculator for E-commerce Sellers & Online Businesses</h2>
@@ -958,7 +958,7 @@ Shipping Cost: ₹720 (at ₹50/kg)
   </p>
 
 </div>
-```
+
 
 
 <!-- Formula Info Modal -->

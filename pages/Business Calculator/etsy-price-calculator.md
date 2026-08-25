@@ -667,7 +667,7 @@ Results:
   <ul>
     <li><strong>Enter Product Selling Price:</strong> Input the price at which you plan to sell your item on Etsy.</li>
 
-```
+
 <li><strong>Add Shipping Charges:</strong> Include the shipping amount charged to customers or your actual shipping expense.</li>
 
 <li><strong>Enter Production Cost:</strong> Add the cost of raw materials, labor, packaging, and manufacturing.</li>
@@ -683,7 +683,7 @@ Results:
 <li><strong>Review Results:</strong> Analyze your net earnings, profit margin percentage, and total costs.</li>
 
 <li><strong>Adjust Pricing:</strong> Experiment with different selling prices to determine the most profitable option.</li>
-```
+
 
   </ul>
 
@@ -708,7 +708,7 @@ Results:
   <ul>
     <li><strong>Listing Fee:</strong> Etsy charges a fee whenever a product is listed or renewed. Listings remain active for a limited period or until sold.</li>
 
-```
+
 <li><strong>Transaction Fee:</strong> Etsy takes a percentage of the total sale amount, including shipping charges.</li>
 
 <li><strong>Payment Processing Fee:</strong> Fees are charged for securely processing customer payments.</li>
@@ -720,7 +720,7 @@ Results:
 <li><strong>VAT/GST:</strong> Applicable taxes based on seller location and regional regulations.</li>
 
 <li><strong>Optional Marketing Costs:</strong> Additional advertising expenses for promoted listings.</li>
-```
+
 
   </ul>
 
@@ -733,7 +733,7 @@ Results:
   <ul>
     <li><strong>New Etsy Sellers:</strong> Learn the true cost of selling before launching products.</li>
 
-```
+
 <li><strong>Experienced Shop Owners:</strong> Optimize pricing strategies and improve profitability.</li>
 
 <li><strong>Handmade Product Creators:</strong> Accurately calculate labor, materials, and overhead costs.</li>
@@ -751,7 +751,7 @@ Results:
 <li><strong>Personalized Gift Sellers:</strong> Account for customization time and materials.</li>
 
 <li><strong>Small Business Owners:</strong> Build long-term pricing strategies based on accurate financial data.</li>
-```
+
 
   </ul>
 
@@ -792,7 +792,7 @@ Results:
   <ul>
     <li><strong>Use Cost-Plus Pricing:</strong> Calculate all costs and add a reasonable profit margin.</li>
 
-```
+
 <li><strong>Research Competitors:</strong> Analyze similar products without simply copying competitors' prices.</li>
 
 <li><strong>Focus on Value:</strong> Unique handmade products often justify premium pricing.</li>
@@ -810,7 +810,7 @@ Results:
 <li><strong>Charge for Customization:</strong> Personalized products should reflect the additional time required.</li>
 
 <li><strong>Track Profit Margins:</strong> Monitor earnings regularly to maintain business sustainability.</li>
-```
+
 
   </ul>
 
@@ -821,7 +821,7 @@ Results:
   <ul>
     <li><strong>Ignoring Hidden Costs:</strong> Small expenses add up over time and should be included in calculations.</li>
 
-```
+
 <li><strong>Undervaluing Your Time:</strong> Labor is one of the most important costs in handmade businesses.</li>
 
 <li><strong>Competing Only on Price:</strong> Constantly lowering prices can damage profitability.</li>
@@ -839,7 +839,7 @@ Results:
 <li><strong>Setting Prices Emotionally:</strong> Pricing should be based on data, not assumptions.</li>
 
 <li><strong>Neglecting Business Growth:</strong> Profit margins should allow for reinvestment and expansion.</li>
-```
+
 
   </ul>
 

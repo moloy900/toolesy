@@ -719,7 +719,6 @@ Breakdown:
     </div>
   </div>
 
-  ```html
 <div class="content-placeholder">
 
   <h2>Free Online GST Calculator for E-commerce Sellers, Businesses & Consumers</h2>
@@ -939,7 +938,7 @@ Breakdown:
   </p>
 
 </div>
-```
+
 
 <!-- GST Rates Info Modal -->
 <div id="ratesModal" class="modal">

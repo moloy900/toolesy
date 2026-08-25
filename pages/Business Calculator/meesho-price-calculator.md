@@ -871,7 +871,7 @@ Results:
     </div>
   </div>
 
-  ```html
+  html
 <div class="content-placeholder">
 
   <h2>Meesho Price Calculator – Calculate Your Selling Price, Profit Margin & GST in Indian Rupees</h2>
@@ -1120,7 +1120,7 @@ Results:
   </p>
 
 </div>
-```
+
 
 
 <!-- Compare Products Modal -->

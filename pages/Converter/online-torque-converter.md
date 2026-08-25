@@ -1004,7 +1004,7 @@ Yes. Both under-tightening and over-tightening can lead to mechanical problems, 
 <strong>Why are different torque units used?</strong><br>
 Different countries and industries have historically adopted different measurement systems, leading to the use of multiple torque units worldwide.
 </p>
-```html id="y1o4lm"
+
 
 <p>
 <strong>How accurate are the conversion results?</strong><br>

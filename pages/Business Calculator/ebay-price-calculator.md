@@ -944,7 +944,7 @@ Results:
   <ul>
     <li><strong>Enter Product Information:</strong> Provide details such as product name, purchase cost, sourcing cost, or manufacturing cost.</li>
 
-```
+
 <li><strong>Add Shipping Expenses:</strong> Include the cost of packaging materials, courier charges, and handling expenses.</li>
 
 <li><strong>Specify eBay Fees:</strong> Enter the applicable final value fee percentage, insertion fees, and payment processing charges.</li>
@@ -958,7 +958,7 @@ Results:
 <li><strong>Analyze Profitability:</strong> Review your minimum selling price, expected profit, margin percentage, and revenue projections.</li>
 
 <li><strong>Adjust Strategy:</strong> Experiment with different profit goals and fee structures to optimize pricing.</li>
-```
+
 
   </ul>
 
@@ -981,7 +981,7 @@ Results:
   <ul>
     <li><strong>New eBay Sellers:</strong> Learn how fees affect profitability before listing products.</li>
 
-```
+
 <li><strong>Experienced Sellers:</strong> Optimize pricing strategies and improve profit margins.</li>
 
 <li><strong>Dropshippers:</strong> Determine whether a product remains profitable after marketplace fees.</li>
@@ -995,7 +995,7 @@ Results:
 <li><strong>Exporters:</strong> Analyze profitability for international buyers.</li>
 
 <li><strong>E-commerce Consultants:</strong> Provide clients with professional pricing recommendations.</li>
-```
+
 
   </ul>
 
@@ -1036,7 +1036,7 @@ Results:
   <ul>
     <li><strong>Insertion Fees:</strong> Charges that may apply when creating listings beyond free allowances.</li>
 
-```
+
 <li><strong>Final Value Fees:</strong> A percentage-based fee deducted after a successful sale.</li>
 
 <li><strong>Payment Processing Fees:</strong> Fees charged for handling customer payments.</li>
@@ -1050,7 +1050,7 @@ Results:
 <li><strong>Shipping Expenses:</strong> Courier, packaging, and fulfillment costs.</li>
 
 <li><strong>Return Costs:</strong> Expenses associated with customer returns and refunds.</li>
-```
+
 
   </ul>
 
@@ -1063,7 +1063,7 @@ Results:
   <ul>
     <li><strong>Research Competitors:</strong> Analyze similar listings to understand market pricing.</li>
 
-```
+
 <li><strong>Calculate Before Listing:</strong> Always estimate fees and profit margins before publishing products.</li>
 
 <li><strong>Use Fixed Price Listings for Consistency:</strong> Fixed-price listings provide predictable revenue and easier profit planning.</li>
@@ -1081,7 +1081,7 @@ Results:
 <li><strong>Account for Returns:</strong> Include a buffer in your pricing strategy for potential returns and damaged items.</li>
 
 <li><strong>Focus on Profit, Not Revenue:</strong> High sales volume means little if profit margins are too low.</li>
-```
+
 
   </ul>
 

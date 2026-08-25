@@ -968,7 +968,7 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
     </div>
   </div>
 
-  ```html
+  html
 <!-- SEO Content Section -->
 <div class="content-placeholder">
   <h2>Free Online Hours Calculator – Easily Track Work Hours, Overtime, and Payroll</h2>
@@ -1116,7 +1116,7 @@ permalink: /hours-calculator-calculate-hours-work-time-timesheet-online/
   <p>By eliminating manual calculations and reducing the risk of errors, the calculator helps save time, improve accuracy, and ensure fair compensation. Use this free online Hours Calculator whenever you need precise time and payroll calculations, and make managing work hours simpler than ever.</p>
 
 </div>
-```
+
 
 
 <script>

@@ -801,7 +801,7 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
     </div>
   </div>
 
-  ```html
+  html
 <!-- SEO Content Section -->
 <div class="content-placeholder">
 
@@ -1007,7 +1007,7 @@ permalink: /date-calculator-calculate-dates-addsubtract-days-online/
   <p>Instead of spending valuable time manually counting days on a calendar, use our free Date Calculator to handle the work for you. Accurate, easy to use, and completely free, it is the perfect companion for all your date-related calculations.</p>
 
 </div>
-```
+
 
 
 <script>

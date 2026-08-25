@@ -556,7 +556,7 @@ Profit: ₹564.80</div>
   <ul>
     <li><strong>Select Product Category:</strong> Choose the category that best matches your product. Different categories often have different referral fee percentages.</li>
 
-```
+
 <li><strong>Choose Product Subcategory:</strong> Selecting the correct subcategory improves fee estimation accuracy because marketplaces may charge different commissions for different product types.</li>
 
 <li><strong>Enter Selling Price:</strong> Input the price at which you plan to sell the product on the marketplace.</li>
@@ -570,7 +570,7 @@ Profit: ₹564.80</div>
 <li><strong>Select GST Rate:</strong> Choose the applicable GST percentage based on your product category.</li>
 
 <li><strong>Click Calculate:</strong> Instantly view a complete breakdown of marketplace fees, shipping costs, taxes, and estimated profit.</li>
-```
+
 
   </ul>
 
@@ -589,7 +589,7 @@ Profit: ₹564.80</div>
   <ul>
     <li><strong>Amazon Sellers:</strong> Calculate accurate profits after referral fees, shipping costs, and marketplace deductions.</li>
 
-```
+
 <li><strong>Flipkart Sellers:</strong> Estimate profitability using similar marketplace fee structures.</li>
 
 <li><strong>E-commerce Beginners:</strong> Learn how online marketplaces charge fees and understand the economics of selling online.</li>
@@ -607,7 +607,7 @@ Profit: ₹564.80</div>
 <li><strong>Dropshippers:</strong> Understand whether supplier pricing leaves enough room for profit.</li>
 
 <li><strong>Growing Brands:</strong> Monitor changing costs and optimize marketplace performance.</li>
-```
+
 
   </ul>
 
@@ -651,7 +651,7 @@ Profit: ₹564.80</div>
   <ul>
     <li><strong>Referral Fees:</strong> A commission charged as a percentage of the selling price. The percentage varies depending on the product category.</li>
 
-```
+
 <li><strong>Closing Fees:</strong> Fixed charges applied to completed sales. These fees can vary based on product value and category.</li>
 
 <li><strong>Shipping Fees:</strong> Costs associated with delivering products to customers. Weight, dimensions, and destination influence shipping expenses.</li>
@@ -665,7 +665,7 @@ Profit: ₹564.80</div>
 <li><strong>Return Processing Costs:</strong> Product returns can affect profitability, especially in categories with high return rates.</li>
 
 <li><strong>Advertising Costs:</strong> Sponsored ads and promotional campaigns are often necessary to increase visibility and sales.</li>
-```
+
 
   </ul>
 
@@ -676,7 +676,7 @@ Profit: ₹564.80</div>
   <ul>
     <li><strong>Review Product Costs Regularly:</strong> Supplier prices, packaging materials, and shipping expenses can change over time.</li>
 
-```
+
 <li><strong>Optimize Packaging:</strong> Smaller and lighter packaging often reduces shipping and fulfillment costs.</li>
 
 <li><strong>Increase Average Order Value:</strong> Bundling complementary products can improve margins while reducing per-item fees.</li>
@@ -694,7 +694,7 @@ Profit: ₹564.80</div>
 <li><strong>Manage Inventory Efficiently:</strong> Avoid excessive storage costs and stockouts by forecasting demand accurately.</li>
 
 <li><strong>Review Marketplace Policies:</strong> Fee structures can change periodically, making regular profit analysis essential.</li>
-```
+
 
   </ul>
 
@@ -705,7 +705,7 @@ Profit: ₹564.80</div>
   <ul>
     <li><strong>Ignoring Marketplace Fees:</strong> Always calculate fees before deciding on a selling price.</li>
 
-```
+
 <li><strong>Copying Competitor Prices Blindly:</strong> Competitors may have different sourcing costs and business models.</li>
 
 <li><strong>Overlooking GST Impact:</strong> Taxes can significantly affect profit calculations.</li>
@@ -719,7 +719,7 @@ Profit: ₹564.80</div>
 <li><strong>Not Reviewing Margins Regularly:</strong> Costs change over time, making periodic analysis essential.</li>
 
 <li><strong>Pricing Too Low:</strong> Competing solely on price often leads to unsustainable business operations.</li>
-```
+
 
   </ul>
 

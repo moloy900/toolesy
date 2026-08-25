@@ -737,7 +737,7 @@ Results:
   <ul>
     <li><strong>Enter Product Selling Price:</strong> Start by entering the wholesale price at which you plan to sell your product on Alibaba. This should be the amount charged to your buyer before deductions.</li>
 
-```
+
 <li><strong>Set Alibaba Commission Percentage:</strong> Depending on your product category and seller arrangement, Alibaba may charge a commission percentage on completed transactions.</li>
 
 <li><strong>Add Payment Processing Fees:</strong> Most transactions involve payment processing costs. These fees vary depending on payment methods, transaction value, and region.</li>
@@ -753,7 +753,7 @@ Results:
 <li><strong>Input Monthly Sales Volume:</strong> Estimate how many units you expect to sell each month. This helps spread annual costs across actual sales volume.</li>
 
 <li><strong>Calculate Results:</strong> Review revenue, total expenses, net profit, and profit margin to determine whether your pricing strategy is sustainable.</li>
-```
+
 
   </ul>
 
@@ -776,11 +776,11 @@ Results:
   <ul>
     <li><strong>Free Membership:</strong> Suitable for businesses that want to explore the platform before making a financial commitment. It provides basic exposure and standard access to buyers.</li>
 
-```
+
 <li><strong>Basic Membership:</strong> Offers improved visibility, additional marketing tools, and enhanced opportunities to attract international buyers.</li>
 
 <li><strong>Premium Membership:</strong> Designed for serious exporters seeking maximum exposure, advanced support, and stronger lead-generation capabilities.</li>
-```
+
 
   </ul>
 
@@ -789,7 +789,7 @@ Results:
   <ul>
     <li><strong>Transaction Commissions:</strong> A percentage of sales revenue that varies depending on product category and seller agreement.</li>
 
-```
+
 <li><strong>Payment Processing Charges:</strong> Costs associated with receiving payments through supported payment methods.</li>
 
 <li><strong>Advertising Expenses:</strong> Sponsored listings and promotional campaigns designed to increase product visibility.</li>
@@ -797,7 +797,7 @@ Results:
 <li><strong>Membership Fees:</strong> Annual subscription costs for enhanced platform benefits.</li>
 
 <li><strong>Operational Costs:</strong> Product sourcing, manufacturing, packaging, quality control, compliance, and logistics expenses.</li>
-```
+
 
   </ul>
 
@@ -806,7 +806,7 @@ Results:
   <ul>
     <li><strong>Manufacturers:</strong> Determine profitable export pricing before approaching international buyers.</li>
 
-```
+
 <li><strong>Exporters:</strong> Understand how fees affect profitability when selling to global markets.</li>
 
 <li><strong>Wholesalers:</strong> Compare pricing strategies across multiple product categories.</li>
@@ -818,7 +818,7 @@ Results:
 <li><strong>Startups:</strong> Plan international expansion strategies with realistic profit expectations.</li>
 
 <li><strong>Established Sellers:</strong> Optimize pricing models and improve overall financial performance.</li>
-```
+
 
   </ul>
 
@@ -859,7 +859,7 @@ Results:
   <ul>
     <li><strong>Use Tiered Pricing:</strong> Offer lower prices for larger order quantities while maintaining healthy margins.</li>
 
-```
+
 <li><strong>Set Realistic MOQs:</strong> Minimum order quantities help ensure that small orders remain profitable.</li>
 
 <li><strong>Monitor Competitors:</strong> Regularly review competitor pricing while focusing on value rather than simply being the cheapest seller.</li>
@@ -871,7 +871,7 @@ Results:
 <li><strong>Review Costs Frequently:</strong> Material prices, shipping rates, and labor costs can change significantly over time.</li>
 
 <li><strong>Evaluate Membership ROI:</strong> Higher membership plans should generate enough additional sales to justify their cost.</li>
-```
+
 
   </ul>
 
@@ -882,7 +882,7 @@ Results:
   <ul>
     <li><strong>Competing Only on Price:</strong> Constantly lowering prices can damage margins and make growth unsustainable.</li>
 
-```
+
 <li><strong>Ignoring Hidden Costs:</strong> Transaction fees, compliance expenses, refunds, and support costs should be included in calculations.</li>
 
 <li><strong>Using the Same Price for Every Market:</strong> Different regions may support different pricing levels.</li>
@@ -894,7 +894,7 @@ Results:
 <li><strong>Overlooking Membership Costs:</strong> Annual subscription fees should be allocated across expected sales volume.</li>
 
 <li><strong>Ignoring Long-Term Sustainability:</strong> Pricing should support future growth, not just short-term sales.</li>
-```
+
 
   </ul>
 

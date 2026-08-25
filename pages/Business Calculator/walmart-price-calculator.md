@@ -535,7 +535,7 @@ permalink: /walmart-price-calculator-estimate-product-costs-online/
     {% include share-and-donation.html %}
   </div>
 
-  ```html
+  html
 <div class="content-placeholder">
 
   <h2>Walmart Price Calculator – Calculate Selling Price, Fees, Profit & Margin for Walmart Marketplace</h2>
@@ -782,7 +782,7 @@ permalink: /walmart-price-calculator-estimate-product-costs-online/
   </p>
 
 </div>
-```
+
 SS
 
 <script>

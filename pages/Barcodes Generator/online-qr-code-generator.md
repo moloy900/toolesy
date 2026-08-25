@@ -492,7 +492,6 @@ permalink: /free-online-barcode-qr-code-generator/
   <ul>
     <li><strong>Select Barcode Type:</strong> Start by choosing the barcode format that best matches your requirements. The tool supports more than 15 barcode formats including QR Code, Data Matrix, PDF417, Aztec Code, Code 128, Code 39, and various GS1 standards.</li>
 
-```
 <li><strong>Enter Your Data:</strong> Type or paste the information you want to encode. This may include text, numbers, URLs, email addresses, product identifiers, inventory codes, Wi-Fi credentials, or other information.</li>
 
 <li><strong>Adjust Size:</strong> Use the size or scale controls to customize the barcode dimensions according to your needs. Larger sizes are recommended for posters and printed materials, while smaller sizes work well for product labels and packaging.</li>
@@ -500,7 +499,7 @@ permalink: /free-online-barcode-qr-code-generator/
 <li><strong>Generate Instantly:</strong> Click the Generate button and the barcode will be created immediately. The tool processes the information in real time and displays a preview before download.</li>
 
 <li><strong>Download and Use:</strong> Save the generated image as a high-quality PNG file. The barcode can then be added to websites, business cards, marketing materials, shipping labels, documents, packaging, and many other applications.</li>
-```
+
 
   </ul>
 
@@ -519,7 +518,6 @@ permalink: /free-online-barcode-qr-code-generator/
   <ul>
     <li><strong>QR Code:</strong> The world's most popular two-dimensional barcode. Perfect for website links, social media profiles, payment links, digital menus, contact information, app downloads, business cards, and marketing campaigns.</li>
 
-```
 <li><strong>Data Matrix:</strong> Frequently used in healthcare, electronics manufacturing, aerospace industries, and industrial tracking applications where small labels need to store a large amount of information.</li>
 
 <li><strong>PDF417:</strong> Commonly found on identification cards, driver's licenses, transportation documents, airline boarding passes, and government-issued credentials.</li>
@@ -533,7 +531,7 @@ permalink: /free-online-barcode-qr-code-generator/
 <li><strong>GS1 Barcode Formats:</strong> Used by retailers, distributors, and healthcare providers for globally standardized product identification.</li>
 
 <li><strong>EAN and UPC Formats:</strong> Essential for retail products sold through supermarkets, convenience stores, and online marketplaces.</li>
-```
+
 
   </ul>
 
@@ -542,7 +540,7 @@ permalink: /free-online-barcode-qr-code-generator/
   <ul>
     <li><strong>Small Business Owners:</strong> Create product labels, inventory tags, and promotional QR codes without paying for expensive software.</li>
 
-```
+
 <li><strong>Online Sellers:</strong> Generate barcodes for inventory management, fulfillment operations, and warehouse organization.</li>
 
 <li><strong>Marketing Professionals:</strong> Build QR codes that connect customers directly to websites, promotions, social media pages, videos, and special offers.</li>
@@ -560,7 +558,7 @@ permalink: /free-online-barcode-qr-code-generator/
 <li><strong>Freelancers and Professionals:</strong> Add QR codes to business cards, portfolios, resumes, and marketing materials.</li>
 
 <li><strong>Individuals:</strong> Share contact details, Wi-Fi credentials, personal websites, or social media profiles easily.</li>
-```
+
 
   </ul>
 
@@ -610,7 +608,7 @@ permalink: /free-online-barcode-qr-code-generator/
   <ul>
     <li><strong>Support for 15+ Barcode Types:</strong> Generate QR Codes, Data Matrix, PDF417, Aztec Codes, Code 128, Code 39, and many other formats.</li>
 
-```
+
 <li><strong>Customizable Dimensions:</strong> Adjust barcode size to match your intended use.</li>
 
 <li><strong>High-Quality Output:</strong> Produce sharp PNG images suitable for printing and digital publishing.</li>
@@ -628,7 +626,7 @@ permalink: /free-online-barcode-qr-code-generator/
 <li><strong>Easy to Use:</strong> Suitable for beginners, professionals, students, and businesses alike.</li>
 
 <li><strong>Cross-Platform Compatibility:</strong> Compatible with modern browsers across Windows, macOS, Linux, Android, and iOS devices.</li>
-```
+
 
   </ul>
 

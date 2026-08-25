@@ -986,13 +986,13 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li><strong>Actual Weight:</strong> Physical weight of the product including packaging materials.</li>
 
-```
+
 <li><strong>Volumetric Weight:</strong> Calculated using package dimensions and a volumetric divisor.</li>
 
 <li><strong>Formula:</strong> (Length × Breadth × Height) ÷ 5000</li>
 
 <li><strong>Final Shipping Weight:</strong> Higher of actual weight or volumetric weight.</li>
-```
+
 
   </ul>
 
@@ -1007,13 +1007,13 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li><strong>Actual Weight:</strong> 1.07 kg</li>
 
-```
+
 <li><strong>Dimensions:</strong> 9.5 cm × 30 cm × 9.5 cm</li>
 
 <li><strong>Volumetric Weight:</strong> (9.5 × 30 × 9.5) ÷ 5000 = 0.54 kg</li>
 
 <li><strong>Final Shipping Weight:</strong> 1.07 kg</li>
-```
+
 
   </ul>
 
@@ -1026,13 +1026,13 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li><strong>Actual Weight:</strong> 0.30 kg</li>
 
-```
+
 <li><strong>Dimensions:</strong> 20 cm × 20 cm × 10 cm</li>
 
 <li><strong>Volumetric Weight:</strong> (20 × 20 × 10) ÷ 5000 = 0.80 kg</li>
 
 <li><strong>Final Shipping Weight:</strong> 0.80 kg</li>
-```
+
 
   </ul>
 
@@ -1047,7 +1047,7 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li><strong>Accurate Profit Calculations:</strong> Estimate actual earnings after referral fees, shipping costs, and other deductions.</li>
 
-```
+
 <li><strong>Avoid Unexpected Costs:</strong> Identify products where volumetric weight may significantly increase shipping expenses.</li>
 
 <li><strong>Improve Pricing Strategy:</strong> Set selling prices that maintain healthy profit margins.</li>
@@ -1061,7 +1061,7 @@ Gross Margin: ₹305 (38.1%)</div>
 <li><strong>Plan Inventory Better:</strong> Make informed sourcing decisions based on realistic profitability estimates.</li>
 
 <li><strong>Support Business Growth:</strong> Use accurate calculations when expanding your product catalog.</li>
-```
+
 
   </ul>
 
@@ -1072,7 +1072,7 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li><strong>Referral Fee:</strong> Amazon charges a percentage of the selling price based on product category.</li>
 
-```
+
 <li><strong>Closing Fee:</strong> A fixed charge applied to completed orders depending on product value.</li>
 
 <li><strong>Weight Handling Fee:</strong> Shipping and fulfillment charges based on actual or volumetric weight.</li>
@@ -1090,7 +1090,7 @@ Gross Margin: ₹305 (38.1%)</div>
 <li><strong>Packaging Costs:</strong> Labels, cartons, bubble wrap, and protective materials.</li>
 
 <li><strong>Other Fees:</strong> Optional premium services and fulfillment programs.</li>
-```
+
 
   </ul>
 
@@ -1129,7 +1129,7 @@ Gross Margin: ₹305 (38.1%)</div>
   <ul>
     <li>Measure package dimensions carefully using a ruler or measuring tape.</li>
 
-```
+
 <li>Always include packaging materials when calculating actual weight.</li>
 
 <li>Use Amazon's volumetric divisor when estimating Amazon shipping fees.</li>
@@ -1147,7 +1147,7 @@ Gross Margin: ₹305 (38.1%)</div>
 <li>Monitor competitor pricing while protecting your margins.</li>
 
 <li>Use the calculator regularly as marketplace fees evolve over time.</li>
-```
+
 
   </ul>
 

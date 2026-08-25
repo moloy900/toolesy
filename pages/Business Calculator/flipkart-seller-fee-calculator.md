@@ -1032,7 +1032,7 @@ Gross Margin: ₹314 (1600 - 486 - 800)</div>
     </div>
   </div>
 
- ```html
+ html
 <div class="content-placeholder">
 
   <h2>Free Online Flipkart Fee Calculator with Volumetric Weight</h2>
@@ -1212,7 +1212,7 @@ Gross Margin: ₹314 (1600 - 486 - 800)</div>
   </p>
 
 </div>
-```
+
 
 <!-- Rate Card Modal -->
 <div id="rateCardModal" class="modal">
