@@ -945,4 +945,3 @@ permalink: /blog/
         }
     });
 </script>
-```
