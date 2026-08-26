@@ -851,176 +851,57 @@ Results:
   </div>
 
  <!-- SEO Content Section -->
-
 <div class="content-placeholder">
+  <h2>Amazon Seller FBA Calculator</h2>
 
-  <h2>Amazon Seller FBA Calculator – Calculate Amazon India Fees, Profit Margins, ROI & Net Earnings</h2>
+  <p>The FBA decision most sellers actually need to make isn't "what price should I charge" — it's "should I buy this inventory at all." Before money goes into a supplier's account for a few hundred units, it's worth knowing whether the product clears a profitable margin once Amazon's fulfillment fees, storage costs, and referral commission are all subtracted. This calculator is built around that pre-purchase decision, not just a price check on something already listed.</p>
 
-  <p>Running a successful Amazon business requires much more than simply finding products and listing them online. Every sale involves multiple costs, including referral fees, fulfillment charges, storage fees, shipping expenses, taxes, packaging costs, advertising spend, and product sourcing expenses. Many new sellers focus only on the selling price and product cost, only to discover later that their actual profits are much lower than expected.</p>
+  <h3>What FBA Actually Costs You, Beyond the Obvious Fee</h3>
 
-  <p>Our free <strong>Amazon Seller FBA Calculator</strong> helps Amazon India sellers accurately estimate their profitability before investing money into inventory. Whether you are selling electronics, clothing, kitchen products, pet supplies, toys, books, beauty products, automotive accessories, or home décor items, this calculator provides a clear breakdown of costs and potential earnings.</p>
+  <p>Fulfillment by Amazon isn't one fee — it's a bundle of them, and that's exactly where new sellers underestimate cost. Beyond the category-based referral fee, there's a pick-and-pack fulfillment charge tied to product weight and size, inbound shipping to get inventory into a fulfillment center in the first place, and a monthly storage fee for however long that inventory sits on a shelf before selling. A slow-moving product doesn't just tie up cash — it actively costs money every month it doesn't sell, in a way a self-fulfilled listing doesn't.</p>
 
-  <p>Instead of manually calculating dozens of expenses, you can instantly estimate Amazon fees, fulfillment charges, profit margins, monthly earnings, and return on investment (ROI). This allows you to make smarter decisions when sourcing products, setting selling prices, and planning your business growth.</p>
+  <h3>Running the Numbers</h3>
 
-  <p>The calculator is designed specifically for Indian sellers and displays all results in Indian Rupees (₹). Whether you are just starting your Amazon journey or already managing a large catalog of products, understanding your actual profitability is essential for long-term success.</p>
+  <ol>
+    <li><strong>Product category and subcategory</strong> — sets the referral fee percentage.</li>
+    <li><strong>Sourcing or manufacturing cost per unit.</strong></li>
+    <li><strong>Target selling price</strong> — what you expect the market to actually pay, not just your cost plus a margin.</li>
+    <li><strong>Product weight and dimensions</strong> — these drive the fulfillment fee more directly than most sellers expect.</li>
+    <li><strong>Inbound shipping cost</strong> — getting inventory from your supplier or warehouse to Amazon's fulfillment center.</li>
+    <li><strong>Expected monthly sales volume</strong> — used to project total monthly profit and to estimate how long inventory will realistically sit before it sells.</li>
+  </ol>
 
-  <h3>How to Use This Amazon Seller Calculator (Step-by-Step):</h3>
+  <p>The output separates referral fee, fulfillment fee, estimated storage cost, and net profit — plus ROI, which is a genuinely different number from margin and worth understanding on its own.</p>
 
-  <ul>
-    <li><strong>Select Product Category:</strong> Begin by choosing the category that best matches your product. Different categories often have different referral fee percentages and fulfillment costs.</li>
+  <h3>A Worked Example</h3>
 
+  <p>Say you're evaluating wireless headphones sourced at ₹1,500 a unit, with a target Amazon India price of ₹2,999 based on competitor research. The gap looks like roughly ₹1,500 in profit at first glance. Once the category referral fee, a weight-based fulfillment charge, inbound shipping to the fulfillment center, and a month or two of storage cost are all factored in, the real number is typically well below that first impression — sometimes enough to turn what looked like a strong opportunity into a marginal one, which is precisely the kind of gap you want to find before placing a bulk order, not after.</p>
 
-<li><strong>Choose Product Subcategory:</strong> Select the most accurate subcategory to improve fee estimation accuracy.</li>
+  <h3>The Storage Fee Trap</h3>
 
-<li><strong>Enter Product Cost:</strong> Add your product sourcing or manufacturing cost. This is one of the most important inputs for calculating profitability.</li>
+  <p>Storage fees are charged monthly and scale with how much space your inventory occupies — and they don't stay flat. Fees typically increase during peak shopping months, and inventory that's been sitting for an extended period can trigger additional long-term storage charges on top of the standard monthly rate. A product with a thin margin to begin with can turn unprofitable purely by sitting unsold through a slow season, which is why sales-velocity assumptions matter as much as the per-unit profit calculation — a product that sells fast at a smaller margin often outperforms one with a bigger margin that moves slowly and quietly accumulates storage charges.</p>
 
-<li><strong>Input Selling Price:</strong> Enter the price you expect customers to pay on Amazon India.</li>
+  <h3>Margin vs. ROI — Two Different Questions</h3>
 
-<li><strong>Add Shipping Costs:</strong> Include transportation costs required to move inventory to Amazon fulfillment centers.</li>
+  <p>Profit margin (profit as a percentage of selling price) tells you how much of each sale you keep. Return on investment (profit as a percentage of what you spent to source and land the product) tells you how hard your capital is working. A product can have a modest margin but an excellent ROI if the sourcing cost is low relative to the price — which matters enormously when you're deciding between two products competing for the same limited inventory budget, rather than just deciding whether to sell one product at all.</p>
 
-<li><strong>Specify Product Weight:</strong> Product weight influences fulfillment and shipping fees, making accurate weight information essential.</li>
+  <h3>Frequently Asked Questions</h3>
 
-<li><strong>Estimate Monthly Sales:</strong> Enter the number of units you expect to sell each month to estimate total monthly profits.</li>
+  <p><strong>Can I use this if I'm doing FBM (Fulfillment by Merchant) instead of FBA?</strong><br>
+  You can, but swap out the FBA fulfillment and storage fee inputs for your own shipping and warehousing costs — the referral fee and GST portions still apply the same way regardless of who handles fulfillment.</p>
 
-<li><strong>Calculate Results:</strong> Click the calculate button to instantly view Amazon fees, net profit, profit margin, ROI, and projected monthly earnings.</li>
+  <p><strong>Why does the calculator ask about expected monthly sales volume if I'm just checking one product's margin?</strong><br>
+  Because storage cost isn't a one-time charge — it accrues for as long as inventory sits unsold. A realistic sales-velocity estimate is what turns a per-unit profit number into an honest picture of total profitability over the life of that inventory batch.</p>
 
-<li><strong>Compare Different Scenarios:</strong> Adjust prices, costs, and sales volume to discover the most profitable business strategy.</li>
+  <p><strong>What's the practical difference between margin and ROI for deciding what to source?</strong><br>
+  Margin tells you how profitable each sale is. ROI tells you how efficiently your sourcing budget is being used. When you're choosing between multiple product opportunities with a fixed amount of capital to spend, ROI is usually the more useful number for deciding where that money goes.</p>
 
+  <p><strong>Do long-term storage fees apply to every product?</strong><br>
+  They apply specifically to inventory that remains in a fulfillment center beyond a certain period, on top of standard monthly storage charges — which is exactly why slow-moving stock quietly erodes margins that looked fine on paper at launch.</p>
 
-  </ul>
-
-  <h3>Real-Life Example & Use Case:</h3>
-
-  <p>Imagine you are researching a new product opportunity in the electronics category. You find a pair of wireless headphones from a supplier for ₹1,500 per unit. After analyzing competitors, you believe the product can be sold on Amazon India for ₹2,999.</p>
-
-  <p>At first glance, it may appear that you are earning nearly ₹1,500 profit per sale. However, several additional costs must be considered before determining actual profitability.</p>
-
-  <p>Amazon may charge referral fees based on category, fulfillment fees based on weight and dimensions, storage fees for inventory kept in fulfillment centers, and applicable taxes on services. There may also be packaging costs, inbound shipping expenses, advertising costs, and occasional returns.</p>
-
-  <p>Using the Amazon Seller FBA Calculator, you can estimate these expenses before purchasing inventory. After entering the product cost, selling price, category, weight, and expected sales volume, the calculator reveals your actual net profit per unit, profit margin percentage, and projected monthly earnings.</p>
-
-  <p>This allows you to determine whether the product is worth investing in and whether your target selling price provides enough profit to support business growth.</p>
-
-  <h3>Benefits & Who Should Use This Tool:</h3>
-
-  <ul>
-    <li><strong>New Amazon Sellers:</strong> Understand Amazon's fee structure before investing in inventory and avoid costly beginner mistakes.</li>
-
-
-<li><strong>Experienced FBA Sellers:</strong> Evaluate new product opportunities quickly and optimize pricing strategies.</li>
-
-<li><strong>Private Label Brands:</strong> Calculate profitability before launching branded products.</li>
-
-<li><strong>Product Researchers:</strong> Compare multiple products and niches to identify the best opportunities.</li>
-
-<li><strong>Manufacturers:</strong> Determine whether direct-to-consumer selling through Amazon is profitable.</li>
-
-<li><strong>Wholesalers:</strong> Evaluate margins across different product categories and pricing models.</li>
-
-<li><strong>Business Owners:</strong> Improve financial planning through accurate cost and revenue forecasting.</li>
-
-<li><strong>E-commerce Agencies:</strong> Provide clients with realistic profit projections and business insights.</li>
-
-<li><strong>Dropshippers:</strong> Understand whether supplier pricing leaves enough room for marketplace fees and profits.</li>
-
-<li><strong>Growing Brands:</strong> Monitor profitability as product costs and marketplace fees change over time.</li>
-
-
-  </ul>
-
-  <h3>Frequently Asked Questions:</h3>
-
-  <p><strong>How accurate is this Amazon Seller FBA Calculator?</strong><br>
-  The calculator provides reliable estimates based on common Amazon India fee structures. Actual charges may vary depending on category updates, product dimensions, promotions, and policy changes.</p>
-
-  <p><strong>Can I use this calculator for product research?</strong><br>
-  Yes. Many sellers use profit calculators during product research to compare multiple opportunities before investing in inventory.</p>
-
-  <p><strong>Does it work for private label products?</strong><br>
-  Absolutely. The calculator is useful for private label brands, wholesalers, manufacturers, and resellers.</p>
-
-  <p><strong>Can I use it for FBM (Fulfillment by Merchant)?</strong><br>
-  While designed primarily for FBA sellers, FBM sellers can also use the calculator by adjusting shipping and fulfillment costs accordingly.</p>
-
-  <p><strong>Do I need to create an account?</strong><br>
-  No. The calculator is completely free and does not require registration or login.</p>
-
-  <p><strong>Will my data be stored?</strong><br>
-  No. All calculations occur directly within your browser, helping keep your business information private.</p>
-
-  <p><strong>Can I use it on mobile devices?</strong><br>
-  Yes. The calculator is responsive and works smoothly on smartphones, tablets, laptops, and desktop computers.</p>
-
-  <h3>Why Choose Our Amazon Seller FBA Calculator?</h3>
-
-  <p>Many online calculators provide only basic fee estimates. While simple tools may calculate referral fees, they often overlook important expenses that directly affect profitability.</p>
-
-  <p>Our Amazon Seller FBA Calculator is designed to provide a more complete view of your business economics. By considering product costs, fulfillment fees, shipping charges, storage costs, category-specific commissions, and sales volume, it helps sellers understand the true financial performance of their products.</p>
-
-  <p>The calculator is easy to use, fast, and designed specifically for Indian sellers. Instead of relying on complicated spreadsheets, you can perform detailed profit analysis within seconds.</p>
-
-  <p>Because calculations occur locally in your browser, your pricing information, sourcing costs, and business data remain private.</p>
-
-  <h3>Understanding Amazon Seller Fees in India</h3>
-
-  <p>To become a profitable Amazon seller, it is important to understand the various fees that affect your earnings.</p>
-
-  <ul>
-    <li><strong>Referral Fees:</strong> Amazon charges a commission based on product category and selling price. Different categories have different referral percentages.</li>
-
-
-<li><strong>FBA Fulfillment Fees:</strong> Charges for picking, packing, shipping, customer service, and order handling.</li>
-
-<li><strong>Storage Fees:</strong> Monthly fees for inventory stored in Amazon fulfillment centers.</li>
-
-<li><strong>Inbound Shipping Costs:</strong> Expenses associated with transporting inventory to fulfillment centers.</li>
-
-<li><strong>GST on Marketplace Services:</strong> Applicable taxes on Amazon services that affect overall profitability.</li>
-
-<li><strong>Long-Term Storage Fees:</strong> Additional charges for inventory stored for extended periods.</li>
-
-<li><strong>Returns Processing Fees:</strong> Costs associated with customer returns and replacements.</li>
-
-<li><strong>Advertising Expenses:</strong> Sponsored product campaigns and promotions designed to increase visibility and sales.</li>
-
-<li><strong>Packaging Costs:</strong> Expenses related to product packaging, labels, inserts, and branding materials.</li>
-
-<li><strong>Compliance Costs:</strong> Testing, certifications, registrations, and documentation required for certain product categories.</li>
-
-
-  </ul>
-
-  <h3>Tips for Maximizing Profit as an Amazon FBA Seller</h3>
-
-  <p>Successful Amazon sellers focus on profitability, not just sales volume. The following strategies can help improve margins and long-term growth.</p>
-
-  <ul>
-    <li><strong>Source Products Efficiently:</strong> Negotiate better pricing with suppliers to improve margins.</li>
-
-
-<li><strong>Optimize Product Packaging:</strong> Smaller and lighter products often incur lower fulfillment fees.</li>
-
-<li><strong>Monitor Competitor Pricing:</strong> Stay competitive while protecting your margins.</li>
-
-<li><strong>Increase Average Order Value:</strong> Product bundles can improve profitability and reduce per-unit costs.</li>
-
-<li><strong>Control Advertising Spend:</strong> Focus on campaigns that generate profitable sales rather than simply increasing traffic.</li>
-
-<li><strong>Reduce Return Rates:</strong> Accurate descriptions and quality products help minimize costly returns.</li>
-
-<li><strong>Track Inventory Carefully:</strong> Avoid excessive storage fees and stockouts through proper forecasting.</li>
-
-<li><strong>Review Profit Margins Regularly:</strong> Supplier costs and marketplace fees change over time.</li>
-
-<li><strong>Focus on High-Margin Products:</strong> Identify products that generate strong profits relative to sales volume.</li>
-
-<li><strong>Use Data for Decisions:</strong> Always calculate profitability before changing prices or launching new products.</li>
-
-
-  </ul>
-
+  <p><strong>Is my sourcing cost and pricing data kept private?</strong><br>
+  Yes — all calculations run locally in your browser, so none of your cost or margin data is transmitted or stored elsewhere.</p>
 </div>
-
 
 <!-- Compare Products Modal -->
 <div id="compareModal" class="modal">
